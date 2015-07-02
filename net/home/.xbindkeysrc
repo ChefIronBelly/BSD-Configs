@@ -50,7 +50,7 @@
 #"xterm"
 #  control + b:2
 
-"dmenu_run -fn '-*-profont-*-*-*-*-15-*-*-*-*-*-*-*' -nb '#3f3f3f' -nf '#dcdccc' -sb '#dcdccc' -sf '#3f3f3f'"
+"dmenu_run -fn '-*-dejavu sans mono-*-*-*-*-14-*-*-*-*-*-*-*' -nb '#3f3f3f' -nf '#dcdccc' -sb '#dcdccc' -sf '#3f3f3f'"
 Alt + p
 
 "status2.sh"
