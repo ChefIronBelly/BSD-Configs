@@ -1,6 +1,4 @@
-!XTerm*faceName: DejaVuSansMono:antialias=false
 XTerm*faceName: DejaVu Sans Mono:style=Book:antialias=true
-!xterm*faceSize: 12
 XTerm*faceNameDoublesize: WenQuanYi Bitmap Song
 XTerm*faceSize: 12
 
@@ -8,7 +6,7 @@ XTerm*vt100*geometry: 80x25
 XTerm*saveLines: 4096
 XTerm*loginShell: true
 XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
-XTerm*termName: xterm-256color
+XTerm*termName: xterm
 XTerm*eightBitInput: false
 XTerm*locale: true
 XTerm*metaSendsEscape: true
@@ -30,79 +28,45 @@ Xft.dpi:                96
 Xft.rgba:               rgb
 Xft.lcdfilter:          lcddefault
 
-!BLK Cursor
-#define _color0        #1f1f1f
-#define _color8        #709080
-!RED Tag
-#define _color1        #705050
-#define _color9        #dca3a3
-!GRN SpecialKey
-#define _color2        #60b48a
-#define _color10       #c3bf9f
-!YEL Keyword
-#define _color3        #dfaf8f
-#define _color11       #f0dfaf
-!BLU Number
-#define _color4        #506070
-#define _color12       #94bff3
-!MAG Precondit
-#define _color5        #dc8cc3
-#define _color13       #ec93d3
-!CYN Float
-#define _color6        #8cd0d3
-#define _color14       #93e0e3
-!WHT Search
-#define _color7        #dcdccc
-#define _color15       #ffffff
-!FMT Include, StatusLine, ErrorMsg
-#define _colorBD       #3f3f3f
-#define _colorUL       #3f3f3f
-#define _colorIT       #dcdccc
-!TXT Normal, Normal, Cursor
-#define _foreground    #dcdccc
-#define _background    #1f1f1f
-#define _cursorColor   #8cd0d3
-URxvt*color0         : _color0
-URxvt*color1         : _color1
-URxvt*color2         : _color2
-URxvt*color3         : _color3
-URxvt*color4         : _color4
-URxvt*color5         : _color5
-URxvt*color6         : _color6
-URxvt*color7         : _color7
-URxvt*color8         : _color8
-URxvt*color9         : _color9
-URxvt*color10        : _color10
-URxvt*color11        : _color11
-URxvt*color12        : _color12
-URxvt*color13        : _color13
-URxvt*color14        : _color14
-URxvt*color15        : _color15
-URxvt*colorBD        : _colorBD
-URxvt*colorIT        : _colorIT
-URxvt*colorUL        : _colorUL
-URxvt*foreground     : _foreground
-URxvt*background     : _background
-URxvt*cursorColor    : _cursorColor
-XTerm*color0         : _color0
-XTerm*color1         : _color1
-XTerm*color2         : _color2
-XTerm*color3         : _color3
-XTerm*color4         : _color4
-XTerm*color5         : _color5
-XTerm*color6         : _color6
-XTerm*color7         : _color7
-XTerm*color8         : _color8
-XTerm*color9         : _color9
-XTerm*color10        : _color10
-XTerm*color11        : _color11
-XTerm*color12        : _color12
-XTerm*color13        : _color13
-XTerm*color14        : _color14
-XTerm*color15        : _color15
-XTerm*colorBD        : _colorBD
-XTerm*colorIT        : _colorIT
-XTerm*colorUL        : _colorUL
-XTerm*foreground     : _foreground
-XTerm*background     : _background
-XTerm*cursorColor    : _cursorColor
+! Base16 Eighties
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+#define base00 #2d2d2d
+#define base01 #393939
+#define base02 #515151
+#define base03 #747369
+#define base04 #a09f93
+#define base05 #d3d0c8
+#define base06 #e8e6df
+#define base07 #f2f0ec
+#define base08 #f2777a
+#define base09 #f99157
+#define base0A #ffcc66
+#define base0B #99cc99
+#define base0C #66cccc
+#define base0D #6699cc
+#define base0E #cc99cc
+#define base0F #d27b53
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base09
+*.color10:      base01
+*.color11:      base02
+*.color12:      base04
+*.color13:      base06
+*.color14:      base0F
+*.color15:      base07
+
