@@ -1,21 +1,24 @@
 #!/bin/sh
 
-LANG=en_US.UTF-8; export LANG
+setxkbmap -layout us -option terminate:ctrl_alt_bksp
+export LANG=en,US,UTF-8
+export TERM=xterm
 
-setxkbmap -option terminate:ctrl_alt_bksp
-#xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
-xcompmgr &
+xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
 devilspie -a &
+xbindkeys &
 
 #xset fp+ /usr/local/share/fonts/
 xset fp+ /home/chef/.fonts/
 xset fp rehash
 xset b off
 
-xrdb ~/.Xresources
+if [ -s ~/.Xresources ]; then
+	xrdb -merge ~/.Xresources
+fi
+
 xsetroot -cursor_name left_ptr
-#xetroot -solid '#3f3f3f'
-hsetroot -fill ~/Pictures/wallpapers/simpledesktops.jpg
+#xsetroot -solid '#111111'
+hsetroot -fill ~/Pictures/wallpapers/simpledesktops.jpg #-blur 1
 
-exec cwm 
-
+exec cwm
