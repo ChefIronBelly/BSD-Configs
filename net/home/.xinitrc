@@ -21,4 +21,4 @@ xsetroot -cursor_name left_ptr
 #xsetroot -solid '#111111'
 hsetroot -fill ~/Pictures/wallpapers/simpledesktops.jpg #-blur 1
 
-exec cwm
+exec evilwm
