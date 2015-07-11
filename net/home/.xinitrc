@@ -6,7 +6,7 @@ export TERM=xterm
 
 xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
 devilspie -a &
-xbindkeys &
+#xbindkeys &
 
 xset fp+ /home/chef/.fonts/
 xset fp rehash
@@ -20,4 +20,4 @@ xsetroot -cursor_name left_ptr
 #xsetroot -solid '#111111'
 hsetroot -fill ~/Pictures/wallpapers/simpledesktops.jpg #-blur 1
 
-exec evilwm
+exec cwm
