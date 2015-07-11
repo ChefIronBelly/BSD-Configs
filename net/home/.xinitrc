@@ -8,7 +8,6 @@ xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
 devilspie -a &
 xbindkeys &
 
-#xset fp+ /usr/local/share/fonts/
 xset fp+ /home/chef/.fonts/
 xset fp rehash
 xset b off
