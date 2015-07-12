@@ -1,0 +1,93 @@
+## cwm config
+
+## Key bindings
+	bind MS-Return xterm
+	bind M-t status.sh
+	bind MS-c delete
+	bind C-r exec
+	bind CMS-l label
+    bind CM-r reload
+	bind M-f maximize
+	bind MS-m menusearch
+	bind M-F8 "mixer -s vol 80:80"
+	bind M-F9 "mixer -s vol -5:-5"
+	bind M-F10 "mixer -s vol +5:+5"
+	bind M-p "dmenu_run -fn '-*-dejavu sans mono-*-*-*-*-14-*-*-*-*-*-*-*' -nb '#dcdad5' -nf '#000000' -sb '#8cd0d3' -sf '#000000'"
+
+	bind M-1 grouponly1
+	bind M-2 grouponly2
+	bind M-3 grouponly3
+	bind M-4 grouponly4
+	bind MS-1 movetogroup1
+	bind MS-2 movetogroup2
+	bind MS-3 movetogroup3
+	bind MS-4 movetogroup4
+
+	mousebind M-2 window_lower
+	mousebind M-3 window_resize
+
+## Application menu
+
+
+## Fonts, Style, Color
+	fontname        "DejaVuSansMono:pixelsize=12:antialias=true"
+	color menubg    "#ffffff"
+	color font      "#000000"
+
+	borderwidth 2
+	color activeborder      "#8cd0d3"
+	color inactiveborder    "#dcdccc"
+	gap 10 10 10 10         #[T,B,L,R]
+
+## Ignore programs; no borders
+	ignore xclock
+
+## Groups predefined
+	autogroup 1 "xterm"
+	autogroup 2 "geany"
+	autogroup 2 "links"
+	autogroup 3 "mpg123"
+	autogroup 3 "mpv"
+    autogroup 4 "Chrome"
+	autogroup 4 "gFTP"
+
+## Tiling
+	#bind 4S-h 	htile
+	#bind 4S-v	vtile
+
+## Mousebindings
+	mousebind CM-1 	window_resize
+	mousebind M-1  	window_move
+
+## pointer movement
+    bind 4-j ptrmovedown
+    bind 4S-j bigptrmovedown
+    bind 4-k ptrmoveup
+    bind 4S-k bigptrmoveup
+    bind 4-h ptrmoveleft
+    bind 4S-h bigptrmoveleft
+    bind 4-l ptrmoveright
+    bind 4S-l bigptrmoveright
+
+## Window movement (standard bindings)
+    bind M-h moveleft
+    bind MS-h bigmoveleft
+    bind M-j movedown
+    bind MS-j bigmovedown
+    bind M-k moveup
+    bind MS-k bigmoveup
+    bind M-l moveright
+    bind MS-l bigmoveright
+
+## Window resizing
+    bind MC-h resizeleft
+    bind MCS-h bigresizeleft
+    bind MC-j resizedown
+    bind MCS-j bigresizedown
+    bind MC-k resizeup
+    bind MCS-k bigresizeup
+    bind MC-l resizeright
+    bind MCS-l bigresizeright
+
+    snapdist 4
+    sticky yes

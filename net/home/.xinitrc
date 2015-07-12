@@ -4,8 +4,8 @@ setxkbmap -layout us -option terminate:ctrl_alt_bksp
 export LANG=en,US,UTF-8
 export TERM=xterm
 
-xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
-devilspie -a &
+#xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
+#devilspie -a &
 #xbindkeys &
 
 xset fp+ /home/chef/.fonts/
@@ -17,7 +17,8 @@ if [ -s ~/.Xresources ]; then
 fi
 
 xsetroot -cursor_name left_ptr
-#xsetroot -solid '#111111'
-hsetroot -fill ~/Pictures/wallpapers/simpledesktops.jpg #-blur 1
+xsetroot -solid '#222222'
+#hsetroot -fill ~/Pictures/wallpapers/simpledesktops.jpg #-blur 1
 
+xclock -d -p 1 &
 exec cwm
