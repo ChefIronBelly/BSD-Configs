@@ -1,3 +1,3 @@
-#!/bin/sh
+#! /bin/sh
 
-sudo mount -t msdos /dev/sd0e /mnt
+sudo mount_msdos /dev/sd4e /mnt
