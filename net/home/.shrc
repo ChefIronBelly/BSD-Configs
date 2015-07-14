@@ -15,6 +15,7 @@ alias ll='ls -laFo'
 alias l='ls -l'
 alias g='egrep -i'
 alias preview='feh -g 450x300+500+200 -R .01 --zoom fill'
+alias free='top -n 1 | head -n 5 | tail -n 2'
  
 # # be paranoid
 # alias cp='cp -ip'
