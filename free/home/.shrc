@@ -1,26 +1,11 @@
-# $FreeBSD: releng/10.1/share/skel/dot.shrc 222932 2011-06-10 13:47:11Z jilles $
-#
-# .shrc - bourne shell startup file 
-#
-# This file will be used if the shell is invoked for interactive use and
-# the environment variable ENV is set to this file.
-#
-# see also sh(1), environ(7).
-#
+if [ -f /etc/shrc ]; then
+	. /etc/shrc
+fi
 
-
-# file permissions: rwxr-xr-x
-#
-# umask	022
-
-# Enable the builtin emacs(1) command line editor in sh(1),
-# e.g. C-a -> beginning-of-line.
-#set -o emacs
-
-# Uncomment this and comment the above to enable the builtin vi(1) command
-# line editor in sh(1), e.g. ESC to go into visual mode.
-# set -o vi
-
+case "$-" in *i*)
+	# interactive mode settings go here
+	;;
+esac
 
 # some useful aliases
 alias h='fc -l'
@@ -29,6 +14,8 @@ alias m=$PAGER
 alias ll='ls -laFo'
 alias l='ls -l'
 alias g='egrep -i'
+alias preview='feh -g 450x300+500+200 -R .01 --zoom fill'
+alias free='top -n 1 | head -n 5 | tail -n 2'
  
 # # be paranoid
 # alias cp='cp -ip'
@@ -45,5 +32,8 @@ alias g='egrep -i'
 
 # search path for cd(1)
 # CDPATH=:$HOME
+
+export LANG="en_US.UTF-8" export LC_CTYPE="en_US.UTF-8" export LC_ALL=""
+
 
 [ -n "$XTERM_VERSION" ] && transset -a >/dev/null

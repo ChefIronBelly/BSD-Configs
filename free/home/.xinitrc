@@ -6,9 +6,13 @@ export TERM=xterm
 
 xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
 devilspie -a &
-xbindkeys &
+#xbindkeys &
+sxhkd &
 
-#xset fp+ /usr/local/share/fonts/
+# turn off screen blanking and turn on energy star features
+    xset s off
+    xset dpms 600 60 60
+
 xset fp+ /home/chef/.fonts/
 xset fp rehash
 xset b off
@@ -18,7 +22,9 @@ if [ -s ~/.Xresources ]; then
 fi
 
 xsetroot -cursor_name left_ptr
-#xsetroot -solid '#111111'
-hsetroot -fill ~/Pictures/wallpapers/simpledesktops.jpg #-blur 1
+xsetroot -solid '#222222'
+#hsetroot -fill ~/Pictures/wallpapers/simpledesktops.jpg #-blur 1
+#xclock  -chime -d -p 1 -twelve &
 
-exec cwm
+exec bspwm -c $HOME/.config/bspwm/bspwmrc
+
