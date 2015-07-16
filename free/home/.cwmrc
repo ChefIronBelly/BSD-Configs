@@ -12,7 +12,7 @@
 	bind M-F8 "mixer -s vol 80:80"
 	bind M-F9 "mixer -s vol -5:-5"
 	bind M-F10 "mixer -s vol +5:+5"
-	bind M-p "dmenu_run -fn 'DejaVuSansMono-14' -nb '#dcdad5' -nf '#000000' -sb '#8cd0d3' -sf '#000000'"
+	bind M-p "dmenu_run -fn 'DejaVuSansMono-14' -nb '#ffffff' -nf '#000000' -sb '#365572' -sf '#ffffff'"
 
 	bind M-1 grouponly1
 	bind M-2 grouponly2
@@ -27,17 +27,21 @@
 	mousebind M-3 window_resize
 
 ## Application menu
-
+	command file_manager "xterm -e vifm"
+	command music_player "xterm -e cmus"
+	command search "xterm -e links -G google.com"
+	command web_browser "xterm -e links -G new.google.com"
+	command weatherman "xterm -e weatherman.sh -e 48328"
 
 ## Fonts, Style, Color
-	fontname        "DejaVuSansMono:pixelsize=12:antialias=true"
-	color menubg    "#ffffff"
-	color font      "#000000"
+    fontname        "DejaVuSansMono:pixelsize=12:antialias=true"
+  	color menubg    "#ffffff"
+    color font      "#000000"
 
 	borderwidth 2
-	color activeborder      "#8cd0d3"
-	color inactiveborder    "#dcdccc"
-	gap 10 10 10 10         #[T,B,L,R]
+    color activeborder      "#8cd0d3"
+    color inactiveborder    "#dcdccc"
+    gap 10 10 10 10         #[T,B,L,R]
 
 ## Ignore programs; no borders
 	ignore xclock
