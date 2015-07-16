@@ -12,8 +12,8 @@ xset b off
 
 xrdb ~/.Xresources
 xsetroot -cursor_name left_ptr
-#xetroot -solid '#3f3f3f'
-hsetroot -fill ~/Pictures/wallpapers/blue_minimalistic.jpg
+xetroot -solid '#333333'
+#hsetroot -fill ~/Pictures/wallpapers/blue_minimalistic.jpg
 
 exec cwm 
 
