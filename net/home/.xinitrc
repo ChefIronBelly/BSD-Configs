@@ -5,8 +5,13 @@ export LANG=en,US,UTF-8
 export TERM=xterm
 
 #xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
+#xcompmgr &
 #devilspie -a &
 #xbindkeys &
+sxhkd &
+
+# turn off screen blanking and turn on energy star features
+xset -dpms s off
 
 xset fp+ /home/chef/.fonts/
 xset fp rehash
@@ -17,8 +22,9 @@ if [ -s ~/.Xresources ]; then
 fi
 
 xsetroot -cursor_name left_ptr
-xsetroot -solid '#222222'
+xsetroot -solid '#2d2d2d'
 #hsetroot -fill ~/Pictures/wallpapers/simpledesktops.jpg #-blur 1
+#xclock  -chime -d -p 1 -twelve &
 
-xclock -d -p 1 &
-exec cwm
+exec bspwm -c $HOME/.config/bspwm/bspwmrc
+

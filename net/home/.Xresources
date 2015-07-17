@@ -1,8 +1,11 @@
 XTerm*faceName: DejaVu Sans Mono:style=Book:antialias=true
 XTerm*faceNameDoublesize: WenQuanYi Bitmap Song
-XTerm*faceSize: 12
+XTerm*faceSize: 10
 
-XTerm*vt100*geometry: 80x25
+!*font:			-*-fixed-medium-r-semicondensed-*-13-*-*-*-*-*-*-*
+!*boldFont:		-*-fixed-bold-r-semicondensed-*-13-*-*-*-*-*-*-*
+
+XTerm*vt100*geometry: 65x20
 XTerm*saveLines: 4096
 XTerm*loginShell: true
 XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
@@ -28,45 +31,4 @@ Xft.dpi:                96
 Xft.rgba:               rgb
 Xft.lcdfilter:          lcddefault
 
-! Base16 Eighties
-! Scheme: Chris Kempson (http://chriskempson.com)
-
-#define base00 #2d2d2d
-#define base01 #393939
-#define base02 #515151
-#define base03 #747369
-#define base04 #a09f93
-#define base05 #d3d0c8
-#define base06 #e8e6df
-#define base07 #f2f0ec
-#define base08 #f2777a
-#define base09 #f99157
-#define base0A #ffcc66
-#define base0B #99cc99
-#define base0C #66cccc
-#define base0D #6699cc
-#define base0E #cc99cc
-#define base0F #d27b53
-
-*.foreground:   base05
-*.background:   base00
-*.cursorColor:  base05
-
-*.color0:       base00
-*.color1:       base08
-*.color2:       base0B
-*.color3:       base0A
-*.color4:       base0D
-*.color5:       base0E
-*.color6:       base0C
-*.color7:       base05
-
-*.color8:       base03
-*.color9:       base09
-*.color10:      base01
-*.color11:      base02
-*.color12:      base04
-*.color13:      base06
-*.color14:      base0F
-*.color15:      base07
-
+#include </home/chef/.colors/Base16_Ocean>

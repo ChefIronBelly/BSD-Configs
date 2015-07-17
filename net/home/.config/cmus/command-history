@@ -1,0 +1,6 @@
+set color_win_inactive_cur_sel_fg=lightred
+set color_win_inactive_cur_sel_fg=lightorange
+colorscheme custom
+colorscheme gray-88
+colorscheme grat-88
+colorscheme zenburn

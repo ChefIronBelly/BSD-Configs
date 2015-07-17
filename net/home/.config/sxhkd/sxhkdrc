@@ -1,0 +1,94 @@
+#
+# bspwm hotkeys
+#
+
+ctrl + alt + Escape
+	bspc quit
+
+ctrl + w
+	bspc window -c
+
+ctrl + t
+	bspc desktop -l next
+
+ctrl + b
+	bspc desktop -B
+
+ctrl + {s,f}
+	bspc window -t {floating,fullscreen}
+
+ctrl + {grave,Tab}
+	bspc {window,desktop} -f last
+
+ctrl + apostrophe
+	bspc window -s last
+
+ctrl + {o,i}
+	bspc control --record-history off; \
+	bspc window {older,newer} -f; \
+	bspc control --record-history on
+
+ctrl + y
+	bspc window -w last.manual
+
+ctrl + m
+	bspc window -s biggest
+
+ctrl + {_,shift + }{h,j,k,l}
+	bspc window -{f,s} {left,down,up,right}
+
+alt + ctrl + {_,shift + }c
+	bspc window -f {next,prev}
+
+ctrl + {comma,period}
+	bspc desktop -C {backward,forward}
+
+ctrl + bracket{left,right}
+	bspc desktop -f {prev,next}
+
+ctrl + ctrl + {h,j,k,l}
+	bspc window -p {left,down,up,right}
+
+ctrl + ctrl + {_,shift + }space
+	bspc {window -p cancel,desktop -c}
+
+ctrl + alt + {h,j,k,l}
+	bspc window -e {left -10,down +10,up -10,right +10}
+
+ctrl + alt + shift + {h,j,k,l}
+	bspc window -e {right -10,up +10,down -10,left +10}
+
+alt + ctrl + {1-9}
+	bspc window -r 0.{1-9}
+
+alt + {_,shift + }{1-9,0}
+	bspc {desktop -f,window -d} ^{1-9,10}
+
+~button1
+	bspc pointer -g focus
+
+alt + button{1-3}
+	bspc pointer -g {move,resize_side,resize_corner}
+
+alt + !button{1-3}
+	bspc pointer -t %i %i
+
+alt + @button{1-3}
+	bspc pointer -u
+
+#
+# wm independent hotkeys
+#
+
+alt + Return
+	xterm
+
+alt + p
+	dmenu_run -fn '-*-gohufont-*-*-*-*-14-*-*-*-*-*-*-*' -nb '#dcdad5' -nf '#000000' -sb '#8cd0d3' -sf '#000000'
+	
+alt + t 
+	status.sh
+
+# make sxhkd reload its configuration files:
+ctrl + Escape
+	pkill -USR1 -x sxhkd
