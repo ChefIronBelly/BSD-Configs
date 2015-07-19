@@ -1,0 +1,219 @@
+# windows key is used as Mod
+set $mod Mod1
+
+# Font
+font pango:Monaco for Powerline 9
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+# bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec xterm
+
+# kill focused window
+bindsym $mod+Shift+Q kill
+
+#Turn off borders.
+bindsym Control+Shift+1 [class="^.*"] border toggle
+for_window [class="^.*"] border pixel 1
+
+# start dmenu (a program launcher)
+bindsym $mod+p exec dmenu_run -fn -*-gohufont-*-*-*-*-14-*-*-*-*-*-*-* -b -nb "#2C3E50" -nf "#ECF0F1" -sb "#3498DB" -sf "#ECF0F1"
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+H move left
+bindsym $mod+Shift+J move down
+bindsym $mod+Shift+K move up
+bindsym $mod+Shift+L move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+b split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# change container layout (stacked, tabbed, default)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout default
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindcode $mod+d focus child
+
+# switch to workspace
+bindsym $mod+1 workspace 1 www
+bindsym $mod+2 workspace 2 term
+bindsym $mod+3 workspace 3 irc
+bindsym $mod+4 workspace 4 d-_-b
+bindsym $mod+5 workspace 5 code
+bindsym $mod+6 workspace 6 code
+bindsym $mod+7 workspace 7 code
+bindsym $mod+8 workspace 8 misc
+bindsym $mod+9 workspace 9 misc
+bindsym $mod+0 workspace 10 misc
+
+# move focused container to workspace
+bindsym $mod+Shift+exclam move workspace 1 www
+bindsym $mod+Shift+quotedbl move workspace 2 term
+bindsym $mod+Shift+numbersign move workspace 3 irc
+bindsym $mod+Shift+dollar move workspace 4 d-_-b
+bindsym $mod+Shift+percent move workspace 5 code
+bindsym $mod+Shift+ampersand move workspace 6 code
+bindsym $mod+Shift+slash move workspace 7 code
+bindsym $mod+Shift+parenleft move workspace 8 misc
+bindsym $mod+Shift+parenright move workspace 9 misc
+bindsym $mod+Shift+equal move workspace 10 misc
+
+# reload the configuration file
+bindsym $mod+Shift+C reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+R restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+E exit
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # They resize the border in the direction you pressed, e.g.
+        # when pressing left, the window is resized so that it has
+        # more space on its left
+
+bindsym h resize shrink left 10 px or 10 ppt
+bindsym Shift+H resize grow   left 10 px or 10 ppt
+
+bindsym j resize shrink down 10 px or 10 ppt
+bindsym Shift+J resize grow   down 10 px or 10 ppt
+
+bindsym k resize shrink up 10 px or 10 ppt
+bindsym Shift+K resize grow   up 10 px or 10 ppt
+
+bindsym l resize shrink right 10 px or 10 ppt
+bindsym Shift+L resize grow   right 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+bindsym Left resize shrink left 10 px or 10 ppt
+bindsym Shift+Left resize grow   left 10 px or 10 ppt
+
+bindsym Down resize shrink down 10 px or 10 ppt
+bindsym Shift+Down resize grow   down 10 px or 10 ppt
+
+bindsym Up resize shrink up 10 px or 10 ppt
+bindsym Shift+Up resize grow   up 10 px or 10 ppt
+
+bindsym Right resize shrink right 10 px or 10 ppt
+bindsym Shift+Right resize grow   right 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+bindsym Return mode "default"
+bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# =============================================================================
+# MY STUFF STARTS HERE
+# =============================================================================
+
+# Tile focus will not follow the mouse
+focus_follows_mouse no
+
+# Press $mod+2 to go to second workspace, press again to return to where you
+# were
+workspace_auto_back_and_forth yes
+
+# Window borders
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+        strip_workspace_numbers yes
+        position top
+#        status_command i3status --config ~/.i3/i3status.conf
+        tray_output none
+        font pango:DejaVuSansMono 14 #, Icons 9
+        colors {
+           statusline  #ECF0F1
+           background  #222222
+           focused_workspace  #3498DB #3498DB #f5f5f5
+           active_workspace   #1ABC9C #2C3E50 #BDC3C7
+           inactive_workspace #2C3E50 #2C3E50 #BDC3C7
+           urgent_workspace   #f92672 #2C3E50 #BDC3C7  
+        }
+}
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -5% #decrease sound volume
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
+
+# Network manager
+#exec --no-startup-id nm-applet
+
+# Wallpaper
+#exec --no-startup-id feh --bg-scale /home/zeta/Pictures/New-Wallpapers/Landscapes/1420375693926.png
+
+# Conky
+#exec --no-startup-id conky -c /home/zeta/conkyrc1
+#exec --no-startup-id conky -c /home/zeta/conkyrc2
+
+# Compton
+#exec --no-startup-id compton --config /home/zeta/.compton.conf
+
+exec --no-startup-id dzstatus.sh 
+
+# Screenshots
+# Screenshots
+# # Screenshot fullscreen
+bindsym Print exec scrot -q 100
+# # Screenshot with selection
+# bindsym $mod+Print exec "sleep 0.2; scrot -q 100 -s '/home/jessie/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S_$wx$h.png' -e 's3cmd put -P $f s3://s3.j3ss.co/screenshots/ && echo https://s3.j3ss.co/screenshots/$n | xclip -i -selection clipboard'"
+# # Screenshot current focused window
+# bindsym Shift+Print exec "scrot -q 100 -u '/home/jessie/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S_$wx$h.png'
+
+
+
+# =============================================================================
+# Colors
+# =============================================================================
+
+client.focused          #3498DB #3498DB #ECF0F1 #2ECC71
+client.unfocused        #3498DB #2C3E50 #ECF0F1 #2C3E50
+client.focused_inactive #3498DB #2C3E50 #ECF0F1 #2C3E50
+client.urgent           #3498DB #2C3E50 #ECF0F1 #2C3E50
+#-----------
+#Gaps
+#----------
+#gap_size 14
+#new_window 1pixel
