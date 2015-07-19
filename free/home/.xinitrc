@@ -15,5 +15,5 @@ xsetroot -cursor_name left_ptr
 xetroot -solid '#333333'
 #hsetroot -fill ~/Pictures/wallpapers/blue_minimalistic.jpg
 
-exec cwm 
-
+#exec cwm 
+exec i3
