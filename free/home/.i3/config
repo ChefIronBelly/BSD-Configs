@@ -163,7 +163,26 @@ bindsym Mod1+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+#bar {
+#		position top
+#        status_command ~/.i3/i3status.conf
+#} 
+
 bar {
-		position top
-        status_command i3status
-} 
+#        status_command conky -c $HOME/.i3/conky/conkyrc
+		status_command -c $HOME/.i3/i3status.conf
+        mode dock
+        position top
+#        font pango:open sans 8
+        strip_workspace_numbers yes
+colors {
+        background #DEDFE3
+        statusline #767E8A
+        separator #51c4d4
+ 
+        focused_workspace  #777F8B #777F8B #ecedee
+        active_workspace   #777F8B #777F8B #ecedee
+        inactive_workspace #DEDFE3 #DEDFE3 #767E8A
+        urgent_workspace   #DEDFE3 #DEDFE3 #767E8A
+    }
+}
