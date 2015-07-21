@@ -3,19 +3,18 @@ own_window no
 out_to_console yes
 background no
 max_text_width 0
-update_interval 2.0
+update_interval 10.0
 total_run_times 0
 short_units yes
 if_up_strictness address
 use_spacer left
 override_utf8_locale no
-cpu_avg_samples 2
 
 TEXT
 [
-    { "full_text" : " CPU ${cpu cpu0}% " , "color" : "\#f2f0ec" },
-    { "full_text" : "  ${kernel} " , "color" : "\#f2f0ec" },
-    { "full_text" : " ${time %B %d %Y} " , "color" : "\#f2f0ec" },
-    { "full_text" : " ${time %I:%M} " , "color" : "\#f2f0ec" },
+    { "full_text" : "  ${execi 5 ~/.i3/cmus-info} " , "color" : "\#f2f0ec" },
+    { "full_text" : "    ${kernel} " , "color" : "\#f2f0ec" },
+    { "full_text" : "   ${time %a, %b %d} " , "color" : "\#f2f0ec" },
+    { "full_text" : "   ${time %I:%M} " , "color" : "\#f2f0ec" },
     { "full_text" : "" , "color" : "\#f2f0ec" }
 ],
