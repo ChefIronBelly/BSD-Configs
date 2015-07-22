@@ -6,8 +6,6 @@ export TERM=xterm
 
 xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
 devilspie -a &
-#xbindkeys &
-#sxhkd &
 
 # turn off screen blanking and turn on energy star features
 xset -dpms s off
@@ -23,7 +21,5 @@ fi
 xsetroot -cursor_name left_ptr
 #xsetroot -solid '#2d2d2d'
 hsetroot -fill ~/Pictures/wallpapers/DLZmbT5.jpg #-blur 1
-#xclock  -chime -d -p 1 -twelve &
 
-#exec bspwm -c $HOME/.config/bspwm/bspwmrc
 exec i3
