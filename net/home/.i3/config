@@ -106,6 +106,7 @@ bindsym $mod+r mode "resize"
 bar {
         strip_workspace_numbers yes
         position top
+        mode dock
         status_command $HOME/.i3/i3status-conky-launcher
         font pango:Inconsolata for Powerline Bold 10    
         colors {
