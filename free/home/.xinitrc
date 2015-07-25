@@ -1,19 +1,26 @@
 #!/bin/sh
 
-LANG=en_US.UTF-8; export LANG
+setxkbmap -layout us -option terminate:ctrl_alt_bksp
+export LANG=en,US,UTF-8
+export TERM=xterm
 
-setxkbmap -option terminate:ctrl_alt_bksp
-xcompmgr &
-devilspie -a &
+#xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
+#devilspie -a &
+
+# turn off screen blanking and turn on energy star features
+xset -dpms s off
 
 xset fp+ /home/chef/.fonts/
 xset fp rehash
 xset b off
 
-xrdb ~/.Xresources
-xsetroot -cursor_name left_ptr
-xetroot -solid '#333333'
-#hsetroot -fill ~/Pictures/wallpapers/blue_minimalistic.jpg
+if [ -s ~/.Xresources ]; then
+	xrdb -merge ~/.Xresources
+fi
 
-#exec cwm 
+xsetroot -cursor_name left_ptr
+xsetroot -solid '#333333'
+#hsetroot -fill ~/Pictures/wallpapers/farm.jpg #-blur 1
+
 exec i3
+
