@@ -19,8 +19,8 @@ if [ -s ~/.Xresources ]; then
 fi
 
 xsetroot -cursor_name left_ptr
-#xsetroot -solid '#2d2d2d'
-hsetroot -fill ~/Pictures/wallpapers/farm.jpg #-blur 1
+xsetroot -solid '#333333'
+#hsetroot -fill ~/Pictures/wallpapers/farm.jpg #-blur 1
 
 exec i3
 

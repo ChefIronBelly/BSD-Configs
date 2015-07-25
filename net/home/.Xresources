@@ -1,6 +1,6 @@
-XTerm*faceName: Inconsolata for Powerline:antialias=true:hinting=true
+XTerm*faceName: DejaVu Sans Mono:antialias=true
 XTerm*faceNameDoublesize: WenQuanYi Bitmap Song
-XTerm*faceSize: 12
+XTerm*faceSize: 10
 
 !*font:			-*-fixed-medium-r-semicondensed-*-13-*-*-*-*-*-*-*
 !*boldFont:		-*-fixed-bold-r-semicondensed-*-13-*-*-*-*-*-*-*
