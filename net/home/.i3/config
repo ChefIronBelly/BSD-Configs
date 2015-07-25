@@ -4,7 +4,6 @@ set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-#font pango:Inconsolata for Powerline Medium 8
 font pango:Inconsolata for Powerline Regular 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -18,8 +17,6 @@ bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+p exec dmenu_run -fn "-*-gohufont-*-*-*-*-14-*-*-*-*-*-*-*" -nb "#2b303b" -sb "#8fa1b3" 
-#bindsym $mod+u exec --no-startup-id passmenu --type -b -fn "Inconsolata for Powerline-12:Regular" -nb "#2b303b" -sb "#8fa1b3" -p ">>>" -hist /home/luke/.dmenuhist
-#bindsym $mod+u exec --no-startup-id passdmenu --type --user --pw -- -b -fn "Inconsolata for Powerline-12:Regular" -nb "#2b303b" -sb "#8fa1b3" -p ">>>" -hist /home/luke/.dmenuhist
 
 # change focus
 bindsym $mod+h focus left
@@ -107,21 +104,9 @@ bar {
 }
 
 for_window [instance="feh"] floating enable;
-for_window [instance="livestreamer-twitch-gui"] floating enable;
-for_window [instance="gpicview"] floating enable;
-for_window [instance="lxappearance"] floating enable;
-for_window [instance="mainwindow.py"] floating enable; #playonlinux
-for_window [instance="transparent-term"] move scratchpad,scratchpad show,resize shrink height 200px;
 new_window pixel
 
-# AUTOSTART
-#exec --no-startup-id compton -b --backend glx --vsync opengl-swc
-#exec --no-startup-id nm-applet
-#exec --no-startup-id autorandr --change
-#exec --no-startup-id urxvtd -q -f -o
-#exec --no-startup-id ~/.fehbg_
- 
-for_window[class="^.*"] border pixel 1
+for_window[class="^.*"] border pixel 2
 #gaps inner 7
 #gaps outer 4
 
@@ -132,21 +117,7 @@ client.unfocused        #333333 #222222 #888888 #292d2e
 client.urgent           #2f343a #900000 #ffffff #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000
 
-# KEYBINDINGS
-bindsym $mod+b exec --no-startup-id SAVE_NAME=$(date +%F-%T).png && maim "$HOME/Pictures/Screenshots/$SAVE_NAME" && echo ~/Pictures/Screenshots/$SAVE_NAME
-bindsym $mod+Shift+b exec --no-startup-id SAVE_NAME=$(date +%F-%T).png && maim -s "$HOME/Pictures/Screenshots/$SAVE_NAME" && echo ~/Pictures/Screenshots/$SAVE_NAME
-bindsym $mod+Shift+q exec --no-startup-id autorandr --change
-bindsym $mod+z [urgent=latest] focus
-bindsym $mod+x exec chromium
-bindsym $mod+m exec qutebrowser
-bindsym $mod+y exec spotify
-bindsym $mod+n exec telegram
-bindsym $mod+comma exec urxvtc -name "transparent-term" -bg [55]#2b303b -depth 32
-bindsym $mod+Shift+comma exec urxvtc -name "transparent-nofloat-term" -bg [55]#2b303b -depth 32
-bindsym $mod+minus scratchpad show
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+Mod4+j exec --no-startup-id xbacklight -dec 3
-bindsym $mod+Mod4+k exec --no-startup-id xbacklight -inc 3
+# keybindings
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% && killall -USR1 i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% && killall -USR1 i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle && killall -USR1 i3status
