@@ -8,13 +8,13 @@ use_spacer none
 TEXT
 [
     { "full_text" : "  ${execi 5 ~/.i3/cmus-info} " , "color" : "\#f2f0ec" },
-	{ "full_text" : "   ${execi 5 mixerctl outputs.master  | sed 's/.*=//'}" , "color" : "\#f2f0ec" },
+	{ "full_text" : "   ${execi 5 ~/bin/volume.sh} " , "color" : "\#f2f0ec" },
 	{ "full_text" : "     ${execi 5 top -n 1 | head -n 4 | tail -n 1 | awk '{print $2}'}" , "color" : "\#f2f0ec" },
 	{ "full_text" : "   ${execi 5 df -h / | tail -1 | awk '{print $2}'}" , "color" : "\#f2f0ec" },
-    { "full_text" : "  ${execi 5 ~/bin/if_ip.sh} " , "color" : "\#f2f0ec" },
+    { "full_text" : "  ${execi 5 ~/bin/if_ip.sh}" , "color" : "\#f2f0ec" },
     { "full_text" : "    ${kernel} " , "color" : "\#f2f0ec" },
     { "full_text" : "   ${time %a, %b %d} " , "color" : "\#f2f0ec" },
-    { "full_text" : "   ${time %I:%M} " , "color" : "\#f2f0ec" },
+    { "full_text" : "   ${time %I:%M} " , "color" : "\#8fa1b3" },
     { "full_text" : "" , "color" : "\#f2f0ec" }
 ],
 
