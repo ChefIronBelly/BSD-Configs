@@ -96,7 +96,8 @@ bar {
         position top
         mode dock
         status_command $HOME/.i3/i3status-conky-launcher
-        font pango:Inconsolata for Powerline Bold 10    
+#        font pango:Inconsolata for Powerline Bold 10    # Inconsolata 8
+		font pango:Inconsolata Bold 10
         colors {
             background #2b303b
             focused_workspace #4c7899 #8fa1b3 #ffffff
