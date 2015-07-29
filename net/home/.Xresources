@@ -32,8 +32,8 @@ Xft.rgba:               rgb
 Xft.lcdfilter:          lcddefault
 
 !#include </home/chef/.colors/base16-default>
-!#include </home/chef/.colors/base16-eighties>
+#include </home/chef/.colors/base16-eighties>
 !#include </home/chef/.colors/base16-flat>
-#include </home/chef/.colors/base16-ocean>
+!#include </home/chef/.colors/base16-ocean>
 !#include </home/chef/.colors/base16-tomorrow>
 

@@ -10,7 +10,7 @@ font pango:Inconsolata for Powerline Regular 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xterm 
+bindsym $mod+Return exec xterm
 
 # kill focused window
 bindsym $mod+q kill
