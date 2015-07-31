@@ -14,7 +14,7 @@ TEXT
     { "full_text" : "  ${execi 5 ~/bin/if_ip.sh}" , "color" : "\#f2f0ec" },
     { "full_text" : "    ${kernel} " , "color" : "\#f2f0ec" },
     { "full_text" : "   ${time %a, %b %d} " , "color" : "\#f2f0ec" },
-    { "full_text" : "   ${time %I:%M} " , "color" : "\#8fa1b3" },
+    { "full_text" : "   ${time %I:%M} " , "color" : "\#f2f0ec" },
     { "full_text" : "" , "color" : "\#f2f0ec" }
 ],
 
