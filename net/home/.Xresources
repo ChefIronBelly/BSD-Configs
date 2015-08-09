@@ -2,7 +2,7 @@ XTerm*faceName: DejaVu Sans Mono:antialias=true
 XTerm*faceNameDoublesize: WenQuanYi Bitmap Song
 XTerm*faceSize: 10
 
-XTerm*vt100*geometry: 65x20
+XTerm*vt100*geometry: 54x20
 XTerm*saveLines: 4096
 XTerm*loginShell: true
 XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
@@ -28,9 +28,9 @@ Xft.dpi:                96
 Xft.rgba:               rgb
 Xft.lcdfilter:          lcddefault
 
+#include </home/chef/.colors/oranges>
 !#include </home/chef/.colors/base16-default>
 !#include </home/chef/.colors/base16-eighties>
 !#include </home/chef/.colors/base16-flat>
-#include </home/chef/.colors/base16-ocean>
-!#include </home/chef/.colors/base16-tomorrow>
-
+!#include </home/chef/.colors/base16-ocean>
+!#include </home/chef/.colors/base16-tomorrow>z

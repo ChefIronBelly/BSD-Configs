@@ -1,0 +1,41 @@
+#!/usr/pkg/bin/bash
+
+BLUE=#FFff9933
+BLACK=#FFCECECE
+RED=#FF566FB4
+GREEN=#FFA08BA0
+YELLOW=#FFc64504
+WHITE=#FFffffff
+
+PANEL_FONT="DejaVu Sans Mono:size=10"
+ICON_FONT="FontAwesome:size=11"
+
+function statusbar {
+
+  ip() {
+   ip=$( if_ip.sh )
+  echo $ip
+  }
+
+   clock() {
+   time=$(date +" %a, %b %d %I:%M")
+   echo $time
+   }
+
+   vol() {
+   vol="$( volume.sh)"
+   echo $vol
+   }
+
+   cur() {
+   cur=$(cmus-info)
+   test -n "$cur" && echo $cur || echo "you ain't got nuthin' playin' "   
+   }
+
+   echo "%{B$YELLOW}%{F$BLUE}  %{B-}%{F-}  %{F$BLACK}$(cur) %{B-}%{F-} %{r} %{F$BLUE} %{F$BLACK}$(ip) %{B-}%{F-} %{F$BLUE} %{B-}%{F$BLACK}$(vol)%{B-}%{F-} %{F$BLUE}  %{B-}%{F$BLACK}$(clock)%{B-}%{F-}  "
+}
+ while true
+ do
+    echo "$(statusbar)"
+   sleep 0.5   
+ done | lemonbar -g 740x25+340+20  -f "$PANEL_FONT" -f "$ICON_FONT" -B "#FF111111" -F "#FFabacae" -p -d &

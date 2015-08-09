@@ -19,9 +19,9 @@ png.o: colors.h
 
 install: all
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
-	cp -f $(BIN) $(DESTDIR)$(PREFIX)/bin
+	cp -f $(EXEC) $(DESTDIR)$(PREFIX)/bin
 	mkdir -p $(DESTDIR)$(MANPREFIX)/man1
-	cp -f $(BIN).1 $(DESTDIR)$(MANPREFIX)/man1
+	cp -f $(EXEC).1 $(DESTDIR)$(MANPREFIX)/man1
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/$(BIN)
