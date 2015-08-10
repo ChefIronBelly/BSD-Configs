@@ -39,10 +39,10 @@ static const bool inverted_colors = true;
 static const uint8_t borders[] = {3,5,5,4};
 /* Windows that won't have a border.*/
 #define LOOK_INTO "WM_NAME"
-static const char *ignore_names[] = {"cat_osd", "bar", "xclock"};
+static const char *ignore_names[] = {"bar", "xclock"};
 ///--Menus and Programs---///
-static const char *menucmd[]   = { "/usr/pkg/bin/dmenu_run", NULL };
-static const char *gmrun[]     = { "/usr/bin/gmrun", NULL };
+static const char *menucmd[]   = { "dmenu_run", NULL };
+static const char *gmrun[]     = { "/usr/bin/gmrun",NULL};
 static const char *terminal[]  = { "xterm", NULL };
 static const char *click1[]    = { "xdotool","click", "1", NULL };
 static const char *click2[]    = { "xdotool","click", "2", NULL };
