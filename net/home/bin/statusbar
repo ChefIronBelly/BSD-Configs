@@ -1,7 +1,7 @@
 #!/usr/pkg/bin/bash
 
 BLUE=#FFff9933
-BLACK=#FFCECECE
+BLACK=#FFeeeeee
 RED=#FF566FB4
 GREEN=#FFA08BA0
 YELLOW=#FFc64504
@@ -32,10 +32,10 @@ function statusbar {
    test -n "$cur" && echo $cur || echo "you ain't got nuthin' playin' "   
    }
 
-   echo "%{B$YELLOW}%{F$BLUE}  %{B-}%{F-}  %{F$BLACK}$(cur) %{B-}%{F-} %{r} %{F$BLUE} %{F$BLACK}$(ip) %{B-}%{F-} %{F$BLUE} %{B-}%{F$BLACK}$(vol)%{B-}%{F-} %{F$BLUE}  %{B-}%{F$BLACK}$(clock)%{B-}%{F-}  "
+   echo "%{B$YELLOW}%{F$BLUE}  %{B-}%{F-}%{F$BLACK} $(cur)%{B-}%{F-}%{r}%{F$BLUE} %{F$BLACK}$(ip)  %{B-}%{F-}%{F$BLUE} %{B-}%{F$BLACK}$(vol)  %{B-}%{F-}%{F$BLUE} %{B-}%{F$BLACK}$(clock)%{B-}%{F-}  "
 }
  while true
  do
     echo "$(statusbar)"
    sleep 0.5   
- done | lemonbar -g 740x25+340+20  -f "$PANEL_FONT" -f "$ICON_FONT" -B "#FF111111" -F "#FFabacae" -p -d &
+ done | lemonbar -g 740x25+340+20  -f "$PANEL_FONT" -f "$ICON_FONT" -B "#FF220000" -F "#FFeeeeee" -p -d &
