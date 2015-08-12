@@ -18,7 +18,7 @@ xset +fp /home/chef/.fonts/
 xset fp rehash
 
 xrdb -load ~/.Xresources
-#sxhkd &
+sxhkd &
 #xbindkeys &
 
 xsetroot -cursor_name left_ptr
@@ -26,5 +26,5 @@ xsetroot -cursor_name left_ptr
 hsetroot -fill ~/Pictures/wallpapers/orange.png #-tint '#c7c7c7' #-blur 1
 
 statusbar
-exec 2bwm
-#exec swm
+#exec 2bwm
+exec swm
