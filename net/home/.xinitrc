@@ -22,9 +22,8 @@ sxhkd &
 #xbindkeys &
 
 xsetroot -cursor_name left_ptr
-#xsetroot -solid '#17181A'
-hsetroot -fill ~/Pictures/wallpapers/orange.png #-tint '#c7c7c7' #-blur 1
+xsetroot -solid '#17181A'
+#hsetroot -fill ~/Pictures/wallpapers/orange.png #-tint '#c7c7c7' #-blur 1
 
-statusbar
-#exec 2bwm
-exec swm
+wew | yawee &
+exec xwait
