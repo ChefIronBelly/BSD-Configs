@@ -11,8 +11,8 @@ mod4 + p
  dmenu_run
 
 mod4 + d
- ~/bin/popup $(date +" %a, %b %d %I:%M")
-
+# ~/bin/popup $(date +" %a, %b %d %I:%M")
+ statusbar
 
 # ╺┳╸╻ ╻╻┏━┓   ╻┏━┓   ╻ ╻┏━┓╻ ╻   ╻ ╻┏━┓╻ ╻   ╻ ╻┏┳┓
 #  ┃ ┣━┫┃┗━┓   ┃┗━┓   ┣━┫┃ ┃┃╻┃   ┗┳┛┃ ┃┃ ┃   ┃╻┃┃┃┃

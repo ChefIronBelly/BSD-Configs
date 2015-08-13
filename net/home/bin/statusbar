@@ -1,41 +1,40 @@
-#!/usr/pkg/bin/bash
+#!/bin/sh
 
-BLUE=#FFff9933
-BLACK=#FFeeeeee
-RED=#FF566FB4
-GREEN=#FFA08BA0
-YELLOW=#FFc64504
-WHITE=#FFffffff
+font="Monaco:size=10"
+bg="#ff2d2d2d"
+fg="#ffd3d0c8"
+hl="#ffd3d0c8"
 
-PANEL_FONT="DejaVu Sans Mono:size=10"
-ICON_FONT="FontAwesome:size=11"
+default_geometry() {
+    # get screen size
+    x=$(wattr w `lsw -r`)
+    y=$(wattr h `lsw -r`)
 
-function statusbar {
+    width=360
+    height=24
 
-  ip() {
-   ip=$( if_ip.sh )
-  echo $ip
-  }
+    offy=10
+    offx=$(( x - x/2 - $width/2 ))
 
-   clock() {
-   time=$(date +" %a, %b %d %I:%M")
-   echo $time
-   }
-
-   vol() {
-   vol="$( volume.sh)"
-   echo $vol
-   }
-
-   cur() {
-   cur=$(cmus-info)
-   test -n "$cur" && echo $cur || echo "you ain't got nuthin' playin' "   
-   }
-
-   echo "%{B$YELLOW}%{F$BLUE}  %{B-}%{F-}%{F$BLACK} $(cur)%{B-}%{F-}%{r}%{F$BLUE} %{F$BLACK}$(ip)  %{B-}%{F-}%{F$BLUE} %{B-}%{F$BLACK}$(vol)  %{B-}%{F-}%{F$BLUE} %{B-}%{F$BLACK}$(clock)%{B-}%{F-}  "
+    echo "${width}x${height}+${offx}+${offy}"
 }
- while true
- do
-    echo "$(statusbar)"
-   sleep 0.5   
- done | lemonbar -g 740x25+340+20  -f "$PANEL_FONT" -f "$ICON_FONT" -B "#FF220000" -F "#FFeeeeee" -p -d &
+
+ip() {
+    ip=$( if_ip.sh )
+    echo $ip
+}
+
+clock() {
+    time=$(date +" %a, %b %d %I:%M")
+    echo $time
+}
+
+vol() {
+    vol="$( volume.sh)"
+    echo $vol
+}
+
+GEOM=${GEOM:-$(default_geometry)}
+SLEEP=${SLEEP:-10}
+
+(echo $(ip) - $(vol) - $(clock) ; sleep $SLEEP) | lemonbar -d -g $GEOM -f $font -B $bg -F $fg
