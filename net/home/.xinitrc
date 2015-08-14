@@ -19,7 +19,6 @@ xset fp rehash
 
 xrdb -load ~/.Xresources
 sxhkd &
-#xbindkeys &
 
 xsetroot -cursor_name left_ptr
 xsetroot -solid '#17181A'

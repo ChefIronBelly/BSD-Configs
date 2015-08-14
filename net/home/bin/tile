@@ -4,31 +4,40 @@
 # arrange windows in a tiled pattern
 
 # default values for gaps and master area
-PANEL=${PANEL:-0}
 GAP=${GAP:-20}
 MASTER=${MASTER:-900}
 
 # get current window id and its borderwidth
 PFW=$(pfw)
-BW=$(wattr b $PFW)
+
+# retrieve first window
+wattr $PFW || PFW=$(lsw|sed 1q)
+
+test -z "$PFW" && exit 1
+
 
 # get root window's size (beware, multi-head setups...)
 ROOT=$(lsw -r)
 SW=$(wattr w $ROOT)
 SH=$(wattr h $ROOT)
 
+# get window's borderwidth
+BW=$(wattr b $PFW)
+
 # get the number of windows to put in the stacking area
 MAX=$(lsw|grep -v $PFW|wc -l)
 
 # calculate usable screen size (without borders and gaps)
 SW=$((SW - GAP - 2*BW))
-SH=$((SH - GAP - 2*BW - PANEL))
+SH=$((SH - GAP - 2*BW))
 
-Y=$((0 + GAP + PANEL))
+test "$MAX" -eq 0 && wtp $GAP $GAP $((SW - GAP)) $((SH - GAP)) $PFW && exit
+
 # put current window in master area
-wtp $GAP $Y $((MASTER - GAP - 2*BW)) $((SH - GAP)) $PFW
+wtp $GAP $GAP $((MASTER - GAP - 2*BW)) $((SH - GAP)) $PFW
 
 # and now, stack up all remaining windows on the right
+Y=$((0 + GAP))
 X=$((MASTER + GAP))
 W=$((SW - MASTER - GAP))
 H=$((SH / MAX - GAP - 2*BW))
