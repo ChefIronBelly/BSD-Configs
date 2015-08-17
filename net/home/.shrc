@@ -15,8 +15,10 @@ alias ll='ls -laFo'
 alias l='ls -l'
 alias g='egrep -i'
 alias preview='feh -g 450x300+500+200 -R .01 --zoom fill'
-alias rec='ffmpeg -f x11grab -s 1440x900 -an -i :0.0 -c:v libvpx -b:v 5M -crf 10 -quality realtime -y -loglevel quiet'
- 
+alias rec='ffmpeg2 -f x11grab -s 1440x900 -an -i :0.0 -c:v libvpx -b:v 5M -crf 10 -quality realtime -y -loglevel quiet'
+alias info='nbinfo.sh'
+alias todo='vim ~/.todo'
+
 # # be paranoid
 # alias cp='cp -ip'
 # alias mv='mv -i'
@@ -29,5 +31,5 @@ PS1=""
  esac
 
 # search path for cd(1)
-# CDPATH=:$HOME
+CDPATH=:$HOME
 

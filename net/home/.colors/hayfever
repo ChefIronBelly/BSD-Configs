@@ -1,0 +1,20 @@
+! Color-scheme : Hayfever
+! Author       : ChefIronBelly
+
+*background:#413421
+*foreground:#977337
+
+*color0:   #413421
+*color1:   #504024
+*color2:   #624c28
+*color3:   #745a2c
+*color4:   #856630
+*color5:   #977337
+*color6:   #a97f34
+*color7:   #b78d3f
+*color8:   #c59c4b
+*color9:   #d3ac57
+*color10:  #e1bd66
+*color11:  #edcc75
+*color12:  #f6dd94
+
