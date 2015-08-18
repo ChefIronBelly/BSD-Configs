@@ -28,8 +28,8 @@ Xft.dpi:                96
 Xft.rgba:               rgb
 Xft.lcdfilter:          lcddefault
 
-#include </home/chef/.colors/pinky>
-!#include </home/chef/.colors/hayfever>
+!#include </home/chef/.colors/pinky>
+#include </home/chef/.colors/hayfever>
 !#include </home/chef/.colors/oranges>
 !#include </home/chef/.colors/base16-default>
 !#include </home/chef/.colors/base16-eighties>
