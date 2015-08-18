@@ -3,7 +3,7 @@
 while IFS=: read ev wid; do
     case $ev in
         # window creation
-        16) wattr o $wid || corner md $wid ;;
+        16) wattr o $wid || corner.sh md $wid ;;
 
         # mapping requests
         19) wattr o $wid \
