@@ -23,7 +23,7 @@ mod4 + alt + shift + {h,j,k,l}
  wrs {-40 0,0 +40, 0 -40, +40 0} $(pfw)
 
 mod4 + {g,y,u,b,n}
- ~/bin/corner.sh {md,tl,tr,bl,br}
+ ~/wmutils/corner.sh {md,tl,tr,bl,br}
 	 
 mod4 + ctrl + q
  pkill xinit
@@ -32,36 +32,36 @@ alt + X
  killw $(pfw)
 
 mod4 + x
- ~/bin/fullscreen $(pfw)
+ ~/wmutils/fullscreen.sh $(pfw)
 
 mod4 + r
  chwso -i $(pfw)
 
 alt + {Tab, shift + Tab}
- ~/bin/vroum.sh {next,prev} 2>/dev/null && \
+ ~/wmutils/vroum {next,prev} 2>/dev/null && \
  wmp -a $(wattr xy $(pfw)) && \
- wmp -r $(wattr wh $(pfw))		
+ wmp -r $(wattr wh $(pfw))
 
 alt + {h,j,k,l}
- ~/bin/focus {h,j,k,l}
-
-mod4 + {F1,F2,F3,F4,F5}
- ~/bin/groaw -t {1,2,3,4,5}
+ ~/wmutils/focus {h,j,k,l}
+ 
+ mod4 + {F1,F2,F3,F4,F5}
+ ~/wmutils/groaw -t {1,2,3,4,5}
 
 mod4 + alt + {F1,F2,F3,F4,F5}
- ~/bin/groaw -d all; \
- ~/bin/groaw -o {1,2,3,4,5}
+ ~/wmutils/groaw -d all; \
+ ~/wmutils/groaw -o {1,2,3,4,5}
 
 mod4 + shift + {F1,F2,F3,F4,F5}
- ~/bin/groaw -a {1,2,3,4,5}
+ ~/wmutils/groaw -a {1,2,3,4,5}
 
 mod4 + BackSpace
- ~/bin/groaw -d all
+ ~/wmutils/groaw -d all
 
 mod4 + {t,v}
- ~/bin/tile {-h,-v}
+ ~/wmutils/tile.sh {-h,-v}
 
 mod4 + s
- ~/bin/grid
+ ~/wmutils/grid.sh
 
 # vim: set foldmethod=marker syntax=conf:
