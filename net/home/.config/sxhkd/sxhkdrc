@@ -45,18 +45,15 @@ alt + {Tab, shift + Tab}
 alt + {h,j,k,l}
  ~/wmutils/focus {h,j,k,l}
  
- mod4 + {F1,F2,F3,F4,F5}
- ~/wmutils/groaw -t {1,2,3,4,5}
+mod4 + shift + {1,2,3,4}
+  groaw -d all; \
+  groaw -a {1,2,3,4}
 
-mod4 + alt + {F1,F2,F3,F4,F5}
- ~/wmutils/groaw -d all; \
- ~/wmutils/groaw -o {1,2,3,4,5}
+mod4 + {1,2,3,4}
+  groaw -t {1,2,3,4}
 
-mod4 + shift + {F1,F2,F3,F4,F5}
- ~/wmutils/groaw -a {1,2,3,4,5}
-
-mod4 + BackSpace
- ~/wmutils/groaw -d all
+mod4 + slash
+  groaw -d all
 
 mod4 + {t,v}
  ~/wmutils/tile.sh {-h,-v}
