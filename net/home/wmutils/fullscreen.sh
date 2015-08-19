@@ -38,4 +38,4 @@ fi
 
 # now focus the window, and put it in front, no matter which state we're in, and
 # put the cursor on its bottom-right corner (for consistency)
-focus.sh $1
+focus $1

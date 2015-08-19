@@ -4,7 +4,7 @@
 # groaw - group, organize and arrange windows (or just a bear behind you)
 
 GROOT=/tmp/groaw.d
-GNUMBER=3
+GNUMBER=5
 
 usage() {
         echo "$(basename $0) [-h] [-admtu <gid>]"

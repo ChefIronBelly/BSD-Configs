@@ -22,9 +22,9 @@ sxhkd &
 
 xsetroot -cursor_name left_ptr
 #xsetroot -solid '#76535a'
-hsetroot -fill ~/Pictures/wallpapers/clear_day_light.jpg #-tint '#c7c7c7' #-blur 1
+hsetroot -fill ~/Pictures/wallpapers/olympic.jpg #-tint '#c7c7c7' #-blur 1
 
 wew | yawee &
-#pulse &
+
 exec xwait
 # exec cwm
