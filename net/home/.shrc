@@ -20,6 +20,7 @@ alias rec='ffmpeg2 -f x11grab -s 1280x800 -an -i :0.0 -c:v libvpx -b:v 5M -crf 1
 alias info='nbinfo.sh'
 alias todo='vi ~/todo'
 alias rnet='sudo /etc/rc.d/network restart'
+alias zzz='xlock'
 
 # # be paranoid
 # alias cp='cp -ip'
