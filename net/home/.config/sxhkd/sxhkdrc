@@ -1,5 +1,5 @@
 mod4 + Return
- xterm
+ urxvt
 	 
 {mod4 + w,XF86HomePage}
  firefox
@@ -60,5 +60,3 @@ mod4 + {t,v}
 
 mod4 + s
  ~/wmutils/grid.sh
-
-# vim: set foldmethod=marker syntax=conf:
