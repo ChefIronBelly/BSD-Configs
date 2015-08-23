@@ -18,9 +18,9 @@
 #define base0E #747474
 #define base0F #5e5e5e
 
-*.foreground:   base05
-*.background:   base00
-*.cursorColor:  base05
+*.foreground:   base06
+*.background:   base03
+*.cursorColor:  base06
 
 *.color0:       base00
 *.color1:       base08
