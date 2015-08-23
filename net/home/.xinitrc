@@ -26,4 +26,5 @@ xsetroot -cursor_name left_ptr
 #xsetroot -solid '#76535a'
 hsetroot -fill ~/Pictures/wallpapers/olympic.jpg
 
+wew | focus_watcher.sh &
 exec xwait
