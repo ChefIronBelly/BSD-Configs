@@ -1,10 +1,10 @@
 #!/bin/sh
 
 font="monaco:size=10"
-ico_font="fontawesome-webfont:size=11"
-bg="#ff001100"
-fg="#ff00bb00"
-hl="#ff00bb00"
+ico_font="fontawesome-webfont:size=10"
+bg="#ff525252"
+fg="#ffe3e3e3"
+hl="#ffe3e3e3"
 
 default_geometry() {
     # get screen size
