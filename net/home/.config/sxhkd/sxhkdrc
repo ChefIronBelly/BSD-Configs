@@ -22,8 +22,8 @@ mod4 + alt + {h,j,k,l}
 mod4 + alt + shift + {h,j,k,l}
  wrs {-40 0,0 +40, 0 -40, +40 0} $(pfw)
 
-mod4 + {g,y,u,b,n}
- ~/wmutils/corner.sh {md,tl,tr,bl,br}
+mod4 + {h,k,j,l}
+ ~/wmutils/closest.sh {h,j,k,l}
 	 
 mod4 + ctrl + q
  pkill xinit
@@ -38,25 +38,21 @@ mod4 + r
  chwso -i $(pfw)
 
 alt + {Tab, shift + Tab}
- ~/wmutils/vroum {next,prev} 2>/dev/null && \
+ ~/wmutils/focus.sh {next,prev} 2>/dev/null && \
  wmp -a $(wattr xy $(pfw)) && \
  wmp -r $(wattr wh $(pfw))
 
-alt + {h,j,k,l}
- ~/wmutils/focus {h,j,k,l}
- 
 mod4 + shift + {1,2,3,4}
-  groaw -d all; \
-  groaw -a {1,2,3,4}
+ ~/wmutils/groups.sh -s $(pfw) {1,2,3,4}
 
 mod4 + {1,2,3,4}
-  groaw -t {1,2,3,4}
-
-mod4 + slash
-  groaw -d all
+ ~/wmutils/groups.sh -t {1,2,3,4}
 
 mod4 + {t,v}
  ~/wmutils/tile.sh {-h,-v}
 
 mod4 + s
- ~/wmutils/grid.sh
+ ~/wmutils/switch_grid.sh
+ 
+mod4 + q
+ pkill -USR1 -x sxhkd

@@ -4,23 +4,22 @@
 # window focus wrapper that sets borders and can focus next/previous window
 
 BW=${BW:-2}                    # border width
-ACTIVE=${ACTIVE:-0xb9b9b9}     # active border color
-INACTIVE=${INACTIVE:-0x#101010} # inactive border color
+ACTIVE=${ACTIVE:-0xffffff}     # active border color
+INACTIVE=${INACTIVE:-0x333333} # inactive border color
 
 # get current window id
 CUR=$(pfw)
 
 usage() {
-    echo "usage: $(basename $0) <next|prev|wid>" >&2
+    echo "usage: $(basename $0) <next|prev|wid>"
     exit 1
 }
 
 setborder() {
     ROOT=$(lsw -r)
 
-    # check that window exists and shouldn't be ignored
+    # check if window exists
     wattr $2 || return
-    wattr o $2 && return
 
     # do not modify border of fullscreen windows
     test "$(wattr xywh $2)" = "$(wattr xywh $ROOT)" && return
@@ -39,9 +38,13 @@ case $1 in
 esac
 
 # exit if we can't find another window to focus
-test -z "$wid" && { echo "$(basename $0): no window to focus" >&2; exit 1; }
+test -z "$wid" && echo "$(basename $0): can't find a window to focus" >&2 && exit 1
 
+setborder inactive $CUR # set inactive border on current window
+setborder active $wid   # activate the new window
 chwso -r $wid           # put it on top of the stack
 wtf $wid                # set focus on it
-setborder active $wid   # activate the new window
-setborder inactive $CUR # set inactive border on current window
+
+# you might want to remove this for sloppy focus
+wmp -a $(wattr xy $wid) # move the mouse cursor to
+wmp -r $(wattr wh $wid) # .. its bottom right corner

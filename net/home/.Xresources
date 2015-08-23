@@ -3,20 +3,27 @@ URxvt.scrollBar: false
 URxvt.font: xft:monaco:size=10:antialias=true:hinting=true
 URxvt*dynamicColors: on
 URxvt.cursorBlink: 1
-URxvt*geometry: 57x16
+URxvt*geometry: 58x18
 URxvt*loginShell: true
 URxvt*scrollBar: false
 URxvt*saveLines: 65535
 URxvt*override-redirect: false
-URxvt*internalBorder: 8
+URxvt*internalBorder: 4
 URxvt.intensityStyles: false
-URxvt.letterSpace: -1.5
+!#URxvt.letterSpace: -1.5
 !URxvt*shading: 80
 !URxvt*transparent: true
+
+URxvt.perl-ext-common: default,keyboard-select,url-select,clipboard
+URxvt.modifier: super
 URxvt*perl-lib:         /usr/lib/urxvt/perl/
 URxvt*perl-ext-common:  default,matcher
 URxvt*matcher.button:   1
 URxvt*urlLauncher:      /usr/pkg/bin/firefox
+
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 
 Xft*dpi:                96
 Xft*antialias:          true
@@ -32,8 +39,8 @@ Xft.lcdfilter:          lcddefault
 !#include </home/chef/.colors/base16-default>
 !#include </home/chef/.colors/base16-eighties>
 !#include </home/chef/.colors/base16-flat>
-!#include </home/chef/.colors/base16-grayscale>
-#include </home/chef/.colors/base16-greenscreen>
+#include </home/chef/.colors/base16-grayscale>
+!#include </home/chef/.colors/base16-greenscreen>
 !#include </home/chef/.colors/base16-monokai>
 !#include </home/chef/.colors/base16-ocean>
 !#include </home/chef/.colors/base16-tomorrow>
