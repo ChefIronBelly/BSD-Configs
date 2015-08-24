@@ -1,8 +1,5 @@
 mod4 + Return
  urxvt
-	 
-{mod4 + w,XF86HomePage}
- firefox
 
 mod4 + p
  ~/bin/dmenu_go.sh
@@ -53,6 +50,6 @@ mod4 + {t,v}
 
 mod4 + s
  ~/wmutils/switch_grid.sh
- 
-mod4 + q
- pkill -USR1 -x sxhkd
+
+mod4 + {y,g,u}
+ ~/wmutils/middles.sh {y,g,u}
