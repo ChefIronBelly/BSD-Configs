@@ -13,11 +13,11 @@ X=0
 Y=0
 
 case $1 in
-    y) X=$((SW/4 - W/2 - BW + 40))
+    y) X=$((SW/4 - W/2 - BW + 20))
        Y=$((SH/2 - H/2 - BW));;
     g) X=$((SW/2 - W/2 - BW))
        Y=$((SH/2 - H/2 - BW)) ;;
-    u) X=$((SW/2 + W/4 - BW - 80))
+    u) X=$((SW/2 + W/4 - BW - 90))
        Y=$((SH/2 - H/2 - BW));;    
 esac
 
