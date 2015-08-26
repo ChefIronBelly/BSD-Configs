@@ -22,7 +22,7 @@ alias info='nbinfo.sh'
 alias todo='vi ~/todo'
 alias rnet='sudo /etc/rc.d/network restart'
 alias zzz='xlock'
-alias shootme='scrot -cd5 ~/Pictures/scrots/$(date +%m-%d-%Y-%H-%M-%S).png'
+alias shootme='scrot -cd5 ~/Pictures/scrots/scrot-$(date +%m-%d-%Y-%H-%M-%S).png'
 
 # # be paranoid
 # alias cp='cp -ip'
