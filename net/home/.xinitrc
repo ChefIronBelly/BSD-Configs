@@ -18,13 +18,16 @@ xset +fp /home/chef/.fonts/
 xset fp rehash
 
 xrdb -load ~/.Xresources
-sxhkd &
 
+export XCOL0=3f3f3f
+export XCOL5=dcdccc
+
+sxhkd &
 urxvtd &
 
 xsetroot -cursor_name left_ptr
 #xsetroot -solid '#76535a'
-hsetroot -fill ~/Pictures/wallpapers/olympic.jpg
+hsetroot -fill ~/Pictures/wallpapers/epic.png
 
 wew | focus_watcher.sh &
 exec xwait
