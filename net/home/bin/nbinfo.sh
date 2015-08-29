@@ -1,17 +1,5 @@
 #!/usr/pkg/bin/bash
 
-# based on the work of pidsley/codemangler and screenFetch.
-# https://github.com/pidsley/codemangler
-# https://github.com/KittyKatt/screenFetch
-
-# simple screen information script
-# similar to archey and screenfetch without annoying ASCII graphics
-
-# this script is provided with NO GUARANTEE and NO SUPPORT 
-# if it breaks or does not do what you want, FIX IT YOURSELF
-
-VERSION="0.1"
-
 # define colors for color-echo
 red="\e[1;31m"
 grn="\e[32m"
@@ -31,17 +19,11 @@ wms=( 2bwm 2wm 9wm aewm afterstep ahwm alopex amiwm antiwm awesome blackbox bspw
     uwm vtwm w9wm weewm wind windowlab wm2 wmaker wmfs wmii wmx xfwm4 xmonad xoat yeahwm )
 
 color-echo() {  # print with colors
-	echo -e "$f1$1: $rst$2"
+	echo -e "$cyn$1: $rst$2"
 }
 
 print-kernel() {
 	color-echo 'Kernel' '........ '"$(uname -mrs)"
-}
-
-print-uptime() {
-	unset uptime
-	uptime=$(uptime | awk '{$1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; sub(" days","d");sub(",","");sub(":","h ");sub(",","m"); print}')
-	color-echo 'Uptime' "$uptime"
 }
 
 print-shell() {
@@ -63,13 +45,6 @@ print-language() {
 
 print-cpu() {
 	cpu=$(awk -F': ' '/model name/ {gsub("\\(R\\)",""); gsub("\\(TM\\)",""); print $2; exit}' /proc/cpuinfo)
-#	cpu_mhz=$(awk -F':' '/cpu MHz/{ print int($2+.5) }' /proc/cpuinfo | head -n 1)
-#	if [ $(echo $cpu_mhz | cut -d. -f1) -gt 999 ];then
-#		cpu_ghz=$(awk '{print $1/1000}' <<< "${cpu_mhz}")
-#		cpu="$cpu @ ${cpu_ghz}GHz"
-#	else
-#	cpu="$cpu @ ${cpu_mhz}MHz"
-#	fi
 	color-echo 'CPU' '........... '"$cpu"
 }
 
@@ -83,9 +58,7 @@ print-disk() {
 }
 
 print-packages() {
-	pkgs=$(if TMPDIR=/dev/null ASSUME_ALWAYS_YES=1 PACKAGESITE=file:///nonexistent pkg info pkg >/dev/null 2>&1; then 
-	pkg info | wc -l | awk '{print $1}'; else pkg_info | wc -l | awk '{sub(" ", "");print $1}'; fi)
-	
+	pkgs=$(pkg_info | wc -l | awk '{sub(" ", "");print $1}')
 	color-echo 'Packages' '...... '"$pkgs"
 }
 
@@ -115,32 +88,30 @@ print-wm() {
 	        break
         fi
     done
-    color-echo 'WM' ' ........... ''nul, wmutils active'
+    color-echo 'WM' '............ ''nul, wmutils active'
 }
            
 print-font() {
 	font="Not Found"
 	if [[ -f $HOME/.Xresources ]]; then
-	font=$(grep '*faceName:' $HOME/.Xresources| awk -F':' '{print $2}')
-	fontsize=$(grep '*faceSize:' $HOME/.Xresources| awk -F':' '{print $2}')
+	font=$(grep 'URxvt.font:' $HOME/.Xresources| awk -F':' '{print $3}')
+	#fontsize=$(grep 'URxvt.font:' $HOME/.Xresources| awk -F':' '{print $4}')
 	fi
-	color-echo 'Font' ' .........'"$font$fontsize"
+	color-echo 'Font' '.......... '"$font$fontsize"
 }
 
 print-distro() {
 	PRETTY_NAME=$(uname)
 	if [[ -n "$PRETTY_NAME" ]]; then
-        color-echo 'OS' ' ........... '"$PRETTY_NAME"
+        color-echo 'OS' '............ '"$PRETTY_NAME"
 	else
-        color-echo 'OS' ' ........... '"not found"
+        color-echo 'OS' '............ '"not found"
 	fi
 }
 
 print-gitdir() {
-	
-gitdir="https://github.com/ChefIronBelly"
-
-color-echo 'Github' "$gitdir"
+	gitdir="/ChefIronBelly"
+	color-echo 'Github' '........ '"$gitdir"
 
 }
 
@@ -155,11 +126,6 @@ print-colors() {
 	done
 	echo -e "$rst\n"
 }
-
-if [[ $1 = '-v' ]]; then # print version information and exit
-	echo $(basename "$0") / version: $VERSION / wm count: ${#wms[*]} 
-	exit
-fi
 
 clear
 echo -e "\n$prp$USER@$HOSTNAME$rst\n"

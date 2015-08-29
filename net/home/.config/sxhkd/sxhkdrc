@@ -53,3 +53,6 @@ mod4 + s
 
 mod4 + {y,g,u}
  ~/wmutils/middles.sh {y,g,u}
+
+alt + w
+ ~/bin/weatherpop.sh %\{c\} $(myweather.sh)

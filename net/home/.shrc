@@ -12,8 +12,8 @@ alias h='fc -l'
 alias p='pwd'
 alias j=jobs
 alias m=$PAGER
-alias ll='ls -laFo'
-alias l='ls -l'
+alias ll='colorls -laFoG'
+alias l='colorls -lG'
 alias g='egrep -i'
 alias preview='feh -g 450x300+500+200 -R .01 --zoom fill'
 #alias rec='ffmpeg2 -f x11grab -s 1280x800 -an -i :0.0 -c:v libvpx -b:v 5M -crf 10 -quality realtime -y -loglevel quiet'
@@ -24,10 +24,9 @@ alias rnet='sudo /etc/rc.d/network restart'
 alias zzz='xlock'
 alias shootme='scrot -cd5 ~/Pictures/scrots/scrot-$(date +%m-%d-%Y-%H-%M-%S).png'
 
-# # be paranoid
-# alias cp='cp -ip'
-# alias mv='mv -i'
-# alias rm='rm -i'
+alias cp='cp -ip'
+alias mv='mv -i'
+alias rm='rm -i'
 
 PS1=""
  case `id -u` in

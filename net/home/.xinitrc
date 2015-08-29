@@ -19,15 +19,15 @@ xset fp rehash
 
 xrdb -load ~/.Xresources
 
-export XCOL0=3f3f3f
-export XCOL5=dcdccc
+export XCOL0=2b303b
+export XCOL5=c0c5ce
 
 sxhkd &
 urxvtd &
 
 xsetroot -cursor_name left_ptr
 #xsetroot -solid '#76535a'
-hsetroot -fill ~/Pictures/wallpapers/epic.png
+hsetroot -fill ~/Pictures/wallpapers/elegant_grey.jpg
 
 wew | focus_watcher.sh &
 exec xwait
