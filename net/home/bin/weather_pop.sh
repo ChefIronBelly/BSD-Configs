@@ -1,4 +1,4 @@
-#!/usr/pkg/bin/bash
+#!/bin/sh
 #
 # z3bra - (c) wtfpl 2014
 # Create a small popup with the given text
@@ -7,8 +7,7 @@
 
 
 # bar options
-font="DejaVu Sans Mono:size=10"
-ico_font="fontawesome-webfont:size=12"
+font="CamingoCode:size=11"
 bg="#ff${XCOL0}"
 fg="#ff${XCOL5}"
 hl="#ff${XCOL5}"
@@ -19,7 +18,7 @@ default_geometry() {
     x=$(wattr w `lsw -r`)
     y=$(wattr h `lsw -r`)
 
-    width=400
+    width=420
     height=20
 
     offy=21
@@ -42,4 +41,5 @@ done
 GEOM=${GEOM:-$(default_geometry)}
 SLEEP=${SLEEP:-5}
 
-(echo "%{c}$@"; sleep $SLEEP) | lemonbar -d -g $GEOM -f $font -f $ico_font -B $bg -F $fg
+(echo "%{c}$@"; sleep $SLEEP) | lemonbar -d -g $GEOM -f $font -B $bg -F $fg
+

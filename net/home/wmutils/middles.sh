@@ -9,8 +9,8 @@ BW=$(wattr b $CUR)
 W=$(wattr w $CUR)
 H=$(wattr h $CUR)
 
-offlm=20
-offrm=90
+offlm=90
+offrm=130
 
 X=0
 Y=0
@@ -23,5 +23,7 @@ case $1 in
     u) X=$((SW/2 + W/4 - BW - ${offrm}))
        Y=$((SH/2 - H/2 - BW));;    
 esac
+
+echo $X $Y
 
 wtp $X $Y $W $H $CUR

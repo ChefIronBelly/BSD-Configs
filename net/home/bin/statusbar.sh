@@ -1,6 +1,6 @@
 #!/bin/sh
 
-font="monaco:size=10"
+font="CamingoCode:size=11"
 ico_font="fontawesome-webfont:size=12"
 bg="#ff${XCOL0}"
 fg="#ff${XCOL5}"
@@ -11,7 +11,7 @@ default_geometry() {
     x=$(wattr w `lsw -r`)
     y=$(wattr h `lsw -r`)
 
-    width=400
+    width=420
     height=20
 
     offy=0
@@ -19,11 +19,6 @@ default_geometry() {
 
     echo "${width}x${height}+${offx}+${offy}"
 }
-
-cur() {
-   cur=$(cmus-info)
-   test -n "$cur" && echo $cur || echo "you ain't got nuthin' playin' "   
-   }
 
 ip() {
     ip=$(if_ip.sh)
