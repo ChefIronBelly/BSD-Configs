@@ -3,6 +3,14 @@
 # This is the default .profile file.
 # Users are expected to edit it to meet their own needs.
 #
+
+unset LC_ALL
+export LANG="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_ALL="" 
+
 export EDITOR=vi
 export EXINIT="se sm ai redraw sw=4"
 export VISUAL=${EDITOR}
