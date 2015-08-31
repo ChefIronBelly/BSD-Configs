@@ -1,6 +1,6 @@
-URxvt*font: xft:CamingoCode:pixelsize=12:antialias=true
+URxvt*font: xft:Anonymous Pro for Powerline:pixelsize=12:antialias=true
 URxvt*letterSpace: 0
-URxvt*lineSpace: -1
+URxvt*lineSpace: 0
 URxvt*termName: rxvt-256color
 URxvt*geometry: 58x18
 URxvt*internalBorder: 4
@@ -18,5 +18,15 @@ URxvt.clipboard.copycmd:  xsel -ib
 URxvt.clipboard.pastecmd: xsel -ob
 URxvt.saveLines: 65535
 !URxvt*altSendsEscape: true
+
+Xft*dpi:                96
+Xft*antialias:          true
+Xft*hinting:            none
+Xft.autohint:           0
+Xft.antialias:          1
+Xft.hinting:            true
+Xft.hintstyle:          hintfull
+Xft.rgba:               rgb
+Xft.lcdfilter:          lcddefault
 
 #include </home/chef/.colors/blues>
