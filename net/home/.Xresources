@@ -1,23 +1,21 @@
-URxvt*font: xft:Anonymous Pro for Powerline:pixelsize=12:antialias=true
-URxvt*letterSpace: 0
-URxvt*lineSpace: 0
-URxvt*termName: rxvt-256color
-URxvt*geometry: 58x18
-URxvt*internalBorder: 4
-URxvt*scrollBar: false
-URxvt*transparent: true
-URxvt*shading: 30
-URxvt*fading: 0
-URxvt*perl-lib: /usr/pkg/lib/urxvt/perl5/
-URxvt.perl-ext-common: default,clipboard,keyboard-select
-URxvt.keysym.M-Escape: perl:keyboard-select:activate
-URxvt.keysym.M-c:   perl:clipboard:copy
-URxvt.keysym.C-v:   perl:clipboard:paste
-URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
-URxvt.clipboard.copycmd:  xsel -ib
-URxvt.clipboard.pastecmd: xsel -ob
-URxvt.saveLines: 65535
-!URxvt*altSendsEscape: true
+XTerm*faceName: Dejavu Sans Mono:antialias=true
+XTerm*faceNameDoublesize: xft:fontawesome-webfont:style=Regular
+XTerm*faceSize: 10
+
+XTerm*vt100*geometry: 58x18		
+XTerm*saveLines: 4096
+XTerm*loginShell: true
+XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+XTerm*termName: xterm-256color
+XTerm*eightBitInput: false
+XTerm*locale: true
+XTerm*metaSendsEscape: true
+XTerm*borderWidth: 0
+XTerm*scaleHeight: 1.01
+XTerm*utf8: 1
+XTerm*selectToClipboard: true
+XTerm*ScrollBar: false
+XTerm*ScrollKey: true
 
 Xft*dpi:                96
 Xft*antialias:          true
@@ -26,7 +24,8 @@ Xft.autohint:           0
 Xft.antialias:          1
 Xft.hinting:            true
 Xft.hintstyle:          hintfull
+Xft.dpi:                96
 Xft.rgba:               rgb
 Xft.lcdfilter:          lcddefault
 
-#include </home/chef/.colors/blues>
+#include </home/chef/.colors/alien>

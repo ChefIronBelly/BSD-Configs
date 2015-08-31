@@ -1,6 +1,6 @@
-XTerm*faceName: Menlo:antialias=true
+XTerm*faceName: Dejavu Sans Mono:antialias=true
 XTerm*faceNameDoublesize: xft:fontawesome-webfont:style=Regular
-XTerm*faceSize: 10
+XTerm*faceSize: 12
 
 XTerm*vt100*geometry: 58x18		
 XTerm*saveLines: 4096
@@ -28,11 +28,4 @@ Xft.dpi:                96
 Xft.rgba:               rgb
 Xft.lcdfilter:          lcddefault
 
-!#include </home/chef/.colors/base16-default>
-!#include </home/chef/.colors/base16-eighties>
-!#include </home/chef/.colors/base16-flat>
-!#include </home/chef/.colors/base16-grayscale>
-#include </home/chef/.colors/base16-greenscreen>
-!#include </home/chef/.colors/base16-monokai>
-!#include </home/chef/.colors/base16-ocean>
-!#include </home/chef/.colors/base16-tomorrow>
+#include </home/chef/.colors/alien>
