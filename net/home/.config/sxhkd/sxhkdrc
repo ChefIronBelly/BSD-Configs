@@ -2,7 +2,7 @@
 # Chef
 
 mod4 + Return
- urxvt
+ xterm
 
 mod4 + p
  ~/bin/dmenu_go.sh
@@ -61,7 +61,7 @@ mod4 + {y,g,u}
  ~/wmutils/middles.sh {y,g,u}
 
 alt + w
- ~/bin/weather_pop.sh %\{c\} $(myweather.sh)
+ ~/bin/weather_pop.sh %\{c\} $(myweather.sh) | skroll -d 0.25
  
 Print
  scrot -q 100 ~/Pictures/scrots/scrot-$(date +%m-%d-%Y-%H-%M-%S).png

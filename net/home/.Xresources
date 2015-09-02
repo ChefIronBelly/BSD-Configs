@@ -1,4 +1,4 @@
-XTerm*faceName: Dejavu Sans Mono:antialias=true
+XTerm*faceName:  xft:DejaVu Sans Mono:style=Book
 XTerm*faceNameDoublesize: xft:fontawesome-webfont:style=Regular
 XTerm*faceSize: 10
 
@@ -28,4 +28,4 @@ Xft.dpi:                96
 Xft.rgba:               rgb
 Xft.lcdfilter:          lcddefault
 
-#include </home/chef/.colors/alien>
+#include </home/chef/.colors/zenburn>

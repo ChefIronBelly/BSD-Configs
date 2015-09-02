@@ -5,13 +5,16 @@
 #
 # depends: lemonbar, wattr and common sense
 
-
 # bar options
-font="CamingoCode:size=11"
-bg="#ff${XCOL0}"
-fg="#ff${XCOL5}"
-hl="#ff${XCOL5}"
+font="monofur for Powerline:size=12"
 
+#alpha
+a="#ff"
+
+#default colors
+bg="${a}${XCOL0}"
+fg="${a}${XCOL7}"
+hl="${a}${XCOL7}"
 
 default_geometry() {
     # get screen size
@@ -41,5 +44,5 @@ done
 GEOM=${GEOM:-$(default_geometry)}
 SLEEP=${SLEEP:-5}
 
-(echo "%{c}$@"; sleep $SLEEP) | lemonbar -d -g $GEOM -f $font -B $bg -F $fg
+(echo "%{c}$@"; sleep $SLEEP) | lemonbar -d -g $GEOM -f "DejaVu Sans Mono:size=10" -B $bg -F $fg
 

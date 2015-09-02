@@ -10,23 +10,26 @@ xset r rate 200 30
 xset +fp /home/chef/.fonts/
 xset fp rehash
 
-xrdb -load ~/.Xresources
+xrdb -load ~/.Xresources &
 
-export XCOL0=000101
-export XCOL1=010d13
-export XCOL2=01181e
-export XCOL3=02242c
-export XCOL4=04333d
-export XCOL5=074652
-export XCOL6=0b5a68
-export XCOL7=1185b4
+export XCOL0=3f3f3f
+export XCOL1=705050
+export XCOL2=60b48a
+export XCOL3=f0dfaf
+export XCOL4=506070
+export XCOL5=dc8cc3
+export XCOL6=8cd0d3
+export XCOL7=dcdccc
+export XCOL12=94bff3
 
 sxhkd &
-urxvtd &
+#urxvtd &
+
+statusbar.sh &
 
 xsetroot -cursor_name left_ptr
-#xsetroot -solid '#35465c'
-hsetroot -fill ~/Pictures/wallpapers/testtube.png
+xsetroot -solid '#333333'
+#hsetroot -fill ~/Pictures/wallpapers/mountain.jpg -tint
 
 wew | focus_watcher.sh &
 exec xwait
