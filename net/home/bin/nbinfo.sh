@@ -9,7 +9,7 @@ blu="\e[34m"
 prp="\e[35m"
 rst="\e[0m"
 
-f1="\e[1;37m"
+f1="\e[0;007m"
 f2="\e[0;37m"
 
 # or use wm array -- add any that need to be recognized
@@ -19,7 +19,7 @@ wms=( 2bwm 2wm 9wm aewm afterstep ahwm alopex amiwm antiwm awesome blackbox bspw
     uwm vtwm w9wm weewm wind windowlab wm2 wmaker wmfs wmii wmx xfwm4 xmonad xoat yeahwm )
 
 color-echo() {  # print with colors
-	echo -e "$cyn$1: $rst$2"
+	echo -e "$red$1: $rst$2"
 }
 
 print-kernel() {
@@ -92,12 +92,14 @@ print-wm() {
 }
            
 print-font() {
-	font="Not Found"
-	if [[ -f $HOME/.Xresources ]]; then
-	font=$(grep 'URxvt.font:' $HOME/.Xresources| awk -F':' '{print $3}')
-	#fontsize=$(grep 'URxvt.font:' $HOME/.Xresources| awk -F':' '{print $4}')
-	fi
-	color-echo 'Font' '.......... '"$font$fontsize"
+    fontstr=$(xrdb -query 2>/dev/null | grep '*faceName:')
+    if [[ $fontstr =~ xft ]]; then # using an xft font
+        d=':'
+    else # using bitmap font
+        d='-'
+    fi
+    font=$(echo $fontstr | awk -F$d '{ print $3 }')
+    [[ $font != "" ]] && color-echo Font '.......... '"$font"
 }
 
 print-distro() {
@@ -112,7 +114,6 @@ print-distro() {
 print-gitdir() {
 	gitdir="/ChefIronBelly"
 	color-echo 'Github' '........ '"$gitdir"
-
 }
 
 print-colors() {
@@ -127,8 +128,16 @@ print-colors() {
 	echo -e "$rst\n"
 }
 
+print-xcolors() {
+echo -e '\n\e[00;30m ██ \e[00;31m ██ \e[0;32m ██ \e[00;30m ██ \e[0;34m ██ \e[00;35m ██ \e[0;36m ██ \e[00;37m ██'
+}
+
+print-sword() {
+echo -e '\n\e[00;37m @xxxx[{::::::::::::::::::::::::::::::::::>'
+}
+
 clear
-echo -e "\n$prp$USER@$HOSTNAME$rst\n"
+echo -e "\n$red$USER@$HOSTNAME$rst\n"
 print-distro
 print-packages
 #print-uptime
@@ -146,6 +155,7 @@ print-kernel
 print-cpu
 echo
 print-gitdir
-echo
+#print-xcolors
+#print-sword
 #print-colors
-#echo
+echo

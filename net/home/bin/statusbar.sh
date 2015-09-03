@@ -16,7 +16,7 @@ default_geometry() {
     x=$(wattr w `lsw -r`)
     y=$(wattr h `lsw -r`)
 
-    width=1435
+    width=1440
     height=20
 
     offy=0
@@ -32,7 +32,7 @@ statusbar() {
 
 cur() {
    cur=$(cmus-info)
-   test -n "$cur" && echo $cur || echo " StereoMatic  "   
+   test -n "$cur" && echo $cur || echo " // StereoMatic //"   
    }
 
 ip() {
@@ -50,7 +50,7 @@ vol() {
     echo $vol
 }
 
-echo %{l}%{B${a}${XCOL0}}%{F${a}${XCOL7}}" " %{F-} $(cur)%{F#ffffffff}%{c}" "%{F-}%{F#ffFFC0CB}""%{F-}%{F#ffffffff}"  "%{F-} %{r} %{F${a}${XCOL7}}" "%{F-} $(ip)  %{F${a}${XCOL7}}   %{F-}$(vol) %{F${a}${XCOL7}}   %{F-}$(clock)" "
+echo %{l}%{B${a}${XCOL0}}%{F${a}${XCOL12}}%{A:xterm -e cmus:}" "%{A} %{F-} $(cur)%{c}%{F${a}${XCOL5}}""%{F-}%{r} %{F${a}${XCOL12}}" "%{F-} $(ip)  %{F${a}${XCOL12}}   %{F-}$(vol) %{F${a}${XCOL12}}%{A:xcal:}   %{F-}$(clock)" "%{A}
 }
 
 while true
@@ -58,4 +58,4 @@ while true
     echo "$(statusbar)"
    sleep 0.5
       
- done |  lemonbar -d -g $GEOM -f "DejaVu Sans Mono:size=10" -f $ico_font -B $bg -F $fg
+ done |  lemonbar -p -d -g $GEOM -f "DejaVu Sans Mono:size=10" -f $ico_font -B $bg -F $fg | while read line; do eval "$line"; done
