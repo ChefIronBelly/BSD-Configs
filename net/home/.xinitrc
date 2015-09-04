@@ -20,7 +20,6 @@ export XCOL4=506070
 export XCOL5=dc8cc3
 export XCOL6=8cd0d3
 export XCOL7=dcdccc
-export XCOL12=94bff3
 
 sxhkd &
 #urxvtd &
@@ -28,8 +27,8 @@ sxhkd &
 statusbar.sh &
 
 xsetroot -cursor_name left_ptr
-xsetroot -solid '#333333'
-#hsetroot -fill ~/Pictures/wallpapers/mountain.jpg -tint
+#xsetroot -solid '#333333'
+hsetroot -fill ~/Pictures/wallpapers/flowers.jpg
 
 wew | focus_watcher.sh &
 exec xwait
