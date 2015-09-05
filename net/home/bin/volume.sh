@@ -2,7 +2,7 @@
 
 device=outputs.master
 inc=10
-volume=`mixerctl outputs.master | cut -d "," -f 2`
+volume=`mixerctl $device | cut -d "," -f 2`
 X=0
 
 case $1 in
