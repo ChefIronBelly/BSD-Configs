@@ -1,10 +1,22 @@
 #!/bin/sh
 
-volume_output=`mixerctl outputs.master | cut -d "=" -f 2`
-left_volume=`echo $volume_output | cut -d "," -f 1`
-right_volume=`echo $volume_output | cut -d "," -f 2`
+device=outputs.master
+inc=10
+volume=`mixerctl outputs.master | cut -d "," -f 2`
+X=0
 
-volume_average=$(( ($left_volume+$right_volume)/2 ))
-volume_percent=$(( 100*$volume_average/255 ))
-
-echo "$volume_percent% " 
+case $1 in
+	9 )
+		X=$((${volume} + ${inc}))
+		mixerctl -w $device=$X,$X >/dev/null;;
+	8 )
+		X=$((${volume} - ${inc}))
+		mixerctl -w $device=$X,$X >/dev/null;;
+	0 )
+		if [ ${volume} != "0" ]; then
+			mixerctl -w $device=0,0
+		else
+			mixerctl -w $device=208,208
+		fi
+		;;
+esac

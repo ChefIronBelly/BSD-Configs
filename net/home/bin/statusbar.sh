@@ -26,7 +26,6 @@ default_geometry() {
 }
 
 GEOM=${GEOM:-$(default_geometry)}
-#SLEEP=${SLEEP:-15}
 
 statusbar() {
 
@@ -46,11 +45,11 @@ clock() {
 }
 
 vol() {
-    vol=$(volume.sh)
+    vol=$(volumebar.sh)
     echo $vol
 }
 
-echo %{l}%{B${a}${XCOL0}}%{F${a}${XCOL12}}%{A:xterm -e cmus:}" "%{A} %{F-} $(cur)%{c}%{F${a}${XCOL5}}""%{F-}%{r} %{F${a}${XCOL12}}" "%{F-} $(ip)  %{F${a}${XCOL12}}   %{F-}$(vol) %{F${a}${XCOL12}}%{A:xcal:}   %{F-}$(clock)" "%{A}
+echo %{l}%{B${a}${XCOL0}}%{F${a}${XCOL4}}%{A:xterm -e cmus:}" "%{A} %{F-} $(cur)%{c}%{F${a}${XCOL5}}""%{F-}%{r} %{F${a}${XCOL7}}" "%{F-} $(ip)  %{F${a}${XCOL7}}   %{F-}$(vol) %{F${a}${XCOL7}}%{A:xcal:}   %{F-}$(clock)" "%{A}
 }
 
 while true
