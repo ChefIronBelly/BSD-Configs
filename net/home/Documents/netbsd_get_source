@@ -1,0 +1,22 @@
+Before you can do an initial (full) checkout of the NetBSD sources via anonymous CVS, you first have to set an environment variable to tell cvs(1) which server to fetch the files from:
+
+$ export CVSROOT="anoncvs@anoncvs.NetBSD.org:/cvsroot"
+
+30.4.4. Fetching the NetBSD-current development branch
+
+To obtain the NetBSD-current source just omit “-r <BRANCH>” and replace it with “-A”:
+
+$ cd /usr
+$ cvs checkout -A -P src
+
+The “xsrc” module is obtained the same way:
+
+$ cd /usr
+$ cvs checkout -A -P xsrc
+
+To update your NetBSD-current source tree, add the -A flag:
+
+$ cd /usr/src
+$ cvs update -A -Pd
+
+The same applies to the “xsrc” module, but in that case you will have to change your working directory to /usr/xsrc first.
