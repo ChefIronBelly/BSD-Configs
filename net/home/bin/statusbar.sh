@@ -40,8 +40,13 @@ ip() {
 }
 
 clock() {
-    time=$(date +" %a, %b %d %I:%M")
+    time=$(date +" %I:%M")
     echo $time
+}
+
+dateclock() {
+    datetime=$(date +" %a, %b %d")
+    echo $datetime
 }
 
 vol() {
@@ -49,7 +54,7 @@ vol() {
     echo $vol
 }
 
-echo %{l}%{B${a}${XCOL0}}%{F${a}${XCOL4}}%{A:xterm -e cmus:}" "%{A} %{F-} $(cur)%{c}%{F${a}${XCOL5}}""%{F-}%{r} %{F${a}${XCOL7}}" "%{F-} $(ip)  %{F${a}${XCOL7}}   %{F-}$(vol) %{F${a}${XCOL7}}%{A:xcal:}   %{F-}$(clock)" "%{A}
+echo %{l}%{B${a}${XCOL0}}%{F${a}${XCOL4}}%{A:xterm -e cmus:}" "%{A} %{F-} $(cur)%{c}%{F${a}${XCOL7}}" "%{F-}%{F${a}${XCOL5}}""%{F-}%{F${a}${XCOL7}}"  "%{F-}%{r} %{F${a}${XCOL7}}" "%{F-} $(ip)  %{F${a}${XCOL7}}   %{F-}$(vol) %{F${a}${XCOL7}}    %{F-}$(dateclock)%{F${a}${XCOL7}}    %{F-}$(clock)"  "
 }
 
 while true
