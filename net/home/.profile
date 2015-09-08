@@ -28,4 +28,5 @@ export PATH
 # This will happen for every shell started, not just login shells.
 export ENV=$HOME/.shrc
 export PKG_PATH=ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD/$(uname -m)/7.0/All/
-export CVSROOT="anoncvs.NetBSD.org:/cvsroot"
+export CVSROOT="anoncvs@anoncvs.NetBSD.org:/cvsroot"
+

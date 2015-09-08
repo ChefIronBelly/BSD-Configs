@@ -31,7 +31,7 @@ statusbar() {
 
 cur() {
    cur=$(cmus-info)
-   test -n "$cur" && echo $cur || echo " // StereoMatic //"   
+   test -n "$cur" && echo $cur || echo " Select-o-matic"   
    }
 
 ip() {
