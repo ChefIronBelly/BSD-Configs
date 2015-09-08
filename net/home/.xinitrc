@@ -28,7 +28,7 @@ statusbar.sh &
 
 xsetroot -cursor_name left_ptr
 #xsetroot -solid '#333333'
-hsetroot -fill ~/Pictures/wallpapers/flowers.jpg
+hsetroot -tile ~/Pictures/wallpapers/bg-phish.jpg
 
 wew | focus_watcher.sh &
 exec xwait
