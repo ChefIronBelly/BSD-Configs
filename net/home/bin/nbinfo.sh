@@ -1,4 +1,4 @@
-#!/usr/pkg/bin/bash
+#!/usr/pkg/bin/mksh
 
 # define colors for color-echo
 red="\e[1;31m"
@@ -27,7 +27,8 @@ print-kernel() {
 }
 
 print-shell() {
-	color-echo 'Shell' '......... '"$SHELL"
+	fshell=$(echo $SHELL | cut -d '/' -f 5)
+	color-echo 'Shell' '......... '"$fshell"
 }
 
 print-tzone() {
@@ -93,12 +94,12 @@ print-wm() {
            
 print-font() {
     fontstr=$(xrdb -query 2>/dev/null | grep '*faceName:')
-    if [[ $fontstr =~ xft ]]; then # using an xft font
-        d=':'
-    else # using bitmap font
-        d='-'
-    fi
-    font=$(echo $fontstr | awk -F$d '{ print $3 }')
+#    if [[ $fontstr =~ xft ]]; then # using an xft font
+#        d=':'
+#    else # using bitmap font
+#        d='-'
+#    fi
+    font=$(echo $fontstr | awk -F: '{ print $3 }')
     [[ $font != "" ]] && color-echo Font '.......... '"$font"
 }
 
@@ -129,7 +130,7 @@ print-colors() {
 }
 
 print-xcolors() {
-echo -e '\n\e[00;30m ██ \e[00;31m ██ \e[0;32m ██ \e[00;30m ██ \e[0;34m ██ \e[00;35m ██ \e[0;36m ██ \e[00;37m ██'
+echo -e '\n\e[00;30m █ \e[00;31m █ \e[0;32m █ \e[00;30m █ \e[0;34m █ \e[00;35m █ \e[0;36m █ \e[00;37m █'
 }
 
 print-sword() {
@@ -137,7 +138,7 @@ echo -e '\n\e[00;37m @xxxx[{::::::::::::::::::::::::::::::::::>'
 }
 
 clear
-echo -e "\n$red$USER@$HOSTNAME$rst\n"
+echo -e "\n$red$USER@$(hostname)$rst\n"
 print-distro
 print-packages
 #print-uptime
@@ -155,7 +156,7 @@ print-kernel
 print-cpu
 echo
 print-gitdir
-#print-xcolors
+print-xcolors
 #print-sword
 #print-colors
 echo

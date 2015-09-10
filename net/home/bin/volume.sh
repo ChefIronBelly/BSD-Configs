@@ -8,10 +8,10 @@ X=0
 case $1 in
 	9 )
 		X=$((${volume} + ${inc}))
-		mixerctl -w $device=$X,$X >/dev/null;;
+		mixerctl -w $device=$X,$X 2>/dev/null;;
 	8 )
 		X=$((${volume} - ${inc}))
-		mixerctl -w $device=$X,$X >/dev/null;;
+		mixerctl -w $device=$X,$X 2>/dev/null;;
 	0 )
 		if [ ${volume} != "0" ]; then
 			mixerctl -w $device=0,0
