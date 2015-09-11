@@ -59,7 +59,7 @@ print-wm() {
 print-font() {
     fontstr=$(xrdb -query 2>/dev/null | grep '*faceName:')
     font=$(echo $fontstr | awk -F: '{ print $3 }')
-    [[ $font != "" ]] && color-echo Font ':::::::::: '"$font"
+    [[ $font != "" ]] && color-echo Font '---------- '"$font"
 }
 
 print-distro() {
