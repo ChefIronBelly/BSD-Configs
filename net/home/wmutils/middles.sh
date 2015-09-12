@@ -9,7 +9,7 @@ BW=$(wattr b $CUR)
 W=$(wattr w $CUR)
 H=$(wattr h $CUR)
 
-offlm=100
+offlm=105
 offrm=100
 
 X=0

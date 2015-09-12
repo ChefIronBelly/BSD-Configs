@@ -1,6 +1,6 @@
 #!/usr/pkg/bin/mksh
 
-[[ -o login ]] && source $HOME/.profile
+#[[ -o login ]] && source $HOME/.profile
 
 # some useful aliases
 alias h='fc -l'
