@@ -1,4 +1,4 @@
-XTerm*faceName:  xft:DejaVu Sans Mono:style=Book
+XTerm*faceName: xft:Hack:style=Regular
 XTerm*faceNameDoublesize: xft:fontawesome-webfont:style=Regular
 XTerm*faceSize: 10
 

@@ -19,7 +19,7 @@ wms=( 2bwm 2wm 9wm aewm afterstep ahwm alopex amiwm antiwm awesome blackbox bspw
     uwm vtwm w9wm weewm wind windowlab wm2 wmaker wmfs wmii wmx xfwm4 xmonad xoat yeahwm )
 
 color-echo() {  # print with colors
-	echo -e "$grn$1: $rst$2"
+	echo -e "$blu$1: $rst$2"
 }
 
 print-kernel() {
@@ -53,7 +53,7 @@ print-wm() {
 	        break
         fi
     done
-    color-echo 'WM' '------------ ''nul, wmutils active'
+    color-echo 'WM' '------------ ''null, wmutils engaged'
 }
            
 print-font() {

@@ -1,8 +1,5 @@
 #!/usr/pkg/bin/mksh
 
-#[[ -o login ]] && source $HOME/.profile
-
-# some useful aliases
 alias h='fc -l'
 alias p='pwd'
 alias j=jobs

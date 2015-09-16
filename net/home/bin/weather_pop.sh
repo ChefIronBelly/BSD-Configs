@@ -6,7 +6,7 @@
 # depends: lemonbar, wattr and common sense
 
 # bar options
-font="monofur for Powerline:size=12"
+font="Hack:size=10"
 
 #alpha
 a="#ff"
@@ -21,7 +21,7 @@ default_geometry() {
     x=$(wattr w `lsw -r`)
     y=$(wattr h `lsw -r`)
 
-    width=420
+    width=460
     height=20
 
     offy=21
@@ -44,5 +44,5 @@ done
 GEOM=${GEOM:-$(default_geometry)}
 SLEEP=${SLEEP:-5}
 
-(echo "%{c}$@"; sleep $SLEEP) | lemonbar -d -g $GEOM -f "DejaVu Sans Mono:size=10" -B $bg -F $fg
+(echo "%{c}$@"; sleep $SLEEP) | lemonbar -d -g $GEOM -f $font -B $bg -F $fg
 

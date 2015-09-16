@@ -22,8 +22,6 @@ export XCOL6=8cd0d3
 export XCOL7=dcdccc
 
 sxhkd &
-#urxvtd &
-
 statusbar.sh &
 
 xsetroot -cursor_name left_ptr
