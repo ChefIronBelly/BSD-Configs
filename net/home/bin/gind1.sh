@@ -1,7 +1,6 @@
 #!/bin/sh
 
 FSDIR=${FSDIR:-/tmp/groups.sh}
-
 group1=""
 
 if [ -f $FSDIR/group.1 ];
