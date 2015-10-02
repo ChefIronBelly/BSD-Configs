@@ -26,7 +26,7 @@ statusbar.sh &
 
 xsetroot -cursor_name left_ptr
 #xsetroot -solid '#333333'
-hsetroot -fill ~/Pictures/wallpapers/hd-wallpapers.jpg -tint '#343d46' -blur 1
+hsetroot -fill ~/Pictures/wallpapers/video_games_city.jpg 
 
 wew | focus_watcher.sh &
 exec wmutils
