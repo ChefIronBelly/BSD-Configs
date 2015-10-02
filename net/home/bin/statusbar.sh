@@ -7,7 +7,7 @@ ico_font="fontawesome-webfont:size=11"
 a="#ff"
 
 # default colors
-bg="${a}${XCOL0}"
+bg="${a}${XCOL1}"
 fg="${a}${XCOL7}"
 hl="#FFFFFF"
 
@@ -74,7 +74,7 @@ group4() {
     echo $group4
 }
 
-echo %{l}%{B${a}${XCOL0}}%{F${a}${XCOL4}}%{A:xterm -e cmus:}" "%{A}%{F-} $(cur)%{c}%{F${a}${XCOL5}}$(group1) $(group2) $(group3) $(group4) %{F-} %{r}%{F${a}${XCOL7}}" "%{F-} $(ip)  %{F${a}${XCOL7}}   %{F-}$(vol) %{F${a}${XCOL7}}    %{F-}$(dateclock)%{F${a}${XCOL7}}    %{F-}$(clock)"  "
+echo %{l}%{B${a}${XCOL0}}%{F${a}${XCOL3}}%{A:xterm -e cmus:}" "%{A}%{F-} $(cur)%{c}%{F${a}${XCOL3}}$(group1)%{F-} %{F${a}${XCOL3}}$(group2)%{F-} %{F${a}${XCOL3}}$(group3)%{F-} %{F${a}${XCOL3}}$(group4)%{F-} %{r}%{F${a}${XCOL3}}" "%{F-} $(ip)  %{F${a}${XCOL3}}   %{F-}$(vol) %{F${a}${XCOL3}}    %{F-}$(dateclock)%{F${a}${XCOL3}}   %{F-}$(clock)%{F${a}${XCOL3}}   %{F-}
 }
 
 while true

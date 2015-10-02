@@ -13,8 +13,8 @@ a="#ff"
 
 #default colors
 bg="${a}${XCOL0}"
-fg="${a}${XCOL7}"
-hl="${a}${XCOL7}"
+fg="${a}${XCOL5}"
+hl="${a}${XCOL5}"
 
 default_geometry() {
     # get screen size
