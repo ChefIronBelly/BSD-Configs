@@ -4,7 +4,7 @@
 # arrange windows in a tiled pattern
 
 # default values for gaps and master area
-PANEL=${PANEL:-0}
+PANEL=${PANEL:-20}
 GAP=${GAP:-20}
 MASTER=${MASTER:-900}
 
@@ -31,7 +31,8 @@ wtp $GAP $Y $((MASTER - GAP - 2*BW)) $((SH - GAP)) $PFW
 # and now, stack up all remaining windows on the right
 X=$((MASTER + GAP))
 W=$((SW - MASTER - GAP))
-H=$((SH / MAX - GAP - 2*BW))
+#H=$((SH / MAX - GAP - 2*BW)) // incorrect. screws alignment
+H=$((SH / MAX - GAP - BW))
 
 for wid in $(lsw|grep -v $PFW); do
     wtp $X $Y $W $H $wid
