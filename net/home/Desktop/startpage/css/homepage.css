@@ -16,7 +16,7 @@
 }
 
 body{
-	background: #333;
+	background: #343d46;
 	padding-top: 12%;
 	font-size: 11px;
 	-webkit-font-smoothing: antialiased;
@@ -27,7 +27,7 @@ body{
 }
 
 p, li, a{
-	color: #dcdccc;
+	color: #c0c5ce;
 	font-family: Lato, Consolas;
 	font-weight: 300;
 	letter-spacing:2px;
@@ -65,7 +65,7 @@ a{
 }
 
 a:hover{
-	color: #333;
+	color: #343d46;
 	background: #dcdccc;
 }
 
@@ -82,7 +82,7 @@ a:hover{
 	display: inline-block;
 	width: 18%;
 	margin: 10px 10px;
-	border: 1px solid #dcdccc;
+	border: 1px solid #c0c5ce;
 }
 	
 /*
@@ -101,9 +101,9 @@ form{
 	height: 20px;
 	margin-right: -4px;
 	padding: 2px 0px 2px 5px;
-	background: #333;
+	background: #343d46;
 	color: #dcdccc;
-	border: 1px solid #444;
+	border: 1px solid #c0c5ce;
 }
 
 .search:hover{
@@ -112,20 +112,20 @@ form{
 
 .search:focus{
 	outline: none;
-	border: 1px solid #dcdccc;
+	border: 1px solid #c0c5ce;
 }
 
 .go{
 	height: 26px;
 	width: 40px;
-	background: #333;
+	background: #343d46;
 	color: #dcdccc;
 	border: 1px solid #dcdccc;
 }
 
 .go:hover{
 	background: #dcdccc;
-	color: #333;
+	color: #343d46;
 	cursor: pointer;
 }
 
