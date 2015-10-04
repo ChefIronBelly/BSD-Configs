@@ -51,11 +51,11 @@ else
     # geometry and id to $FSFILE we also remove any border from this window.
     wattr xywhi $1 > $FSFILE
 	Y=$((0 + GAP + PANEL))
-	wtp $GAP $Y $((MASTER - GAP - 2*BW)) $((SH - GAP)) $1
+	wtp $GAP $Y $((MASTER - GAP)) $((SH - GAP)) $1
 #    wtp $(wattr xywh `lsw -r`) $1 #original
     chwb -s 0 $1
 fi
 
 # now focus the window, and put it in front, no matter which state we're in, and
 # put the cursor on its bottom-right corner (for consistency)
-focus.sh $1
+#focus.sh $1
