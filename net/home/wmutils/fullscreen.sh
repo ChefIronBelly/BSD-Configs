@@ -16,7 +16,7 @@ usage() {
 # exit if no argument given
 test -z "$1" && usage
 
-# default values for gaps and master area
+# default values for gaps, panel and master area
 PANEL=${PANEL:-20}
 GAP=${GAP:-0}
 MASTER=${MASTER:-1440}
@@ -50,8 +50,8 @@ else
     # if not, then put the current window in fullscreen mode, after saving its
     # geometry and id to $FSFILE we also remove any border from this window.
     wattr xywhi $1 > $FSFILE
-	Y=$((0 + GAP + PANEL))
-	wtp $GAP $Y $((MASTER - GAP)) $((SH - GAP)) $1
+    Y=$((0 + GAP + PANEL))
+    wtp $GAP $Y $((MASTER - GAP)) $((SH - GAP)) $1
 #    wtp $(wattr xywh `lsw -r`) $1 #original
     chwb -s 0 $1
 fi
