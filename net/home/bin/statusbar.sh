@@ -16,7 +16,7 @@ default_geometry() {
     x=$(wattr w `lsw -r`)
     y=$(wattr h `lsw -r`)
 
-    width=1440
+    width=x # x=full width or values like 1280, 1440 etc
     height=20
 
     offy=0
