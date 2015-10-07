@@ -1,6 +1,6 @@
 #!/usr/pkg/bin/mksh
 
-EXCLUDES="/etc/bbq_excludes"
+EXCLUDES="/etc/fs_excludes"
 
 if ! [ -f $EXCLUDES ] ; then
 cat > "$EXCLUDES" << EOF
