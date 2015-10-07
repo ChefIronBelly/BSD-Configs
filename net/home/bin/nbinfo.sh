@@ -77,7 +77,7 @@ print-gitdir() {
 }
 
 print-colors() {
-	COLORS=('▓▒░' '▓▒░' '▓▒░' '▓▒░' '▓▒░' '▓▒░' '▓▒░' '▓▒░')
+	COLORS=('▓▒░' '░▒▓' '▓▒░' '░▒▓' '▓▒░' '░▒▓' '▓▒░' '░▒▓')
 	for f in `seq 0 7`; do
         echo -ne "\033[m\033[$(($f+30))m ${COLORS[$f]} " # normal colors
 	done
