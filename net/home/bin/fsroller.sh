@@ -22,10 +22,12 @@ fi
 echo "I: Copying File System, please wait"
 rsync -av / /tmp/target/ --exclude-from="$EXCLUDES" >/dev/null 2>&1
 # rsync -a --delete --exclude={".cache/*","Downloads/*","Video/*","Music/*"} "$HOME" /tmp/backup
+echo
 echo "I: Success. File System copied."
 echo
 echo "I: Compressing File System. please wait"
 cd /tmp/target && sudo tar -czf /tmp/backup.tar.gz .
-echo "I: File System Compressed."
 echo
+echo "I: File System Compressed."
 rm "$EXCLUDES"
+echo
