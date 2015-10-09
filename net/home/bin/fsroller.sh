@@ -26,7 +26,7 @@ echo
 echo "I: Success. File System copied."
 echo
 echo "I: Compressing File System. please wait"
-cd /tmp/target && sudo tar -czf /tmp/backup.tar.gz .
+cd /tmp/target && sudo tar -czf /tmp/image.tar . | xz -9 -c - > image.tar.xz 
 echo
 echo "I: File System Compressed."
 rm "$EXCLUDES"
