@@ -9,7 +9,6 @@ cat > "$EXCLUDES" << EOF
 - /mnt/*
 - /proc/*
 - /tmp/*
-- /rescue/*
 EOF
 chmod 666 "$EXCLUDES"
 fi
@@ -20,7 +19,8 @@ echo
 echo "I: Success. File System copied."
 echo
 echo "I: Compressing File System. please wait"
-cd /tmp/target && sudo tar -czf /tmp/image.tar . | xz -9 -c - > image.tar.xz 
+cd /tmp/target && sudo tar -czf /tmp/image.tar .
+# xz -9 -c /tmp/image.tar > image.tar.xz 
 echo
 echo "I: File System Compressed."
 rm "$EXCLUDES"
