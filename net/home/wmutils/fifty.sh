@@ -18,6 +18,6 @@ case $1 in
   left) wtp $GAP $((GAP + PANEL)) $((WIDTH - GAP - 2*B)) $((H - PANEL - 2*GAP)) $(pfw) ;;
   right) wtp $((WIDTH + GAP)) $((GAP + PANEL)) $((WIDTH - 2*GAP - 2*B)) $((H - PANEL - 2*GAP)) $(pfw) ;;
   up) wtp $GAP $((GAP + PANEL)) $((W - 2*GAP - 2*B )) $((HEIGHT - GAP - 2*B)) $(pfw) ;;
-  down) wtp $GAP $((HEIGHT + GAP + PANEL)) $((W - 2*GAP - 2*B)) $((HEIGHT - 2*GAP - 2*B)) $(pfw) ;;
+  down) wtp $GAP  $((HEIGHT + GAP + PANEL)) $((W - 2*GAP - 2*B)) $((HEIGHT - PANEL - 2*GAP - 2*B)) $(pfw) ;;
   *) usage ;;
 esac
