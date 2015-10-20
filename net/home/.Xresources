@@ -28,4 +28,4 @@ Xft.dpi:                96
 Xft.rgba:               rgb
 Xft.lcdfilter:          lcddefault
 
-#include </home/chef/.colors/scorcerer>
+#include </home/chef/.colors/base16-eighties>
