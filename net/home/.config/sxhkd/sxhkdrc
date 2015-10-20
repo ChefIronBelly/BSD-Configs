@@ -7,9 +7,13 @@
 mod4 + Return
  xterm
 
-# open dmenu
-mod4 + p
- ~/bin/dmenu_go.sh
+# open browser
+alt + f
+ /usr/pkg/bin/firefox
+ 
+# open overview
+alt + g
+ /usr/pkg/bin/geany 
 
 # move left, down, up, right 
 mod4 + {h,j,k,l}
@@ -72,6 +76,10 @@ mod4 + s
 # move window to left center, center, right center
 mod4 + {y,g,u}
  ~/wmutils/middles.sh {y,g,u}
+ 
+# snap window to 50% screen left, right, top or bottom
+mod4 + {n,m,comma,period}
+ ~/wmutils/fifty.sh {left,right,up,down} 
 
 # weather pop up
 alt + w
