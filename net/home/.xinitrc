@@ -12,14 +12,14 @@ xset fp rehash
 
 xrdb -load ~/.Xresources &
 
-export XCOL0=2b2b2b
-export XCOL1=272935
-export XCOL2=3a4055
-export XCOL3=5a647e
-export XCOL4=d4cfc9
-export XCOL5=e6e1dc
-export XCOL6=f4f1ed
-export XCOL7=f9f7f3
+export XCOL0=222222
+export XCOL1=aa4450
+export XCOL2=719611
+export XCOL3=cc8800
+export XCOL4=6688aa
+export XCOL5=8f6f8f
+export XCOL6=528b8b
+export XCOL7=d3d3d3
 
 sxhkd &
 statusbar.sh &
