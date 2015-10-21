@@ -3,7 +3,7 @@
 # z3bra - 2014 (c) wtfpl
 # window focus wrapper that sets borders and can focus next/previous window
 
-BW=${BW:-2}                    # border width
+BW=${BW:-4}                    # border width
 ACTIVE=${ACTIVE:-0x${XCOL3}}     # active border color
 INACTIVE=${INACTIVE:-0x${XCOL0}} # inactive border color
 
