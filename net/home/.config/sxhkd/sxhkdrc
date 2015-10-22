@@ -8,11 +8,11 @@ mod4 + Return
  xterm
 
 # open browser
-alt + f
+alt + shift + f
  /usr/pkg/bin/firefox
  
 # open overview
-alt + g
+alt + shift + g
  /usr/pkg/bin/geany 
 
 # move left, down, up, right 
