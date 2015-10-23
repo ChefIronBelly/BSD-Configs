@@ -12,21 +12,21 @@ xset fp rehash
 
 xrdb -load ~/.Xresources &
 
-export XCOL0=2d2d2d
-export XCOL1=393939
-export XCOL2=515151
-export XCOL3=747369
-export XCOL4=a09f93
-export XCOL5=d3d0c8
-export XCOL6=e8e6df
-export XCOL7=f2f0ec
+export XCOL0=2b303b
+export XCOL1=343d46
+export XCOL2=4f5b66
+export XCOL3=65737e
+export XCOL4=a7adba
+export XCOL5=c0c5ce
+export XCOL6=dfe1e8
+export XCOL7=eff1f5
 
 sxhkd &
 statusbar.sh &
 
 xsetroot -cursor_name left_ptr
-#xsetroot -solid '#333333'
-hsetroot -fill ~/Pictures/wallpapers/lakeside.jpg
+xsetroot -solid '#2b303b'
+#hsetroot -fill ~/Pictures/wallpapers/5.png
 
 wew | focus_watcher.sh &
 exec wmutils
