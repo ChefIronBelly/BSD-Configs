@@ -1,14 +1,12 @@
 #!/bin/sh
 # 
-# franksn
-# puts focued window to fifty% to the left, right, top, or bottom
+# originally by franksn
+# puts focued window to fifty percent size to the left, right, top, or bottom.
 
 ROOT=$(lsw -r)
 SW=$(wattr w $ROOT)
 SH=$(wattr h $ROOT)
 BW=$(wattr b $(pfw))
-#WIDTH=$((SW / 2))
-#HEIGHT=$((SH / 2))
 GAP=${GAP:-20}
 PANEL=${PANEL:-20}
 
