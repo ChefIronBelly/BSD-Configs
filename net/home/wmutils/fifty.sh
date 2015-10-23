@@ -1,11 +1,14 @@
 #!/bin/sh
+# 
+# franksn
+# puts focued window to fifty% to the left, right, top, or bottom
 
-R=$(lsw -r)
-W=$(wattr w $R)
-H=$(wattr h $R)
-B=$(wattr b $(pfw))
-WIDTH=$((W / 2))
-HEIGHT=$((H / 2))
+ROOT=$(lsw -r)
+SW=$(wattr w $ROOT)
+SH=$(wattr h $ROOT)
+BW=$(wattr b $(pfw))
+#WIDTH=$((SW / 2))
+#HEIGHT=$((SH / 2))
 GAP=${GAP:-20}
 PANEL=${PANEL:-20}
 
@@ -15,9 +18,9 @@ usage() {
 }
 
 case $1 in
-  left) wtp $GAP $((GAP + PANEL)) $((WIDTH - GAP - 2*B)) $((H - PANEL - 2*GAP)) $(pfw) ;;
-  right) wtp $((WIDTH + GAP)) $((GAP + PANEL)) $((WIDTH - 2*GAP - 2*B)) $((H - PANEL - 2*GAP)) $(pfw) ;;
-  up) wtp $GAP $((GAP + PANEL)) $((W - 2*GAP - 2*B )) $((HEIGHT - GAP - 2*B)) $(pfw) ;;
-  down) wtp $GAP  $((HEIGHT + GAP + PANEL)) $((W - 2*GAP - 2*B)) $((HEIGHT - PANEL - 2*GAP - 2*B)) $(pfw) ;;
+  left) wtp $GAP $((GAP + PANEL)) $((SW/2 - GAP - 2*BW)) $((SH - PANEL - 2*BW - 2*GAP)) $(pfw) ;;
+  right) wtp $((SW/2 + GAP)) $((GAP + PANEL)) $((SW/2 - 2*GAP - 2*BW)) $((SH - PANEL - 2*BW - 2*GAP)) $(pfw) ;;
+  up) wtp $GAP $((GAP + PANEL)) $((SW - 2*GAP - 2*BW )) $((SH/2 - GAP - 2*BW)) $(pfw) ;;
+  down) wtp $GAP  $((SH/2 + GAP + PANEL)) $((SW - 2*GAP - 2*BW)) $((SH/2 - PANEL - 2*GAP - 2*BW)) $(pfw) ;;
   *) usage ;;
 esac
