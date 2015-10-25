@@ -1,7 +1,7 @@
 #!/bin/sh
 # 
-# originally by franksn
-# puts focued window to fifty percent size to the left, right, top, or bottom.
+# origin by franksn
+# puts focused window to fifty percent size and then to left, right, top, or bottom.
 
 ROOT=$(lsw -r)
 SW=$(wattr w $ROOT)
