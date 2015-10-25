@@ -32,8 +32,8 @@ SW=$(wattr w $ROOT)
 SH=$(wattr h $ROOT)
 
 # calculate usable screen size (without borders and gaps)
-SW=$((SW - GAP - 2*BW))
-SH=$((SH - GAP - 2*BW - PANEL))
+SW=$((SW - GAP - BW))
+SH=$((SH - GAP - BW - PANEL))
 
 # this will unset the fullscreen state of any fullscreen window if there is one.
 # this way, there will only be one window in fullscreen at a time, and no window
