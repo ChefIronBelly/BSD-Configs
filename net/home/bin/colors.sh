@@ -1,4 +1,4 @@
-#!/usr/pkg/bin/bash
+#!/usr/pkg/bin/mksh
  
 echo
  
