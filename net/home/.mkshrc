@@ -22,6 +22,7 @@ alias rm='rm -i'
 alias free='top -n 1 | head -n 5 | tail -n 2'
 alias blankf='cdrecord dev=/dev/rcd0d blank=fast'
 alias blanka='cdrecord dev=/dev/rcd0d blank=all'
+alias rip='sudo cdparanoia -g /dev/rcd0d -B'
 
 PS1=""
  case `id -u` in
