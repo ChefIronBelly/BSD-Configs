@@ -20,6 +20,8 @@ alias cp='cp -ip'
 alias mv='mv -i'
 alias rm='rm -i'
 alias free='top -n 1 | head -n 5 | tail -n 2'
+alias blankf='cdrecord dev=/dev/rcd0d blank=fast'
+alias blanka='cdrecord dev=/dev/rcd0d blank=all'
 
 PS1=""
  case `id -u` in
