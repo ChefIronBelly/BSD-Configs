@@ -20,5 +20,4 @@ case $1 in
   right) wtp $((SW/2 + GAP)) $((GAP + PANEL)) $((SW/2 - 2*GAP - 2*BW)) $((SH - PANEL - 2*BW - 2*GAP)) $(pfw) ;;
   up) wtp $GAP $((GAP + PANEL)) $((SW - 2*GAP - 2*BW )) $((SH/2 - GAP - 2*BW)) $(pfw) ;;
   down) wtp $GAP  $((SH/2 + GAP + PANEL)) $((SW - 2*GAP - 2*BW)) $((SH/2 - PANEL - 2*GAP - 2*BW)) $(pfw) ;;
-  *) usage ;;
 esac
