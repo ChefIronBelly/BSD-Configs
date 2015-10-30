@@ -75,7 +75,7 @@ mod4 + s
 
 # move window to left center, center, right center
 mod4 + {y,g,u}
- ~/wmutils/middles.sh {y,g,u}
+ ~/wmutils/middles.sh {left,middle,right}
  
 # snap window to 50% screen left, right, top or bottom
 mod4 + {n,m,comma,period}
