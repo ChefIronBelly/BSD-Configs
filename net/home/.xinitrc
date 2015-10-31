@@ -5,7 +5,7 @@ setxkbmap -layout us -option terminate:ctrl_alt_bksp
 xset -dpms
 #xset s off
 xset b off
-xset r rate 200 30
+#xset r rate 200 30
 
 xset +fp /home/chef/.fonts/
 xset fp rehash

@@ -2,4 +2,4 @@
 
 touch $*
 chmod a+x $*
-vim -p $*
+vi -p $*
