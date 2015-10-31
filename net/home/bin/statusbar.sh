@@ -17,7 +17,7 @@ default_geometry() {
     x=$(wattr w `lsw -r`)
     y=$(wattr h `lsw -r`)
 
-    width=x # x=full width or values like 1280, 1440 etc
+    width=x # x=full width or values like 1280, 1440, 1920, etc
     height=20
 
     offy=0
@@ -75,7 +75,7 @@ group4() {
     echo $group4
 }
 
-echo %{l}%{B${a}${XCOL1}%{F${a}${XCOL5}}%{A:xterm -e cmus:}" "%{A}%{F-} $(cur) %{c} %{F${a}${XCOL5}}    $(group1)%{F-} %{F${a}${XCOL5}}$(group2)%{F-} %{F${a}${XCOL5}}$(group3)%{F-} %{F${a}${XCOL5}}$(group4)%{F-} %{r}%{F${a}${XCOL3}}" "%{F-} $(ip)  %{F${a}${XCOL3}}   %{F-}$(vol) %{F${a}${XCOL3}}    %{F-}$(dateclock)%{F${a}${XCOL3}}   %{F-}$(clock)%{F${a}${XCOL3}}   %{F-}
+echo %{l}%{B${a}${XCOL1}%{A:xterm -e cmus:}%{F${a}${XCOL3}}"    "%{A}%{F-}%{F${a}${XCOL5}}$(cur)%{F-}%{c}%{F${a}${XCOL5}}    $(group1)%{F-} %{F${a}${XCOL5}}$(group2)%{F-} %{F${a}${XCOL5}}$(group3)%{F-} %{F${a}${XCOL5}}$(group4)%{F-}%{r}%{F${a}${XCOL3}}"   "%{F-}$(ip)%{F${a}${XCOL3}}"    "%{F-}$(vol)%{F${a}${XCOL3}}"     "%{F-}$(dateclock)%{F${a}${XCOL3}}"    "%{F-}$(clock)%{F${a}${XCOL3}}"     "%{F-}
 }
 
 while true
