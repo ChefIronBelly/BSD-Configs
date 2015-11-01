@@ -1,4 +1,9 @@
 #!/bin/sh
+# 
+# chef 2015
+# puts focused window to left middle, center or right middle.
+# use offlm and offrm to offset placement for screen sizes.
+
 
 CUR=${2:-$(pfw)}
 ROOT=$(lsw -r)
@@ -27,12 +32,12 @@ test -z "$1" && usage
 case $1 in
     left) X=$((SW/4 - W/2 - BW + ${offlm}))
 		Y=$((SH/2 - H/2 - BW));;
-    middle) X=$((SW/2 - W/2 - BW))
+  center) X=$((SW/2 - W/2 - BW))
 		Y=$((SH/2 - H/2 - BW)) ;;
     right) X=$((SW/2 + W/4 - BW - ${offrm}))
 		Y=$((SH/2 - H/2 - BW));;    
 esac
 
-echo $X $Y
+#echo $X $Y 
 
 wtp $X $Y $W $H $CUR
