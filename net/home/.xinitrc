@@ -2,10 +2,8 @@
 
 setxkbmap -layout us -option terminate:ctrl_alt_bksp
 
-xset -dpms
-#xset s off
+xset +dpms
 xset b off
-#xset r rate 200 30
 
 xset +fp /home/chef/.fonts/
 xset fp rehash
@@ -26,7 +24,7 @@ statusbar.sh &
 
 xsetroot -cursor_name left_ptr
 xsetroot -solid '#2b303b'
-#hsetroot -fill ~/Pictures/wallpapers/5.png
+#hsetroot -fill ~/Pictures/wallpapers/stripes_down_blue.png
 
 wew | focus_watcher.sh &
 exec wmutils
