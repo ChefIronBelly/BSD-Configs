@@ -7,7 +7,7 @@
 wew | while IFS=: read ev wid; do
     case $ev in
         # window creation    
-        16) wattr o $wid || middles.sh y $wid ;;
+        16) wattr o $wid || middles.sh center $wid ;;
         
         # occurs on mapping requests
         19) wattr o $wid || focus.sh $wid ;;
