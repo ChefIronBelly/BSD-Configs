@@ -3,7 +3,7 @@
 FSDIR=${FSDIR:-/tmp/groups.sh}
 group3=""
 
-if [ -f $FSDIR/group.3 ];
+if [ -f $FSDIR/group.4 ];
     then group3="1"
     else group3="0"
 fi

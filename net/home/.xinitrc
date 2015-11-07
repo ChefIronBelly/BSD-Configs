@@ -10,20 +10,20 @@ xset fp rehash
 
 xrdb -load ~/.Xresources &
 
-export XCOL0=2b303b
-export XCOL1=343d46
-export XCOL2=4f5b66
-export XCOL3=65737e
-export XCOL4=a7adba
-export XCOL5=c0c5ce
-export XCOL6=dfe1e8
-export XCOL7=eff1f5
+export XCOL0=1C2023
+export XCOL1=393F45
+export XCOL2=565E65
+export XCOL3=747C84
+export XCOL4=ADB3BA
+export XCOL5=C7CCD1
+export XCOL6=DFE2E5
+export XCOL7=F3F4F5
 
 sxhkd &
 statusbar.sh &
 
 xsetroot -cursor_name left_ptr
-xsetroot -solid '#2b303b'
+xsetroot -solid '#1C2023'
 #hsetroot -fill ~/Pictures/wallpapers/stripes_down_blue.png
 
 wew | focus_watcher.sh &
