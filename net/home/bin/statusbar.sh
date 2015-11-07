@@ -70,7 +70,7 @@ group4() {
     echo $group4
 }
 
-echo %{l}%{B${a}${XCOL1}%{F${a}${XCOL5}} "0 0 0 0" $(group1) %{F-}%{F${a}${XCOL5}}$(group2)%{F-} %{F${a}${XCOL5}}$(group3)%{F-} %{F${a}${XCOL5}}$(group4)%{F-}%{r}%{F${a}${XCOL3}}"   "%{F-}$(ip)%{F${a}${XCOL3}}"    "%{F-}$(vol)%{F${a}${XCOL3}}"     "%{F-}$(dateclock)%{F${a}${XCOL3}}"    "%{F-}$(clock)%{F${a}${XCOL3}}"     "%{F-}
+echo %{l}%{B${a}${XCOL1}%{F${a}${XCOL5}} "0 x 0 0 0 0" $(group1) %{F-}%{F${a}${XCOL5}}$(group2)%{F-} %{F${a}${XCOL5}}$(group3)%{F-} %{F${a}${XCOL5}}$(group4)%{F-}%{r}%{F${a}${XCOL3}}"   "%{F-}$(ip)%{F${a}${XCOL3}}"    "%{F-}$(vol)%{F${a}${XCOL3}}"     "%{F-}$(dateclock)%{F${a}${XCOL3}}"    "%{F-}$(clock)%{F${a}${XCOL3}}"     "%{F-}
 }
 
 while true
