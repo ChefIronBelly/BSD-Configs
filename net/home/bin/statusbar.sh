@@ -1,6 +1,6 @@
 #!/bin/sh
 
-font="Anonymous_Pro:size=10"
+font="DejaVu Sans Mono:size=10"
 
 # alpha
 a="#ff"
@@ -50,22 +50,22 @@ vol() {
 }
 
 group1() {
-    group1=$(gind0.sh)
+    group1=$(gind1.sh)
     echo $group1
 }
 
 group2() {
-    group2=$(gind1.sh)
+    group2=$(gind2.sh)
     echo $group2
 }
 
 group3() {
-    group3=$(gind2.sh)
+    group3=$(gind3.sh)
     echo $group3
 }
 
 group4() {
-    group4=$(gind3.sh)
+    group4=$(gind4.sh)
     echo $group4
 }
 
@@ -77,4 +77,4 @@ while true
     echo "$(statusbar)"
    sleep 0.5
       
- done |  lemonbar -p -d -g $GEOM -f $font -B $bg -F $fg
+ done |  lemonbar -p -d -g $GEOM -f "DejaVu Sans Mono:size=10" -B $bg -F $fg
