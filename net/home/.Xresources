@@ -1,16 +1,17 @@
-XTerm*faceName: xft:Anonymous_Pro:style=Regular
-XTerm*faceNameDoublesize: xft:fontawesome-webfont:style=Regular
+XTerm*faceName: xft:DejaVu Sans Mono:style=Book
+!XTerm*faceNameDoublesize: xft:fontawesome-webfont:style=Regular
 XTerm*faceSize: 10
 
 XTerm*vt100*geometry: 58x18		
 XTerm*saveLines: 4096
 XTerm*loginShell: true
 XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
-XTerm*termName: xterm-256color
+XTerm*termName: xterm-color
 XTerm*eightBitInput: false
 XTerm*locale: true
 XTerm*metaSendsEscape: true
 XTerm*borderWidth: 0
+Xterm*internalBorder: 10
 XTerm*scaleHeight: 1.01
 XTerm*utf8: 1
 XTerm*selectToClipboard: true

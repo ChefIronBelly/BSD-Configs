@@ -7,7 +7,7 @@ a="#ff"
 b="#c0"
 
 # default colors
-bg="${b}${XCOL2}"
+bg="${a}${XCOL2}"
 fg="${a}${XCOL5}"
 hl="${a}${XCOL5}"
 
