@@ -1,7 +1,7 @@
 /*
 	Fonts
 */
-@import url(http://fonts.googleapis.com/css?family=Inconsolata&text=Hello%20World#41A317);
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
 /*
 	Page Setup
@@ -16,7 +16,7 @@
 }
 
 body{
-	background: #343d46;
+	background: #393F45;
 	padding-top: 12%;
 	font-size: 11px;
 	-webkit-font-smoothing: antialiased;
@@ -28,7 +28,7 @@ body{
 
 p, li, a{
 	color: #c0c5ce;
-	font-family: Lato, Consolas;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	letter-spacing:2px;
 }
@@ -65,7 +65,7 @@ a{
 }
 
 a:hover{
-	color: #343d46;
+	color: #393F45;
 	background: #dcdccc;
 }
 
@@ -101,7 +101,7 @@ form{
 	height: 20px;
 	margin-right: -4px;
 	padding: 2px 0px 2px 5px;
-	background: #343d46;
+	background: #393F45;
 	color: #dcdccc;
 	border: 1px solid #c0c5ce;
 }
@@ -118,14 +118,14 @@ form{
 .go{
 	height: 26px;
 	width: 40px;
-	background: #343d46;
+	background: #393F45;
 	color: #dcdccc;
 	border: 1px solid #dcdccc;
 }
 
 .go:hover{
 	background: #dcdccc;
-	color: #343d46;
+	color: #393F45;
 	cursor: pointer;
 }
 
