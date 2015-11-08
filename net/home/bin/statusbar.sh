@@ -1,7 +1,6 @@
 #!/bin/sh
 
-font="Hack:size=10"
-ico_font="fontawesome-webfont:size=11"
+font="Anonymous_Pro:size=10"
 
 # alpha
 a="#ff"
@@ -51,22 +50,22 @@ vol() {
 }
 
 group1() {
-    group1=$(gind1.sh)
+    group1=$(gind0.sh)
     echo $group1
 }
 
 group2() {
-    group2=$(gind2.sh)
+    group2=$(gind1.sh)
     echo $group2
 }
 
 group3() {
-    group3=$(gind3.sh)
+    group3=$(gind2.sh)
     echo $group3
 }
 
 group4() {
-    group4=$(gind4.sh)
+    group4=$(gind3.sh)
     echo $group4
 }
 
@@ -78,4 +77,4 @@ while true
     echo "$(statusbar)"
    sleep 0.5
       
- done |  lemonbar -p -d -g $GEOM -f $font -f $ico_font -B $bg -F $fg | while read line; do eval "$line"; done
+ done |  lemonbar -p -d -g $GEOM -f $font -B $bg -F $fg
