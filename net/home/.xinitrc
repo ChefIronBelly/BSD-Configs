@@ -23,8 +23,8 @@ sxhkd &
 statusbar.sh &
 
 xsetroot -cursor_name left_ptr
-xsetroot -solid '#1C2023'
-#hsetroot -fill ~/Pictures/wallpapers/stripes_down_blue.png
+#xsetroot -solid '#1C2023'
+hsetroot -fill ~/Pictures/wallpapers/stripes_down_blue.png
 
 wew | focus_watcher.sh &
 exec wmutils

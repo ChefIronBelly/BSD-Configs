@@ -4,7 +4,6 @@
 # puts focused window to left middle, center or right middle.
 # use offlm and offrm to offset placement for screen sizes.
 
-
 CUR=${2:-$(pfw)}
 ROOT=$(lsw -r)
 SW=$(wattr w $ROOT)
@@ -37,7 +36,5 @@ case $1 in
     right) X=$((SW/2 + W/4 - BW - ${offrm}))
 		Y=$((SH/2 - H/2 - BW));;    
 esac
-
-#echo $X $Y 
 
 wtp $X $Y $W $H $CUR

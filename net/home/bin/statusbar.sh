@@ -1,7 +1,5 @@
 #!/bin/sh
 
-font="DejaVu Sans Mono:size=10"
-
 # alpha
 a="#ff"
 b="#c0"
