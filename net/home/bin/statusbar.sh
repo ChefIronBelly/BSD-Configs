@@ -1,5 +1,7 @@
 #!/bin/sh
 
+font="CamingoCode:size=10"
+
 # alpha
 a="#ff"
 b="#c0"
@@ -75,4 +77,4 @@ while true
     echo "$(statusbar)"
    sleep 0.5
       
- done |  lemonbar -p -d -g $GEOM -f "DejaVu Sans Mono:size=10" -B $bg -F $fg
+ done |  lemonbar -p -d -g $GEOM -f $font -B $bg -F $fg

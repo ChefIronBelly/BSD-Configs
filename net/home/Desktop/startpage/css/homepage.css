@@ -1,7 +1,7 @@
 /*
 	Fonts
 */
-<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 
 /*
 	Page Setup
@@ -16,7 +16,7 @@
 }
 
 body{
-	background: #393F45;
+	background: #1C2023;
 	padding-top: 12%;
 	font-size: 11px;
 	-webkit-font-smoothing: antialiased;
@@ -43,7 +43,7 @@ p, li, a{
 }
 
 .favorites p{
-	border-bottom: 1px solid #dcdccc;
+	border-bottom: 1px solid #C7CCD1;
 	padding-right: 100%;
 }
 
@@ -65,8 +65,8 @@ a{
 }
 
 a:hover{
-	color: #393F45;
-	background: #dcdccc;
+	color: #1C2023;
+	background: #C7CCD1;
 }
 
 /*
@@ -101,8 +101,8 @@ form{
 	height: 20px;
 	margin-right: -4px;
 	padding: 2px 0px 2px 5px;
-	background: #393F45;
-	color: #dcdccc;
+	background: #1C2023;
+	color: #C7CCD1;
 	border: 1px solid #c0c5ce;
 }
 
@@ -118,14 +118,14 @@ form{
 .go{
 	height: 26px;
 	width: 40px;
-	background: #393F45;
-	color: #dcdccc;
-	border: 1px solid #dcdccc;
+	background: #1C2023;
+	color: #C7CCD1;
+	border: 1px solid #C7CCD1;
 }
 
 .go:hover{
-	background: #dcdccc;
-	color: #393F45;
+	background: #C7CCD1;
+	color: #1C2023;
 	cursor: pointer;
 }
 

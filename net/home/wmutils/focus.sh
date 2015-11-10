@@ -4,7 +4,7 @@
 # window focus wrapper that sets borders and can focus next/previous window
 
 BW=${BW:-4}                    # border width
-ACTIVE=${ACTIVE:-0x${XCOL3}}     # active border color
+ACTIVE=${ACTIVE:-0x${XCOL1}}     # active border color
 INACTIVE=${INACTIVE:-0x${XCOL0}} # inactive border color
 
 # get current window id

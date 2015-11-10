@@ -24,7 +24,6 @@ statusbar.sh &
 
 xsetroot -cursor_name left_ptr
 #xsetroot -solid '#1C2023'
-hsetroot -fill ~/Pictures/wallpapers/stripes_down_blue.png
-
+hsetroot -fill ~/Pictures/wallpapers/url.jpg
 wew | focus_watcher.sh &
 exec wmutils

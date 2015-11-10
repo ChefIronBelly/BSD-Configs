@@ -18,7 +18,7 @@ fi
 
 # user defined
 BW=${BW:-4} # width of your borders
-GAP=${GAP:-10} # gap between windows
+GAP=${GAP:-40} # gap between windows
 PANEL=${PANEL:-20} # height of panel // might make this a global
 
 # get monitor dimensions

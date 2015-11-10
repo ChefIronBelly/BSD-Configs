@@ -1,25 +1,25 @@
-! Base16 Ocean
+! Base16 Pop
 ! Scheme: Chris Kempson (http://chriskempson.com)
 
-#define base00 #2b303b
-#define base01 #343d46
-#define base02 #4f5b66
-#define base03 #65737e
-#define base04 #a7adba
-#define base05 #c0c5ce
-#define base06 #dfe1e8
-#define base07 #eff1f5
-#define base08 #bf616a
-#define base09 #d08770
-#define base0A #ebcb8b
-#define base0B #a3be8c
-#define base0C #96b5b4
-#define base0D #8fa1b3
-#define base0E #b48ead
-#define base0F #ab7967
+#define base00 #000000
+#define base01 #202020
+#define base02 #303030
+#define base03 #505050
+#define base04 #b0b0b0
+#define base05 #d0d0d0
+#define base06 #e0e0e0
+#define base07 #ffffff
+#define base08 #eb008a
+#define base09 #f29333
+#define base0A #f8ca12
+#define base0B #37b349
+#define base0C #00aabb
+#define base0D #0e5a94
+#define base0E #b31e8d
+#define base0F #7a2d00
 
 *.foreground:   base05
-*.background:   base01
+*.background:   base00
 *.cursorColor:  base05
 
 *.color0:       base00
