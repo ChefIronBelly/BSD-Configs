@@ -6,14 +6,14 @@
 # depends: lemonbar, wattr and common sense
 
 # bar options
-font="CamingoCode:size=10"
+font="DejaVuSansMono:size=10"
 
 # alpha
 a="#ff"
 b="#c0"
 
 # default colors
-bg="${a}${XCOL2}"
+bg="${a}${XCOL0}"
 fg="${a}${XCOL5}"
 hl="${a}${XCOL5}"
 

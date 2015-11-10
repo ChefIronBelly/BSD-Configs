@@ -7,7 +7,7 @@ ROOT=$(lsw -r)
 SW=$(wattr w $ROOT)
 SH=$(wattr h $ROOT)
 BW=$(wattr b $(pfw))
-GAP=${GAP:-40}
+GAP=${GAP:-20}
 PANEL=${PANEL:-20}
 
 # it's pretty simple, but anyway...

@@ -1,13 +1,13 @@
 #!/bin/sh
 
-font="CamingoCode:size=10"
+font="DejaVuSansMono:size=10"
 
 # alpha
 a="#ff"
 b="#c0"
 
 # default colors
-bg="${a}${XCOL2}"
+bg="${a}${XCOL0}"
 fg="${a}${XCOL5}"
 hl="${a}${XCOL5}"
 
@@ -69,7 +69,7 @@ group4() {
     echo $group4
 }
 
-echo %{l}%{B${a}${XCOL1}%{F${a}${XCOL5}} "0 x 0 0 0 0" $(group4) %{F-}%{F${a}${XCOL5}}$(group3)%{F-} %{F${a}${XCOL5}}$(group2)%{F-} %{F${a}${XCOL5}}$(group1)%{F-}%{r}%{F${a}${XCOL3}}" | "%{F-}$(ip)%{F${a}${XCOL3}}" | "%{F-}$(vol)%{F${a}${XCOL3}}" | "%{F-}$(dateclock)%{F${a}${XCOL3}}" | "%{F-}$(clock)%{F${a}${XCOL3}}" | "%{F-}
+echo %{l}%{B${a}${XCOL0}%{F${a}${XCOL5}} "0 x 0 0 0 0" $(group4) %{F-}%{F${a}${XCOL5}}$(group3)%{F-} %{F${a}${XCOL5}}$(group2)%{F-} %{F${a}${XCOL5}}$(group1)%{F-}%{r}%{F${a}${XCOL2}}" | "%{F-}$(ip)%{F${a}${XCOL2}}" | "%{F-}$(vol)%{F${a}${XCOL2}}" | "%{F-}$(dateclock)%{F${a}${XCOL2}}" | "%{F-}$(clock)%{F${a}${XCOL2}}" | "%{F-}%{B-}
 }
 
 while true
