@@ -83,7 +83,15 @@ mod4 + {n,m,comma,period}
 
 # weather pop up
 alt + w
- ~/bin/weather_pop.sh %\{c\} $(myweather.sh)
+ ~/bin/pop.sh %\{c\} $(myweather.sh)
+ 
+# uptime
+alt + u
+ ~/bin/pop.sh %\{c\} $(uptime) 
+ 
+# temp
+alt + t
+ ~/bin/pop.sh %\{c\} $(temp_bar.sh)  
 
 # adjust volume down, up,  mute toggle
 alt + {8,9,0}

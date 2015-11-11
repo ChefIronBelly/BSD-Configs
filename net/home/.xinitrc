@@ -18,6 +18,7 @@ export XCOL4=a7adba
 export XCOL5=c0c5ce
 export XCOL6=dfe1e8
 export XCOL7=eff1f5
+export FONT="DejaVuSansMono:size=10"
 
 sxhkd &
 statusbar.sh &
