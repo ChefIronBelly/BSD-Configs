@@ -1,8 +1,8 @@
-XTerm*faceName: xft:CamingoCode:style=Regular
+XTerm*faceName: xft:DejaVuSansMono:style=Book
 !XTerm*faceNameDoublesize: xft:fontawesome-webfont:style=Regular
 XTerm*faceSize: 10
 
-XTerm*vt100*geometry: 80x18		
+XTerm*vt100*geometry: 58x18		
 XTerm*saveLines: 4096
 XTerm*loginShell: true
 XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
@@ -12,7 +12,7 @@ XTerm*locale: true
 XTerm*metaSendsEscape: true
 XTerm*borderWidth: 0
 Xterm*internalBorder: 4
-XTerm*scaleHeight: 1.0
+XTerm*scaleHeight: 1.01
 XTerm*utf8: 1
 XTerm*selectToClipboard: true
 XTerm*ScrollBar: false
@@ -29,4 +29,4 @@ Xft.dpi:                96
 Xft.rgba:               rgb
 Xft.lcdfilter:          lcddefault
 
-#include </home/chef/.colors/base-16/base16-ashes.dark.xresources>
+#include </home/chef/.colors/base-16/base16-ocean.dark.xresources>
