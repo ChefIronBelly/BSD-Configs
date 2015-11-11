@@ -1,7 +1,7 @@
 /*
 	Fonts
 */
-<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+@import url(http://fonts.googleapis.com/css?family=Inconsolata&text=Hello%20World#41A317);
 
 /*
 	Page Setup
@@ -18,7 +18,7 @@
 body{
 	background: #1C2023;
 	padding-top: 12%;
-	font-size: 11px;
+	font-size: 10px;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
 	-ms-font-smoothing: antialiased;
@@ -28,7 +28,7 @@ body{
 
 p, li, a{
 	color: #c0c5ce;
-	font-family: 'Roboto', sans-serif;
+	font-family: Lato, Consolas;
 	font-weight: 300;
 	letter-spacing:2px;
 }
