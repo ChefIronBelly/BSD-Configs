@@ -91,7 +91,11 @@ alt + u
  
 # temp
 alt + t
- ~/bin/pop.sh %\{c\} $(temp_bar.sh)  
+ ~/bin/pop.sh %\{c\} "Temp:" $(temp_bar.sh) "F"
+ 
+# cmus-info
+alt + s
+ ~/bin/pop.sh %\{c\} "Playing:" $(cmus-info)
 
 # adjust volume down, up,  mute toggle
 alt + {8,9,0}
