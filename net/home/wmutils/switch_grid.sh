@@ -18,8 +18,8 @@ fi
 
 # user defined
 BW=${BW:-4} # width of your borders
-GAP=${GAP:-40} # gap between windows
-PANEL=${PANEL:-20} # height of panel // might make this a global
+GAP=${GAP:-20} # gap between windows
+PANEL=${PANEL:-10} # height of panel // might make this a global
 
 # get monitor dimensions
 ROOT=$(lsw -r)

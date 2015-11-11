@@ -1,13 +1,11 @@
 #!/bin/sh
 
-font="DejaVuSansMono:size=10"
-
 # alpha
 a="#ff"
 b="#c0"
 
 # default colors
-bg="${a}${XCOL0}"
+bg="${a}${XCOL1}"
 fg="${a}${XCOL5}"
 hl="${a}${XCOL5}"
 
@@ -69,7 +67,7 @@ group4() {
     echo $group4
 }
 
-echo %{l}%{B${a}${XCOL0}%{F${a}${XCOL5}} "0 x 0 0 0 0" $(group4) %{F-}%{F${a}${XCOL5}}$(group3)%{F-} %{F${a}${XCOL5}}$(group2)%{F-} %{F${a}${XCOL5}}$(group1)%{F-}%{r}%{F${a}${XCOL2}}" | "%{F-}$(ip)%{F${a}${XCOL2}}" | "%{F-}$(vol)%{F${a}${XCOL2}}" | "%{F-}$(dateclock)%{F${a}${XCOL2}}" | "%{F-}$(clock)%{F${a}${XCOL2}}" | "%{F-}%{B-}
+echo %{l}%{B${a}${XCOL1}%{F${a}${XCOL5}} "0 x 0 0 0 0" $(group4) %{F-}%{F${a}${XCOL5}}$(group3)%{F-} %{F${a}${XCOL5}}$(group2)%{F-} %{F${a}${XCOL5}}$(group1)%{F-}%{r}%{F${a}${XCOL2}}" | "%{F-}$(ip)%{F${a}${XCOL2}}" | "%{F-}$(vol)%{F${a}${XCOL2}}" | "%{F-}$(dateclock)%{F${a}${XCOL2}}" | "%{F-}$(clock)%{F${a}${XCOL2}}" | "%{F-}%{B-}
 }
 
 while true
@@ -77,4 +75,4 @@ while true
     echo "$(statusbar)"
    sleep 0.5
       
- done |  lemonbar -p -d -g $GEOM -f $font -B $bg -F $fg
+ done |  lemonbar -p -d -g $GEOM -f $FONT -B $bg -F $fg

@@ -18,7 +18,7 @@ test -z "$1" && usage
 
 # default values for gaps, panel and master area
 PANEL=${PANEL:-20}
-GAP=${GAP:-0}
+GAP=${GAP:-10}
 #MASTER=${MASTER:-1440}
 MASTER=$(wattr w `lsw -r`)
 

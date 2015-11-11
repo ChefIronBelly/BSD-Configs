@@ -19,7 +19,7 @@ wms=( 2bwm 2wm 9wm aewm afterstep ahwm alopex amiwm antiwm awesome blackbox bspw
     uwm vtwm w9wm weewm wind windowlab wm2 wmaker wmfs wmii wmutils wmx xfwm4 xmonad xoat yeahwm )
 
 color-echo() {  # print with colors
-	echo -e "$grn$1: $rst$2"
+	echo -e "$blu$1: $rst$2"
 }
 
 print-kernel() {
@@ -49,7 +49,7 @@ print-wm() {
     for wm in ${wms[@]}; do          # pgrep through wmname array
         pid=$(pgrep -x -u $USER $wm)		# if found, this wmname has running process
         if [[ "$pid" ]]; then
-            color-echo 'WM' '       '"$wm"
+            color-echo 'WM' '       '"nul - $wm"
 	        break
         fi
     done
@@ -77,7 +77,8 @@ print-gitdir() {
 }
 
 print-colors() {
-	COLORS=('▓▒░' '░▒▓' '▓▒░' '░▒▓' '▓▒░' '░▒▓' '▓▒░' '░▒▓')
+#	COLORS=('▓▒░' '░▒▓' '▓▒░' '░▒▓' '▓▒░' '░▒▓' '▓▒░' '░▒▓')
+	COLORS=('░▒▓' '░▒▓' '░▒▓' '░▒▓' '░▒▓' '░▒▓' '░▒▓' '░▒▓')
 	for f in `seq 0 7`; do
         echo -ne "\033[m\033[$(($f+30))m ${COLORS[$f]} " # normal colors
 	done
