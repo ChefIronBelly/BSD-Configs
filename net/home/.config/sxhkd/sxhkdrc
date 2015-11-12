@@ -27,7 +27,7 @@ mod4 + shift + {h,j,k,l}
 mod4 + alt + {h,j,k,l}
  wrs {-10 0,0 +10, 0 -10, +10 0} $(pfw)
 
-# resize faast left, down, up, right
+# resize fast left, down, up, right
 mod4 + alt + shift + {h,j,k,l}
  wrs {-40 0,0 +40, 0 -40, +40 0} $(pfw)
 
@@ -91,7 +91,7 @@ alt + u
  
 # temp
 alt + t
- ~/bin/pop.sh %\{c\} "Temp:" $(temp_bar.sh) "F"
+ ~/bin/pop.sh %\{c\} "cpu0 temperature:" $(temp_bar.sh) "F"
  
 # cmus-info
 alt + s
