@@ -85,17 +85,17 @@ mod4 + {n,m,comma,period}
 alt + w
  ~/bin/pop.sh %\{c\} $(myweather.sh)
  
-# uptime
+# uptime pop up
 alt + u
  ~/bin/pop.sh %\{c\} $(uptime) 
  
-# temp
+# core temp pop up
 alt + t
  ~/bin/pop.sh %\{c\} "cpu0 temperature:" $(temp_bar.sh) "F"
  
-# cmus-info
+# cmus-info pop up
 alt + s
- ~/bin/pop.sh %\{c\} "Playing:" $(cmus-info)
+ ~/bin/pop.sh %\{c\} "Now... " $(cmus-info)
 
 # adjust volume down, up,  mute toggle
 alt + {8,9,0}
