@@ -8,6 +8,8 @@ xset b off
 xset +fp /home/chef/.fonts/
 xset fp rehash
 
+xmodmap ~/.swapesc
+
 xrdb -load ~/.Xresources &
 
 export XCOL0=2b303b
