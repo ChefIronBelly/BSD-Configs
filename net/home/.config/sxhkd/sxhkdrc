@@ -91,7 +91,7 @@ alt + u
  
 # core temp pop up
 alt + t
- ~/bin/pop.sh %\{c\} "cpu0 temperature:" $(temp_bar.sh) "F"
+ ~/bin/pop.sh %\{c\} "cpu1 temperature:" $(temp_bar.sh) "F"
  
 # cmus-info pop up
 alt + s
