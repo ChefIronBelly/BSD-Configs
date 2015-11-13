@@ -83,15 +83,15 @@ mod4 + {n,m,comma,period}
 
 # weather pop up
 alt + w
- ~/bin/pop.sh %\{c\} $(myweather.sh)
+ ~/bin/pop.sh %\{c\} "[ "$(myweather.sh)" ]"
  
 # uptime pop up
 alt + u
- ~/bin/pop.sh %\{c\} $(uptime) 
+ ~/bin/pop.sh %\{c\} "["$(uptime)" ]" 
  
 # core temp pop up
 alt + t
- ~/bin/pop.sh %\{c\} "cpu1 temperature:" $(temp_bar.sh) "F"
+ ~/bin/pop.sh %\{c\} " [ cpu1 temperature:" $(temp_bar.sh)"F ]"
  
 # mpc pop up
 alt + s
