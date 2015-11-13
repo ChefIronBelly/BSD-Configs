@@ -2,8 +2,8 @@
 
 mus=$(mpc -f %artist% current)
 sng=$(mpc -f %title% current)
-if [ -z $mus ]; then
-echo "Select a song"
+if [[ $mus ]]; then
+echo "[ Select a song. or update mp3 tags... ]"
 else
-echo "Now: " $mus - $sng
+echo "[ Now: " $mus - $sng "]"
 fi
