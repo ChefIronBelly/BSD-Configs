@@ -93,9 +93,9 @@ alt + u
 alt + t
  ~/bin/pop.sh %\{c\} "cpu1 temperature:" $(temp_bar.sh) "F"
  
-# cmus-info pop up
+# mpc pop up
 alt + s
- ~/bin/pop.sh %\{c\} "Now... " $(cmus-info)
+ ~/bin/pop.sh %\{c\} $(mpc_pop.sh)
 
 # adjust volume down, up,  mute toggle
 alt + {8,9,0}
