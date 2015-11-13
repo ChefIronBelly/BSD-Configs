@@ -1,7 +1,8 @@
 /*
 	Fonts
 */
-@import url(http://fonts.googleapis.com/css?family=Inconsolata&text=Hello%20World#41A317);
+
+<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 /*
 	Page Setup
@@ -28,7 +29,7 @@ body{
 
 p, li, a{
 	color: #c0c5ce;
-	font-family: DejaVuSansMono, Lato, Consolas;
+	font-family: Lato, Consolas;
 	font-weight: 300;
 	letter-spacing:2px;
 }
