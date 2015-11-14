@@ -67,7 +67,7 @@ group4() {
     echo $group4
 }
 
-echo %{l}%{B${a}${XCOL1}}%{F${a}${XCOL5}}"[0 x 0 0 0 0" $(group4) $(group3) $(group2) $(group1)"]"${F-}%{r}%{F${a}${XCOL5}}" ["$(ip)"] ["$(vol)"] ["$(dateclock)"] ["$(clock)"] "%{F-}%{B-}
+echo %{l}%{B${a}${XCOL1}}%{F${a}${XCOL5}}"[" $(group8) $(group7) $(group6) $(group5) $(group4) $(group3) $(group2) $(group1)"]"${F-}%{r}%{F${a}${XCOL5}}" ["$(ip)"] ["$(vol)"] ["$(dateclock)"] ["$(clock)"] "%{F-}%{B-}
 }
 
 while true
