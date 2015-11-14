@@ -1,9 +1,9 @@
 #!/bin/sh
 
-FSDIR=${FSDIR:-/tmp/groups.sh}
+FSDIR=${FSDIR:-/tmp/grp}
 group3=""
 
-if [ -f $FSDIR/group.3 ];
+if [ -f $FSDIR/3 ];
     then group3="1"
     else group3="0"
 fi

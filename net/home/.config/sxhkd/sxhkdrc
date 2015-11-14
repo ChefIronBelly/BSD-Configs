@@ -56,14 +56,22 @@ alt + {Tab, shift + Tab}
  ~/wmutils/focus.sh {next,prev} 2>/dev/null && \
  wmp -a $(wattr xy $(pfw)) && \
  wmp -r $(wattr wh $(pfw))
-
+ 
 # create groups
-mod4 + shift + {1,2,3,4}
- ~/wmutils/groups.sh -s $(pfw) {1,2,3,4}
+mod4 + shift + {1,2,3,4,5,6,7,8,9,0}
+ ~/wmutils/grp.sh add $(pfw) {1,2,3,4,5,6,7,8,9,0}
 
-# toggle groups 
-mod4 + {1,2,3,4}
- ~/wmutils/groups.sh -t {1,2,3,4}
+# view groups 
+mod4 + {1,2,3,4,5,6,7,8,9,0}
+ ~/wmutils/grp.sh view {1,2,3,4,5,6,7,8,9,0}
+ 
+# hide groups 
+mod4 + alt + {1,2,3,4,5,6,7,8,9,0}
+  ~/wmutils/grp.sh hide {1,2,3,4,5,6,7,8,9,0} 
+
+# remove groups
+mod4 + shift + Backspace
+  ~/wmutils/grp.sh remove $(pfw)
 
 # tile windows
 mod4 + {t,v}
