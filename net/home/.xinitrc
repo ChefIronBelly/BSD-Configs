@@ -30,4 +30,4 @@ xsetroot -solid '#2b303b'
 #hsetroot -center ~/Pictures/wallpapers/crow-bird-raven.jpg
 
 wew | focus_watcher.sh &
-exec swm
+exec wmutils

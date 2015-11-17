@@ -47,47 +47,12 @@ vol() {
     echo $vol
 }
 
-group1() {
-    group1=$(gind1.sh)
-    echo $group1
+groups() {
+    groups=$(gind.sh)
+    echo $groups
 }
 
-group2() {
-    group2=$(gind2.sh)
-    echo $group2
-}
-
-group3() {
-    group3=$(gind3.sh)
-    echo $group3
-}
-
-group4() {
-    group4=$(gind4.sh)
-    echo $group4
-}
-
-group5() {
-    group5=$(gind5.sh)
-    echo $group5
-}
-
-group6() {
-    group6=$(gind6.sh)
-    echo $group6
-}
-
-group7() {
-    group7=$(gind7.sh)
-    echo $group7
-}
-
-group8() {
-    group8=$(gind8.sh)
-    echo $group8
-}
-
-echo %{l}%{B${a}${XCOL1}}%{F${a}${XCOL5}}"[0 x "$(group8) $(group7) $(group6) $(group5) $(group4) $(group3) $(group2) $(group1)"]"${F-}%{r}%{F${a}${XCOL5}}" ["$(ip)"]["$(vol)"]["$(dateclock)"]["$(clock)"] "%{F-}%{B-}
+echo %{l}%{B${a}${XCOL1}}%{F${a}${XCOL5}}"[0 x "$(groups)"]"${F-}%{r}%{F${a}${XCOL5}}"["$(ip)"] ["$(vol)"] ["$(dateclock)"] ["$(clock)"] "%{F-}%{B-}
 }
 
 while true
