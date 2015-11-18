@@ -12,21 +12,21 @@ xmodmap ~/.swapesc
 
 xrdb -load ~/.Xresources &
 
-export XCOL0=2b303b
-export XCOL1=343d46
-export XCOL2=4f5b66
-export XCOL3=65737e
-export XCOL4=a7adba
-export XCOL5=c0c5ce
-export XCOL6=dfe1e8
-export XCOL7=eff1f5
+export XCOL0=151515
+export XCOL1=202020
+export XCOL2=303030
+export XCOL3=505050
+export XCOL4=b0b0b0
+export XCOL5=d0d0d0
+export XCOL6=e0e0e0
+export XCOL7=f5f5f5
 export FONT="DejaVuSansMono:size=10"
 
 sxhkd &
 statusbar.sh &
 
 xsetroot -cursor_name left_ptr
-xsetroot -solid '#2b303b'
+xsetroot -solid '#151515'
 #hsetroot -center ~/Pictures/wallpapers/crow-bird-raven.jpg
 
 wew | focus_watcher.sh &
