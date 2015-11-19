@@ -5,7 +5,7 @@ red="\e[1;31m"
 grn="\e[32m"
 ylw="\e[33m"
 cyn="\e[36m"
-blu="\e[34m"
+blu="\e[1;34m"
 prp="\e[35m"
 rst="\e[0m"
 
@@ -49,7 +49,7 @@ print-wm() {
     for wm in ${wms[@]}; do          # pgrep through wmname array
         pid=$(pgrep -x -u $USER $wm)		# if found, this wmname has running process
         if [[ "$pid" ]]; then
-            color-echo 'WM' '       '"nul - $wm"
+            color-echo 'WM' '       '"nul - $wm active"
 	        break
         fi
     done
@@ -77,31 +77,42 @@ print-gitdir() {
 }
 
 print-colors() {
-#	COLORS=('▓▒░' '░▒▓' '▓▒░' '░▒▓' '▓▒░' '░▒▓' '▓▒░' '░▒▓')
-	COLORS=('░▒▓' '░▒▓' '░▒▓' '░▒▓' '░▒▓' '░▒▓' '░▒▓' '░▒▓')
+	COLORS=('███' '███' '███' '███' '███' '███' '███' '███')
 	for f in `seq 0 7`; do
-        echo -ne "\033[m\033[$(($f+30))m ${COLORS[$f]} " # normal colors
+        printf "\033[m\033[$(($f+30))m ${COLORS[$f]} " # normal colors
 	done
 	echo
 	for f in `seq 0 7`; do
-        echo -ne "\033[m\033[1;$(($f+30))m ${COLORS[$f]} " # bold colors
+        printf "\033[m\033[1;$(($f+30))m ${COLORS[$f]} " # bold colors
 	done
-	echo -e "$rst\n"
+	printf "$rst\n"
 }
 
 clear
-echo -e "\n$prp$USER@$(hostname)$rst\n"
+printf "\n$prp$USER@$(hostname)$rst\n"
+printf "\n"
 print-distro
 print-packages
-echo
+printf "\n"
 print-wm
 print-shell
 print-term
+printf "\n"
 print-font
-echo
+colors='Base16 Grayscale'
+printf "\e[1;34mCOLORS \e[0m    $colors\n"
+printf "\n"
 print-kernel
 print-cpu
-echo
+#printf "\n"
 #print-gitdir
-#echo
-print-colors
+#print-colors
+#█▓▒░ colors 
+printf "\n"
+i=0
+while [ $i -le 6 ]
+do
+  printf "\e[$((i+30))m█▓▒░"
+  i=$(($i+1))
+done
+printf "\e[37m█\e[0m▒░\n\n"

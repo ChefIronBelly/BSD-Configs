@@ -6,8 +6,8 @@ b="#c0"
 
 # default colors
 bg="${a}${XCOL1}"
-fg="${a}${XCOL5}"
-hl="${a}${XCOL7}"
+fg="${a}${XCOL4}"
+hl="${a}${XCOL4}"
 
 default_geometry() {
     # get screen size
@@ -52,7 +52,7 @@ groups() {
     echo $groups
 }
 
-echo %{l}%{B${a}${XCOL1}}%{F${a}${XCOL5}}"[0 x "$(groups)"]"${F-}%{r}%{F${a}${XCOL5}}"["$(ip)"] ["$(vol)"] ["$(dateclock)"] ["$(clock)"] "%{F-}%{B-}
+echo %{l}%{B${a}${XCOL1}}%{F${a}${XCOL4}}"[0 x "$(groups)"]"${F-}%{r}%{F${a}${XCOL4}}"["$(ip)"] ["$(vol)"] ["$(dateclock)"] ["$(clock)"] "%{F-}%{B-}
 }
 
 while true

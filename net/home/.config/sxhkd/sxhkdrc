@@ -85,7 +85,7 @@ mod4 + s
 mod4 + {y,g,u}
  ~/wmutils/middles.sh {left,center,right}
  
-# snap window to 50% screen left, right, top or bottom
+# size window to 50% screen left, right, top or bottom
 mod4 + {n,m,comma,period}
  ~/wmutils/fifty.sh {left,right,up,down} 
 
