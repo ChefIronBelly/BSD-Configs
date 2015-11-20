@@ -11,6 +11,10 @@ mod4 + Return
 alt + shift + f
  /usr/pkg/bin/firefox
  
+# surfin usa
+alt + shift + s
+ ~/bin/surf_run.sh
+ 
 # open overviewer
 alt + shift + g
  /usr/pkg/bin/geany 
@@ -106,8 +110,8 @@ alt + s
  ~/bin/pop.sh %\{c\} $(mpc_pop.sh)
 
 # adjust volume down, up,  mute toggle
-alt + {8,9,0}
- ~/bin/volume.sh {8,9,0}
+alt + {F10,F11,F12}
+ ~/bin/volume.sh {-,+,0}
  
 # create scrot 
 Print
