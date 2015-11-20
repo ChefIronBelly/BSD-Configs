@@ -2,7 +2,7 @@ XTerm*faceName: xft:DejaVuSansMono:style=Book
 !XTerm*faceNameDoublesize: xft:fontawesome-webfont:style=Regular
 XTerm*faceSize: 10
 
-XTerm*vt100*geometry: 58x18		
+XTerm*vt100*geometry: 58x19	
 XTerm*saveLines: 4096
 XTerm*loginShell: true
 XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
@@ -29,4 +29,4 @@ Xft.dpi:                96
 Xft.rgba:               rgb
 Xft.lcdfilter:          lcddefault
 
-#include </home/chef/.colors/base-16/base16-grayscale.dark.xresources>
+#include </home/chef/.colors/base-16/base16-ocean.dark.xresources>

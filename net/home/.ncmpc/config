@@ -1,0 +1,13 @@
+# ncmpc configuration file
+# vim: filetype=config
+enable-colors = yes
+auto-center = yes
+set-xterm-title = yes
+audible-bell = no
+visible-bell = no
+crossfade-time = 5
+seek-time = 10
+# timeout when trying to fetch lyrics from the internet
+lyrics-timeout = 30 
+# terminal title formatting
+xterm-title-format = "ncmpc: [ %name%|[%artist% - ]%title%|%file%]"
