@@ -1,7 +1,5 @@
 #	$NetBSD: dot.profile,v 1.8.4.1 2012/04/12 17:12:06 riz Exp $
 #
-# Users are expected to edit it to meet their own needs.
-#
 
 unset LC_ALL
 export LANG="en_US.UTF-8"

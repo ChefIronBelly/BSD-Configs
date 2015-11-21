@@ -52,7 +52,7 @@ groups() {
     echo $groups
 }
 
-echo %{l}%{B${a}${XCOL1}}%{F${a}${XCOL4}}"[0 x "$(groups)"]"${F-}%{r}%{F${a}${XCOL4}}"["$(ip)"] ["$(vol)"] ["$(dateclock)"] ["$(clock)"] "%{F-}%{B-}
+echo %{l}"[0 x "$(groups)"]"%{r}"["$(ip)"] ["$(vol)"] ["$(dateclock)"] ["$(clock)"] "
 }
 
 while true
