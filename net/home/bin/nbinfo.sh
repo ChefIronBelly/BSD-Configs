@@ -100,7 +100,7 @@ print-term
 printf "\n"
 print-font
 colors='Base16 Ocean Dark'
-printf "\e[1;34mCOLORS \e[0m    $colors\n"
+printf "\e[1;34mCOLORS: \e[0m    $colors\n"
 printf "\n"
 print-kernel
 print-cpu
