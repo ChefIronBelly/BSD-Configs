@@ -29,4 +29,4 @@ Xft.dpi:                96
 Xft.rgba:               rgb
 Xft.lcdfilter:          lcddefault
 
-#include </home/chef/.colors/base-16/base16-ocean.dark.xresources>
+#include </home/chef/.colors/base-16/base16-flat.dark.xresources>

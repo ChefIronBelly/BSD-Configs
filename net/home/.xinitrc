@@ -12,22 +12,22 @@ xmodmap ~/.swapesc
 
 xrdb -load ~/.Xresources &
 
-export XCOL0=2b303b
-export XCOL1=343d46
-export XCOL2=4f5b66
-export XCOL3=65737e
-export XCOL4=a7adba
-export XCOL5=c0c5ce
-export XCOL6=dfe1e8
-export XCOL7=eff1f5
-export FONT="DejaVuSansMono:size=10"
+export XCOL0=2C3E50
+export XCOL1=34495E
+export XCOL2=7F8C8D
+export XCOL3=95A5A6
+export XCOL4=BDC3C7
+export XCOL5=e0e0e0
+export XCOL6=f5f5f5
+export XCOL7=ECF0F1
+export FONT="DejaVuSansMono:style=Book:size=10"
 
 sxhkd &
 statusbar.sh &
 
 xsetroot -cursor_name left_ptr
-#xsetroot -solid '#2b303b'
-hsetroot -center ~/Pictures/wallpapers/ajAtLx0.jpg -tint '#65737e'
+xsetroot -solid '#2C3E50'
+#hsetroot -center ~/Pictures/wallpapers/ajAtLx0.jpg -tint '#65737e'
 
 wew | focus_watcher.sh &
 exec wmutils

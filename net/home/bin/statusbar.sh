@@ -52,7 +52,7 @@ groups() {
     echo $groups
 }
 
-echo %{l}"[0 x "$(groups)"]"%{r}"["$(ip)"] ["$(vol)"] ["$(dateclock)"] ["$(clock)"] "
+echo %{l}" 0 x "$(groups)%{r}" | "$(ip)" | "$(vol)" | "$(dateclock)" | "$(clock)" | "
 }
 
 while true
