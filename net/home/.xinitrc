@@ -12,21 +12,21 @@ xmodmap ~/.swapesc
 
 xrdb -load ~/.Xresources &
 
-export XCOL0=2C3E50
-export XCOL1=34495E
-export XCOL2=7F8C8D
-export XCOL3=95A5A6
-export XCOL4=BDC3C7
-export XCOL5=e0e0e0
-export XCOL6=f5f5f5
-export XCOL7=ECF0F1
+export XCOL0=181818
+export XCOL1=282828
+export XCOL2=383838
+export XCOL3=585858
+export XCOL4=b8b8b8
+export XCOL5=d8d8d8
+export XCOL6=e8e8e8
+export XCOL7=f8f8f8
 export FONT="DejaVuSansMono:style=Book:size=10"
 
 sxhkd &
 statusbar.sh &
 
 xsetroot -cursor_name left_ptr
-xsetroot -solid '#2C3E50'
+xsetroot -solid '#181818'
 #hsetroot -center ~/Pictures/wallpapers/ajAtLx0.jpg -tint '#65737e'
 
 wew | focus_watcher.sh &
