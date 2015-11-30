@@ -99,7 +99,7 @@ print-shell
 print-term
 printf "\n"
 print-font
-colors='Base16 Default Dark'
+colors='Zenburn'
 printf "\e[1;34mCOLORS \e[0m    $colors\n"
 printf "\n"
 print-kernel
