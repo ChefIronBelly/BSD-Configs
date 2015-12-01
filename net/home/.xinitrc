@@ -26,8 +26,8 @@ sxhkd &
 statusbar.sh &
 
 xsetroot -cursor_name left_ptr
-xsetroot -solid '#333333'
-#hsetroot -center ~/Pictures/wallpapers/ajAtLx0.jpg -tint '#65737e'
+#xsetroot -solid '#2d2d2d'
+hsetroot -center ~/Pictures/wallpapers/paisley.jpg -tint '#506070'
 
 wew | focus_watcher.sh &
 exec wmutils
