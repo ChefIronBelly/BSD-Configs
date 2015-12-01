@@ -13,6 +13,8 @@ BW=$(wattr b $CUR)
 W=$(wattr w $CUR)
 H=$(wattr h $CUR)
 
+PANEL=${PANEL:-20}
+
 offlm=105
 offrm=100
 
@@ -32,7 +34,7 @@ case $1 in
     left) X=$((SW/4 - W/2 - BW + ${offlm}))
 		Y=$((SH/2 - H/2 - BW));;
   center) X=$((SW/2 - W/2 - BW))
-		Y=$((SH/2 - H/2 - BW)) ;;
+		Y=$((SH/2 + PANEL/2 - H/2 - BW)) ;;
     right) X=$((SW/2 + W/4 - BW - ${offrm}))
 		Y=$((SH/2 - H/2 - BW));;    
 esac
