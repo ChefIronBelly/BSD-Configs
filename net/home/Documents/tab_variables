@@ -1,0 +1,3 @@
+/* TAB VARIABLES */
+--bg-light: #506070; --bg-dark: #3f3f3f;
+--fg-light: #dcdcdc; --fg-dark: #eeeeee;
