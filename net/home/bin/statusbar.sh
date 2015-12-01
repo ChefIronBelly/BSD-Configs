@@ -60,4 +60,4 @@ while true
     echo "$(statusbar)"
    sleep 0.5
       
- done |  lemonbar -p -d -g $GEOM -f $FONT -B $bg -F $fg
+ done |  lemonbar -p -d -g $GEOM -f $FONT -f $ICOFONT -B $bg -F $fg

@@ -21,6 +21,7 @@ export XCOL5=dc8cc3
 export XCOL6=8cd0d3
 export XCOL7=dcdccc
 export FONT="DejaVuSansMono:style=Book:size=10"
+export ICOFONT="fontawesome-webfont:style=Regular:size=11"
 
 sxhkd &
 statusbar.sh &

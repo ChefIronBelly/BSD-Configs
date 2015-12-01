@@ -1,5 +1,5 @@
 XTerm*faceName: xft:DejaVuSansMono:style=Book
-!XTerm*faceNameDoublesize: xft:fontawesome-webfont:style=Regular
+XTerm*faceNameDoublesize: xft:fontawesome-webfont:style=Regular
 XTerm*faceSize: 10
 
 XTerm*vt100*geometry: 58x19	

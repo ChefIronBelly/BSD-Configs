@@ -107,11 +107,11 @@ alt + t
  
 # cmus pop up
 alt + s 
- ~/bin/pop.sh %\{c\} $(cmus-info)  
+ ~/bin/pop.sh %\{c\} " " $(cmus-info)  
 
 # adjust volume down, up,  mute toggle
 alt + {F10,F11,F12}
- ~/bin/volume.sh {-,+,0}
+ ~/bin/volume.sh {8,9,0}
  
 # create scrot 
 Print
