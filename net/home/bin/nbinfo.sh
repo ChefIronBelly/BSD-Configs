@@ -5,7 +5,7 @@ red="\e[1;31m"
 grn="\e[32m"
 ylw="\e[33m"
 cyn="\e[36m"
-blu="\e[1;34m"
+blu="\e[34m"
 prp="\e[35m"
 rst="\e[0m"
 
@@ -100,7 +100,7 @@ print-term
 printf "\n"
 print-font
 colors='Zenburn'
-printf "\e[1;34mCOLORS: \e[0m   $colors\n"
+printf "\e[34mCOLORS: \e[0m   $colors\n"
 printf "\n"
 print-kernel
 print-cpu
