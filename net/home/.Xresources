@@ -1,4 +1,4 @@
-XTerm*faceName: xft:DejaVuSansMono:style=Book
+XTerm*faceName: xft:DejaVu Sans Mono:style=Book
 XTerm*faceNameDoublesize: xft:fontawesome-webfont:style=Regular
 XTerm*faceSize: 10
 
@@ -30,4 +30,4 @@ Xft.rgba:               rgb
 Xft.lcdfilter:          lcddefault
 
 !#include </home/chef/.colors/base-16/base16-default.dark.xresources>
-#include </home/chef/.colors/zenburn>
+#include </home/chef/.colors/bluZen>
