@@ -1,10 +1,10 @@
 ! bluZen color-scheme
 
 *foreground:   #eeeeee
-*background:   #333333
+*background:   #2d2d2d
 *cursorColor:  #eeeeee
 
-*color0:     #333333
+*color0:     #2d2d2d
 *color1:     #705050
 *color2:     #60b48a
 *color3:     #dfaf8f

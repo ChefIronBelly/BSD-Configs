@@ -12,7 +12,7 @@ xmodmap ~/.swapesc
 
 xrdb -load ~/.Xresources &
 
-export XCOL0=333333
+export XCOL0=2d2d2d
 export XCOL1=705050
 export XCOL2=60b48a
 export XCOL3=dfaf8f
