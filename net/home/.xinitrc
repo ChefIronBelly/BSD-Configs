@@ -12,14 +12,14 @@ xmodmap ~/.swapesc
 
 xrdb -load ~/.Xresources &
 
-export XCOL0=2d2d2d
+export XCOL0=333333
 export XCOL1=705050
 export XCOL2=60b48a
-export XCOL3=dfaf8f
+export XCOL3=d64937
 export XCOL4=506070
 export XCOL5=dc8cc3
 export XCOL6=8cd0d3
-export XCOL7=eeeeee
+export XCOL7=dedede
 export FONT="DejaVuSansMono:style=Book:size=10"
 export ICOFONT="fontawesome-webfont:style=Regular:size=11"
 
