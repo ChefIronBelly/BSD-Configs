@@ -18,16 +18,12 @@ XTerm*selectToClipboard: true
 XTerm*ScrollBar: false
 XTerm*ScrollKey: true
 
-Xft*dpi:                96
-Xft*antialias:          true
-Xft*hinting:            none
-Xft.autohint:           0
-Xft.antialias:          1
-Xft.hinting:            true
-Xft.hintstyle:          hintfull
-Xft.dpi:                96
-Xft.rgba:               rgb
-Xft.lcdfilter:          lcddefault
+Xft.dpi:       96
+Xft.antialias: true
+Xft.hinting:   true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: none
+Xft.rgba:      rgb
 
 !#include </home/chef/.colors/base-16/base16-default.dark.xresources>
 #include </home/chef/.colors/bluZen>
