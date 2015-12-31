@@ -1,2 +1,2 @@
-# BSD-Configs
-My current BSD configs
+# myBSD-Configs
+My current BSD dots and scripts.
