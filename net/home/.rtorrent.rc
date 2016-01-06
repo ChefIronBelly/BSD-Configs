@@ -17,6 +17,6 @@ schedule = untied_directory,5,5,stop_untied=
 
 port_range = 19999-19999
 
-use_udp_trackers = yes
+#use_udp_trackers = yes
 
 check_hash = yes

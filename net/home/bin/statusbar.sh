@@ -2,7 +2,7 @@
 
 # alpha
 a="#ff"
-b="#c0"
+b="#00"
 
 # default colors
 bg="${a}${XCOL4}"

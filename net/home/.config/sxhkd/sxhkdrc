@@ -9,7 +9,7 @@ mod4 + Return
  
 # calling ranger danger
 alt + shift + r
- xterm -e ~/bin/ranger
+ xterm -e ~/Source/ranger/./ranger.py
 
 # let's surf
 alt + shift + f
