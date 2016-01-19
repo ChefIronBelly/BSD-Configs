@@ -1,0 +1,135 @@
+/*
+	Fonts
+*/
+
+<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+/*
+	Page Setup
+*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+*::-webkit-input-placeholder{
+	opacity: 0.3;
+}
+
+body{
+	background: #506070;
+	padding-top: 12%;
+	font-size: 11px;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+p, li, a{
+	color: #d0d0d0;
+	font-family: Lato, Consolas;
+	font-weight: 300;
+	letter-spacing:2px;
+}
+
+/*
+	Favorite
+*/
+.favorites{
+	width: 90%;
+	margin: 10px auto 0 auto;
+	text-align: center;
+}
+
+.favorites p{
+	border-bottom: 1px solid #505050;
+	padding-right: 100%;
+}
+
+.list{
+	display: inline-block;
+	width: 18%;
+	margin: 0 15px;
+	vertical-align: text-top;
+}
+
+.list ul{
+	list-style-type: none;
+}
+
+a{
+	text-decoration: none;
+	display: block;
+	padding: 3px;
+}
+
+a:hover{
+	color: #f5f5f5;
+	background: #65737e;
+}
+
+/*
+	Google Pages
+*/
+.googles{
+	width: 90%;
+	margin: 25px auto;
+	text-align: center;
+}
+
+.googles p{
+	display: inline-block;
+	width: 18%;
+	margin: 10px 10px;
+	border: 1px solid #505050;
+}
+	
+/*
+	Search Bars
+*/
+form{
+	width: 90%;
+	margin: auto;
+	padding: 5px;
+	text-align: center;
+	position: relative;
+}
+
+.search{
+	width: 400px;
+	height: 20px;
+	margin-right: -4px;
+	padding: 2px 0px 2px 5px;
+	background: #506070;
+	color: #d0d0d0;
+	border: 1px solid #505050;
+}
+
+.search:hover{
+	border: 1px solid #d0d0d0;
+}
+
+.search:focus{
+	outline: none;
+	border: 1px solid #505050;
+}
+
+.go{
+	height: 26px;
+	width: 40px;
+	background: #506070;
+	color: #d0d0d0;
+	border: 1px solid #505050;
+}
+
+.go:hover{
+	background: #65737e;
+	color: #f5f5f5;
+	cursor: pointer;
+}
+
+.go:focus{
+	outline: none;
+}

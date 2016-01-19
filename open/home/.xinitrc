@@ -14,6 +14,8 @@ xrdb ~/.Xresources
 xsetroot -cursor_name left_ptr
 
 xsetroot -solid '#3f3f3f'
-#setroot -fill ~/Pictures/wallpapers/underwater_tiles.jpg #-blur 1
+#hsetroot -fill ~/Pictures/wallpapers/simpledesktops.jpg #-blur 1
 
-exec cwm 
+xbindkeys &
+
+exec evilwm
