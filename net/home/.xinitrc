@@ -28,7 +28,8 @@ statusbar.sh &
 
 xsetroot -cursor_name left_ptr
 #xsetroot -solid '#2d2d2d'
-hsetroot -fill ~/Pictures/wallpapers/brighton_palace_pier.jpg -tint '#506070'
+hsetroot -fill ~/Pictures/wallpapers/optimal-performance.jpg -tint '#506070'
 
 wew | focus_watcher.sh &
-exec wmutils
+
+exec xterm
