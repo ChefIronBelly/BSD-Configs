@@ -1,2 +1,4 @@
-# myBSD-Configs
-My current BSD dots and scripts.
+BSD-Configs
+- FreeBSD - https://www.freebsd.org
+- NetBSD - http://netbsd.org
+- OpenBSD - http://openbsd.org
