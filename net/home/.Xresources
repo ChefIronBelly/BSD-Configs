@@ -11,7 +11,8 @@ XTerm*eightBitInput: false
 XTerm*locale: true
 XTerm*metaSendsEscape: true
 XTerm*borderWidth: 0
-Xterm*internalBorder: 6
+XTerm*internalBorder: 8
+XTerm*externalBorder: 4
 XTerm*scaleHeight: 1.01
 XTerm*utf8: 1
 XTerm*selectToClipboard: true
