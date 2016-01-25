@@ -12,4 +12,4 @@ Burning the image
 
 If you have a CD/DVD-Writer, you can burn the iso image to a CD. For this task you need to install cdrecord, which is part of sysutils/cdrtools.
 
-# cdrecord -dev=/dev/rcd0d -data -pad -v FILENAME.iso
+# cdrecord dev=/dev/rcd0d -data -pad -v FILENAME.iso
