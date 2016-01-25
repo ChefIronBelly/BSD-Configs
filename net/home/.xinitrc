@@ -32,4 +32,4 @@ hsetroot -fill ~/Pictures/wallpapers/optimal-performance.jpg -tint '#506070'
 
 wew | focus_watcher.sh &
 
-exec xterm
+exec xterm -geometry 30x1+0+0 -name login
