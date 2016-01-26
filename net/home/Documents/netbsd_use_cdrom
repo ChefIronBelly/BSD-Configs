@@ -1,12 +1,8 @@
 Using CD-RW rewritables
 
-You can treat a CD-RW drive like a CD-R drive (see Section 13.10, “Using a CD-R writer with data CDs”) in NetBSD, creating images with mkisofs(8) and writing them on a CD-RW medium with cdrecord(8).
-
 If you want to blank a CD-RW, you can do this with cdrecord's "blank" option:
 
 # cdrecord dev=/dev/rcd0d blank=fast
-
-There are several other ways to blank the CD-RW, call cdrecord(8) with "blank=help" for a list. See the cdrecord(8) man page for more information.
 
 Burning the image
 
