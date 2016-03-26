@@ -36,7 +36,7 @@ groups() {
 }
 
 mem() {
-	mem="$(free -h | grep Mem | awk -F ' ' '{ print $3 }')"
+	mem="$(free | grep Memory | awk -F ' ' '{ print $2 }')"
 	echo $mem
 }
 
@@ -45,20 +45,9 @@ ip() {
     echo $ip
 }
 
-sound() {
-  SOUND=$(amixer get Master|awk 'NR==5 {print $4}'|cut -d '%' -f1 | cut -d '[' -f2)
-  if [ ${SOUND} -ge 75 ]; then
-    SIGNAL="%{F${fg}} $SOUND%{F-}"
-  elif [ ${SOUND} -ge 50 ]; then
-    SIGNAL="%{F${fg}} $SOUND%{F-}"
-  elif [ ${SOUND} -ge 25 ]; then
-    SIGNAL="%{F${fg}} $SOUND%{F-}"
-  elif [ ${SOUND} -ge 1 ]; then
-    SIGNAL="%{F${fg}} $SOUND%{F-}"
-  elif [ ${SOUND} -eq 0 ]; then
-    SIGNAL="%{F${fg}} $SOUND%{F-}"
-  fi
-  echo $SIGNAL
+vol() {
+    vol=$(volumebar.sh)
+    echo $vol
 }
 
 dateclock() {
@@ -71,7 +60,7 @@ clock() {
     echo $time
 }
 
-echo %{l}%{F${sp}}" | "%{F-}%{F${fg}}"0 x "$(groups)%{F-}%{F${sp}}" | "%{F-}%{F${fg}}$(x11ind)%{F-}%{r}%{F${sp}}" | "%{F-}%{F${fg}} $(mem)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(ip)%{F-}%{F${sp}}" | "%{F-}$(sound)%{F${sp}}" | "%{F-}%{F${fg}} $(dateclock)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(clock)%{F-}%{F${sp}}" | %{F-}"
+echo %{l}%{F${sp}}" | "%{F-}%{F${fg}}"0 x "$(groups)%{F-}%{F${sp}}" | "%{F-}%{F${fg}}$(x11ind)%{F-}%{r}%{F${sp}}" | "%{F-}%{F${fg}} $(mem)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(ip)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(vol)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(dateclock)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(clock)%{F-}%{F${sp}}" | %{F-}"
 }
 
 while true
