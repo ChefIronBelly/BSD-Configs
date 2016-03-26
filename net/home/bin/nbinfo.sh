@@ -54,7 +54,7 @@ print-disk() {
 print-mem() {
     # field 2 on line 2 is total, field 3 on line 2 is used
     # use -m because slackaware does not have -h
-    mem=$(top | awk 'NR==4 {total=$2} NR==2 {used=$3; print used"M / "total"M"}')
+    mem=$(free | grep Memory | awk -F ' ' '{ print $2 }')
     color-echo 'MEM' '      '"$mem 2048M"
 }
 
@@ -66,7 +66,7 @@ print-wm() {
 	        break
         fi
     done
-    color-echo 'WM' '       '"Not Found / x11fs active"
+    color-echo 'WM' '       '"Not Found / wmutils active"
 }
            
 print-font() {
@@ -76,12 +76,12 @@ print-font() {
 }
 
 print-distro() {
-    [[ -e /etc/os-release ]] && source /etc/os-release
-    if [ -n "$PRETTY_NAME" ]; then
+	PRETTY_NAME=$(uname)
+	if [[ -n "$PRETTY_NAME" ]]; then
         color-echo 'OS' '       '"$PRETTY_NAME"
-    else
+	else
         color-echo 'OS' '       '"not found"
-    fi
+	fi
 }
 
 print-colors() {
@@ -112,7 +112,7 @@ colors='zenblue'
 printf "\e[94mCOLORS: \e[0m   $colors$rst\n"
 #printf "\n"
 print-disk
-print-mem
+#print-mem
 print-kernel
 print-cpu
 #print-colors

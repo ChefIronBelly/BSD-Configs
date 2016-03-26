@@ -18,9 +18,9 @@ test -z "$1" && usage
 
 # default values for gaps, panel and master area
 PANEL=${PANEL:-20}
-GAP=${GAP:-0}
-MASTER=${MASTER:-1438}
-#MASTER=$(wattr w `lsw -r`)
+GAP=${GAP:-10}
+#MASTER=${MASTER:-1438}
+MASTER=$(wattr w `lsw -r`)
 
 # get current window id and its borderwidth
 PFW=$(pfw)
@@ -52,7 +52,7 @@ else
     # geometry and id to $FSFILE we also remove any border from this window.
     wattr xywhi $1 > $FSFILE
     Y=$((0 + GAP + PANEL))
-    wtp $GAP $Y $((MASTER - GAP)) $((SH - GAP)) $1
+    wtp $GAP $Y $((MASTER - 2*GAP)) $((SH - 2*GAP)) $1
 #    wtp $(wattr xywh `lsw -r`) $1 #original
     chwb -s 0 $1
 fi

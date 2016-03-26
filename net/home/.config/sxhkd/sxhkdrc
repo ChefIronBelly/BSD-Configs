@@ -6,10 +6,26 @@
 # pop a terminal
 mod4 + Return
  xterm
+
+# demenu
+shift + alt + d
+ dmenu_start.sh 
+ 
+# soma
+shift + alt + r
+ dmenu_soma.sh  
+
+# hset wallpaper
+shift + alt + h
+ dmenu_hset.sh 
  
 # calling ranger danger
 alt + shift + r
  xterm -e ~/Source/ranger/./ranger.py
+
+# let's surf
+alt + shift + s
+ dillo file:///home/chef/Desktop/startpage/index.html
 
 # let's surf
 alt + shift + f
@@ -103,11 +119,11 @@ alt + u
  
 # core temp pop up
 alt + t
- ~/bin/pop.sh %\{c\} "cpu temp:" $(temp_bar.sh)"F"
+ ~/bin/pop.sh -g 180x20+200+20 %\{c\} $(tempbar.sh)"F"
  
 # cmus pop up
 alt + s 
- ~/bin/pop.sh %\{c\} " " $(cmus-info)  
+ ~/bin/pop.sh %\{c\} $(cmus-info)
 
 # adjust volume down, up,  mute toggle
 alt + {F10,F11,F12}
