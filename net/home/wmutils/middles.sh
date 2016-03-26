@@ -15,6 +15,10 @@ H=$(wattr h $CUR)
 
 PANEL=${PANEL:-20}
 
+# calculate usable screen size (without borders and gaps)
+SW=$((SW - BW))
+SH=$((SH - BW - PANEL))
+
 offlm=105
 offrm=100
 
@@ -40,3 +44,4 @@ case $1 in
 esac
 
 wtp $X $Y $W $H $CUR
+

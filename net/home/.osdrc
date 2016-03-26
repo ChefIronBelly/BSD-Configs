@@ -1,0 +1,19 @@
+#!/bin/bash
+# ~/.osdrc
+
+. $HOME/.colorrc
+
+OSD_FN="-f -*-terminus-*-*-*-*-18-*-*-*-*-*-*-*"
+OSD_CL="-c #a2a2a2"
+OSD_s="-s 0"
+OSD_S="-S #a2a2a2"
+OSD_p="-p top"
+OSD_a="-A center"
+OSD_d="-d 5"
+OSD_l="-l 1"
+OSD_O="-o 25"
+OSD_WARN="-c RED"
+OSD_NOTI="-c GREEN"
+
+
+export OSD_s OSD_S OSD_p OSD_a OSD_d OSD_l OSD_CL OSD_FN OSD_O OSD_WARN OSD_NOTI
