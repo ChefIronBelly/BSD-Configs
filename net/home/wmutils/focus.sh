@@ -5,7 +5,7 @@
 
 . $HOME/.colorrc
 
-BW=${BW:-4}                    # border width
+BW=${BW:-2}                    # border width
 ACTIVE=${ACTIVE:-0x${C4}}     # active border color
 INACTIVE=${INACTIVE:-0x${C0}} # inactive border color
 
