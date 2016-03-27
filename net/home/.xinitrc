@@ -12,7 +12,7 @@ setxkbmap -layout us -option ctrl:nocaps
 
 xset +dpms
 xset b off
-xset s 300
+#xset s 300
 
 xset +fp /home/chef/.fonts/
 xset +fp /usr/pkg/share/fonts/X11/misc
@@ -20,7 +20,7 @@ xset fp rehash
 
 xrdb -load ~/.Xresources &
 
-xsidle.sh slock &
+#xsidle.sh slock &
 
 sxhkd &
 #l_statusbar.sh &
@@ -28,17 +28,10 @@ statusbar.sh &
 
 xsetroot -cursor_name left_ptr
 #xsetroot -solid '#506070'
-hsetroot -fill ~/Pictures/wallpapers/1600x767.jpg -tint '#506070'
+hsetroot -fill ~/Pictures/wallpapers/37369_miscellaneous_black-white.jpg -tint '#506070'
 
 wew | focus_watcher.sh &
 exec xwait
-
-#export X11FS="$HOME/mnt/x11fs/$DISPLAY"
-#statusbar.sh &
-#sxhkd &
-#x11fs $X11FS
-#bash -c "cat $X11FS/event | focuser"
-#fusermount -u $X11FS
 
 #exec evilwm -term xterm -fn fixed -fg '#506070' -snap 10 -bw 4 -nosoliddrag
 
