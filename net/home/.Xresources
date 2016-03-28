@@ -18,13 +18,12 @@ XTerm*selectToClipboard: true
 XTerm*ScrollBar: false
 XTerm*ScrollKey: true
 
-Xft*dpi:                96
 Xft*antialias:          true
 Xft*hinting:            none
 Xft.autohint:           0
 Xft.antialias:          1
 Xft.hinting:            true
-Xft.hintstyle:          hintfull
+Xft.hintstyle:          hintslight 
 Xft.dpi:                96
 Xft.rgba:               rgb
 Xft.lcdfilter:          lcddefault
