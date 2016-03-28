@@ -1,0 +1,130 @@
+# sxhkdrc
+# chef
+#
+# mod4 = super key / window key
+
+# pop a terminal
+mod4 + Return
+ xterm
+
+# demenu
+shift + alt + d
+ dmenu_start.sh 
+ 
+# soma
+shift + alt + r
+ dmenu_soma.sh  
+
+# hset wallpaper
+shift + alt + h
+ dmenu_hset.sh 
+ 
+# calling ranger danger
+alt + shift + r
+ xterm -e ~/Source/ranger/./ranger.py
+
+# let's surf
+alt + shift + f
+ firefox
+ 
+# overlord
+alt + shift + g
+ geany 
+
+# move left, down, up, right 
+mod4 + {h,j,k,l}
+ wmv {-10 0,0 +10, 0 -10, +10 0} $(pfw)
+
+# move fast left, down, up, right
+mod4 + shift + {h,j,k,l}
+ wmv {-40 0,0 +40, 0 -40, +40 0} $(pfw)
+
+# resize left, down, up, right
+mod4 + alt + {h,j,k,l}
+ wrs {-10 0,0 +10, 0 -10, +10 0} $(pfw)
+
+# resize fast left, down, up, right
+mod4 + alt + shift + {h,j,k,l}
+ wrs {-40 0,0 +40, 0 -40, +40 0} $(pfw)
+
+# quit X	 
+mod4 + ctrl + q
+ pkill xinit
+
+# restart sxhkd (keybinder) 
+mod4 + Escape
+ pkill -USR1 -x sxhkd 
+
+# kill  window
+alt + X
+ killw $(pfw)
+
+# fullscreen window
+mod4 + x
+ ~/wmutils/fullscreen.sh $(pfw)
+
+# change window search order
+mod4 + r
+ chwso -i $(pfw)
+
+# cycle thru windows 
+alt + {Tab, shift + Tab}
+ ~/wmutils/focus.sh {next,prev} 2>/dev/null && \
+ wmp -a $(wattr xy $(pfw)) && \
+ wmp -r $(wattr wh $(pfw))
+ 
+# create groups
+mod4 + shift + {1,2,3,4,5,6,7,8}
+ ~/wmutils/grp.sh add $(pfw) {1,2,3,4,5,6,7,8}
+
+# view groups 
+mod4 + {1,2,3,4,5,6,7,8}
+ ~/wmutils/grp.sh view {1,2,3,4,5,6,7,8}
+ 
+# hide groups 
+mod4 + alt + {1,2,3,4,5,6,7,8}
+  ~/wmutils/grp.sh hide {1,2,3,4,5,6,7,8} 
+
+# remove groups
+mod4 + shift + BackSpace
+  ~/wmutils/grp.sh remove $(pfw)
+
+# tile windows
+mod4 + {t,v}
+ ~/wmutils/tile.sh {-h,-v}
+
+# switch tile grid 
+mod4 + s
+ ~/wmutils/switch_grid.sh
+
+# move window to left center, center, right center
+mod4 + {y,g,u}
+ ~/wmutils/middles.sh {left,center,right}
+ 
+# size window to 50% screen left, right, top or bottom
+mod4 + {n,m,comma,period}
+ ~/wmutils/fifty.sh {left,right,up,down} 
+
+# weather pop up
+alt + w
+ ~/bin/pop.sh %\{c\} $(myweather.sh)
+ 
+# uptime pop up
+alt + u
+ ~/bin/pop.sh %\{c\} $(uptime) 
+ 
+# core temp pop up
+alt + t
+ ~/bin/pop.sh -g 180x20+200+20 %\{c\} $(tempbar.sh)"F"
+ 
+# cmus pop up
+alt + s 
+ ~/bin/pop.sh %\{c\} $(cmus-info)
+
+# adjust volume down, up,  mute toggle
+alt + {F10,F11,F12}
+ ~/bin/volume.sh {-,+,0}
+ 
+# create scrot 
+Print
+ DISPLAY=:0 import -window root ~/Pictures/scrots/scrot-$(date +%m-%d-%Y-%H-%M-%S).png

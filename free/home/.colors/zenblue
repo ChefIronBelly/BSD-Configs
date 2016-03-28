@@ -1,0 +1,23 @@
+! zenblue color-scheme
+
+*foreground:   #EDF0F3
+*background:   #1d1d1d
+*cursorColor:  #f9f9f9
+
+*color0:     #1d1d1d
+*color1:     #ca2026
+*color2:     #379a37
+*color3:     #f37226
+*color4:     #7A858A
+*color5:     #dc8cc3
+*color6:     #4c8fce
+*color7:     #EDF0F3
+
+*color8:     #2d2d2d
+*color9:     #ca2026
+*color10:    #60b48a
+*color11:    #f37226
+*color12:    #94bff3
+*color13:    #dc8cc3
+*color14:    #4c8fce
+*color15:    #EDF0F3

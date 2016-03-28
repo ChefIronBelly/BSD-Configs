@@ -1,26 +1,39 @@
 #!/bin/sh
 
-setxkbmap -layout us -option terminate:ctrl_alt_bksp
-export LANG=en,US,UTF-8
-export TERM=xterm
+unset LC_ALL
+export LANG="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_ALL=""
 
-#xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
-#devilspie -a &
+setxkbmap -option terminate:ctrl_alt_bksp
+setxkbmap -layout us -option ctrl:nocaps
 
-# turn off screen blanking and turn on energy star features
-xset -dpms s off
-
-xset fp+ /home/chef/.fonts/
-xset fp rehash
+xset +dpms
 xset b off
+#xset s 300
 
-if [ -s ~/.Xresources ]; then
-	xrdb -merge ~/.Xresources
-fi
+xset +fp /home/chef/.fonts/
+xset +fp /usr/local/share/fonts/terminus-font
+xset fp rehash
+
+xrdb -load ~/.Xresources &
+
+#xsidle.sh slock &
+
+sxhkd &
+#l_statusbar.sh &
+statusbar.sh &
 
 xsetroot -cursor_name left_ptr
-xsetroot -solid '#333333'
-#hsetroot -fill ~/Pictures/wallpapers/farm.jpg #-blur 1
+xsetroot -solid '#506070'
+#hsetroot -fill ~/Pictures/wallpapers/37369_miscellaneous_black-white.jpg -tint '#506070'
 
-exec i3
+wew | focus_watcher.sh &
+exec xwait
+
+#exec evilwm -term xterm -fn fixed -fg '#506070' -snap 10 -bw 4 -nosoliddrag
+
+#exec xterm -geometry 80x32+20+20 -name login
 
