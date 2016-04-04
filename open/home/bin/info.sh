@@ -35,7 +35,7 @@ print-term() {
 }
 
 print-cpu() {
-	cpu=$(sysctl hw.model | sed -r 's/^.{9}//')
+	cpu=$(sysctl hw.model | sed -r 's/^.{9}//' | sed 's/("GenuineIntel" 686-class)//')
 	color-echo 'CPU' '      '"$cpu"
 }
 
