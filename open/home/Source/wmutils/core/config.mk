@@ -1,9 +1,9 @@
 PREFIX = /usr/local
-MANPREFIX = $(PREFIX)/man
+MANPREFIX = $(PREFIX)/share/man
 
-CC      = cc
-LD      = $(CC)
+CC = cc
+LD = $(CC)
 
-CFLAGS  = -std=c99 -pedantic -Wall -Os -I/usr/local/include -I/usr/X11R6/include
-LDFLAGS = -lxcb -L/usr/local/lib -L /usr/X11R6/lib
+CFLAGS  = -I/usr/X11R6/include -std=c99 -pedantic -Wall -Os
+LDFLAGS = -L/usr/X11R6/lib -lxcb
 
