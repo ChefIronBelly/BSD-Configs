@@ -1,0 +1,11 @@
+either wdX or sdX, open starts at i.
+
+sysctl hw.disknames 
+
+fdisk sdX
+
+disklabel sdX
+
+dmesg | grep sdX
+
+mount /dev/sdXi /mnt
