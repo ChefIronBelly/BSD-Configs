@@ -3,15 +3,15 @@
 
 . $HOME/.colorrc
 
-OSD_FN="-f -*-terminus-*-*-*-*-18-*-*-*-*-*-*-*"
+OSD_FN="-f -*-terminus-*-*-*-*-16-*-*-*-*-*-*-*"
 OSD_CL="-c #eee"
 OSD_s="-s 0"
 OSD_S="-S #eee"
 OSD_p="-p top"
 OSD_a="-A center"
-OSD_d="-d 15"
+OSD_d="-d 10"
 OSD_l="-l 1"
-OSD_O="-o 10"
+OSD_O="-o 5"
 OSD_WARN="-c RED"
 OSD_NOTI="-c GREEN"
 
