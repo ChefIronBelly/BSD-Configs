@@ -8,4 +8,4 @@ vol="vol/pcm: $( ( mixer -s vol 2> /dev/null || echo - ) | cut -d ':' -f 2 )/$( 
 ip="ip: $( if_ip.sh )"
 time=$(date +" %a, %b %d %I:%M")
 
-echo -n $vol - $ip - $time | osd_cat -p top -A center -d 30 -s 0 -c '#eeeeee' -f "DejaVuSansMono 12"
+echo -n "|" $time "|" $vol "|" $ip "|"  | osd_cat -p top -A center -d 30 -s 0 -c '#eeeeee' -f "-*-terminus-*-*-*-*-14-*-*-*-*-*-*-1"

@@ -35,15 +35,8 @@ print-term() {
 }
 
 print-cpu() {
-	cpu=$(sysctl hw.model)
-	cpu_mhz=$(sysctl hw.clockrate | awk '{print $2}')
-		if [ $(echo $cpu_mhz | cut -d. -f1) -gt 999 ];then
-		cpu_ghz=$(awk '{print $1/1000}' <<< "${cpu_mhz}")
-		cpu="$cpu @ ${cpu_ghz}GHz"
-	else
-		cpu="$cpu @ ${cpu_mhz}MHz"
-	fi
-	color-echo 'CPU' '      '"${cpu#*: }" # everything after colon is processor name
+	cpu=$(sysctl hw.model | sed -r 's/^.{9}//' | sed 's/("GenuineIntel" 686-class)//')
+	color-echo 'CPU' '     '"$cpu"
 }
 
 print-packages() {
@@ -94,7 +87,7 @@ print-wm() {
 	        break
         fi
     done
-    color-echo 'WM' '       '"Not Found / wmutils active"
+    #color-echo 'WM' '       '"Not Found / wmutils active"
 }
            
 print-font() {

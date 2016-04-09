@@ -23,6 +23,7 @@ xrdb -load ~/.Xresources &
 #xsidle.sh slock &
 
 #sxhkd &
+xbindkeys &
 #l_statusbar.sh &
 #statusbar.sh &
 
