@@ -28,13 +28,13 @@ xbindkeys &
 #statusbar.sh &
 
 xsetroot -cursor_name left_ptr
-xsetroot -solid '#506070'
-#hsetroot -fill ~/Pictures/wallpapers/37369_miscellaneous_black-white.jpg -tint '#506070'
+#xsetroot -solid '#506070'
+hsetroot -center ~/Pictures/wallpapers/1600x767.jpg -tint '#506070'
 
 #wew | focus_watcher.sh &
 #exec xwait
 
-exec evilwm -term xterm -fn fixed -fg '#506070' -snap 10 -bw 4 -nosoliddrag
+exec evilwm -term xterm -fn fixed -fg '#506070' -snap 10 -bw 2 -nosoliddrag
 
 #exec xterm -geometry 80x32+20+20 -name login
 

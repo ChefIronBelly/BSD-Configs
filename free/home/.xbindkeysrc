@@ -48,8 +48,17 @@
 "status.sh"
   Alt+Shift +s
   
+"dmenu_soma.sh"
+  Alt+Shift +r
+  
+"dmenu_hset.sh"
+  Alt+Shift +h
+  
+"dmenu_start.sh"
+  Alt+Shift +d
+  
 "geany"
-  Alt+Shift +g 
+  Alt+Shift +g      
 
 # set directly keycode (here control + f with my keyboard)
 #"xterm"

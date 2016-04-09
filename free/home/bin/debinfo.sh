@@ -133,7 +133,7 @@ colors='zenblue'
 printf "\e[94mCOLORS: \e[0m   $colors$rst\n"
 #printf "\n"
 print-disk
-#print-mem
+print-mem
 print-kernel
 print-cpu
 #print-colors

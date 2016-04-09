@@ -1,0 +1,17 @@
+#!/bin/bash
+# ~/.colorrc
+
+export FG=edf0f3
+export BG=1d1d1d
+
+export C0=1d1d1d
+export C1=ca2026
+export C2=379a37
+export C3=f37226
+export C4=7a858a
+export C5=dc8cc3
+export C6=4c8fce
+export C7=edf0f3
+
+export FONT="-*-terminus-*-*-*-*-14-*-*-*-*-*-*-*"
+export ICOFONT="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
