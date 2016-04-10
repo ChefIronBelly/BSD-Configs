@@ -87,7 +87,7 @@ print-wm() {
 	        break
         fi
     done
-    #color-echo 'WM' '       '"Not Found / wmutils active"
+    color-echo 'WM' '       '"Not Found / wmutils active"
 }
            
 print-font() {

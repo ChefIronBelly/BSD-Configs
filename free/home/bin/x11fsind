@@ -8,10 +8,10 @@
 #x11Y=$(cat $X11FS/$x11WID/geometry/y)
 	
 #echo "WID: $x11WID"
-#echo "WW: $x11WW"
-#echo "WH: $x11WH"
-#echo "X: $x11X"
-#echo "Y: $x11Y"
+#echo "WW: $WW"
+#echo "WH: $WH"
+#echo "X: $X"
+#echo "Y: $Y"
 
 ## wmutils
 PFW=$(pfw)
@@ -20,8 +20,8 @@ WH=$(wattr h $PFW)
 X=$(wattr x $PFW)
 Y=$(wattr y $PFW)
 
-echo "WID: $PFW"
-echo "WW: $WW"
-echo "WH: $WH"
-echo "X: $X"
-echo "Y: $Y"
+echo "WID:$PFW"
+echo "WW:$WW"
+echo "WH:$WH"
+echo "X:$X"
+echo "Y:$Y"
