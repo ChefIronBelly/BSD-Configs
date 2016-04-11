@@ -26,7 +26,4 @@ if [ -f $FSDIR/4 ];
     else group4="0"
 fi
 
-echo "$group4"
-echo "$group3"
-echo "$group2"
-echo "$group1"
+echo "$group4""$group3""$group2""$group1"
