@@ -15,6 +15,7 @@ xset b off
 #xset s 300
 
 xset +fp /home/chef/.fonts/
+xset +fp /home/chef/.fonts/envypn
 xset +fp /usr/pkg/share/fonts/X11/misc
 xset fp rehash
 

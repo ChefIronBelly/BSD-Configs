@@ -1,0 +1,104 @@
+			Envypn font by Ypnose -- http://ywstd.fr/
+
+DESCRIPTION
+===========
+
+	Strange name, isn't it?
+
+	Envypn is a pcf font inspired by Envy Code R. I wanted to have a highly
+	readable PCF font. I started this font from scratch!
+	It's called Envypn because it's a mix of Envy and Ypnose.
+		[Env][ypn]
+		  |    |
+		  |    +--> Ypnose
+		  +-------> Envy
+	Many symbols are redrawed and improved, IMHO. I didn't copy letters from
+	Envy Code R. envypn-font uses MirOS licence[1]. This licence is perfect
+	for my work/needs.
+
+	Why a README?
+
+	This is just a little README which aims to learn you, how to use the font.
+
+USAGE
+=====
+
+	First, you need to "enable" the font. You can add these lignes in your
+	.xinitrc:
+
+		xset +fp /usr/share/fonts/envypn
+		xset fp rehash
+
+	If the font isn't installed in '/usr/share/fonts/envypn', modify it
+	accordingly.
+	Restart X and now you can preview the font with xfontsel[2] or xfd[3].
+	The best way to include this font, is to use XLFD standard[4].
+
+	The full syntax is:
+
+		-ypn-envypn-Medium-R-Normal--15-150-75-75-C-90-ISO8859-1
+
+	You can use the following syntax in your .Xresources / .Xdefaults or
+	programs you use:
+
+		-*-envypn-Medium-R-*-*-15-*-*-*-*-*-ISO8859-1
+			or
+		-*-envypn-Medium-R-*-*-15-*-*-*-*-*-ISO8859-2
+
+	For now, you can change the size: 13 or 15 and the characters encoding
+	(ISO8859-1 & ISO8859-2).
+
+	I also added aliases. If you're a lazy man, you can use the following
+	syntax (for rxvt-unicode):
+
+		URxvt*font: envypn-13
+
+	It'll enable envypn with size 13. It replaces the previous syntaxes.
+	Here the aliases:
+
+		envypn-13 => envypn 13 size (ISO8859-1)
+		envypn-15 => envypn 15 size (ISO8859-1)
+		envypn.ce-13 => envypn 13 size (ISO8859-2)
+		envypn.ce-15 => envypn 15 size (ISO8859-2)
+
+	I do not recommend this syntax:
+
+		xft:envypn:pixelsize=15
+
+	Why? This font isn't xft. The rule is specified and you shouldn't change
+	it. Even if it works, it's wrong, ugly and it causes global warming or 
+	diseases.
+
+NOTES
+=====
+
+	Even if a package doesn't exist for your favourite distribution / OS, it
+	is possible to install the font, without headaches. The tarball provides
+	an install script called 'envypn-install.sh'. The files won't be "seen"
+	by the package manager though.
+
+	You should NEVER use gbdfed[5], if you want to edit this font!!
+	This thing (I'm not calling it a software), will corrupt or destroy the
+	font, by duplicating characters. And if you even succeed to do what you
+	want, you have a chance it will crashes with a "Segmentation Fault" (it
+	happened to me several times, when two windows are opened).
+	Save your time, and don't use this piece of crap...
+	However, if you want to edit an *existing* character, it should work. Do
+	it very carefully and make sure you didn't include an error (I do not
+	guarantee you a valid result).
+
+	When I totally reworked the font (around 1.5.2), I used bdfedit[6] at the
+	beginning. Then, I finally decided to work with bdfctool[7] and bdfc file
+	format. It's a good software. I can edit it as an ASCII file.
+	Thanks to you mira!
+
+LINKS
+=====
+
+	[1] https://www.mirbsd.org/MirOS-Licence
+	[2] http://linux.die.net/man/1/xfontsel
+	[3] http://linux.die.net/man/1/xfd
+	[4] https://en.wikipedia.org/wiki/X_logical_font_description
+	[5] http://www.math.nmsu.edu/~mleisher/Software/gbdfed/
+	[6] http://hea-www.harvard.edu/~fine/Tech/bdfedit.html
+	[7] https://www.mirbsd.org/htman/i386/man1/bdfctool.htm
