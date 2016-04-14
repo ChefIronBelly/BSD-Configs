@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # ~/.colorrc
 
 export FG=edf0f3

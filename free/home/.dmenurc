@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 # ~/.dmenurc
 
 . $HOME/.colorrc
 
-DMENU_FN="-fn -*-terminus-*-*-*-*-16-*-*-*-*-*-*-*"
+DMENU_FN="-fn -*-terminus-*-*-*-*-14-*-*-*-*-*-*-*"
 DMENU_NB="-nb #1d1d1d"
 DMENU_NF="-nf #edf0f3"
 DMENU_SB="-sb #506070"

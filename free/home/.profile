@@ -29,3 +29,6 @@ PS1=""
  	*) PS1="${PS1}$ ";;
  esac
 
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
