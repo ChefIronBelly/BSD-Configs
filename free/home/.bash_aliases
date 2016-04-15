@@ -2,30 +2,23 @@
 
 alias upd='sudo freebsd-update fetch'
 alias upg='sudo freebsd-update install'
-alias depends='apt-cache depends'
 alias ins='sudo pkg install'
 
 ## Space on drive
-alias disk='du -S | sort -n -r |more'
+alias disk='du -h | sort -n -r |more'
 
 #### SAFETY ####
-alias rm='rm -Iv --preserve-root'
+alias rm='rm -Iv'
 alias mv='mv -iv'
 alias cp='cp -iv'
 alias ln='ln -i'
-
-alias chown='chown --preserve-root'
-alias chmod='chmod --preserve-root'
-alias chgrp='chgrp --preserve-root'
-
-alias shred='shred -n 100 -z -v -u'
 
 #### REBOOT/SHUTDOWN ####
 alias reboot='sudo /sbin/shutdown -r now'
 alias poweroff='sudo /sbin/shutdown -h now'
 alias shutdown='sudo /sbin/shutdown -h now'
 
-#alias ls='ls -G'
+alias ls='ls -G'
 #alias la='ls -A'
 alias ll='ls -lG'
 
