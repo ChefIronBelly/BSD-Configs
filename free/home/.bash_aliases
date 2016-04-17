@@ -3,8 +3,8 @@
 alias upd='sudo freebsd-update fetch'
 alias upg='sudo freebsd-update install'
 alias ins='sudo pkg install'
-alias pkgud='sudo pkg update'
-alisa pkgug='sudo pkg upgrade'
+alias pkgupd='sudo pkg update'
+alias pkgupg='sudo pkg upgrade'
 
 ## Space on drive
 alias disk='du -h | sort -n -r |more'
