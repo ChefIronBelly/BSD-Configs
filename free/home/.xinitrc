@@ -12,7 +12,7 @@ setxkbmap -layout us -option ctrl:nocaps
 
 xset +dpms
 xset b off
-#xset s 300
+xset s 300
 
 xset +fp /home/chef/.fonts/
 xset +fp /usr/local/share/fonts/terminus-font
@@ -20,12 +20,13 @@ xset fp rehash
 
 xrdb -load ~/.Xresources &
 
-#xsidle.sh slock &
+xsidle.sh slock &
 
 sxhkd &
 #xbindkeys &
 #l_statusbar.sh &
 statusbar.sh &
+compton &
 
 xsetroot -cursor_name left_ptr
 #xsetroot -solid '#506070'
