@@ -1,5 +1,7 @@
 #!/bin/sh
-# ~/.colorrc
+# ~/.wmrc
+
+export NAME=Columbia
 
 export FG=edf0f3
 export BG=1d1d1d
@@ -15,3 +17,11 @@ export C7=edf0f3
 
 export FONT="-*-terminus-*-*-*-*-14-*-*-*-*-*-*-*"
 export ICOFONT="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
+
+DMENU_FN="-fn -*-terminus-*-*-*-*-14-*-*-*-*-*-*-*"
+DMENU_NB="-nb #1d1d1d"
+DMENU_NF="-nf #edf0f3"
+DMENU_SB="-sb #506070"
+DMENU_SF="-sf #edf0f3"
+
+export DMENU_FN DMENU_NB DMENU_NF DMENU_SF DMENU_SB

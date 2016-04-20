@@ -1,7 +1,7 @@
 #!/bin/sh
 # play somaFM radio streams using dmenu and mpg123.
 
-. $HOME/.dmenurc
+. $HOME/.wmrc
 
 selection="";
 
