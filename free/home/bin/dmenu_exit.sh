@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # a simple logout dialog
 
 . $HOME/.wmrc
