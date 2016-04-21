@@ -9,23 +9,23 @@ mod4 + Return
 
 # demenu
 shift + alt + d
- dmenu_start.sh 
+ ~/bin/dmenu_start.sh 
  
 # soma
 shift + alt + r
- dmenu_soma.sh  
+ ~/bin/dmenu_soma.sh  
 
 # hset wallpaper
 shift + alt + h
- dmenu_hset.sh 
+ ~/bin/dmenu_hset.sh 
  
-# calling ranger danger
-alt + shift + r
- xterm -e ~/Source/ranger/./ranger.py
-
 # let's surf
 alt + shift + f
  firefox
+
+# let's surf
+alt + shift + s
+ ~/bin/dmenu_google.sh
  
 # overlord
 alt + shift + g
@@ -49,7 +49,7 @@ mod4 + alt + shift + {h,j,k,l}
 
 # quit X	 
 mod4 + ctrl + q
- pkill xinit
+ ~/bin/dmenu_exit.sh
 
 # restart sxhkd (keybinder) 
 mod4 + Escape
@@ -115,15 +115,15 @@ alt + u
  
 # core temp pop up
 alt + t
- ~/bin/pop.sh -g 180x20+200+20 %\{c\} $(tempbar.sh)"F"
- 
+ ~/bin/pop.sh %\{c\} $(tempbar.sh)"F"
+
 # cmus pop up
 alt + s 
- ~/bin/pop.sh %\{c\} $(cmus-info)
+ ~/bin/pop.sh %\{c\} $(cmus-info)  
 
 # adjust volume down, up,  mute toggle
 alt + {F10,F11,F12}
- ~/bin/volume.sh {-,+,0}
+ ~/bin/volume {-,+,!}
  
 # create scrot 
 Print

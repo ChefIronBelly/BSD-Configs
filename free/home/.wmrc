@@ -1,8 +1,6 @@
 #!/bin/sh
 # ~/.wmrc
 
-export NAME=Columbia
-
 export FG=edf0f3
 export BG=1d1d1d
 
