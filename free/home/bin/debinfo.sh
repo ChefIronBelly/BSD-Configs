@@ -53,28 +53,9 @@ print-disk() {
 }
 
 print-mem() {
-	free_mem=0
-	human=1024
-	phys_mem=$(sysctl -n hw.physmem)
-	size_mem=$phys_mem
-	size_chip=1
-	guess_chip=`echo "$size_mem / 8 - 1" | bc`
-	while [ $guess_chip != 0 ]; do
-		guess_chip=`echo "$guess_chip / 2" | bc`
-		size_chip=`echo "$size_chip * 2" | bc`
-	done
-	round_mem=`echo "( $size_mem / $size_chip + 1 ) * $size_chip " | bc`
-	totalmem=$(($round_mem / ($human * $human) ))
-	pagesize=$(sysctl -n hw.pagesize)
-	inactive_count=$(sysctl -n vm.stats.vm.v_inactive_count)
-	inactive_mem=$(($inactive_count * $pagesize))
-	cache_count=$(sysctl -n vm.stats.vm.v_cache_count)
-	cache_mem=$(($cache_count * $pagesize))
-	free_count=$(sysctl -n vm.stats.vm.v_free_count)
-	free_mem=$(($free_count * $pagesize))
-	avail_mem=$(($inactive_mem + $cache_mem + $free_mem))
-	used_mem=$(($round_mem - $avail_mem))
-	usedmem=$(($used_mem / ($human * $human) ))
+	# requires freecolor Im lazy today.
+	totalmem=$( freecolor -mo | awk 'NR==2 {print substr($2,0,4)}')
+	usedmem=$( freecolor -mo | awk 'NR==2 {print substr($3,0,3)}')
 	mem="${usedmem}MB / ${totalmem}MB"
 	color-echo 'MEM' '      '"$mem"
 }
