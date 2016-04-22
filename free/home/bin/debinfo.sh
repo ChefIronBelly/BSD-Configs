@@ -76,7 +76,7 @@ print-mem() {
 	used_mem=$(($round_mem - $avail_mem))
 	usedmem=$(($used_mem / ($human * $human) ))
 	mem="${usedmem}MB / ${totalmem}MB"
-	color-echo 'Mem' '      '"$mem"
+	color-echo 'MEM' '      '"$mem"
 }
 
 print-wm() {
