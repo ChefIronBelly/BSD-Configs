@@ -71,7 +71,7 @@ clock() {
     echo $time
 }
 
-echo %{l}%{F${sp}}" | "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{F${sp}}" | "%{F-}%{F${fg}}$(x11ind)%{F-}%{F${sp}}" | "%{F-}%{c}%{F${fg}}$(hostname)%{F-}%{r}%{F${sp}}" | "%{F-}%{F${fg}} $(mem)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(ip)%{F-}%{F${sp}}" | "%{F-}$(sound)%{F${sp}}" | "%{F-}%{F${fg}} $(dateclock)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(clock)%{F-}%{F${sp}}" | %{F-}"
+echo %{l}%{F${sp}}" | "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{F${sp}}" | "%{F-}%{F${fg}}$(x11ind)%{F-}%{F${sp}}" | "%{F-}%{c}%{F${fg}}$(hostname)%{F-}%{r}%{F${sp}}" | "%{F-}%{F${fg}} $(mem)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(ip)%{F-}%{F${sp}}" | "%{F-}$(sound)%{F${sp}}" | "%{F-}%{F${fg}} $(dateclock)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(clock)%{F-}%{F${sp}}" | "%{F-}
 }
 
 while true
