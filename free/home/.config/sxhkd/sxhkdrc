@@ -123,7 +123,7 @@ alt + s
 
 # adjust volume down, up,  mute toggle
 alt + {F10,F11,F12}
- ~/bin/volume {-,+,!}
+ ~/bin/volume.sh {-,+,!}
  
 # create scrot 
 Print
