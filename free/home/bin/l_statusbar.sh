@@ -49,22 +49,20 @@ ip() {
 
 battery() {
 	BAT=$(battery.sh)
-
-  if [ $BAT -lt '10' ]; then
+	if [ $BAT -lt '10' ]; then
     CUR="%{F${red}} $BAT% %{F-}"
-  elif [ $BAT -ge '10' ] && [ $BAT -lt '25' ]; then
+	elif [ $BAT -ge '10' ] && [ $BAT -lt '25' ]; then
     CUR="%{F${red}} $BAT% %{F-}"
-  elif [ $BAT -ge '25' ] && [ $BAT -lt '50' ]; then
+	elif [ $BAT -ge '25' ] && [ $BAT -lt '50' ]; then
     CUR="%{F${red}} $BAT% %{F-}"
-  elif [ $BAT -ge '50' ] && [ $BAT -lt '75' ]; then
-    CUR="%{F${grn}} $BAT% %{F-}"
-  elif [ $BAT -ge '75' ] && [ $BAT -lt '90' ]; then
-    CUR="%{F${grn}} $BAT% %{F-}"
-  else
-    CUR="%{F${grn}} $BAT% %{F-}"
-  fi
+	elif [ $BAT -ge '50' ] && [ $BAT -lt '75' ]; then
+    CUR="%{F${fg}} $BAT% %{F-}"
+	elif [ $BAT -ge '75' ] && [ $BAT -lt '90' ]; then
+    CUR="%{F${fg}} $BAT% %{F-}"
+	else
+    CUR="%{F${fg}} $BAT% %{F-}"
+	fi
 	echo $CUR
-
 }
 
 sound() {
