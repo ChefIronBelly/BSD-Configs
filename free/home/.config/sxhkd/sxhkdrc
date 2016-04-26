@@ -107,7 +107,7 @@ mod4 + {n,m,comma,period}
 
 # weather pop up
 alt + w
- ~/bin/pop.sh %\{c\} $(myweather.sh)
+ ~/bin/pop.sh %\{c\} $(weather.sh)
  
 # uptime pop up
 alt + u

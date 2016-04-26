@@ -45,11 +45,6 @@ ip() {
     echo $ip
 }
 
-freebsd_get_bat ()
-{
-    sysctl -n hw.acpi.battery.life
-}
-
 battery() {
 	BAT=$(battery.sh)
 	echo $BAT
@@ -81,7 +76,7 @@ clock() {
     echo $time
 }
 
-echo %{l}%{F${sp}}" | "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{F${sp}}" | "%{F-}%{F${fg}}$(x11ind)%{F-}%{r}%{F${sp}}" | "%{F-}%{F${fg}} $(battery)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(mem)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(ip)%{F-}%{F${sp}}" | "%{F-}$(sound)%{F${sp}}" | "%{F-}%{F${fg}} $(dateclock)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(clock)%{F-}%{F${sp}}" | "%{F-}
+echo %{l}%{F${sp}}" | "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{F${sp}}" | "%{F-}%{F${fg}}$(x11ind)%{F-}%{c}%{F${sp}}"♥"%{F-}%{r}%{F${sp}}" | "%{F-}%{F${fg}} $(battery)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(mem)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(ip)%{F-}%{F${sp}}" | "%{F-}$(sound)%{F${sp}}" | "%{F-}%{F${fg}} $(dateclock)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(clock)%{F-}%{F${sp}}" | "%{F-}
 }
 
 while true

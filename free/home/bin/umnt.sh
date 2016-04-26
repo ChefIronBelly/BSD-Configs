@@ -1,3 +1,4 @@
 #! /bin/sh
 
-sudo umount /mnt/da4s1
+sync
+sudo umount /mnt
