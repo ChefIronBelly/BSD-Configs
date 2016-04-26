@@ -5,24 +5,26 @@
 #
 # depends: lemonbar, wattr and common sense
 
+. $HOME/.wmrc
+
 # alpha
 a="#ff"
 b="#c0"
 
 # default colors
-bg="${a}${XCOL4}"
-fg="${a}${XCOL7}"
-hl="${a}${XCOL0}"
+bg="${a}${C4}"
+fg="${a}${C7}"
+hl="${a}${C0}"
 
 default_geometry() {
     # get screen size
     x=$(wattr w `lsw -r`)
     y=$(wattr h `lsw -r`)
 
-    width=450
+    width=470
     height=18
 
-    offy=0
+    offy=20
     offx=$(( x - x/2 - $width/2 ))
 
     echo "${width}x${height}+${offx}+${offy}"
@@ -43,4 +45,3 @@ GEOM=${GEOM:-$(default_geometry)}
 SLEEP=${SLEEP:-5}
 
 (echo "%{c}$@"; sleep $SLEEP) | lemonbar -d -g $GEOM -f $FONT -B $bg -F $fg
-
