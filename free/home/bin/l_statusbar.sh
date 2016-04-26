@@ -10,6 +10,8 @@ b="#00"
 bg="${a}${C0}"
 fg="${a}${C7}"
 sp="${a}${C3}"
+red="${a}${C1}"
+grn="${a}${C2}"
 
 # default geometry
 default_geometry() {
@@ -47,7 +49,22 @@ ip() {
 
 battery() {
 	BAT=$(battery.sh)
-	echo $BAT
+
+  if [ $BAT -lt '10' ]; then
+    CUR="%{F${red}} $BAT% %{F-}"
+  elif [ $BAT -ge '10' ] && [ $BAT -lt '25' ]; then
+    CUR="%{F${red}} $BAT% %{F-}"
+  elif [ $BAT -ge '25' ] && [ $BAT -lt '50' ]; then
+    CUR="%{F${red}} $BAT% %{F-}"
+  elif [ $BAT -ge '50' ] && [ $BAT -lt '75' ]; then
+    CUR="%{F${grn}} $BAT% %{F-}"
+  elif [ $BAT -ge '75' ] && [ $BAT -lt '90' ]; then
+    CUR="%{F${grn}} $BAT% %{F-}"
+  else
+    CUR="%{F${grn}} $BAT% %{F-}"
+  fi
+	echo $CUR
+
 }
 
 sound() {
@@ -76,7 +93,7 @@ clock() {
     echo $time
 }
 
-echo %{l}%{F${sp}}" | "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{F${sp}}" | "%{F-}%{F${fg}}$(x11ind)%{F-}%{c}%{F${sp}}"♥"%{F-}%{r}%{F${sp}}" | "%{F-}%{F${fg}} $(battery)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(mem)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(ip)%{F-}%{F${sp}}" | "%{F-}$(sound)%{F${sp}}" | "%{F-}%{F${fg}} $(dateclock)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(clock)%{F-}%{F${sp}}" | "%{F-}
+echo %{l}%{F${sp}}" | "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{F${sp}}" | "%{F-}%{F${fg}}$(x11ind)%{F-}%{c}%{F${sp}}" ♥" %{F-}%{r}%{F${sp}}" | "%{F-}$(battery)%{F${sp}}" | "%{F-}%{F${fg}} $(mem)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(ip)%{F-}%{F${sp}}" | "%{F-}$(sound)%{F${sp}}" | "%{F-}%{F${fg}} $(dateclock)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(clock)%{F-}%{F${sp}}" | "%{F-}
 }
 
 while true
