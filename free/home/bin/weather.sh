@@ -1,4 +1,5 @@
 #!/usr/local/bin/bash
+
 # original source https://github.com/blamonet/bash-weather
 # jsonval credit: https://gist.github.com/cjus/1047794
 jsonval () {

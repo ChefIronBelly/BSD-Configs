@@ -1,0 +1,3 @@
+camcontrol devlist
+
+mount /dev/ada1s1a  /mnt
