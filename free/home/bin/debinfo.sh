@@ -34,6 +34,11 @@ print-term() {
 	color-echo 'TERM' '     '"$TERM"
 }
 
+print-temp() {
+	temp=$(sysctl -n dev.cpu.0.temperature)
+	color-echo 'TEMP' '     '"$temp"
+}
+
 print-cpu() {
 	cpu=$(sysctl hw.model | sed -r 's/^.{9}//' | sed 's/("GenuineIntel" 686-class)//')
 	color-echo 'CPU' '     '"$cpu"
@@ -43,7 +48,7 @@ print-packages() {
 	pkgs=$(if TMPDIR=/dev/null ASSUME_ALWAYS_YES=1 PACKAGESITE=file:///nonexistent pkg info pkg >/dev/null 2>&1; then 
 	pkg info | wc -l | awk '{print $1}'; else pkg_info | wc -l | awk '{sub(" ", "");print $1}'; fi)
 	
-	color-echo 'Packages' ' '"$pkgs"
+	color-echo 'PACKAGES' ' '"$pkgs"
 }
 
 print-disk() {
@@ -117,5 +122,6 @@ print-disk
 print-mem
 print-kernel
 print-cpu
+print-temp
 #print-colors
 read
