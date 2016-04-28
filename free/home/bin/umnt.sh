@@ -1,4 +1,4 @@
 #! /bin/sh
 
 sync
-sudo umount /mnt
+sudo umount /mnt/usb

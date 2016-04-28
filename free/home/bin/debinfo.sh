@@ -35,8 +35,8 @@ print-term() {
 }
 
 print-temp() {
-	temp=$(sysctl -n dev.cpu.0.temperature)
-	color-echo 'TEMP' '     '"$temp"
+	temp=$(sysctl -n dev.cpu.0.temperature | awk '{print $1*9/5+32}')
+	color-echo 'TEMP' '     '"$temp""F"
 }
 
 print-cpu() {
@@ -122,6 +122,6 @@ print-disk
 print-mem
 print-kernel
 print-cpu
-print-temp
+#print-temp
 #print-colors
 read
