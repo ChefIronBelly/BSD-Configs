@@ -8,11 +8,11 @@
 . $HOME/.wmrc
 
 # alpha
-a="#ff"
+a="#cc"
 b="#c0"
 
 # default colors
-bg="${a}${C4}"
+bg="${a}${C0}"
 fg="${a}${C7}"
 hl="${a}${C0}"
 
