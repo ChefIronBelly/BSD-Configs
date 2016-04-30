@@ -21,6 +21,15 @@ PAGER=more;  	export PAGER
 # set ENV to a file invoked each time sh is started for interactive use.
 ENV=$HOME/.shrc; export ENV
 
+### XDG CONFIG DIRS
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DESKTOP_DIR="$HOME"
+export XDG_DOCUMENTS_DIR="$HOME/Documents"
+export XDG_DOWNLOAD_DIR="$HOME/Downloads"
+export XDG_MUSIC_DIR="$HOME/Music"
+export XDG_PICTURES_DIR="$HOME/Pictures"
+export XDG_VIDEOS_DIR="$HOME/Videos"
+
 #if [ -x /usr/games/fortune ] ; then /usr/games/fortune freebsd-tips ; fi
 
 PS1=""
