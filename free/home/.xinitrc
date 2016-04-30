@@ -8,7 +8,7 @@ export LC_TIME="en_US.UTF-8"
 export LC_ALL=""
 
 setxkbmap -option terminate:ctrl_alt_bksp
-setxkbmap -layout us -option ctrl:nocaps
+setxkbmap -layout us -option caps:escape
 
 xset +dpms
 xset b off
@@ -24,13 +24,13 @@ xsidle.sh slock &
 
 sxhkd &
 #xbindkeys &
-l_statusbar.sh &
-#statusbar.sh &
+#l_statusbar.sh &
+statusbar.sh &
 compton &
 
 xsetroot -cursor_name left_ptr
-xsetroot -solid '#506070'
-#hsetroot -fill ~/Pictures/wallpapers/minimal-dr-manhattan.jpg #-tint '#506070'
+#xsetroot -solid '#506070'
+hsetroot -fill ~/Pictures/wallpapers/scratched-metal-wall.jpg -tint '#506070'
 
 wew | focus_watcher.sh &
 exec xwait
