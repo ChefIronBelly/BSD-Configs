@@ -105,7 +105,7 @@ printf "\e[34m░▒▓█\e[0m▓▒░\n\n"
 }
 
 clear
-printf "\n$org$USER@$(hostname)$rst\n"
+printf "\n$red$USER@$(hostname)$rst\n"
 printf "\n"
 print-distro
 print-packages
