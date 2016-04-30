@@ -1,7 +1,7 @@
 XTerm*font:		-*-terminus-*-*-*-*-14-*-*-*-*-*-*-1
 XTerm*boldFont:		-*-terminus-medium-*-*-*-14-*-*-*-*-*-*-1
 
-XTerm*vt100*geometry: 58x15
+XTerm*vt100*geometry: 58x14
 XTerm*saveLines: 4096
 XTerm*loginShell: true
 XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
