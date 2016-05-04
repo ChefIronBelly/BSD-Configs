@@ -9,7 +9,7 @@ b="#00"
 # default colors
 bg="${a}${C0}"
 fg="${a}${C7}"
-sp="${a}${C3}"
+sp="${a}${C1}"
 
 # default geometry
 default_geometry() {
@@ -71,7 +71,8 @@ clock() {
     echo $time
 }
 
-echo %{l}%{F${sp}}" | "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{F${sp}}" | "%{F-}%{F${fg}}$(x11ind)%{F-}%{F${sp}}" | "%{F-}%{c}%{F${fg}}$(hostname)%{F-}%{r}%{F${sp}}" | "%{F-}%{F${fg}} $(mem)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(ip)%{F-}%{F${sp}}" | "%{F-}$(sound)%{F${sp}}" | "%{F-}%{F${fg}} $(dateclock)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(clock)%{F-}%{F${sp}}" | "%{F-}
+#%{F-}%{F${fg}}$(x11ind)%{F-}
+echo %{l}%{F${sp}}" | "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{F${sp}}" | "%{r}%{F${sp}}" | "%{F-}%{F${fg}} $(mem)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(ip)%{F-}%{F${sp}}" | "%{F-}$(sound)%{F${sp}}" | "%{F-}%{F${fg}} $(dateclock)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(clock)%{F-}%{F${sp}}" | "%{F-}
 }
 
 while true
