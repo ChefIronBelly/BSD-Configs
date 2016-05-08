@@ -9,12 +9,12 @@
 
 # alpha
 a="#cc"
-b="#c0"
+b="#00"
 
 # default colors
 bg="${a}${C0}"
 fg="${a}${C7}"
-hl="${a}${C0}"
+sp="${a}${C1}"
 
 default_geometry() {
     # get screen size
@@ -22,10 +22,11 @@ default_geometry() {
     y=$(wattr h `lsw -r`)
 
     width=470
-    height=18
+    height=16
 
-    offy=20
-    offx=$(( x - x/2 - $width/2 ))
+    offy=0
+#    offx=$(( x - x/2 - $width/2 ))
+    offx=90
 
     echo "${width}x${height}+${offx}+${offy}"
 }
@@ -44,4 +45,4 @@ done
 GEOM=${GEOM:-$(default_geometry)}
 SLEEP=${SLEEP:-5}
 
-(echo "%{c}$@"; sleep $SLEEP) | lemonbar -d -g $GEOM -f $FONT -B $bg -F $fg
+(echo "%{l}$@"; sleep $SLEEP) | lemonbar -d -g $GEOM -f $FONT -B $bg -F $fg

@@ -8,8 +8,8 @@ choice=`echo -e "0: Logout\n1: Shutdown\n2: Reboot\n3:Lock\n4:Cancel" | dmenu $D
 # execute the choice in background
 case "$choice" in
   0) xdotool key Ctrl+Alt+BackSpace & ;;
-  1) sudo shutdown -h now & ;;
-  2) sudo shutdown -r now & ;;
+  1) shutdown & ;;
+  2) reboot & ;;
   3) slock ;;
   4) exit ;;
 esac

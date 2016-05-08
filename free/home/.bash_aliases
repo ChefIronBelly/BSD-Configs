@@ -5,6 +5,7 @@ alias upg='sudo freebsd-update install'
 alias ins='sudo pkg install'
 alias pkgupd='sudo pkg update'
 alias pkgupg='sudo pkg upgrade'
+alias search='sudo pkg search'
 
 ## Space on drive
 alias disk='du -h | sort -n -r |more'

@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 # dev/sd0e or sd4e on my machines #netbsd
 # dev/da4 on my machines #netbsd
 

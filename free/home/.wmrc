@@ -14,7 +14,7 @@ export C6=4c8fce
 export C7=edf0f3
 
 export FONT="-*-terminus-*-*-*-*-14-*-*-*-*-*-*-*"
-export ICOFONT="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
+export ICOFONT="-wuncon-siji-medium-r-normal--11-100-75-75-c-80-iso10646-1"
 
 DMENU_FN="-fn -*-terminus-*-*-*-*-14-*-*-*-*-*-*-*"
 DMENU_NB="-nb #1d1d1d"
