@@ -4,6 +4,7 @@
 
 # svnlite update /usr/src
 
+# cd /usr/src
 # make buildkernel KERNCONF=MOMOFUKU
 # make installkernel KERNCONF=MOMOFUKU
 # shutdown -r now
