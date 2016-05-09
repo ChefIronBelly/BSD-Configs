@@ -94,6 +94,8 @@ options 	USB_DEBUG		# enable debug msgs
 device		uhci			# UHCI PCI->USB interface
 device		usb			# USB Bus (required)
 
+device		snd_hda			# Intel High Definition Audio
+
 device		virtio			# Generic VirtIO bus (required)
 device		virtio_pci		# VirtIO PCI device
 device		vtnet			# VirtIO Ethernet device
