@@ -74,6 +74,10 @@ device		splash			# Splash screen and screen saver support
 device		sc
 options 	SC_PIXEL_MODE	# add support for the raster text mode
 
+device		vt
+device		vt_vga
+device		vt_efifb
+
 device		uart			# Generic UART driver
 
 device		loop			# Network loopback
@@ -94,6 +98,7 @@ options 	USB_DEBUG		# enable debug msgs
 device		uhci			# UHCI PCI->USB interface
 device		usb				# USB Bus (required)
 
+device		sound			# Generic sound driver (required)
 device		snd_hda			# Intel High Definition Audio
 
 device		virtio			# Generic VirtIO bus (required)
