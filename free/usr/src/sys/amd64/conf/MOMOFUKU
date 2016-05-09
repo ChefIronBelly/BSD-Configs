@@ -8,7 +8,7 @@ options 	INET			# InterNETworking
 options 	INET6			# IPv6 communications protocols
 options 	TCP_OFFLOAD		# TCP offload
 options 	SCTP			# Stream Control Transmission Protocol
-options 	FFS			# Berkeley Fast Filesystem
+options 	FFS				# Berkeley Fast Filesystem
 options 	SOFTUPDATES		# Enable FFS soft updates support
 options 	UFS_ACL			# Support for access control lists
 options 	UFS_DIRHASH		# Improve performance on big directories
@@ -39,16 +39,16 @@ options 	AUDIT			# Security event auditing
 options 	CAPABILITY_MODE		# Capsicum capability mode
 options 	CAPABILITIES		# Capsicum capabilities
 options 	PROCDESC		# Support for process descriptors
-options 	MAC			# TrustedBSD MAC Framework
+options 	MAC				# TrustedBSD MAC Framework
 options 	KDTRACE_FRAME		# Ensure frames are compiled in
 options 	KDTRACE_HOOKS		# Kernel DTrace hooks
 options 	DDB_CTF			# Kernel ELF linker loads CTF data
 options 	INCLUDE_CONFIG_FILE	# Include this file in kernel
 
-options 	KDB			# Enable kernel debugger support.
+options 	KDB				# Enable kernel debugger support.
 options 	KDB_TRACE		# Print a stack trace for a panic.
 
-options 	SMP			# Symmetric MultiProcessor Kernel
+options 	SMP				# Symmetric MultiProcessor Kernel
 
 device		cpufreq
 
@@ -56,18 +56,18 @@ device		acpi
 options 	ACPI_DMAR
 device		pci
 
-device		ata			# Legacy ATA/SATA controllers
-options 	ATA_STATIC_ID		# Static device numbering
+device		ata				# Legacy ATA/SATA controllers
+options 	ATA_STATIC_ID	# Static device numbering
 
-device		scbus		# SCSI bus (required for ATA/SCSI)
-device		da			# Direct Access (disks)
-device		cd			# CD
-device		pass		# Passthrough device (direct ATA/SCSI access)
+device		scbus			# SCSI bus (required for ATA/SCSI)
+device		da				# Direct Access (disks)
+device		cd				# CD
+device		pass			# Passthrough device (direct ATA/SCSI access)
 
 device		atkbdc			# AT keyboard controller
 device		atkbd			# AT keyboard
 
-device		vga			# VGA video card driver
+device		vga				# VGA video card driver
 
 device		splash			# Splash screen and screen saver support
 
@@ -82,17 +82,17 @@ device		padlock_rng		# VIA Padlock RNG
 device		rdrand_rng		# Intel Bull Mountain RNG
 device		ether			# Ethernet support
 device		vlan			# 802.1Q VLAN support
-device		tun			# Packet tunnel.
-device		md			# Memory "disks"
-device		gif			# IPv6 and IPv4 tunneling
+device		tun				# Packet tunnel.
+device		md				# Memory "disks"
+device		gif				# IPv6 and IPv4 tunneling
 device		faith			# IPv6-to-IPv4 relaying (translation)
 device		firmware		# firmware assist module
 
-device		bpf			# Berkeley packet filter
+device		bpf				# Berkeley packet filter
 
 options 	USB_DEBUG		# enable debug msgs
 device		uhci			# UHCI PCI->USB interface
-device		usb			# USB Bus (required)
+device		usb				# USB Bus (required)
 
 device		snd_hda			# Intel High Definition Audio
 
@@ -104,7 +104,7 @@ device		virtio_scsi		# VirtIO SCSI device
 device		virtio_balloon		# VirtIO Memory Balloon device
 
 
-device		pf			# Enables PF in kernel
+device		pf				# Enables PF in kernel
 device		pflog			# PF logging interface
 
 options		ALTQ
