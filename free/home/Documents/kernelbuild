@@ -1,7 +1,7 @@
-//first time pull source
-## svnlite co https://svn0.us-east.FreeBSD.org/base/stable/10 /usr/src
-# svnlite co https://svn0.us-east.freebsd.org/base/release/10.3.0/ /usr/src
+// first time sync
+# svnlite co https://svn0.us-east.FreeBSD.org/base/stable/10 /usr/src
 
+// after just update
 # svnlite update /usr/src
 
 # cd /usr/src
