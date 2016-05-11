@@ -56,6 +56,7 @@ device		acpi
 options 	ACPI_DMAR
 device		pci
 
+device		ahci			# AHCI-compatible SATA controllers
 device		ata				# Legacy ATA/SATA controllers
 options 	ATA_STATIC_ID	# Static device numbering
 
