@@ -1,5 +1,6 @@
 // first time sync
 # svnlite co https://svn0.us-east.FreeBSD.org/base/stable/10 /usr/src
+# svnlite co https://svn0.us-east.FreeBSD.org/base/releng/10.3 /usr/src
 
 // after just update
 # svnlite update /usr/src

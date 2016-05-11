@@ -1,7 +1,6 @@
 # .bash_aliases
 
-alias upd='sudo freebsd-update fetch'
-alias upg='sudo freebsd-update install'
+alias upg='sudo freebsd-update fetch install'
 alias ins='sudo pkg install'
 alias pkgupd='sudo pkg update'
 alias pkgupg='sudo pkg upgrade'
