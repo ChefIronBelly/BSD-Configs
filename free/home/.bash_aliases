@@ -34,11 +34,9 @@ alias manb='man -H'
 
 #### My Adds
 alias info='debinfo.sh'
-alias ifconfig='/sbin/ifconfig'
-alias route='/sbin/route'
 alias rec='ffmpeg -f x11grab -s 1440x900 -an -i :0.0 -c:v libvpx -b:v 5M -crf 10 -quality realtime -y -loglevel quiet'
 alias todo='vi ~/todo'
-alias rnet='sudo service networking restart'
+alias rnet='sudo /etc/rc.d/netif restart'
 alias shootme='DISPLAY=:0 import -window root ~/Pictures/scrots/scrot-$(date +%m-%d-%Y-%H-%M-%S).png'
 alias blankcd='cdrdao blank'
 alias zzz=slock
