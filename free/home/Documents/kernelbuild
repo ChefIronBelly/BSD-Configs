@@ -1,3 +1,10 @@
+// list hardware
+pciconf -lv
+
+// backup generic/working kernel
+# mv /boot/kernel /boot/kernel.gen
+# mv /boot/kernel.old /boot/kernel
+
 // first time sync
 # svnlite co https://svn0.us-east.FreeBSD.org/base/stable/10 /usr/src
 # svnlite co https://svn0.us-east.FreeBSD.org/base/releng/10.3 /usr/src
