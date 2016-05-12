@@ -47,18 +47,7 @@ ip() {
 
 sound() {
   SOUND=$( ( mixer -s vol 2> /dev/null || echo - ) | cut -d ':' -f 2 )
-  if [ ${SOUND} -ge 75 ]; then
-    SIGNAL="%{F${fg}} $SOUND%{F-}"
-  elif [ ${SOUND} -ge 50 ]; then
-    SIGNAL="%{F${fg}} $SOUND%{F-}"
-  elif [ ${SOUND} -ge 25 ]; then
-    SIGNAL="%{F${fg}} $SOUND%{F-}"
-  elif [ ${SOUND} -ge 1 ]; then
-    SIGNAL="%{F${fg}} $SOUND%{F-}"
-  elif [ ${SOUND} -eq 0 ]; then
-    SIGNAL="%{F${fg}} $SOUND%{F-}"
-  fi
-  echo $SIGNAL
+  echo $SOUND
 }
 
 dateclock() {
@@ -72,7 +61,7 @@ clock() {
 }
 
 #%{F-}%{F${fg}}$(x11ind)%{F-}
-echo %{l}%{F${sp}}" | "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{F${sp}}" | "%{F-}%{r}%{F${sp}}" | "%{F-}%{F${fg}} $(mem)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(ip)%{F-}%{F${sp}}" | "%{F-}$(sound)%{F${sp}}" | "%{F-}%{F${fg}} $(dateclock)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(clock)%{F-}%{F${sp}}" | "%{F-}
+echo %{l}%{F${sp}}" "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{F${sp}}" >> "%{F-}%{r}%{F${sp}}" >> "%{F-}%{F${fg}}mem: $(mem)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}}ip:$(ip)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}}vol:$(sound)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}}$(dateclock)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}}$(clock)%{F-}%{F${sp}}" "%{F-}
 }
 
 while true
