@@ -1,5 +1,5 @@
 XTerm*font:		-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*
-XTerm*boldFont:		-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*
+XTerm*boldFont:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*
 
 XTerm*vt100*geometry: 58x14
 XTerm*saveLines: 4096
