@@ -19,7 +19,7 @@ PANEL=${PANEL:-20}
 SW=$((SW - BW))
 SH=$((SH - BW - PANEL))
 
-offlm=105
+offlm=60
 offrm=100
 
 X=0
@@ -38,7 +38,7 @@ case $1 in
     left) X=$((SW/4 - W/2 - BW + ${offlm}))
 		Y=$((SH/2 + PANEL/2 - H/2 - BW));;
   center) X=$((SW/2 - W/2 - BW))
-		Y=$((SH/2 + PANEL/2 - H/2 - BW)) ;;
+		Y=$((SH/2 + PANEL - H/2 - BW)) ;;
     right) X=$((SW/2 + W/4 - BW - ${offrm}))
 		Y=$((SH/2 + PANEL/2 - H/2 - BW));;    
 esac
