@@ -111,6 +111,7 @@ device		bpf				# Berkeley packet filter
 
 options 	USB_DEBUG		# enable debug msgs
 device		uhci			# UHCI PCI->USB interface
+device 		ehci			# provides USB 2.0 support
 device		usb				# USB Bus (required)
 
 device		sound			# Generic sound driver (required)
