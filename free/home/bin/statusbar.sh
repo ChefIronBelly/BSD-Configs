@@ -9,7 +9,7 @@ b="#00"
 # default colors
 bg="${a}${C0}"
 fg="${a}${C7}"
-sp="${a}${C1}"
+sp="${a}${C4}"
 
 # default geometry
 default_geometry() {
@@ -25,11 +25,6 @@ GEOM=${GEOM:-$(default_geometry)}
 
 statusbar() {
 	
-x11ind() {
-	x11ind=$(x11fsind)
-	echo $x11ind
-}
-
 groups() {
     groups=$(gind.sh)
     echo $groups
@@ -45,9 +40,9 @@ ip() {
     echo $ip
 }
 
-sound() {
-  SOUND=$( ( mixer -s vol 2> /dev/null || echo - ) | cut -d ':' -f 2 )
-  echo $SOUND
+vol() {
+    vol=$( ( mixer -s vol 2> /dev/null || echo - ) | cut -d ':' -f 2 )
+    echo $vol
 }
 
 dateclock() {
@@ -60,8 +55,7 @@ clock() {
     echo $time
 }
 
-#%{F-}%{F${fg}}$(x11ind)%{F-}
-echo %{l}%{F${sp}}" "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{F${sp}}" >> "%{F-}%{r}%{F${sp}}" >> "%{F-}%{F${fg}}mem: $(mem)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}}ip:$(ip)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}}vol:$(sound)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}}$(dateclock)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}}$(clock)%{F-}%{F${sp}}" "%{F-}
+echo %{l}%{F${sp}}" "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{F${sp}}" >> "%{F-}%{r}%{F${sp}}" >> "%{F-}%{F${fg}}mem:$(mem)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}}ip:$(ip)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}}vol:$(vol)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}}$(dateclock)%{F-}%{F${sp}}" @ "%{F-}%{F${fg}}$(clock)%{F-}%{F${sp}}" "%{F-}
 }
 
 while true

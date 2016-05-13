@@ -14,9 +14,9 @@ export C6=4c8fce
 export C7=edf0f3
 
 export FONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
-export ICOFONT="-wuncon-siji-medium-r-normal--11-100-75-75-c-80-iso10646-1"
+export ICOFONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
 
-DMENU_FN="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
+DMENU_FN="-fn -*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
 DMENU_NB="-nb #1d1d1d"
 DMENU_NF="-nf #edf0f3"
 DMENU_SB="-sb #506070"
