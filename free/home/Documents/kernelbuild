@@ -1,9 +1,12 @@
-// list hardware
-pciconf -lv
-
+// 8.6. If Something Goes Wrong
 // backup generic/working kernel
+
 # mv /boot/kernel /boot/kernel.gen
 # mv /boot/kernel.old /boot/kernel
+
+// 8.3. Finding the System Hardware
+// list hardware
+pciconf -lv
 
 // first time sync
 # svnlite co https://svn0.us-east.FreeBSD.org/base/stable/10 /usr/src
