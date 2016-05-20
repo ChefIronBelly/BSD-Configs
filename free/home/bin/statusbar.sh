@@ -9,7 +9,7 @@ b="#00"
 # default colors
 bg="${a}${C0}"
 fg="${a}${C7}"
-sp="${a}${C4}"
+sp="${a}${C3}"
 
 # default geometry
 default_geometry() {
