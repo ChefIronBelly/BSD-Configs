@@ -5,7 +5,7 @@ BSD-Configs
 
 Current Setup
 
-    BSD Distro: FreeBSD / NetBSD
+    Distro: FreeBSD / NetBSD
     Window Manager: null / wmutils
     Bar: lemonbar
     Launcher: dmenu
