@@ -55,7 +55,7 @@ clock() {
     echo $time
 }
 
-echo %{l}%{F${sp}}" "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{F${sp}}" > "%{F-}%{r}%{F${sp}}" > "%{F-}%{F${fg}}mem:$(mem)%{F-}%{F${sp}}" > "%{F-}%{F${fg}}ip:$(ip)%{F-}%{F${sp}}" > "%{F-}%{F${fg}}vol:$(vol)%{F-}%{F${sp}}" > "%{F-}%{F${fg}}$(dateclock)%{F-}%{F${sp}}" @ "%{F-}%{F${fg}}$(clock)%{F-}%{F${sp}}" "%{F-}
+echo %{l}%{F${sp}}" "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{F${sp}}" > "%{F-}%{r}%{F${fg}}mem:$(mem)%{F-}%{F${sp}}" > "%{F-}%{F${fg}}ip:$(ip)%{F-}%{F${sp}}" > "%{F-}%{F${fg}}vol:$(vol)%{F-}%{F${sp}}" > "%{F-}%{F${fg}}$(dateclock)%{F-}%{F${sp}}" @ "%{F-}%{F${fg}}$(clock)%{F-}%{F${sp}}" "%{F-}
 }
 
 while true
