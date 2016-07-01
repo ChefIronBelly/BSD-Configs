@@ -9,7 +9,7 @@ b="#00"
 # default colors
 bg="${a}${C0}"
 fg="${a}${C7}"
-sp="${a}${C3}"
+sp="${a}${C4}"
 
 # default geometry
 default_geometry() {
@@ -30,19 +30,9 @@ groups() {
     echo $groups
 }
 
-mem() {
-	mem=$(freecolor -o | awk 'NR==2 {print substr($3,0,3)}')
-	echo $mem
-}
-
-ip() {
-    ip=$(if_ip.sh)
-    echo $ip
-}
-
-vol() {
-    vol=$( ( mixer -s vol 2> /dev/null || echo - ) | cut -d ':' -f 2 )
-    echo $vol
+muzac() {
+	muzac=$(cmus-info)
+    echo $muzac
 }
 
 dateclock() {
@@ -51,11 +41,11 @@ dateclock() {
 }
 
 clock() {
-    time=$(date +" %I:%M")
+    time=$(date +" %I:%M %p")
     echo $time
 }
 
-echo %{l}%{F${sp}}" "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{F${sp}}" > "%{F-}%{r}%{F${fg}}mem:$(mem)%{F-}%{F${sp}}" > "%{F-}%{F${fg}}ip:$(ip)%{F-}%{F${sp}}" > "%{F-}%{F${fg}}vol:$(vol)%{F-}%{F${sp}}" > "%{F-}%{F${fg}}$(dateclock)%{F-}%{F${sp}}" @ "%{F-}%{F${fg}}$(clock)%{F-}%{F${sp}}" "%{F-}
+echo %{l}%{F${sp}}" "%{F-}%{F${fg}}$(groups)%{F-}%{F${sp}}%{F-}%{c}%{F${sp}}%{F-}%{F${fg}}$(dateclock)%{F-}%{F${fg}}" - "%{F-}%{F${fg}}$(clock)%{r}%{F-}%{F${fg}}$(muzac)" "%{F-}
 }
 
 while true

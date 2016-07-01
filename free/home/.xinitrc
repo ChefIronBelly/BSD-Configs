@@ -31,7 +31,7 @@ redshift &
 
 xsetroot -cursor_name left_ptr
 #xsetroot -solid '#506070'
-hsetroot -fill ~/Pictures/wallpapers/1600x767.jpg -tint '#506070'
+hsetroot -fill ~/Pictures/wallpapers/xray_500.jpg -tint '#506070'
 
 rm /tmp/grp/* 2>/dev/null 
 
