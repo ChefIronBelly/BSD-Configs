@@ -39,3 +39,4 @@ alias rnet='sudo /etc/rc.d/netif restart'
 alias shootme='DISPLAY=:0 import -window root ~/Pictures/scrots/scrot-$(date +%m-%d-%Y-%H-%M-%S).png'
 alias blankcd='cdrdao blank'
 alias zzz=slock
+alias wet=curl -4 wttr.in
