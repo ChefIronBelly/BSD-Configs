@@ -26,8 +26,8 @@ sxhkd &
 #xbindkeys &
 #l_statusbar.sh &
 statusbar.sh &
-compton &
-redshift &
+#compton &
+#redshift &
 
 xsetroot -cursor_name left_ptr
 #xsetroot -solid '#506070'

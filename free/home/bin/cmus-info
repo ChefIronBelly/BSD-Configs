@@ -4,7 +4,7 @@ ARTIST=$( cmus-remote -Q 2>/dev/null | grep artist | cut -d " " -f 3- | head -n1
 TITLE=$( cmus-remote -Q 2>/dev/null | grep title | cut -d " " -f 3- )
 
 if [ -z "$ARTIST" ]; then
-    echo ""
+    echo "Select-O-matic 100 | 2 Plays Quarter"
 else
-    echo " $ARTIST - $TITLE"
+    echo "Now playing - $ARTIST - $TITLE"
 fi
