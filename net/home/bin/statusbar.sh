@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. $HOME/.colorrc
+. $HOME/.wmrc
 
 # alpha
 a="#cc"
@@ -9,7 +9,7 @@ b="#00"
 # default colors
 bg="${a}${C0}"
 fg="${a}${C7}"
-sp="${a}${C3}"
+sp="${a}${C4}"
 
 # default geometry
 default_geometry() {
@@ -25,29 +25,14 @@ GEOM=${GEOM:-$(default_geometry)}
 
 statusbar() {
 	
-x11ind() {
-	x11ind=$(x11fsind)
-	echo $x11ind
-}
-
 groups() {
     groups=$(gind.sh)
     echo $groups
 }
 
-mem() {
-	mem="$(free | grep Memory | awk -F ' ' '{ print $2 }')"
-	echo $mem
-}
-
-ip() {
-    ip=$(if_ip.sh)
-    echo $ip
-}
-
-vol() {
-    vol=$(volumebar.sh)
-    echo $vol
+muzac() {
+	muzac=$(cmus-info)
+    echo $muzac
 }
 
 dateclock() {
@@ -56,11 +41,11 @@ dateclock() {
 }
 
 clock() {
-    time=$(date +" %I:%M")
+    time=$(date +" %I:%M %p")
     echo $time
 }
 
-echo %{l}%{F${sp}}" | "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{F${sp}}" | "%{F-}%{F${fg}}$(x11ind)%{F-}%{r}%{F${sp}}" | "%{F-}%{F${fg}} $(mem)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(ip)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(vol)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(dateclock)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(clock)%{F-}%{F${sp}}" | %{F-}"
+echo %{l}%{F${sp}}" "%{F-}%{F${fg}}$(groups)%{F-}%{F${sp}}%{F-}%{c}%{F${sp}}%{F-}%{F${fg}}$(dateclock)%{F-}%{F${fg}}" - "%{F-}%{F${fg}}$(clock)%{r}%{F-}%{F${fg}}$(muzac)" "%{F-}
 }
 
 while true

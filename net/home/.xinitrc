@@ -15,7 +15,6 @@ xset b off
 #xset s 300
 
 xset +fp /home/chef/.fonts/
-xset +fp /home/chef/.fonts/envypn
 xset +fp /usr/pkg/share/fonts/X11/misc
 xset fp rehash
 
@@ -29,7 +28,7 @@ statusbar.sh &
 
 xsetroot -cursor_name left_ptr
 #xsetroot -solid '#506070'
-hsetroot -fill ~/Pictures/wallpapers/37369_miscellaneous_black-white.jpg -tint '#506070'
+hsetroot -fill ~/Pictures/wallpapers/1600x767.jpg -tint '#506070'
 
 wew | focus_watcher.sh &
 exec xwait
