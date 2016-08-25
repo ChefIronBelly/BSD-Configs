@@ -1,0 +1,14 @@
+Let's assume you are running NetBSD/amd64 7.0 and you wish to upgrade to NetBSD 7.0.1. The procedure to do so would be to run the following command:
+
+# sysupgrade auto ftp://ftp.NetBSD.org/pub/NetBSD/NetBSD-7.0.1/amd64
+  
+Let's assume we want to upgrade all installed binary packages.
+First install /usr/pkgsrc/pkgtools/pkgin
+
+# pkgin update
+# pkgin upgrade
+
+Keeping pkgsrc up-to-date via CVS
+
+$ cd /usr/pkgsrc && cvs update -dP
+
