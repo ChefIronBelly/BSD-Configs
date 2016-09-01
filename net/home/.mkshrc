@@ -13,7 +13,7 @@ alias rec='ffmpeg2 -f x11grab -s 1440x900 -an -i :0.0 -c:v libvpx -b:v 5M -crf 1
 alias info='nbinfo.sh'
 alias todo='vi ~/todo'
 alias rnet='sudo /etc/rc.d/network restart'
-alias shutdown='sudo shutdown -h now'
+alias shutdown='sudo /sbin/shutdown -p now "going down"'
 alias zzz='xlock'
 alias shootme='DISPLAY=:0 import -window root ~/Pictures/scrots/scrot-$(date +%m-%d-%Y-%H-%M-%S).png'
 alias cp='cp -ip'
@@ -29,3 +29,27 @@ PS1=""
  	0) PS1="${PS1}# ";;
  	*) PS1="${PS1}$ ";;
  esac
+
+man() {
+	if [ "$TERM" = 'linux' ]; then
+		env \
+			LESS_TERMCAP_mb=$(printf "\e[34m") \
+			LESS_TERMCAP_md=$(printf "\e[1;31m") \
+			LESS_TERMCAP_me=$(printf "\e[0m") \
+			LESS_TERMCAP_se=$(printf "\e[0m") \
+			LESS_TERMCAP_so=$(printf "\e[30;43m") \
+			LESS_TERMCAP_ue=$(printf "\e[0m") \
+			LESS_TERMCAP_us=$(printf "\e[32m") \
+					/usr/bin/man "$@"
+	else
+		env \
+			LESS_TERMCAP_mb=$(printf "\e[1;34m") \
+			LESS_TERMCAP_md=$(printf "\e[38;5;9m") \
+			LESS_TERMCAP_me=$(printf "\e[0m") \
+			LESS_TERMCAP_se=$(printf "\e[0m") \
+			LESS_TERMCAP_so=$(printf "\e[30;43m") \
+			LESS_TERMCAP_ue=$(printf "\e[0m") \
+			LESS_TERMCAP_us=$(printf "\e[38;5;10m") \
+					/usr/bin/man "$@"
+	fi
+}
