@@ -9,5 +9,5 @@ Let's assume we want to upgrade installed (binary) packages.
 
 Let's assume we want to upgrade (source) pkgsrc up-to-date via CVS
 
-$ cd /usr/pkgsrc && cvs update -dP
+# cd /usr/pkgsrc && cvs update -dP
 
