@@ -20,7 +20,7 @@ xset fp rehash
 
 xrdb -load ~/.Xresources &
 
-xsidle.sh slock &
+#xsidle.sh slock &
 
 #sxhkd &
 xbindkeys &
@@ -30,9 +30,9 @@ xbindkeys &
 
 xsetroot -cursor_name left_ptr
 #xsetroot -solid '#333'
-#hsetroot -cover ~/Pictures/wallpapers/1600x767.png #-tint '#506070'
+#hsetroot -cover ~/Pictures/wallpapers/optimal-performance.jpg #-tint '#506070'
 #xsetroot -solid steelblue
-feh --bg-scale ~/Pictures/wallpapers/1600x767.jpg &
+feh --bg-scale ~/Pictures/wallpapers/optimal-performance.jpg &
 
 #wew | focus_watcher.sh &
 #exec xwait
