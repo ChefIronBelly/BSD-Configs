@@ -1,7 +1,7 @@
 BSD-Configs
 - FreeBSD - https://www.freebsd.org
 - NetBSD - http://www.netbsd.org
-- OpenBSD - http:/www./openbsd.org
+- OpenBSD - http://www.openbsd.org
 
 Current Setup
 
