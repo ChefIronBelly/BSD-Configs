@@ -29,10 +29,10 @@ xbindkeys &
 #compton --config /home/chef/.config/compton.conf &
 
 xsetroot -cursor_name left_ptr
-#xsetroot -solid '#333'
+#xsetroot -solid '#2d2d2d'
 #hsetroot -cover ~/Pictures/wallpapers/optimal-performance.jpg #-tint '#506070'
-#xsetroot -solid steelblue
-feh --bg-scale ~/Pictures/wallpapers/yosemite.png &
+xsetroot -solid steelblue
+#feh --bg-scale ~/Pictures/wallpapers/vTMGurl.png &
 
 #wew | focus_watcher.sh &
 #exec xwait
