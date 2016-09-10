@@ -34,6 +34,14 @@
 "geany"
  alt + shift + g
  
+# adjust volume mute toggle
+"~/bin/volume.sh 0"
+alt + 0
+ 
+# fullscreen window
+"~/wmutils/fullscreen.sh $(pfw)"
+mod4 + x 
+
 ##################################
 # End of xbindkeys configuration #
 ##################################

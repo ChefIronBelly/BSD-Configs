@@ -32,7 +32,7 @@ xsetroot -cursor_name left_ptr
 #xsetroot -solid '#333'
 #hsetroot -cover ~/Pictures/wallpapers/optimal-performance.jpg #-tint '#506070'
 #xsetroot -solid steelblue
-feh --bg-scale ~/Pictures/wallpapers/optimal-performance.jpg &
+feh --bg-scale ~/Pictures/wallpapers/yosemite.png &
 
 #wew | focus_watcher.sh &
 #exec xwait
