@@ -1,7 +1,7 @@
 #!/usr/local/bin/bash
 
 # define colors for color-echo
-red="\e[1;31m"
+red="\e[41m"
 grn="\e[32m"
 org="\e[33m"
 blu="\e[94m"
@@ -95,7 +95,7 @@ printf "\e[34m░▒▓█\e[0m▓▒░\n\n"
 }
 
 clear
-printf "\n$org$USER@$(hostname)$rst\n"
+printf "\n$red$USER@$(hostname)$rst\n"
 printf "\n"
 print-distro
 print-packages
