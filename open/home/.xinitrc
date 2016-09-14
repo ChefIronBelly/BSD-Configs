@@ -22,18 +22,11 @@ xrdb -load ~/.Xresources &
 
 #xsidle.sh slock &
 
-#sxhkd &
 xbindkeys &
-#l_statusbar.sh &
-#statusbar.sh &
-#compton --config /home/chef/.config/compton.conf &
 
 xsetroot -cursor_name left_ptr
-#xsetroot -solid '#2d2d2d'
-#hsetroot -cover ~/Pictures/wallpapers/optimal-performance.jpg #-tint '#506070'
-xsetroot -solid steelblue
-#feh --bg-scale ~/Pictures/wallpapers/vTMGurl.png &
+xsetroot -solid #506070
 
 #wew | focus_watcher.sh &
 #exec xwait
-exec evilwm -term xterm -fn fixed -fg '#506070' -snap 10 -bw 2 -nosoliddrag
+exec evilwm -term xterm -fn fixed -fg '#eeeeee' -snap 20 -bw 2 -nosoliddrag

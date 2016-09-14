@@ -22,11 +22,15 @@
 "xterm" 
  mod4 + Return
   
-# demenu
+# demenu_start
 "~/bin/dmenu_start.sh"
  shift + alt + d
+
+# demenu_xset
+"~/bin/dmenu_xset.sh"
+ shift + alt + x
  
-# soma
+# demenu_soma
 "~/bin/dmenu_soma.sh"  
  shift + alt + r
 
@@ -38,9 +42,13 @@
 "~/bin/volume.sh 0"
 alt + 0
  
-# fullscreen window
-"~/wmutils/fullscreen.sh $(pfw)"
-mod4 + x 
+# adjust volume up
+"~/bin/volume.sh +"
+alt + plus
+
+# quit X
+"~/bin/dmenu_exit.sh" 
+mod4 + control + q
 
 ##################################
 # End of xbindkeys configuration #
