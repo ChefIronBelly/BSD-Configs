@@ -25,8 +25,8 @@ xrdb -load ~/.Xresources &
 xbindkeys &
 
 xsetroot -cursor_name left_ptr
-xsetroot -solid #506070
+xsetroot -solid '#333333' 
 
 #wew | focus_watcher.sh &
 #exec xwait
-exec evilwm -term xterm -fn fixed -fg '#eeeeee' -snap 20 -bw 2 -nosoliddrag
+exec evilwm -term xterm -fn Ohsnap -fg '#a09f93' -snap 10 -bw 2 -nosoliddrag

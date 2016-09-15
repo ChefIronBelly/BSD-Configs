@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/mksh
 
 # Script para ver la cantidad de correos de Gmail.
 # Imprime la cantidad o "err" en caso de algún error

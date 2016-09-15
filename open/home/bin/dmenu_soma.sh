@@ -6,7 +6,7 @@
 selection="";
 
 if [ "$(pgrep mpg123)" ] ; then
-        echo -n "All your sound belong to us ..." | osd_cat -p top -A center -d 3 -s 0 -c '#$FG' -f '$FONT'
+        echo -n "All your sound belong to us ..." | osd_cat -p top -A center -d 3 -s 0 -c '#$FG' -f $FONT
         pkill mpg123
         exit 0
 fi

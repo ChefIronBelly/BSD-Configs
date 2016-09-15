@@ -31,4 +31,4 @@ Xft.dpi:                96
 Xft.rgba:               rgb
 Xft.lcdfilter:          lcddefault
 
-#include </home/chef/.colors/zenblue>
+#include </home/chef/.colors/base-16/base16-eighties.dark.xresources>
