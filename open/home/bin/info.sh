@@ -95,7 +95,7 @@ printf "\e[34m░▒▓█\e[0m▓▒░\n\n"
 }
 
 clear
-printf "\n$red$USER@$(hostname)$rst\n"
+printf "\e[44m$USER@$(hostname)$rst\n"
 printf "\n"
 print-distro
 print-packages
@@ -105,7 +105,7 @@ print-shell
 print-term
 #printf "\n"
 print-font
-colors='zenblue'
+colors='base16-eighties.dark'
 printf "\e[94mCOLORS: \e[0m   $colors$rst\n"
 #printf "\n"
 print-disk

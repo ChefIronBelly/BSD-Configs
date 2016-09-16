@@ -41,6 +41,10 @@
 # adjust volume mute toggle
 "~/bin/volume.sh 0"
 alt + 0
+
+# adjust volume down
+"~/bin/volume.sh -"
+alt + minus
  
 # adjust volume up
 "~/bin/volume.sh +"
