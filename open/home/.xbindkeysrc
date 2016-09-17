@@ -15,7 +15,7 @@
   alt+shift+f
   
 # give me status
-"status.sh"
+"~/bin/status.sh"
   alt+s
 
 # pop a terminal
