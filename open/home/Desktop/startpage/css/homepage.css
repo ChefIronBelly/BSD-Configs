@@ -17,7 +17,7 @@
 }
 
 body{
-	background: #5F8787;
+	background: #121212;
 	padding-top: 12%;
 	font-size: 11px;
 	-webkit-font-smoothing: antialiased;
@@ -67,7 +67,7 @@ a{
 
 a:hover{
 	color: #f5f5f5;
-	background: #c2c2b0;
+	background: #5F8787;
 }
 
 /*
@@ -102,7 +102,7 @@ form{
 	height: 20px;
 	margin-right: -4px;
 	padding: 2px 0px 2px 5px;
-	background: #5F8787;
+	background: #121212;
 	color: #d0d0d0;
 	border: 1px solid #c2c2b0;
 }
@@ -119,13 +119,13 @@ form{
 .go{
 	height: 26px;
 	width: 40px;
-	background: #5F8787;
+	background: #121212;
 	color: #d0d0d0;
 	border: 1px solid #c2c2b0;
 }
 
 .go:hover{
-	background: #65737e;
+	background: #5F8787;
 	color: #f5f5f5;
 	cursor: pointer;
 }
