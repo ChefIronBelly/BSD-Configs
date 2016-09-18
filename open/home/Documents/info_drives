@@ -1,5 +1,7 @@
 either wdX or sdX, open starts at i.
 
+cat /var/log/messages # after plugging usb
+
 sysctl hw.disknames 
 
 fdisk sdX
