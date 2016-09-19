@@ -22,11 +22,13 @@ xrdb -load ~/.Xresources &
 
 #xsidle.sh slock &
 
-xbindkeys &
+sxhkd &
+#xbindkeys &
 
 xsetroot -cursor_name left_ptr
-xsetroot -solid '#6272a4' 
+#xsetroot -solid '#6272a4'
+feh --bg-fill $HOME/Pictures/wallpapers/wp1.jpg & 
 
-#wew | focus_watcher.sh &
-#exec xwait
-exec evilwm -term xterm -fn Ohsnap -fg '#282a36' -snap 10 -bw 2 -nosoliddrag
+wew | focus_watcher.sh &
+exec xwait
+#exec evilwm -term xterm -fn Ohsnap -fg '#282a36' -snap 10 -bw 2 -nosoliddrag
