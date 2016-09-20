@@ -1,97 +1,107 @@
-## cwm config  
+#
+# ~/.cwmrc
+#
 
-## Key bindings
-	bind MS-Return xterm 
-	bind M-t status.sh
-	bind MS-c delete
-	bind C-r exec
-	bind CMS-l label
-    bind CM-r reload
-	bind M-f maximize 
-	bind MS-m menusearch
-	bind CM-r reload
-	bind M-F8 "mixer -s vol 80:80"
-	bind M-F9 "mixer -s vol -5:-5"
-	bind M-F10 "mixer -s vol +5:+5"
-	bind M-p "dmenu_run -fn 'DejaVuSansMono-12' -nb '#3f3f3f' -nf '#dcdccc' -sb '#dcdccc' -sf '#3f3f3f'"
+# set font
+fontname "-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
 
-	bind M-1 grouponly1
-	bind M-2 grouponly2
-	bind M-3 grouponly3
-	bind M-4 grouponly4
-	bind MS-1 movetogroup1
-	bind MS-2 movetogroup2
-	bind MS-3 movetogroup3
-	bind MS-4 movetogroup4
+# set border width
+borderwidth 4
 
-	mousebind M-2 window_lower
-	mousebind M-3 window_resize
+# colors
+color activeborder   '#c4bbb0'
+color inactiveborder '#413f43'
+color menubg         '#252326'
+color menufg         '#c4bbb0'
+color font           '#c4bbb0'
+color selfont        '#252326'
 
-## Application menu
-	command file_manager "xterm -e mc" 
-	command music_player "xterm -e cmus" 
-	command search "xterm -e links -G google.com"	
-	command web_browser "xterm -e links -G new.google.com"
+# fuck you're slow
+moveamount 10
 
-## Fonts, Style, Color
-    fontname        "DejaVuSansMono:pixelsize=12:antialias=true"
-  	color menubg    "#1f1f1f"
-    color font      "#dcdccc"
+# autogroups
+autogroup 1 Pidgin
+autogroup 1 Mumble
+autogroup 2 Firefox
+autogroup 3 mpv
 
-	borderwidth 2 
-    color activeborder      "#dcdccc"
-    color inactiveborder    "#3f3f3f"
-    gap 10 10 10 10         #[T,B,L,R] 
-          
-## Ignore programs; no borders
-	ignore xclock
+# menu
+command term   /usr/local/bin/xterm
+command surf   /usr/local/bin/firefox
+command lock   /usr/local/bin/slock
 
-## Groups predefined
-	autogroup 1 "xterm"
-	autogroup 2 "geany"
-	autogroup 2 "links"
-	autogroup 3 "mpg123"
-	autogroup 3 "mpv"
-    autogroup 4 "Chrome"
-	autogroup 4 "gFTP"
+# binds
+bind SM-Return xterm
+bind SM-s     status.sh
+bind SM-f     firefox
+bind SM-g     geany
+bind SM-d 	  dmenu_start.sh
+bind SM-r     dmenu_soma.sh
+bind SM-h     dmenu_hset.sh
+bind SM-q     dmenu_exit.sh
+bind M-0 	  volume.sh 0
 
-## Tiling
-	#bind 4S-h 	htile
-	#bind 4S-v	vtile	
+bind 4-v      vmaximize
+bind 4-b      hmaximize
+bind 4-f      maximize
+bind 4S-h     resizeleft
+bind 4S-j     resizedown
+bind 4S-k     resizeup
+bind 4S-l     resizeright
+bind 4MS-h    bigresizeleft
+bind 4MS-j    bigresizedown
+bind 4MS-k    bigresizeup
+bind 4MS-l    bigresizeright
 
-## Mousebindings
-	mousebind CM-1 	window_resize
-	mousebind M-1  	window_move
+bind 4-h      moveleft
+bind 4-j      movedown
+bind 4-k      moveup
+bind 4-l      moveright
+bind 4C-h     bigmoveleft
+bind 4C-j     bigmovedown
+bind 4C-k     bigmoveup
+bind 4C-l     bigmoveright
 
-## pointer movement
-    bind 4-j ptrmovedown 
-    bind 4S-j bigptrmovedown 
-    bind 4-k ptrmoveup 
-    bind 4S-k bigptrmoveup 
-    bind 4-h ptrmoveleft 
-    bind 4S-h bigptrmoveleft 
-    bind 4-l ptrmoveright 
-    bind 4S-l bigptrmoveright 
+bind 4-comma  label
+bind 4S-e     delete
 
-## Window movement (standard bindings)
-    bind M-h moveleft
-    bind MS-h bigmoveleft
-    bind M-j movedown
-    bind MS-j bigmovedown
-    bind M-k moveup
-    bind MS-k bigmoveup
-    bind M-l moveright 
-    bind MS-l bigmoveright 
+bind 4-Tab    cycle
+bind 4S-Tab   rcycle
 
-## Window resizing
-    bind MC-h resizeleft
-    bind MCS-h bigresizeleft
-    bind MC-j resizedown
-    bind MCS-j bigresizedown
-    bind MC-k resizeup
-    bind MCS-k bigresizeup
-    bind MC-l resizeright
-    bind MCS-l bigresizeright
+bind 4-g      grouptoggle
+bind 4MC-l    cyclegroup
+bind 4MC-h    rcyclegroup
+bind 4-1      group1
+bind 4-2      group2
+bind 4-3      group3
+bind 4-4      group4
+bind 4-5      group5
+bind 4-6      group6
+bind 4-7      group7
+bind 4-8      group8
+bind 4-9      group9
+bind 4-0      nogroup
+bind 4M-1     grouponly1
+bind 4M-2     grouponly2
+bind 4M-3     grouponly3
+bind 4M-4     grouponly4
+bind 4M-5     grouponly5
+bind 4M-6     grouponly6
+bind 4M-7     grouponly7
+bind 4M-8     grouponly8
+bind 4M-9     grouponly9
 
-    snapdist 4 
-    sticky yes
+bind 4C-r     restart
+bind 4C-q     quit
+
+bind 4-d      exec
+bind 4-s      search
+
+bind M-Left   unbind
+bind M-Right  unbind
+bind M-Return unbind
+
+# mousebinds
+mousebind 4-1 window_move
+mousebind 4-2 window_grouptoggle
+mousebind 4-3 window_resize

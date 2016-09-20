@@ -63,7 +63,7 @@ print-wm() {
 	        break
         fi
     done
-    #color-echo 'WM' '       '"Not Found / x11fs active"
+    #color-echo 'WM' '       '"Not Found / wmutils active"
 }
            
 print-font() {
