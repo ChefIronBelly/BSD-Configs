@@ -17,7 +17,7 @@
 }
 
 body{
-	background: #282a36;
+	background: #3C4556;
 	padding-top: 12%;
 	font-size: 11px;
 	-webkit-font-smoothing: antialiased;
@@ -66,7 +66,7 @@ a{
 }
 
 a:hover{
-	color: #f5f5f5;
+	color: #f2f2f2;
 	background: #5F8787;
 }
 

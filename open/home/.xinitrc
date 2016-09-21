@@ -16,11 +16,12 @@ xset s 300
 
 xset +fp /home/chef/.fonts/
 xset +fp /usr/local/share/fonts/terminus
+xset +fp /usr/local/share/fonts/ohsnap
 xset fp rehash
 
 xrdb -load ~/.Xresources &
 
-#xsidle.sh slock &
+xsidle.sh slock &
 
 #sxhkd &
 #xbindkeys &
