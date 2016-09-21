@@ -11,12 +11,12 @@ borderwidth 4
 # colors
 color activeborder   '#c4bbb0'
 color inactiveborder '#413f43'
-color menubg         '#252326'
-color menufg         '#c4bbb0'
-color font           '#c4bbb0'
-color selfont        '#252326'
+color menubg         '#282a36'
+color menufg         '#f8f8f2'
+color font           '#f8f8f2'
+color selfont        '#282a36'
 
-# fuck you're slow
+# faster
 moveamount 10
 
 # autogroups
@@ -37,7 +37,7 @@ bind SM-f     firefox
 bind SM-g     geany
 bind SM-d 	  dmenu_start.sh
 bind SM-r     dmenu_soma.sh
-bind SM-h     dmenu_hset.sh
+bind SM-x     dmenu_xset.sh
 bind SM-q     dmenu_exit.sh
 bind M-0 	  volume.sh 0
 
