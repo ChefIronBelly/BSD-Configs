@@ -39,7 +39,6 @@ bind SM-d 	  dmenu_start.sh
 bind SM-r     dmenu_soma.sh
 bind SM-x     dmenu_xset.sh
 bind SM-q     dmenu_exit.sh
-bind M-0 	  volume.sh 0
 
 bind 4-v      vmaximize
 bind 4-b      hmaximize
