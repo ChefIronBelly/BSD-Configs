@@ -26,12 +26,12 @@ autogroup 2 Firefox
 autogroup 3 mpv
 
 # menu
-command term   /usr/local/bin/xterm
+command term   /usr/local/bin/st
 command surf   /usr/local/bin/firefox
 command lock   /usr/local/bin/slock
 
 # binds
-bind SM-Return xterm
+bind SM-Return st
 bind SM-s     status.sh
 bind SM-f     firefox
 bind SM-g     geany

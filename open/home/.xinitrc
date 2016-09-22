@@ -21,6 +21,8 @@ xset fp rehash
 
 xrdb -load ~/.Xresources &
 
+mpd ~/.config/mpd/mpd.conf &
+
 xsidle.sh slock &
 
 #sxhkd &
