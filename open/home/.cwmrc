@@ -5,8 +5,9 @@
 # set font
 fontname "-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
 
-# set border width
+# set border width / gaps
 borderwidth 4
+gap 20 20 20 20      #[T,B,L,R]
 
 # colors
 color activeborder   '#c4bbb0'
