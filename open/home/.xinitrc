@@ -11,7 +11,7 @@ setxkbmap -option terminate:ctrl_alt_bksp
 setxkbmap -layout us -option ctrl:nocaps
 
 xset +dpms
-xset b off
+xset -b
 xset s 300
 
 xset +fp /home/chef/.fonts/
@@ -19,20 +19,14 @@ xset +fp /usr/local/share/fonts/terminus
 xset +fp /usr/local/share/fonts/ohsnap
 xset fp rehash
 
-xrdb -load ~/.Xresources &
+xrdb < ~/.Xdefaults
 
 mpd ~/.config/mpd/mpd.conf &
 
-xsidle.sh slock &
-
-#sxhkd &
-#xbindkeys &
+xidle -timeout 300 -program "/usr/local/bin/slock" &
 
 xsetroot -cursor_name left_ptr
-#xsetroot -solid '#6272a4'
-feh --bg-fill $HOME/Pictures/wallpapers/TPXxScw.png &
+xsetroot -solid steelblue
 
-#wew | focus_watcher.sh &
-#exec xwait
 #exec evilwm -term xterm -fn Ohsnap -fg '#282a36' -snap 10 -bw 2 -nosoliddrag
 exec cwm

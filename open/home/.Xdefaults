@@ -4,7 +4,7 @@
 XTerm*font:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*
 XTerm*boldFont:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*
 
-XTerm*vt100*geometry: 56x15
+*vt100*geometry: 56x15
 XTerm*saveLines: 4096
 XTerm*loginShell: true
 XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
