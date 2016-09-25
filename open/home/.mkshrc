@@ -24,7 +24,8 @@ alias blankf='cdrecord dev=/dev/rcd0d blank=fast'
 alias blanka='cdrecord dev=/dev/rcd0d blank=all'
 alias rip='sudo cdparanoia -g /dev/rcd0d -B'
 alias weather='curl -4 http://wttr.in'
-alias tb="nc termbin.com 9999"
+alias tb='nc termbin.com 9999'
+alias gc='git commit -m "adds and tweaks"'
 
 PS1=""
  case `id -u` in
