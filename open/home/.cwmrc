@@ -6,8 +6,7 @@
 fontname "-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
 
 # set border width / gaps
-borderwidth 4
-gap 20 20 20 20      #[T,B,L,R]
+borderwidth 2
 
 # colors
 color activeborder   '#c4bbb0'
@@ -27,19 +26,18 @@ autogroup 2 Firefox
 autogroup 3 mpv
 
 # menu
-command term   /usr/local/bin/st
+command term   /usr/local/bin/xterm
 command surf   /usr/local/bin/firefox
 command lock   /usr/local/bin/slock
 
 # binds
-bind SM-Return st
+bind SM-Return xterm
 bind SM-s     status.sh
 bind SM-f     firefox
 bind SM-g     geany
 bind SM-d 	  dmenu_start.sh
 bind SM-r     dmenu_soma.sh
 bind SM-x     dmenu_xset.sh
-bind SM-q     dmenu_exit.sh
 
 bind 4-v      vmaximize
 bind 4-b      hmaximize

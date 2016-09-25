@@ -4,7 +4,7 @@
 XTerm*font:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*
 XTerm*boldFont:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*
 
-*vt100*geometry: 56x15
+XTerm*vt100*geometry: 56x15
 XTerm*saveLines: 4096
 XTerm*loginShell: true
 XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
@@ -20,15 +20,5 @@ XTerm*utf8: 1
 XTerm*selectToClipboard: true
 XTerm*ScrollBar: false
 XTerm*ScrollKey: true
-
-Xft*antialias:          true
-Xft*hinting:            none
-Xft.autohint:           0
-Xft.antialias:          1
-Xft.hinting:            true
-Xft.hintstyle:          hintslight 
-Xft.dpi:                96
-Xft.rgba:               rgb
-Xft.lcdfilter:          lcddefault
 
 #include </home/chef/.colors/dracula>
