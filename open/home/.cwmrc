@@ -5,8 +5,8 @@
 # set font
 fontname "-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
 
-# set border width / gaps
-borderwidth 2
+# set border width
+borderwidth 4
 
 # colors
 color activeborder   '#c4bbb0'
@@ -38,6 +38,7 @@ bind SM-g     geany
 bind SM-d 	  dmenu_start.sh
 bind SM-r     dmenu_soma.sh
 bind SM-x     dmenu_xset.sh
+bind SM-t     tmux.sh
 
 bind 4-v      vmaximize
 bind 4-b      hmaximize
