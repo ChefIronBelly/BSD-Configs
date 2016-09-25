@@ -23,7 +23,7 @@ export FONT ICOFONT
 DMENU_FN="-fn -*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
 DMENU_NB="-nb #282a36"
 DMENU_NF="-nf #f8f8f2"
-DMENU_SB="-sb #6272a4"
+DMENU_SB="-sb #f8f8f2"
 DMENU_SF="-sf #282a36"
 
 export DMENU_FN DMENU_NB DMENU_NF DMENU_SF DMENU_SB

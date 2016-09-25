@@ -105,7 +105,7 @@ print-shell
 print-term
 #printf "\n"
 print-font
-colors='dracula'
+colors='Dracula'
 printf "\e[94mCOLORS: \e[0m   $colors$rst\n"
 #printf "\n"
 print-disk
