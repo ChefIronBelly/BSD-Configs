@@ -38,7 +38,8 @@ bind SM-g     geany
 bind SM-d 	  dmenu_start.sh
 bind SM-r     dmenu_soma.sh
 bind SM-x     dmenu_xset.sh
-bind SM-t     tmux.sh
+bind SM-t     "st -e \"tmux\""
+bind 4-t      "xterm -e \"top -s 0.6\""
 
 bind 4-v      vmaximize
 bind 4-b      hmaximize
