@@ -20,7 +20,6 @@ color selfont        '#282a36'
 moveamount 10
 
 # autogroups
-autogroup 1 Pidgin
 autogroup 1 Mumble
 autogroup 2 Firefox
 autogroup 3 mpv
@@ -35,11 +34,10 @@ bind SM-Return st
 bind SM-s     status.sh
 bind SM-f     firefox
 bind SM-g     geany
-bind SM-d 	  dmenu_start.sh
+bind SM-d     dmenu_start.sh
 bind SM-r     dmenu_soma.sh
 bind SM-x     dmenu_xset.sh
 bind SM-t     "st -e \"tmux\""
-bind 4-t      "st -e \"top -s 0.6\""
 bind SM-n     "st -e \"ncmpcpp\""
 
 bind 4-v      vmaximize

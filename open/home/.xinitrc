@@ -10,6 +10,8 @@ export LC_ALL=""
 setxkbmap -option terminate:ctrl_alt_bksp
 setxkbmap -layout us -option ctrl:nocaps
 
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+
 xset +dpms
 xset -b
 xset s 300

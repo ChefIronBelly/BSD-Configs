@@ -90,8 +90,8 @@ do
   printf "\e[$((i+30))m░▒▓█"
   i=$(($i+1))
 done
-printf "\e[34m░▒▓█\e[0m▓▒░\n\n"
-# ascii bits by xero
+printf "\e[34m░▒▓█\e[0m█▓▒░\n\n"
+# ascii bit by xero
 }
 
 clear
@@ -112,5 +112,5 @@ print-disk
 print-mem
 print-kernel
 print-cpu
-#print-colors
+print-colors
 read
