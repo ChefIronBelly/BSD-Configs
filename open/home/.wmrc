@@ -1,5 +1,6 @@
 #!/bin/sh
 # ~/.wmrc
+#
 
 FG=f8f8f2
 BG=282a36

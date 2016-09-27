@@ -16,7 +16,7 @@ selection="$(echo "$stations" | dmenu "$@" $DMENU_FN $DMENU_NB $DMENU_NF $DMENU_
 player() { mpg123 -C -@ "$@" 2>/dev/null & }
 
 if [ "$selection" ]; then
-		pop.sh "Playing SomaFM channel $selection ..."
+		echo -n "Playing SomaFM channel $selection ..." | osd_cat -p top -A center -d 3 -s 0 -c '#$FG' -f $FONT
 		player http://somafm.com/$selection.pls
 else exit;
 fi

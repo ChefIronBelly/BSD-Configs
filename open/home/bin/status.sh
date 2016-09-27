@@ -18,4 +18,4 @@
     current="| [paused] "
   fi
 
-  echo -n $time "|" $mem "|" $ip "|" $vol $current | osd_cat -p top -A center -d 5 -s 0 -c '#f8f8f2' -f $FONT
+  echo -n $time "|" $mem "|" $ip "|" $vol $current | osd_cat -p top -A center -d 5 -s 0 -c '#$FG' -f $FONT
