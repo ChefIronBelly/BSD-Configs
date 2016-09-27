@@ -25,20 +25,20 @@ autogroup 2 Firefox
 autogroup 3 mpv
 
 # menu
-command term   /usr/local/bin/xterm
+command term   /usr/local/bin/st
 command surf   /usr/local/bin/firefox
 command lock   /usr/local/bin/slock
 
 # binds
-bind SM-Return st
+bind SM-Return "st -g 80x24+143+284"
 bind SM-s     status.sh
 bind SM-f     firefox
 bind SM-g     geany
 bind SM-d     dmenu_start.sh
 bind SM-r     dmenu_soma.sh
 bind SM-x     dmenu_xset.sh
-bind SM-t     "st -e \"tmux\""
-bind SM-n     "st -e \"ncmpcpp\""
+bind SM-t     "st -g 80x24+733+284 -e \"tmux\""
+bind SM-n     "st -g 80x24+733+284 -e \"ncmpcpp\""
 
 bind 4-v      vmaximize
 bind 4-b      hmaximize
