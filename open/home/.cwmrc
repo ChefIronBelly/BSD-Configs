@@ -30,15 +30,16 @@ command surf   /usr/local/bin/firefox
 command lock   /usr/local/bin/slock
 
 # binds
-bind SM-Return "st -g 80x24+143+284"
+bind SM-Return "st -g 80x24+123+284" # middle left
+bind SM-t     "st -g 80x24+743+284 -e \"tmux\"" # middle right
+bind SM-n     "st -g 95x60+30+30" # left 50%
+bind SM-m     "st -g 95x60+733+30" # right 50%
 bind SM-s     status.sh
 bind SM-f     firefox
 bind SM-g     geany
 bind SM-d     dmenu_start.sh
 bind SM-r     dmenu_soma.sh
 bind SM-x     dmenu_xset.sh
-bind SM-t     "st -g 80x24+733+284 -e \"tmux\""
-bind SM-n     "st -g 80x24+733+284 -e \"ncmpcpp\""
 
 bind 4-v      vmaximize
 bind 4-b      hmaximize
