@@ -25,21 +25,26 @@ autogroup 2 Firefox
 autogroup 3 mpv
 
 # menu
-command term   /usr/local/bin/st
+command term   "st -g 80x24+123+284"
 command surf   /usr/local/bin/firefox
 command lock   /usr/local/bin/slock
 
 # binds
-bind SM-Return "st -g 80x24+123+284" # middle left
-bind SM-t     "st -g 80x24+743+284 -e \"tmux\"" # middle right
-bind SM-n     "st -g 95x60+30+30" # left 50%
-bind SM-m     "st -g 95x60+733+30" # right 50%
+bind 4-Return "st -g 80x24+123+284" # middle left
+bind 4-t      "st -g 80x24+743+284 -e \"tmux\"" # middle right
+bind 4-n      "st -g 95x60+30+30"   # left 50%
+bind 4-m      "st -g 95x60+733+30"  # right 50%
+bind 4-comma  "st -g 196x28+30+30"  # top 50%
+bind 4-period "st -g 196x28+30+460" # bottom 50%
 bind SM-s     status.sh
 bind SM-f     firefox
 bind SM-g     geany
 bind SM-d     dmenu_start.sh
 bind SM-r     dmenu_soma.sh
 bind SM-x     dmenu_xset.sh
+bind M-0      "volume.sh 0" # audio mute toggle
+bind M-minus  "volume.sh -" # audio lower
+bind M-equal  "volume.sh +" # audio raise
 
 bind 4-v      vmaximize
 bind 4-b      hmaximize
@@ -62,7 +67,7 @@ bind 4C-j     bigmovedown
 bind 4C-k     bigmoveup
 bind 4C-l     bigmoveright
 
-bind 4-comma  label
+bind 4S-comma label
 bind 4S-e     delete
 
 bind 4-Tab    cycle
