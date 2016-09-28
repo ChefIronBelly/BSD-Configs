@@ -3,10 +3,16 @@
 #
 
 # set font
-fontname "-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
+fontname "-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1"
 
 # set border width
 borderwidth 4
+
+# gaps
+gap 10 10 10 10
+
+# stick it
+sticky yes
 
 # colors
 color activeborder   '#c4bbb0'
@@ -20,7 +26,7 @@ color selfont        '#282a36'
 moveamount 10
 
 # autogroups
-autogroup 1 Mumble
+autogroup 1 "st-256color,tmux"
 autogroup 2 Firefox
 autogroup 3 mpv
 
