@@ -34,8 +34,8 @@ bind 4-Return "st -g 80x24+123+284" # middle left
 bind 4-t      "st -g 80x24+743+284 -e \"tmux\"" # middle right
 bind 4-n      "st -g 95x60+30+30"   # left 50%
 bind 4-m      "st -g 95x60+733+30"  # right 50%
-bind 4-comma  "st -g 196x28+30+30"  # top 50%
-bind 4-period "st -g 196x28+30+460" # bottom 50%
+bind 4-comma  "st -g 195x29+30+30"  # top 50%
+bind 4-period "st -g 195x29+30+470" # bottom 50%
 bind SM-s     status.sh
 bind SM-f     firefox
 bind SM-g     geany
