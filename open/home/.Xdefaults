@@ -1,8 +1,8 @@
 !XTerm*font:		-*-terminus-*-*-*-*-14-*-*-*-*-*-*-1
 !XTerm*boldFont:	-*-terminus-medium-*-*-*-14-*-*-*-*-*-*-1
 
-XTerm*font:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*
-XTerm*boldFont:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*
+XTerm*font:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
+XTerm*boldFont:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
 
 XTerm*vt100*geometry: 56x15
 XTerm*saveLines: 4096
@@ -21,4 +21,4 @@ XTerm*selectToClipboard: true
 XTerm*ScrollBar: false
 XTerm*ScrollKey: true
 
-#include </home/chef/.colors/dracula>
+#include </home/chef/.colors/gruvbox-dark>
