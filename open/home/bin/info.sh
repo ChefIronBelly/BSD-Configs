@@ -90,7 +90,7 @@ do
   printf "\e[$((i+30))m░▒▓█"
   i=$(($i+1))
 done
-printf "\e[34m░▒▓█\e[0m█▓▒░\n\n"
+printf "\e[37m░▒▓█\n"
 # ascii bit by xero
 }
 
@@ -105,7 +105,7 @@ print-shell
 print-term
 #printf "\n"
 print-font
-colors='Dracula'
+colors='gruvbox-dark'
 printf "\e[94mCOLORS: \e[0m   $colors$rst\n"
 #printf "\n"
 print-disk

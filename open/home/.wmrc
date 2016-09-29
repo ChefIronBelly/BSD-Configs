@@ -2,7 +2,7 @@
 # ~/.wmrc
 #
 
-FG=ebdbb2
+FG=a89984
 BG=282828
 
 C0=282828
@@ -23,8 +23,8 @@ export FONT ICOFONT
 
 DMENU_FN="-fn -*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
 DMENU_NB="-nb #282828"
-DMENU_NF="-nf #a89984"
-DMENU_SB="-sb #a89984"
+DMENU_NF="-nf #458588"
+DMENU_SB="-sb #458588"
 DMENU_SF="-sf #282828"
 
 export DMENU_FN DMENU_NB DMENU_NF DMENU_SF DMENU_SB

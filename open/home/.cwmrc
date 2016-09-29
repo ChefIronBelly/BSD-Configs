@@ -15,11 +15,11 @@ gap 10 10 10 10
 sticky yes
 
 # colors
-color activeborder   '#c4bbb0'
-color inactiveborder '#413f43'
-color menubg         '#282a36'
-color menufg         '#f8f8f2'
-color font           '#f8f8f2'
+color activeborder   '#a89984'
+color inactiveborder '#282828'
+color menubg         '#282828'
+color menufg         '#ebdbb2'
+color font           '#ebdbb2'
 color selfont        '#282a36'
 
 # faster
@@ -28,7 +28,8 @@ moveamount 10
 # autogroups
 autogroup 1 "st-256color,tmux"
 autogroup 2 Firefox
-autogroup 3 mpv
+autogroup 3 Geany
+autogroup 4 mpv
 
 # menu
 command term   "st -g 80x24+123+284"
