@@ -30,5 +30,4 @@ xidle -timeout 300 -program "/usr/local/bin/slock" &
 xsetroot -cursor_name left_ptr
 xsetroot -solid '#458588'
 
-#exec evilwm -term xterm -fn Ohsnap -fg '#282a36' -snap 10 -bw 2 -nosoliddrag
 exec cwm

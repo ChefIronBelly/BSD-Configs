@@ -32,9 +32,9 @@ autogroup 3 Geany
 autogroup 4 mpv
 
 # menu
-command term   "st -g 80x24+123+284"
-command surf   /usr/local/bin/firefox
-command lock   /usr/local/bin/slock
+command box    "st -g 80x24+123+284"
+command surf   firefox
+command xlock  slock
 
 # binds
 bind 4-Return "st -g 80x24+123+284" # middle left
