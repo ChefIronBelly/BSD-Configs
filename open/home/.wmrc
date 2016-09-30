@@ -16,8 +16,8 @@ C7=a89984
 
 export FG BG C0 C1 C2 C3 C4 C5 C6 C7
 
-FONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
-ICOFONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
+FONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1"
+ICOFONT="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
 
 export FONT ICOFONT
 
