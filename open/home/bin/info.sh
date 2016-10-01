@@ -4,7 +4,7 @@
 red="\e[41m"
 grn="\e[32m"
 org="\e[33m"
-blu="\e[94m"
+blu="\e[103m"
 prp="\e[35m"
 cyn="\e[36m"
 rst="\e[0m"
@@ -104,7 +104,7 @@ print-term
 #printf "\n"
 print-font
 colors='Gotham'
-printf "\e[94mCOLORS: \e[0m   $colors$rst\n"
+printf "\e[103mCOLORS: \e[0m   $colors$rst\n"
 #printf "\n"
 print-disk
 print-mem
