@@ -1,3 +1,3 @@
 #! /bin/sh
 
-doas umount /mnt
+doas umount /mnt/usb
