@@ -28,6 +28,6 @@ mpd ~/.config/mpd/mpd.conf &
 xidle -timeout 300 -program "/usr/local/bin/slock" &
 
 xsetroot -cursor_name left_ptr
-xsetroot -solid '#458588'
+xsetroot -solid '#33859d'
 
 exec cwm

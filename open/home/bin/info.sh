@@ -103,7 +103,7 @@ print-shell
 print-term
 #printf "\n"
 print-font
-colors='gruvbox-dark'
+colors='Gotham'
 printf "\e[94mCOLORS: \e[0m   $colors$rst\n"
 #printf "\n"
 print-disk

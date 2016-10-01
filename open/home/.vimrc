@@ -224,7 +224,7 @@ let g:ag_highlight=1
 nnoremap \ :Ag<SPACE>
 
 " wizard colors http://git.io/vim.sourcerer
-colorscheme dracula
+colorscheme gotham
 
 " ┏━┓╺┳╸┏━┓╺┳╸╻ ╻┏━┓╻  ╻┏┓╻┏━╸
 " ┗━┓ ┃ ┣━┫ ┃ ┃ ┃┗━┓┃  ┃┃┗┫┣╸ 

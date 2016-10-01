@@ -15,12 +15,12 @@ gap 10 10 10 10
 sticky yes
 
 # colors
-color activeborder   '#a89984'
-color inactiveborder '#282828'
-color menubg         '#282828'
-color menufg         '#ebdbb2'
-color font           '#ebdbb2'
-color selfont        '#282a36'
+color activeborder   '#98d1ce'
+color inactiveborder '#0a0f14'
+color menubg         '#0a0f14'
+color menufg         '#98d1ce'
+color font           '#98d1ce'
+color selfont        '#0a0f14'
 
 # faster
 moveamount 10
