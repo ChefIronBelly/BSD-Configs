@@ -1,12 +1,13 @@
 #!/usr/local/bin/bash
 
 # define colors for color-echo
-red="\e[41m"
+red="\e[31m"
 grn="\e[32m"
 org="\e[33m"
-blu="\e[103m"
+blu="\e[34m"
 prp="\e[35m"
 cyn="\e[36m"
+wht="\e[37m"
 rst="\e[0m"
 
 f1="\e[0;007m"
@@ -17,7 +18,7 @@ wms=( 2bwm 9wm bspwm catwm cwm dminiwm dwm evilwm fluxbox i3 icewm jwm openbox r
     w9wm wmfs wmii wmutils )
 
 color-echo() {  # print with colors
-	echo -e "$blu$1: $rst$2"
+	echo -e "$cyn$1: $wht$2"
 }
 
 print-kernel() {
@@ -65,8 +66,8 @@ print-wm() {
 }
            
 print-font() {
-    fontstr=$(xrdb -query 2>/dev/null | grep '*faceName:')
-    font=$(echo $fontstr | awk -F: '{ print $3 }')
+    fontstr=$(xrdb -query 2>/dev/null | grep '*font:')
+    font=$(echo $fontstr | awk -F: '{ print $4 }')
     [[ $font != "" ]] && color-echo 'FONT' '     '"$font"
 }
 
@@ -104,8 +105,9 @@ print-term
 #printf "\n"
 print-font
 colors='Gotham'
-printf "\e[103mCOLORS: \e[0m   $colors$rst\n"
+printf "\e[36mCOLORS: \e[0m   $colors$rst\n"
 #printf "\n"
+print-font
 print-disk
 print-mem
 print-kernel
