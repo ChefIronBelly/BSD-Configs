@@ -6,15 +6,15 @@ BSD-Configs
 Current Setup
 
     Distro: FreeBSD / NetBSD / OpenBSD (triple boot)
-    Window Manager: null / wmutils / evilwm 
+    Window Manager: wmutils / cwm 
     Bar: lemonbar / osd_clock
     Launcher: dmenu
-    Terminal Emulator: xterm
+    Terminal Emulator: st / xterm
     Shell: bash / mksh 
     Terminal Font: ohsnap / terminus
     File Manager: mc
     Text Editor: vim / geany
-    Color Scheme: zenblue / blaquemagick
+    Color Scheme: zenblue / dracula / gotham
     Music Player: mpd / mpg123 / cmus
     Browser: firefox
     Video Player: mpv
