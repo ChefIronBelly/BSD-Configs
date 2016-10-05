@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/mksh
 
 # define colors for color-echo
 red="\e[31m"

@@ -31,4 +31,5 @@ xsetroot -cursor_name left_ptr
 xsetroot -mod 16 16 -bg "$(xrdb -query | awk '/\*.color6/ {print $2}')" \
 -fg "$(xrdb -query | awk '/\*.color7/ {print $2}')"
 
-exec cwm
+exec cwm 
+
