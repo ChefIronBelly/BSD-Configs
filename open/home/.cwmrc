@@ -34,7 +34,7 @@ autogroup 4 mpv
 # menu
 command box    "st -g 80x24+123+284"
 command surf   firefox
-command xlock  xlock -mode fiberlamp
+command xlock  "xlock -mode matrix"
 
 # binds
 bind 4-Return "st -g 80x24+123+284" # middle left
