@@ -16,7 +16,7 @@ export C7=edf0f3
 export FONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
 export ICOFONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
 
-DMENU_FN="-fn -*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
+DMENU_FN="-fn -*-ohsnap.icons-medium-r-*-*-12-*-*-*-*-*-*-*"
 DMENU_NB="-nb #1d1d1d"
 DMENU_NF="-nf #edf0f3"
 DMENU_SB="-sb #506070"

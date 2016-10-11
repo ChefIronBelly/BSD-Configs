@@ -9,7 +9,7 @@ b="#00"
 # default colors
 bg="${a}${C0}"
 fg="${a}${C7}"
-sp="${a}${C4}"
+sp="${a}${C1}"
 
 # default geometry
 default_geometry() {
@@ -25,14 +25,40 @@ GEOM=${GEOM:-$(default_geometry)}
 
 statusbar() {
 	
+x11ind() {
+	x11ind=$(x11fsind)
+	echo $x11ind
+}
+
 groups() {
     groups=$(gind.sh)
     echo $groups
 }
 
-muzac() {
-	muzac=$(cmus-info)
-    echo $muzac
+mem() {
+	mem=$(freecolor -o | awk 'NR==2 {print substr($3,0,3)}')
+	echo $mem
+}
+
+ip() {
+    ip=$(if_ip.sh)
+    echo $ip
+}
+
+sound() {
+  SOUND=$( ( mixer -s vol 2> /dev/null || echo - ) | cut -d ':' -f 2 )
+  if [ ${SOUND} -ge 75 ]; then
+    SIGNAL="%{F${fg}} $SOUND%{F-}"
+  elif [ ${SOUND} -ge 50 ]; then
+    SIGNAL="%{F${fg}} $SOUND%{F-}"
+  elif [ ${SOUND} -ge 25 ]; then
+    SIGNAL="%{F${fg}} $SOUND%{F-}"
+  elif [ ${SOUND} -ge 1 ]; then
+    SIGNAL="%{F${fg}} $SOUND%{F-}"
+  elif [ ${SOUND} -eq 0 ]; then
+    SIGNAL="%{F${fg}} $SOUND%{F-}"
+  fi
+  echo $SIGNAL
 }
 
 dateclock() {
@@ -41,11 +67,12 @@ dateclock() {
 }
 
 clock() {
-    time=$(date +" %I:%M %p")
+    time=$(date +" %I:%M")
     echo $time
 }
 
-echo %{l}%{F${sp}}" "%{F-}%{F${fg}}$(groups)%{F-}%{F${sp}}%{F-}%{c}%{F${sp}}%{F-}%{F${fg}}$(dateclock)%{F-}%{F${fg}}" - "%{F-}%{F${fg}}$(clock)%{r}%{F-}%{F${fg}}$(muzac)" "%{F-}
+#%{F-}%{F${fg}}$(x11ind)%{F-}
+echo %{l}%{F${sp}}" | "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{F${sp}}" | "%{F-}%{r}%{F${sp}}" | "%{F-}%{F${fg}} $(mem)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(ip)%{F-}%{F${sp}}" | "%{F-}$(sound)%{F${sp}}" | "%{F-}%{F${fg}} $(dateclock)%{F-}%{F${sp}}" | "%{F-}%{F${fg}} $(clock)%{F-}%{F${sp}}" | "%{F-}
 }
 
 while true
