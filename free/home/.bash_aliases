@@ -1,8 +1,8 @@
 # .bash_aliases
 
-alias upg='sudo freebsd-update fetch install'
+alias upd='sudo freebsd-update fetch'
+alias upg='sudo freebsd-update install'
 alias ins='sudo pkg install'
-alias pkgupd='sudo pkg update'
 alias pkgupg='sudo pkg upgrade'
 alias search='sudo pkg search'
 
@@ -38,5 +38,4 @@ alias todo='vi ~/todo'
 alias rnet='sudo /etc/rc.d/netif restart'
 alias shootme='DISPLAY=:0 import -window root ~/Pictures/scrots/scrot-$(date +%m-%d-%Y-%H-%M-%S).png'
 alias blankcd='cdrdao blank'
-alias zzz='slock'
-alias wet='curl -4 wttr.in'
+alias zzz=slock
