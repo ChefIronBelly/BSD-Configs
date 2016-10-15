@@ -13,17 +13,16 @@ setxkbmap -layout us -option ctrl:nocaps
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 
 xset +dpms
-xset -b
+xset b off
 xset s 300
 
 xset +fp /home/chef/.fonts/
-xset +fp /usr/local/share/fonts/terminus
 xset +fp /usr/local/share/fonts/ohsnap
 xset fp rehash
 
 xrdb < ~/.Xdefaults
 
-mpd ~/.config/mpd/mpd.conf &
+#mpd ~/.config/mpd/mpd.conf &
 
 #xidle -timeout 300 -program "/usr/local/bin/slock" &
 
