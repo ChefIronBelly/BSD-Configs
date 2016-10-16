@@ -32,17 +32,17 @@ autogroup 3 "Geany,vim"
 autogroup 4 mpv
 
 # menu
-command box    "xterm -g 80x24+123+284"
+command box    "st -g 80x24+123+284"
 command surf   firefox
 command xlock  "xlock -mode blot"
 
 # binds
-bind 4-Return "xterm -g 80x24+123+284" # middle left
-bind 4-t      "xterm -g 80x24+743+284 -e \"tmux\"" # middle right
-bind 4-n      "xterm -g 95x60+30+30"   # left 50%
-bind 4-m      "xterm -g 95x60+733+30"  # right 50%
-bind 4-comma  "xterm -g 195x29+30+30"  # top 50%
-bind 4-period "xterm -g 195x29+30+470" # bottom 50%
+bind 4-Return "st -g 80x24+123+284" # middle left
+bind 4-t      "st -g 80x24+743+284 -e \"tmux\"" # middle right
+bind 4-n      "st -g 95x60+30+30"   # left 50%
+bind 4-m      "st -g 95x60+733+30"  # right 50%
+bind 4-comma  "st -g 195x29+30+30"  # top 50%
+bind 4-period "st -g 195x29+30+470" # bottom 50%
 bind SM-s     status.sh
 bind SM-f     firefox
 bind SM-g     geany

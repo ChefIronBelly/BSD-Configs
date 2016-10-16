@@ -10,7 +10,7 @@ dev_key='8b3d165d639ff3a8'
 zip_code='48328'
 city='Waterford'
 state='MI'
-red=$(tput setaf 1)
+#red=$(tput setaf 1)
 textreset=$(tput sgr0)
 
 haystack=$(curl -Ls -X GET http://api.wunderground.com/api/$dev_key/conditions/q/$state/$city.json)
