@@ -1,0 +1,30 @@
+#!/bin/sh
+# ~/.wmrc
+#
+
+FG=98d1ce
+BG=0a0f14
+
+C0=0a0f14
+C1=c33027
+C2=26a98b
+C3=edb54b
+C4=195465
+C5=4e5165
+C6=33859d
+C7=98d1ce
+
+export FG BG C0 C1 C2 C3 C4 C5 C6 C7
+
+FONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1"
+ICOFONT="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
+
+export FONT ICOFONT
+
+DMENU_FN="-fn -*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
+DMENU_NB="-nb #0a0f14"
+DMENU_NF="-nf #98d1ce"
+DMENU_SB="-sb #98d1ce"
+DMENU_SF="-sf #0a0f14"
+
+export DMENU_FN DMENU_NB DMENU_NF DMENU_SF DMENU_SB
