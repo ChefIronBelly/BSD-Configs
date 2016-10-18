@@ -8,7 +8,6 @@ blu="\e[94m"
 prp="\e[35m"
 cyn="\e[36m"
 rst="\e[0m"
-spc="\e[41m"
 
 f1="\e[0;007m"
 f2="\e[0;37m"
@@ -48,6 +47,7 @@ print-cpu() {
 print-packages() {
 	pkgs=$(if TMPDIR=/dev/null ASSUME_ALWAYS_YES=1 PACKAGESITE=file:///nonexistent pkg info pkg >/dev/null 2>&1; then 
 	pkg info | wc -l | awk '{print $1}'; else pkg_info | wc -l | awk '{sub(" ", "");print $1}'; fi)
+	
 	color-echo 'PACKAGES' ' '"$pkgs"
 }
 
@@ -105,7 +105,7 @@ printf "\e[34m░▒▓█\e[0m▓▒░\n\n"
 }
 
 clear
-printf "\n$spc$USER@$(hostname)$rst\n"
+printf "\n$red$USER@$(hostname)$rst\n"
 printf "\n"
 print-distro
 print-packages

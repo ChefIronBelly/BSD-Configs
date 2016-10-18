@@ -20,24 +20,24 @@ xset fp rehash
 
 xrdb -load ~/.Xresources &
 
-#xsidle.sh slock &
+xsidle.sh slock &
 
-#sxhkd &
+sxhkd &
 #xbindkeys &
 l_statusbar.sh &
 #statusbar.sh &
 #compton &
 
 xsetroot -cursor_name left_ptr
-xsetroot -solid '#506070'
-#hsetroot -fill ~/Pictures/wallpapers/ANhxh.jpg -tint '#506070'
+#xsetroot -solid '#506070'
+hsetroot -fill ~/Pictures/wallpapers/ANhxh.jpg -tint '#506070'
 
 rm /tmp/grp/* 2>/dev/null
 
-#wew | focus_watcher.sh &
-#exec xwait
+wew | focus_watcher.sh &
+exec xwait
 
 #exec evilwm -term xterm -fn fixed -fg '#506070' -snap 10 -bw 2 -nosoliddrag
 
 #exec xterm -geometry 80x32+20+20 -name login
-exec cwm
+
