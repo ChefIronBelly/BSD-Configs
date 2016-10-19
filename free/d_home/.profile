@@ -23,7 +23,7 @@ ENV=$HOME/.shrc; export ENV
 
 ### XDG CONFIG DIRS
 export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DESKTOP_DIR="$HOME/Desktop""
+export XDG_DESKTOP_DIR="$HOME/Desktop"
 export XDG_DOCUMENTS_DIR="$HOME/Documents"
 export XDG_DOWNLOAD_DIR="$HOME/Downloads"
 export XDG_MUSIC_DIR="$HOME/Music"
@@ -38,8 +38,8 @@ PS1=""
  	*) PS1="${PS1}$ ";;
  esac
 
-if [ -f ~/.mkshrc ]; then
-    . ~/.mkshrc
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
 fi
 
 #[ -n "$XTERM_VERSION" ] && transset --id "$WINDOWID" >/dev/null

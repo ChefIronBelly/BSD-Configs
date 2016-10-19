@@ -1,10 +1,10 @@
-#!/usr/local/bin/mksh
+#!/usr/local/bin/bash
 
 # define colors for color-echo
 red="\e[31m"
 grn="\e[32m"
 org="\e[33m"
-blu="\e[94m"
+blu="\e[34m"
 prp="\e[35m"
 cyn="\e[36m"
 rst="\e[0m"
@@ -116,7 +116,7 @@ print-term
 #printf "\n"
 print-font
 colors='Gotham'
-printf "\e[	36mCOLORS: \e[0m   $colors$rst\n"
+printf "\e[36mCOLORS: \e[0m   $colors$rst\n"
 #printf "\n"
 print-disk
 print-mem

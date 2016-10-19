@@ -1,4 +1,4 @@
-#!/usr/local/bin/mksh
+#!/usr/local/bin/bash
 # Usage: colordump
 # Dump 256 ansi colors to the terminal.
 
