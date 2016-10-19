@@ -1,4 +1,4 @@
-#!/usr/local/bin/mksh
+#!/usr/local/bin/bash
 
 # jsonval credit: https://gist.github.com/cjus/1047794
 jsonval () {
