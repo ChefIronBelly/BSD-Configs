@@ -1,37 +1,45 @@
-# $OpenBSD: dot.profile,v 1.4 2005/02/16 06:56:57 matthieu Exp $
+# $FreeBSD: releng/10.3/share/skel/dot.profile 266029 2014-05-14 15:23:06Z bdrewery $
 #
-# sh/ksh initialization
+# .profile - Bourne Shell startup script for login shells
+#
+# see also sh(1), environ(7).
+#
 
-PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:.
-export PATH
-export LANG=en_US.UTF-8
+# These are normally set through /etc/login.conf.  You may override them here
+# if wanted.
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:$HOME/bin:$HOME/wmutils; export PATH
+# BLOCKSIZE=K;	export BLOCKSIZE
 
-extract()
-{
-	case "$1" in
-		*.tar.bz2) tar xvjf   "$1" ;;
-		*.tar.gz)  tar xvzf   "$1" ;;
-		*.bz2)     bunzip2    "$1" ;;
-		*.rar)     unrar x    "$1" ;;
-		*.gz)      gunzip     "$1" ;;
-		*.tar)     tar xvf    "$1" ;;
-		*.tbz2)    tar xvjf   "$1" ;;
-		*.tgz)     tar xvzf   "$1" ;;
-		*.zip)     unzip      "$1" ;;
-		*.Z)       uncompress "$1" ;;
-		*.7z)      7z x       "$1" ;;
-		*.xz)      xz -d      "$1" ;;
-		*.deb)     ar vx      "$1" ;;
-		*)         printf 'extract: Unknown archive type\n';;
-	esac
-}
+# Setting TERM is normally done through /etc/ttys.  Do only override
+# if you're sure that you'll never log in via telnet or xterm or a
+# serial line.
+# TERM=xterm; 	export TERM
 
-color()
-{
-	for color in 0 1 2 3 4 5 6 7
-	do printf " \033[3${color}m██\033[1m██\033[0m"
-	done
-	printf '\n'
-}
+EDITOR=vi;   	export EDITOR
+PAGER=more;  	export PAGER
 
-CC=cc
+# set ENV to a file invoked each time sh is started for interactive use.
+ENV=$HOME/.shrc; export ENV
+
+### XDG CONFIG DIRS
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DESKTOP_DIR="$HOME/Desktop""
+export XDG_DOCUMENTS_DIR="$HOME/Documents"
+export XDG_DOWNLOAD_DIR="$HOME/Downloads"
+export XDG_MUSIC_DIR="$HOME/Music"
+export XDG_PICTURES_DIR="$HOME/Pictures"
+export XDG_VIDEOS_DIR="$HOME/Videos"
+
+#if [ -x /usr/games/fortune ] ; then /usr/games/fortune freebsd-tips ; fi
+
+PS1=""
+ case `id -u` in
+ 	0) PS1="${PS1}# ";;
+ 	*) PS1="${PS1}$ ";;
+ esac
+
+if [ -f ~/.mkshrc ]; then
+    . ~/.mkshrc
+fi
+
+#[ -n "$XTERM_VERSION" ] && transset --id "$WINDOWID" >/dev/null

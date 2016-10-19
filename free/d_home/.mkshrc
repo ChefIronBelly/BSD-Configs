@@ -2,12 +2,6 @@
 # ~/.mkshrc
 #
 
-PS1=""
- case `id -u` in
- 	0) PS1="${PS1}# ";;
- 	*) PS1="${PS1}$ ";;
- esac
-
 # Colored man pages
 man() {
     env LESS_TERMCAP_mb=$'\E[01;31m' \
