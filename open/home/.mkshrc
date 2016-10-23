@@ -12,6 +12,6 @@ PS1=""
 HISTFILE=~/.mksh/history
 HISTSIZE=5000
 
-for h in ~/.sh/*; do
+for h in ~/.etc/*; do
 	source "${h}"
 done
