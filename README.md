@@ -2,11 +2,12 @@ BSD-Configs
 - FreeBSD - http://www.freebsd.org
 - NetBSD - http://www.netbsd.org
 - OpenBSD - http://www.openbsd.org
+- MirBSD - https://www.mirbsd.org
 
 Current Setup
 
-    Distro: FreeBSD / NetBSD / OpenBSD (triple boot)
-    Window Manager: wmutils / cwm 
+    Distro: FreeBSD / NetBSD / OpenBSD / MirBSD
+    Window Manager: wmutils / cwm / evilwm
     Bar: lemonbar / osd_clock
     Launcher: dmenu
     Terminal Emulator: st / xterm
@@ -17,5 +18,5 @@ Current Setup
     Color Scheme: zenblue / dracula / gotham
     Music Player: mpd / mpg123 / cmus
     Browser: firefox
-    Video Player: mpv
+    Video Player: mpv / mplayer
 
