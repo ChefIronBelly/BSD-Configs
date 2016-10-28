@@ -4,8 +4,9 @@ LC_CTYPE=en_US.UTF-8
 TZ=America/New_York
 
 PATH=$HOME/.bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:.
-LANG=en_US.UTF-8
+PKG_PATH=http://ftp5.usa.openbsd.org/pub/OpenBSD/snapshots/packages/$(uname -p)/
 
+LANG=en_US.UTF-8
 XDG_DATA_HOME=$HOME
 EDITOR=vim
 VISUAL=$EDITOR
@@ -15,5 +16,5 @@ MANWIDTH=80
 CC=cc
 CVSROOT=anoncvs@mirror.planetunix.net:/cvs
 
-export LC_CTYPE PATH XDG_DATA_HOME EDITOR VISUAL PAGER BROWSER \
+export LC_CTYPE PATH PKG_PATH XDG_DATA_HOME EDITOR VISUAL PAGER BROWSER \
 	MANWIDTH CC CVSROOT TZ
