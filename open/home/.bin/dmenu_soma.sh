@@ -11,7 +11,7 @@ if [ "$(pgrep mpg123)" ] ; then
         exit 0
 fi
 
-stations="$(cat /home/chef/bin/stations)"
+stations="$(cat /home/chef/.bin/stations)"
 selection="$(echo "$stations" | dmenu "$@" $DMENU_FN $DMENU_NB $DMENU_NF $DMENU_SF $DMENU_SB)"
 player() { mpg123 -C -b 3000 -@ "$@" 2>/dev/null & }
 

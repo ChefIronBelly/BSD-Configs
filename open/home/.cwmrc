@@ -6,7 +6,7 @@
 fontname "-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1"
 
 # set border width
-borderwidth 4
+borderwidth 2
 
 # gaps
 gap 10 10 10 10
