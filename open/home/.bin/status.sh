@@ -18,4 +18,4 @@ elif mpc status | grep -q paused; then
   current="| paused "
 fi
 
-echo -n $time "|" $mem "|" $ip "|" $vol $current | osd_cat -p top -A center -d 10 -s 0 -c '#ffffff' -f $FONT
+echo -n $(date) "|" $mem "|" $ip "|" $vol $current | osd_cat -p top -A center -d 10 -s 0 -c '#98d1ce' -f $FONT

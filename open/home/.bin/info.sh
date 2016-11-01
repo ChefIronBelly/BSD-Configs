@@ -80,6 +80,11 @@ print-distro() {
 	fi
 }
 
+print-date() {
+	T_DATE=$(date)
+        color-echo 'DATE' '     '"$T_DATE"
+}
+
 print-colors() {
 #█▓▒░ colors 
 printf "\n"
@@ -96,6 +101,7 @@ printf "\e[37m░▒▓█\n"
 clear
 printf "\e[41m$USER@$(hostname)$rst\n"
 printf "\n"
+print-date
 print-distro
 print-packages
 #printf "\n"
