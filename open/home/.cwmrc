@@ -29,7 +29,7 @@ moveamount 10
 autogroup 1 "st-256color,tmux"
 autogroup 2 Firefox
 autogroup 3 "Geany,vim"
-autogroup 4 mpv
+autogroup 4 "mpv,mplayer"
 
 # menu
 command box    "st -g 80x24+123+284"
