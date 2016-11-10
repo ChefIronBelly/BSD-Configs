@@ -7,9 +7,9 @@
 #mem="mem: $(top -n 1 | head -n 7 | tail -n 1 | awk '{print $3}')"
 memtotal="$(($(sysctl -n hw.physmem) / 1024 / 1024))"
 memused="$(($(vmstat | awk 'END {printf $4}') / 1024))"
-mem="${memused}MB/${memtotal}MB"
+mem="mem:${memused}MB/${memtotal}MB"
 vol="vol:$(volumebar.sh)"
-ip="ip: $( if_ip.sh )"
+ip="ip:$( if_ip.sh )"
 #mail="mail: $(gmail.sh)"
 time=$(date +" %a, %b %d %I:%M")
 current=""
