@@ -1,4 +1,4 @@
-#!/bin/mksh
+#!/usr/bin/env bash
 
 # define colors for color-echo
 red="\e[31m"
@@ -50,7 +50,9 @@ print-disk() {
 }
 
 print-mem() {
-    mem=$(top | grep Memory | awk -F ' ' '{ print $3 }')
+	memtotal="$(($(sysctl -n hw.physmem) / 1024 / 1024))"
+	memused="$(($(vmstat | awk 'END {printf $4}') / 1024))"
+    mem="${memused}MB / ${memtotal}MB"
     color-echo 'MEM' '      '"$mem"
 }
 
@@ -81,8 +83,8 @@ print-distro() {
 }
 
 print-date() {
-	T_DATE=$(date)
-        color-echo 'DATE' '     '"$T_DATE"
+	time=$(date +" %a, %b %d %I:%M")
+        color-echo 'DATE' '    '"$time"
 }
 
 print-colors() {
