@@ -21,12 +21,17 @@ color-echo() {  # print with colors
 	echo -e "$cyn$1: $wht$2"
 }
 
-print-kernel() {
-	color-echo 'KERNEL' '   '"$(uname -mrs)"
+print-distro() {
+	color-echo 'OS' '       '"$(uname -mrs)"
 }
 
 print-shell() {
-    color-echo 'SHELL' '    '"$SHELL"
+    shell="${SHELL##*/}"
+    shell+=" "
+    shell+="$("$SHELL" -c 'printf "%s" "$KSH_VERSION"')"
+    shell="${shell/ * KSH}"
+	shell="${shell/\(*\)}"	
+    color-echo 'SHELL' '    '"$shell"
 }
 
 print-term() {
@@ -73,14 +78,12 @@ print-font() {
     [[ $font != "" ]] && color-echo 'FONT' '     '"$font"
 }
 
-print-distro() {
-	PRETTY_NAME=$(uname)
-	if [[ -n "$PRETTY_NAME" ]]; then
-        color-echo 'OS' '       '"$PRETTY_NAME"
-	else
-        color-echo 'OS' '       '"not found"
-	fi
-}
+print-gpu() {
+# stolen from neofetch
+	gpu="$(glxinfo | grep -F 'OpenGL renderer string')"
+    gpu="${gpu/'OpenGL renderer string: '}"
+	color-echo 'GPU' '      '"$gpu"
+}	
 
 print-date() {
 	time=$(date +" %a, %b %d %I:%M")
@@ -103,7 +106,7 @@ printf "\e[37m░▒▓█\n"
 clear
 printf "\e[41m$USER@$(hostname)$rst\n"
 printf "\n"
-print-date
+#print-date
 print-distro
 print-packages
 #printf "\n"
@@ -118,7 +121,7 @@ printf "\e[36mCOLORS: \e[0m   $colors$rst\n"
 print-font
 print-disk
 print-mem
-print-kernel
 print-cpu
+print-gpu
 print-colors
 read
