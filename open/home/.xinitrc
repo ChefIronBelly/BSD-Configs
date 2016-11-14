@@ -16,13 +16,7 @@ xrdb < ~/.Xdefaults
 
 mpd ~/.config/mpd/mpd.conf &
 
-#xidle -timeout 300 -program "/usr/local/bin/slock" &
-
 xsetroot -cursor_name left_ptr
-#xsetroot -mod 16 16 -bg "$(xrdb -query | awk '/\*.color6/ {print $2}')" \
--fg "$(xrdb -query | awk '/\*.color7/ {print $2}')"
-#sh ~/.fehbg &
 feh --bg-fill --randomize ~/.wallpapers/* &
 
-exec cwm 
-
+exec cwm
