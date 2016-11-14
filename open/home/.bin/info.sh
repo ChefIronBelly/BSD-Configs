@@ -26,12 +26,12 @@ print-distro() {
 }
 
 print-shell() {
-    shell="${SHELL##*/}"
-    shell+=" "
-    shell+="$("$SHELL" -c 'printf "%s" "$KSH_VERSION"')"
-    shell="${shell/ * KSH}"
+  shell="${SHELL##*/}"
+  shell+=" "
+  shell+="$("$SHELL" -c 'printf "%s" "$KSH_VERSION"')"
+  shell="${shell/ * KSH}"
 	shell="${shell/\(*\)}"	
-    color-echo 'SHELL' '    '"$shell"
+  color-echo 'SHELL' '    '"$shell"
 }
 
 print-term() {
@@ -50,15 +50,15 @@ print-packages() {
 
 print-disk() {
     # field 2 on line 2 is total, field 3 on line 2 is used
-    disk=$(df -h / | awk 'NR==2 {total=$2; used=$3; print used" / "total}')
-    color-echo 'DISK' '     '"$disk"
+  disk=$(df -h / | awk 'NR==2 {total=$2; used=$3; print used" / "total}')
+  color-echo 'DISK' '     '"$disk"
 }
 
 print-mem() {
 	memtotal="$(($(sysctl -n hw.physmem) / 1024 / 1024))"
 	memused="$(($(vmstat | awk 'END {printf $4}') / 1024))"
-    mem="${memused}MB / ${memtotal}MB"
-    color-echo 'MEM' '      '"$mem"
+  mem="${memused}MB / ${memtotal}MB"
+  color-echo 'MEM' '      '"$mem"
 }
 
 print-wm() {
@@ -73,21 +73,21 @@ print-wm() {
 }
            
 print-font() {
-    fontstr=$(xrdb -query 2>/dev/null | grep '*font:')
-    font=$(echo $fontstr | awk -F: '{ print $4 }')
-    [[ $font != "" ]] && color-echo 'FONT' '     '"$font"
+  fontstr=$(xrdb -query 2>/dev/null | grep '*font:')
+  font=$(echo $fontstr | awk -F: '{ print $4 }')
+  [[ $font != "" ]] && color-echo 'FONT' '     '"$font"
 }
 
 print-gpu() {
 # stolen from neofetch
 	gpu="$(glxinfo | grep -F 'OpenGL renderer string')"
-    gpu="${gpu/'OpenGL renderer string: '}"
+  gpu="${gpu/'OpenGL renderer string: '}"
 	color-echo 'GPU' '      '"$gpu"
 }	
 
 print-date() {
 	time=$(date +" %a, %b %d %I:%M")
-        color-echo 'DATE' '    '"$time"
+  color-echo 'DATE' '    '"$time"
 }
 
 print-colors() {
