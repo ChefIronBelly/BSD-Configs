@@ -10,7 +10,7 @@ Current Setups
    
    Window Manager: wmutils / cwm / evilwm
    
-   Bar: lemonbar / osd_clock
+   Bar: lemonbar / osd_cat
    
    Launcher: dmenu
    
