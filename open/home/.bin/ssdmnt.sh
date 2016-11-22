@@ -1,5 +1,8 @@
 #! /bin/sh
-# usually /dev/sd0e or sd4e on my machines. (NetBSD)
-# usually /dev/sd0i or sd3i on my machines. (OpenBSD)
+
+# Mount SSD
+# sysctl hw.disknames
+# dmesg | grep sd1
+# disklabel sd1
 
 doas mount /dev/sd1k /mnt/sd1
