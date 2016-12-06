@@ -116,12 +116,12 @@ print-term
 #printf "\n"
 print-font
 colors='Gotham'
-printf "\e[36mCOLORS: \e[0m   $colors$rst\n"
+printf "\e[36mCOLORS: \e[37m   $colors$rst\n"
 #printf "\n"
 print-font
 print-disk
 print-mem
 print-cpu
 print-gpu
-print-colors
+#print-colors
 read

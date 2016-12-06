@@ -18,7 +18,7 @@ clock()
 	mtime=$(date +'%H:%M')
 	myear=$(date +'%Y-%m-')
 	mday=$(date +'%d')
-	echo "#[fg=$C7]#[bg=$C1]█ $mtime"
+	echo "#[fg=$7]#[bg=$C0] $mtime"
 }
 
 echo `clock`

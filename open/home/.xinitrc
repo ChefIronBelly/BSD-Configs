@@ -17,6 +17,7 @@ xrdb < ~/.Xdefaults
 mpd ~/.config/mpd/mpd.conf &
 
 xsetroot -cursor_name left_ptr
-feh --bg-fill --randomize ~/.wallpapers/* &
+#feh --bg-fill --randomize ~/.wallpapers/* &
+feh --bg-fill ~/Pictures/wallpapers/_DSF6699b_3000px_1500.jpg &
 
 exec cwm

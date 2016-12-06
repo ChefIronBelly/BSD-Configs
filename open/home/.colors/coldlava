@@ -1,0 +1,35 @@
+!# COLDLAVA
+!# nxll <nxll@teknik.io>
+
+*.cursor: #817FA3
+*.mouse_background: #57607A
+*.mouse_foreground: #FEDDD0
+*.highlight: #57607A
+*.border: #3C4254
+*.background: #3C4254
+*.foreground: #FEDDD0
+
+
+*.color0: #4B5269
+*.color8: #57607A
+
+*.color1: #D8686D
+*.color9: #ED7278
+
+*.color2: #918EB3
+*.color10: #A19EC7
+
+*.color3: #EBC6A1
+*.color11: #FFD7AF
+
+*.color4: #B84E46
+*.color12: #CC564E
+
+*.color5: #875F87
+*.color13: #9C6D9C
+
+*.color6: #F77C6C
+*.color14: #FF806F 
+
+*.color7: #FDCBAC
+*.color15: #FDCBAC

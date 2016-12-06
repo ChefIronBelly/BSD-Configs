@@ -6,7 +6,7 @@
 fontname "-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1"
 
 # set border width
-borderwidth 2
+borderwidth 4
 
 # gaps
 gap 10 10 10 10
@@ -15,34 +15,34 @@ gap 10 10 10 10
 sticky yes
 
 # colors
-color activeborder   '#98d1ce'
-color inactiveborder '#0a0f14'
-color menubg         '#0a0f14'
-color menufg         '#98d1ce'
-color font           '#98d1ce'
-color selfont        '#0a0f14'
+color activeborder   '#57607A'
+color inactiveborder '#3C4254'
+color menubg         '#3C4254'
+color menufg         '#3C4254'
+color font           '#FEDDD0'
+color selfont        '#D8686D'
 
 # faster
 moveamount 10
 
 # autogroups
-autogroup 1 "st-256color,tmux"
+autogroup 1 "xterm-256color,tmux"
 autogroup 2 Firefox
 autogroup 3 "Geany,vim"
 autogroup 4 "mpv,mplayer"
 
 # menu
-command box    "st -g 80x24+123+284"
+command box    "xterm -g 80x24+123+284"
 command surf   firefox
 command xlock  "xlock -mode blot"
 
 # binds
-bind-key 4-Return "st -g 80x24+123+284" # middle left
-bind-key 4-t      "st -g 80x24+743+284 -e \"tmux\"" # middle right
-bind-key 4-n      "st -g 95x60+30+30"   # left 50%
-bind-key 4-m      "st -g 95x60+733+30"  # right 50%
-bind-key 4-comma  "st -g 195x29+30+30"  # top 50%
-bind-key 4-period "st -g 195x29+30+470" # bottom 50%
+bind-key 4-Return "xterm -g 80x24+123+284" # middle left
+bind-key 4-t      "xterm -g 80x24+743+284 -e \"tmux\"" # middle right
+bind-key 4-n      "xterm -g 95x60+30+30"   # left 50%
+bind-key 4-m      "xterm -g 95x60+733+30"  # right 50%
+bind-key 4-comma  "xterm -g 195x29+30+30"  # top 50%
+bind-key 4-period "xterm -g 195x29+30+470" # bottom 50%
 bind-key SM-s     status.sh
 bind-key SM-f     firefox
 bind-key SM-g     geany
