@@ -10,6 +10,7 @@ xset -b
 xset s 300
 
 xset +fp /usr/local/share/fonts/ohsnap
+xset +fp /usr/local/share/fonts/envypn-font-1.7
 xset fp rehash
 
 xrdb < ~/.Xdefaults

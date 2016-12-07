@@ -115,7 +115,7 @@ print-shell
 print-term
 #printf "\n"
 print-font
-colors='Gotham'
+colors='Coldlava'
 printf "\e[36mCOLORS: \e[37m   $colors$rst\n"
 #printf "\n"
 print-font
