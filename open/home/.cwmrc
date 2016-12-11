@@ -26,10 +26,10 @@ color selfont        '#D8686D'
 moveamount 10
 
 # autogroups
-autogroup 1 "xterm-256color,tmux"
-autogroup 2 Firefox
-autogroup 3 "Geany,vim"
-autogroup 4 "mpv,mplayer"
+group 1 "xterm-256color,tmux"
+group 2 Firefox
+group 3 "Geany,vim"
+group 4 "mpv,mplayer"
 
 # menu
 command box    "xterm -g 80x24+123+284"
@@ -86,15 +86,15 @@ bind-key 4S-Tab   rcycle
 bind-key 4-g      grouptoggle
 bind-key 4MC-l    cyclegroup
 bind-key 4MC-h    rcyclegroup
-bind-key 4-1      group1
-bind-key 4-2      group2
-bind-key 4-3      group3
-bind-key 4-4      group4
-bind-key 4-5      group5
-bind-key 4-6      group6
-bind-key 4-7      group7
-bind-key 4-8      group8
-bind-key 4-9      group9
+bind-key 4-1      group-toggle-1
+bind-key 4-2      group-toggle-2
+bind-key 4-3      group-toggle-3
+bind-key 4-4      group-toggle-4
+bind-key 4-5      group-toggle-5
+bind-key 4-6      group-toggle-6
+bind-key 4-7      group-toggle-7
+bind-key 4-8      group-toggle-8
+bind-key 4-9      group-toggle-9
 bind-key 4-0      nogroup
 bind-key 4M-1     grouponly1
 bind-key 4M-2     grouponly2
