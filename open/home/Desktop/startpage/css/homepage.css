@@ -17,7 +17,7 @@
 }
 
 body{
-	background: #3C4556;
+	background: #3C4254;
 	padding-top: 12%;
 	font-size: 11px;
 	-webkit-font-smoothing: antialiased;
@@ -119,7 +119,7 @@ form{
 .go{
 	height: 26px;
 	width: 40px;
-	background: #3C4556;
+	background: #3C4254;
 	color: #d0d0d0;
 	border: 1px solid #c2c2b0;
 }
