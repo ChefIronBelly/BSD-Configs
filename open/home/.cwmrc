@@ -22,23 +22,24 @@ color menufg         '#3C4254'
 color font           '#FEDDD0'
 color selfont        '#D8686D'
 
-# faster
+# faster pussy cat
 moveamount 10
 
 # autogroups
 group 1 "xterm-256color,tmux"
-group 2 Firefox
+group 2 "Firefox"
 group 3 "Geany,vim"
 group 4 "mpv,mplayer"
 
 # menu
-command box    "xterm -g 80x24+123+284"
+command box    "xterm -g 80x24+290+324"
 command surf   firefox
 command xlock  "xlock -mode blot"
 
 # binds
-bind-key 4-Return "xterm -g 80x24+123+284" # middle left
-bind-key 4-t      "xterm -g 80x24+743+284 -e \"tmux\"" # middle right
+# window geometry based on 1920x1080
+bind-key 4-Return "xterm -g 80x24+290+324" # middle left
+bind-key 4-t      "xterm -g 80x24+980+324 -e \"tmux\"" # middle right
 bind-key 4-n      "xterm -g 95x60+30+30"   # left 50%
 bind-key 4-m      "xterm -g 95x60+733+30"  # right 50%
 bind-key 4-comma  "xterm -g 195x29+30+30"  # top 50%
