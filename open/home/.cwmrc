@@ -27,8 +27,8 @@ moveamount 10
 
 # autogroups
 autogroup 1 "xterm-256color,tmux"
-autogroup 2 "Firefox"
-autogroup 3 "Geany,vim"
+autogroup 2 "firefox"
+autogroup 3 "geany,vim"
 autogroup 4 "mpv,mplayer"
 
 # menu
@@ -36,14 +36,17 @@ command box    "xterm -g 80x24+290+324"
 command surf   firefox
 command xlock  "xlock -mode blot"
 
+# Ignore programs by that name by not drawing borders around them. 
+ignore firefox
+
 # binds
 # window geometry based on 1920x1080
 bind-key 4-Return "xterm -g 80x24+290+324" # middle left
 bind-key 4-t      "xterm -g 80x24+980+324 -e \"tmux\"" # middle right
-bind-key 4-n      "xterm -g 95x60+30+30"   # left 50%
-bind-key 4-m      "xterm -g 95x60+733+30"  # right 50%
-bind-key 4-comma  "xterm -g 195x29+30+30"  # top 50%
-bind-key 4-period "xterm -g 195x29+30+470" # bottom 50%
+bind-key 4-n      "xterm -g 125x67+25+25"   # left 50%
+bind-key 4-m      "xterm -g 125x67+995+25"  # right 50%
+bind-key 4-comma  "xterm -g 263x32+25+25"  # top 50%
+bind-key 4-period "xterm -g 263x32+25+544" # bottom 50%
 bind-key SM-s     status.sh
 bind-key SM-f     firefox
 bind-key SM-g     geany
