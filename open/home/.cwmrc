@@ -26,10 +26,10 @@ color selfont        '#D8686D'
 moveamount 10
 
 # autogroups
-group 1 "xterm-256color,tmux"
-group 2 "Firefox"
-group 3 "Geany,vim"
-group 4 "mpv,mplayer"
+autogroup 1 "xterm-256color,tmux"
+autogroup 2 "Firefox"
+autogroup 3 "Geany,vim"
+autogroup 4 "mpv,mplayer"
 
 # menu
 command box    "xterm -g 80x24+290+324"
