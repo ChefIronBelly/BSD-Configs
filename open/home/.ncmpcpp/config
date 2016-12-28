@@ -17,6 +17,7 @@ user_interface = "alternative"
 # message_delay_time = "3"
 # now_playing_prefix = "$b"
 # now_playing_suffix = "$/b"
+now_playing_prefix = "> "
 # display_volume_level = "yes"
 # display_bitrate = "yes"
 # clock_display_seconds = "yes"
@@ -29,7 +30,10 @@ user_interface = "alternative"
 # MPD #
 #######
 
-mpd_music_dir = "~/Music/"
+mpd_crossfade_time = "3"
+mpd_music_dir = "~/Music"
+mpd_host = "127.0.0.1"
+mpd_port = "6600"
 
 ######
 # UI #

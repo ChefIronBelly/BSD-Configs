@@ -10,7 +10,6 @@ xset -b
 xset s 300
 
 xset +fp /usr/local/share/fonts/ohsnap
-xset +fp /usr/local/share/fonts/terminus
 xset fp rehash
 
 xrdb < ~/.Xdefaults

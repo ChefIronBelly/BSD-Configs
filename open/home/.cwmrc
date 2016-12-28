@@ -15,11 +15,11 @@ gap 10 10 10 10
 sticky yes
 
 # colors
-color activeborder   '#e3e3e3'
+color activeborder   '#b9b9b9'
 color inactiveborder '#252525'
-color menubg         '#3C4254'
-color menufg         '#3C4254'
-color font           '#FEDDD0'
+color menubg         '#252525'
+color menufg         '#e3e3e3'
+color font           '#f7f7f7'
 color selfont        '#D8686D'
 
 # faster pussy cat
