@@ -50,7 +50,7 @@ print-packages() {
 
 print-disk() {
     # field 2 on line 2 is total, field 3 on line 2 is used
-  disk=$(df -h / | awk 'NR==2 {total=$2; used=$3; print used" / "total}')
+  disk=$(df -h /home | awk 'NR==2 {total=$2; used=$3; print used" / "total}')
   color-echo 'DISK' '     '"$disk"
 }
 
@@ -115,7 +115,7 @@ print-shell
 print-term
 #printf "\n"
 print-font
-colors='Coldlava'
+colors='Dark'
 printf "\e[36mCOLORS: \e[37m   $colors$rst\n"
 #printf "\n"
 print-font

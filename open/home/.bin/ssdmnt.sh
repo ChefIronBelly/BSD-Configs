@@ -5,4 +5,4 @@
 # dmesg | grep sd1
 # disklabel sd1
 
-doas mount /dev/sd1k /mnt/sd1
+sudo mount /dev/sd1k /mnt/sd1

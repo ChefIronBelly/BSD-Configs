@@ -21,4 +21,4 @@ XTerm*selectToClipboard: true
 XTerm*ScrollBar: false
 XTerm*ScrollKey: true
 
-#include </home/chef/.colors/coldlava>
+#include </home/chef/.colors/dark>

@@ -2,17 +2,17 @@
 # ~/.wmrc
 #
 
-FG=3C4254
-BG=FEDDD0
+FG=f7f7f7
+BG=101010
 
-C0=4B5269
-C1=D8686D
-C2=918EB3
-C3=EBC6A1
-C4=B84E46
-C5=875F87
-C6=F77C6C
-C7=FDCBAC
+C0=101010
+C1=252525
+C2=464646
+C3=525252
+C4=ababab
+C5=b9b9b9
+C6=e3e3e3
+C7=f7f7f7
 
 export FG BG C0 C1 C2 C3 C4 C5 C6 C7
 
@@ -22,9 +22,9 @@ ICOFONT="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
 export FONT ICOFONT
 
 DMENU_FN="-fn -*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
-DMENU_NB="-nb #3C4254"
-DMENU_NF="-nf #FEDDD0"
-DMENU_SB="-sb #FEDDD0"
-DMENU_SF="-sf #3C4254"
+DMENU_NB="-nb #101010"
+DMENU_NF="-nf #f7f7f7"
+DMENU_SB="-sb #f7f7f7"
+DMENU_SF="-sf #101010"
 
 export DMENU_FN DMENU_NB DMENU_NF DMENU_SF DMENU_SB

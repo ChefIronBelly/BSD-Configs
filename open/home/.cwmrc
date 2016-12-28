@@ -15,8 +15,8 @@ gap 10 10 10 10
 sticky yes
 
 # colors
-color activeborder   '#F77C6C'
-color inactiveborder '#918EB3'
+color activeborder   '#f7f7f7'
+color inactiveborder '#101010'
 color menubg         '#3C4254'
 color menufg         '#3C4254'
 color font           '#FEDDD0'
@@ -39,8 +39,7 @@ command xlock  "xlock -mode blot"
 # Ignore programs by that name by not drawing borders around them. 
 ignore firefox
 
-# binds
-# window geometry based on 1920x1080
+# binds (window geometry based on 1920x1080)
 bind-key 4-Return "xterm -g 80x24+290+324" # middle left
 bind-key 4-t      "xterm -g 80x24+980+324 -e \"tmux\"" # middle right
 bind-key 4-n      "xterm -g 125x67+25+25"   # left 50%
