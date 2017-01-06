@@ -19,6 +19,7 @@ mpd ~/.config/mpd/mpd.conf &
 
 xsetroot -cursor_name left_ptr
 #feh --bg-fill --randomize ~/.wallpapers/* &
-feh --bg-scale ~/Pictures/wallpapers/republica.jpg &
+#feh --bg-scale ~/Pictures/wallpapers/republica.jpg &
+xsetroot -mod 12 2 -bg "$(xrdb -query | awk '/\*background/ {print $2}')" -fg "$(xrdb -query | awk '/\*color8/ {print $2}')"
 
 exec cwm

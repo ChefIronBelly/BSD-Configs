@@ -1,14 +1,12 @@
 BSD-Configs
 - FreeBSD - http://www.freebsd.org
-- NetBSD - http://www.netbsd.org
 - OpenBSD - http://www.openbsd.org
-- MirBSD - https://www.mirbsd.org
 
 Current Setups
 
-   Distro: FreeBSD (amd64) laptop / OpenBSD (amd64) / NetBSD (amd64) / MirBSD (i386)
+   Distro: FreeBSD (amd64) laptop / OpenBSD (amd64)
    
-   Window Manager: wmutils / cwm / evilwm
+   Window Manager: wmutils / cwm 
    
    Bar: lemonbar / osd_cat
    
@@ -24,7 +22,7 @@ Current Setups
    
    Text Editor: vim / geany
    
-   Color Scheme: zenblue / dracula / gotham
+   Color Scheme: zenblue / traffic by dkeg 
    
    Music Player: mpd / mpg123 / cmus
    

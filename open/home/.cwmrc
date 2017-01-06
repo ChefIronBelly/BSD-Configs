@@ -15,8 +15,8 @@ gap 10 10 10 10
 sticky yes
 
 # colors
-color activeborder   '#b9b9b9'
-color inactiveborder '#252525'
+color activeborder   '#515e67'
+color inactiveborder '#272c30'
 color menubg         '#252525'
 color menufg         '#e3e3e3'
 color font           '#f7f7f7'

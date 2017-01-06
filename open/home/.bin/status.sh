@@ -13,4 +13,4 @@ ip="ip:$( if_ip.sh )"
 #mail="mail: $(gmail.sh)"
 time=$(date +" %a, %b %d %I:%M")
 
-echo -n $time "|" $mem "|" $ip "|" $vol | osd_cat -p top -A center -d 10 -s 0 -c '#f7f7f7' -f $FONT
+echo -n $time "|" $mem "|" $ip "|" $vol | osd_cat -p top -A center -d 10 -s 0 -c '#cfb9a8' -f $FONT
