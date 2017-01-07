@@ -11,6 +11,9 @@ borderwidth 4
 # gaps
 gap 10 10 10 10
 
+# snap
+snapdist 10
+
 # stick it
 sticky yes
 
@@ -25,11 +28,11 @@ color selfont        '#D8686D'
 # faster pussy cat
 moveamount 10
 
-# autogroups
-autogroup 1 "xterm-256color,tmux"
-autogroup 2 "firefox"
-autogroup 3 "geany,vim"
-autogroup 4 "mpv,mplayer"
+# autogroup
+autogroup 1 "xterm,tmux"
+autogroup 2 "Navigator,Firefox"
+autogroup 3 "Geany,vim"
+autogroup 4 "mpv,MPlayer"
 
 # menu
 command box    "xterm -g 80x24+290+324"
@@ -99,15 +102,15 @@ bind-key 4-7      group-toggle-7
 bind-key 4-8      group-toggle-8
 bind-key 4-9      group-toggle-9
 bind-key 4-0      nogroup
-bind-key 4M-1     grouponly1
-bind-key 4M-2     grouponly2
-bind-key 4M-3     grouponly3
-bind-key 4M-4     grouponly4
-bind-key 4M-5     grouponly5
-bind-key 4M-6     grouponly6
-bind-key 4M-7     grouponly7
-bind-key 4M-8     grouponly8
-bind-key 4M-9     grouponly9
+bind-key 4M-1     group-only-1
+bind-key 4M-2     group-only-2
+bind-key 4M-3     group-only-3
+bind-key 4M-4     group-only-4
+bind-key 4M-5     group-only-5
+bind-key 4M-6     group-only-6
+bind-key 4M-7     group-only-7
+bind-key 4M-8     group-only-8
+bind-key 4M-9     group-only-9
 
 bind-key 4C-r     restart
 bind-key 4C-q     quit
