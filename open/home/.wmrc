@@ -3,9 +3,10 @@
 #
 
 #include </home/chef/.colors/traffic>
+. $HOME/.colors/traffic
 
-FG=cfb9a8
-BG=272c30
+FG=fg
+BG=bg
 
 C0=282d31
 C1=934e46
@@ -30,3 +31,26 @@ DMENU_SB="-sb #cfb9a8"
 DMENU_SF="-sf #272c30"
 
 export DMENU_FN DMENU_NB DMENU_NF DMENU_SF DMENU_SB
+
+#include </home/chef/.colors/traffic>
+
+! Colors
+*background:   bg
+*foreground:   fg
+
+*color0:      blk
+*color8:      bblk
+*color1:      red
+*color9:      bred
+*color2:      grn
+*color10:     bgrn
+*color3:      ylw
+*color11:     bylw
+*color4:      blu
+*color12:     bblu
+*color5:      mag
+*color13:     bmag
+*color6:      cyn
+*color14:     bcyn
+*color7:      wht
+*color15:     bwht
