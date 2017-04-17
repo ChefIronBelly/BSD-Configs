@@ -6,13 +6,13 @@ Current Setups
 
    Distro: FreeBSD (amd64) laptop / OpenBSD (amd64)
    
-   Window Manager: wmutils / cwm 
+   Window Manager: cwm 
    
    Bar: lemonbar / osd_cat
    
    Launcher: dmenu
    
-   Terminal Emulator: st / xterm
+   Terminal Emulator: xterm
    
    Shell: bash / mksh
    
@@ -22,9 +22,9 @@ Current Setups
    
    Text Editor: vim / geany
    
-   Color Scheme: zenblue / traffic by dkeg 
+   Color Scheme: zenblue / traffic 
    
-   Music Player: mpd / mpg123 / cmus
+   Music Player: cmus / mpg123
    
    Browser: firefox
    
