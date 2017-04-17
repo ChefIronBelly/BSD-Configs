@@ -14,12 +14,12 @@ xset fp rehash
 
 xrdb < ~/.Xdefaults
 
-mpd ~/.config/mpd/mpd.conf &
+#mpd ~/.config/mpd/mpd.conf &
 #cupsd &
 
 xsetroot -cursor_name left_ptr
 #feh --bg-fill --randomize ~/.wallpapers/* &
 #feh --bg-scale ~/Pictures/wallpapers/republica.jpg &
-xsetroot -mod 12 2 -bg "$(xrdb -query | awk '/\*background/ {print $2}')" -fg "$(xrdb -query | awk '/\*color8/ {print $2}')"
+xsetroot -mod 16 16 -bg "$(xrdb -query | awk '/\*background/ {print $2}')" -fg "$(xrdb -query | awk '/\*color8/ {print $2}')"
 
 exec cwm

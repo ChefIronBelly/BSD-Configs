@@ -2,23 +2,6 @@
 # ~/.wmrc
 #
 
-#include </home/chef/.colors/traffic>
-. $HOME/.colors/traffic
-
-FG=fg
-BG=bg
-
-C0=282d31
-C1=934e46
-C2=637268
-C3=c79e84
-C4=515e67
-C5=715f5e
-C6=5c6f7d
-C7=f7f7f7
-
-export FG BG C0 C1 C2 C3 C4 C5 C6 C7
-
 FONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1"
 ICOFONT="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
 
@@ -34,6 +17,8 @@ export DMENU_FN DMENU_NB DMENU_NF DMENU_SF DMENU_SB
 
 #include </home/chef/.colors/traffic>
 
+. $HOME/.colors/traffic
+ 
 ! Colors
 *background:   bg
 *foreground:   fg

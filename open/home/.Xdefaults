@@ -23,7 +23,6 @@ XTerm*ScrollKey: true
 
 #include </home/chef/.colors/traffic>
 
-
 ! Colors
 *background:   bg
 *foreground:   fg
@@ -44,4 +43,3 @@ XTerm*ScrollKey: true
 *color14:     bcyn
 *color7:      wht
 *color15:     bwht
-

@@ -3,6 +3,7 @@
 #
 
 . $HOME/.wmrc
+. $HOME/.colors/traffic
 
 cw="$(weather.sh)"
 
