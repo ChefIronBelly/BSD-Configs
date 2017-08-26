@@ -1,0 +1,19 @@
+### upgrade from 10.3 to 11.0 release (from memory)
+
+# freebsd-update fetch
+# freebsd-update install
+# pkg update -f 
+# pkg upgrade -y
+
+# shutdown -r now
+
+# freebsd-update upgrade 11.0-RELEASE
+# vi /etc/sysctl.conf (edit)
+
+# shutdown -r now
+
+# pkg-static bootstrap -f
+# pkg update -f 
+# pkg upgrade -y
+
+# shutdown -r now
