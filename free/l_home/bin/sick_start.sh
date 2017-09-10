@@ -13,10 +13,10 @@ wait $pid_job_2
 echo "Started transmission..."
 
 echo "cd /Source/SickGear"
-cd ~/Source/SickGear
+cd ~/Source/temp/SickGear
 
 echo "Starting SickGear..."
-python sickbeard.py --datadir ~/Source/SickGear/data/ &
+python SickBeard.py --datadir ~/Source/SickGear/data/ &
 pid_job_3=$!
 wait $pid_job_3
 echo "Started SickGear..."

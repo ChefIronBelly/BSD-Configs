@@ -34,10 +34,5 @@ hsetroot -fill ~/Pictures/wallpapers/ANhxh.jpg -tint '#506070'
 
 rm /tmp/grp/* 2>/dev/null
 
-wew | focus_watcher.sh &
-exec xwait
-
 #exec evilwm -term xterm -fn fixed -fg '#506070' -snap 10 -bw 2 -nosoliddrag
-
-#exec xterm -geometry 80x32+20+20 -name login
-
+exec cwm
