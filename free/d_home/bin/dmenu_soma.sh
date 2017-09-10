@@ -5,8 +5,8 @@
 
 selection="";
 
-if [ "$(pgrep mpg123)" ] ; then
-        echo -n "All your sound belong to us ..." | osd_cat -p top -A center -d 3 -s 0 -c '#$FG' -f $FONT
+if [ "$(pidof mpg123)" ] ; then
+        pop.sh "All your sound belong to us ..."
         pkill mpg123
         exit 0
 fi
@@ -16,7 +16,8 @@ selection="$(echo "$stations" | dmenu "$@" $DMENU_FN $DMENU_NB $DMENU_NF $DMENU_
 player() { mpg123 -C -@ "$@" 2>/dev/null & }
 
 if [ "$selection" ]; then
-		echo -n "Playing SomaFM channel $selection ..." | osd_cat -p top -A center -d 3 -s 0 -c '#$FG' -f $FONT
+		pop.sh "Playing SomaFM channel $selection ..."
 		player http://somafm.com/$selection.pls
 else exit;
 fi
+

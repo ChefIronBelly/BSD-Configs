@@ -11,44 +11,51 @@ borderwidth 4
 # gaps
 gap 10 10 10 10
 
+# snap
+snapdist 10
+
 # stick it
 sticky yes
 
 # colors
-color activeborder   '#98d1ce'
-color inactiveborder '#0a0f14'
-color menubg         '#0a0f14'
-color menufg         '#98d1ce'
-color font           '#98d1ce'
-color selfont        '#0a0f14'
+color activeborder   '#515e67'
+color inactiveborder '#272c30'
+color menubg         '#252525'
+color menufg         '#e3e3e3'
+color font           '#f7f7f7'
+color selfont        '#D8686D'
 
-# faster
+# faster pussy cat
 moveamount 10
 
-# autogroups
-autogroup 1 "st-256color,tmux"
-autogroup 2 Firefox
+# autogroup
+autogroup 1 "xterm,tmux"
+autogroup 2 "Navigator,Firefox"
 autogroup 3 "Geany,vim"
-autogroup 4 mpv
+autogroup 4 "mpv,MPlayer"
 
 # menu
-command box    "xterm -g 80x24+123+284"
+command box    "xterm -g 80x24+290+324"
 command surf   firefox
 command xlock  "xlock -mode blot"
 
-# binds
-bind 4-Return "xterm -g 80x24+123+284" # middle left
-bind 4-t      "xterm -g 80x24+743+284 -e \"tmux\"" # middle right
-bind 4-n      "xterm -g 95x60+30+30"   # left 50%
-bind 4-m      "xterm -g 95x60+733+30"  # right 50%
-bind 4-comma  "xterm -g 195x29+30+30"  # top 50%
-bind 4-period "xterm -g 195x29+30+470" # bottom 50%
+# Ignore programs by that name by not drawing borders around them. 
+ignore firefox
+
+# binds (window geometry based on 1920x1080)
+bind 4-Return "xterm -g 80x24+290+324" # middle left
+bind 4-t      "xterm -g 80x24+980+324 -e \"tmux\"" # middle right
+bind 4-n      "xterm -g 125x67+25+25"   # left 50%
+bind 4-m      "xterm -g 125x67+995+25"  # right 50%
+bind 4-comma  "xterm -g 263x32+25+25"  # top 50%
+bind 4-period "xterm -g 263x32+25+544" # bottom 50%
 bind SM-s     status.sh
 bind SM-f     firefox
 bind SM-g     geany
 bind SM-d     dmenu_start.sh
 bind SM-r     dmenu_soma.sh
 bind SM-x     dmenu_xset.sh
+bind SM-q     dmenu_exit.sh
 bind M-0      "volume.sh 0" # audio mute toggle
 bind M-minus  "volume.sh -" # audio lower
 bind M-equal  "volume.sh +" # audio raise
@@ -85,25 +92,25 @@ bind 4S-Tab   rcycle
 bind 4-g      grouptoggle
 bind 4MC-l    cyclegroup
 bind 4MC-h    rcyclegroup
-bind 4-1      group1
-bind 4-2      group2
-bind 4-3      group3
-bind 4-4      group4
-bind 4-5      group5
-bind 4-6      group6
-bind 4-7      group7
-bind 4-8      group8
-bind 4-9      group9
+bind 4-1      group-toggle-1
+bind 4-2      group-toggle-2
+bind 4-3      group-toggle-3
+bind 4-4      group-toggle-4
+bind 4-5      group-toggle-5
+bind 4-6      group-toggle-6
+bind 4-7      group-toggle-7
+bind 4-8      group-toggle-8
+bind 4-9      group-toggle-9
 bind 4-0      nogroup
-bind 4M-1     grouponly1
-bind 4M-2     grouponly2
-bind 4M-3     grouponly3
-bind 4M-4     grouponly4
-bind 4M-5     grouponly5
-bind 4M-6     grouponly6
-bind 4M-7     grouponly7
-bind 4M-8     grouponly8
-bind 4M-9     grouponly9
+bind 4M-1     group-only-1
+bind 4M-2     group-only-2
+bind 4M-3     group-only-3
+bind 4M-4     group-only-4
+bind 4M-5     group-only-5
+bind 4M-6     group-only-6
+bind 4M-7     group-only-7
+bind 4M-8     group-only-8
+bind 4M-9     group-only-9
 
 bind 4C-r     restart
 bind 4C-q     quit

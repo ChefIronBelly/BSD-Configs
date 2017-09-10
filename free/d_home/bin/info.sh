@@ -1,14 +1,13 @@
-#!/usr/local/bin/bash
+#!/usr/bin/env bash
 
 # define colors for color-echo
-red="\e[31m"
+red="\e[1;31m"
 grn="\e[32m"
 org="\e[33m"
-blu="\e[34m"
+blu="\e[94m"
 prp="\e[35m"
 cyn="\e[36m"
 rst="\e[0m"
-spc="\e[41m"
 
 f1="\e[0;007m"
 f2="\e[0;37m"
@@ -20,7 +19,7 @@ wms=( 2bwm 2wm 9wm aewm afterstep ahwm alopex amiwm antiwm awesome blackbox bspw
     uwm vtwm w9wm weewm wind windowlab wm2 wmaker wmfs wmii wmutils wmx xfwm4 xmonad xoat yeahwm )
 
 color-echo() {  # print with colors
-	echo -e "$cyn$1: $rst$2"
+	echo -e "$blu$1: $rst$2"
 }
 
 print-kernel() {
@@ -48,6 +47,7 @@ print-cpu() {
 print-packages() {
 	pkgs=$(if TMPDIR=/dev/null ASSUME_ALWAYS_YES=1 PACKAGESITE=file:///nonexistent pkg info pkg >/dev/null 2>&1; then 
 	pkg info | wc -l | awk '{print $1}'; else pkg_info | wc -l | awk '{sub(" ", "");print $1}'; fi)
+	
 	color-echo 'PACKAGES' ' '"$pkgs"
 }
 
@@ -105,7 +105,7 @@ printf "\e[34m░▒▓█\e[0m▓▒░\n\n"
 }
 
 clear
-printf "\n$spc$USER@$(hostname)$rst\n"
+printf "\n$red$USER@$(hostname)$rst\n"
 printf "\n"
 print-distro
 print-packages
@@ -115,8 +115,8 @@ print-shell
 print-term
 #printf "\n"
 print-font
-colors='Gotham'
-printf "\e[36mCOLORS: \e[0m   $colors$rst\n"
+colors='zenblue'
+printf "\e[94mCOLORS: \e[0m   $colors$rst\n"
 #printf "\n"
 print-disk
 print-mem

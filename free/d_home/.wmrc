@@ -1,30 +1,25 @@
 #!/bin/sh
 # ~/.wmrc
-#
 
-FG=98d1ce
-BG=0a0f14
+export FG=edf0f3
+export BG=1d1d1d
 
-C0=0a0f14
-C1=c33027
-C2=26a98b
-C3=edb54b
-C4=195465
-C5=4e5165
-C6=33859d
-C7=98d1ce
+export C0=1d1d1d
+export C1=ca2026
+export C2=379a37
+export C3=f37226
+export C4=7a858a
+export C5=dc8cc3
+export C6=4c8fce
+export C7=edf0f3
 
-export FG BG C0 C1 C2 C3 C4 C5 C6 C7
+export FONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
+export ICOFONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
 
-FONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1"
-ICOFONT="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
-
-export FONT ICOFONT
-
-DMENU_FN="-fn -*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
-DMENU_NB="-nb #0a0f14"
-DMENU_NF="-nf #98d1ce"
-DMENU_SB="-sb #98d1ce"
-DMENU_SF="-sf #0a0f14"
+DMENU_FN="-fn -*-ohsnap.icons-medium-r-*-*-12-*-*-*-*-*-*-*"
+DMENU_NB="-nb #1d1d1d"
+DMENU_NF="-nf #edf0f3"
+DMENU_SB="-sb #506070"
+DMENU_SF="-sf #edf0f3"
 
 export DMENU_FN DMENU_NB DMENU_NF DMENU_SF DMENU_SB

@@ -37,5 +37,5 @@ alias rec='ffmpeg -f x11grab -s 1440x900 -an -i :0.0 -c:v libvpx -b:v 5M -crf 10
 alias todo='vi ~/todo'
 alias rnet='sudo /etc/rc.d/netif restart'
 alias shootme='DISPLAY=:0 import -window root ~/Pictures/scrots/scrot-$(date +%m-%d-%Y-%H-%M-%S).png'
-alias blankcd='cdrecord blank=fast dev=2,0,0'
-alias zzz=xlock
+alias blankcd='cdrdao blank'
+alias zzz=slock

@@ -42,24 +42,6 @@ ip() {
     echo $ip
 }
 
-battery() {
-	BAT=$(battery.sh)
-	if [ $BAT -lt '10' ]; then
-    CUR="%{F${red}} $BAT% %{F-}"
-	elif [ $BAT -ge '10' ] && [ $BAT -lt '25' ]; then
-    CUR="%{F${red}} $BAT% %{F-}"
-	elif [ $BAT -ge '25' ] && [ $BAT -lt '50' ]; then
-    CUR="%{F${red}} $BAT% %{F-}"
-	elif [ $BAT -ge '50' ] && [ $BAT -lt '75' ]; then
-    CUR="%{F${fg}} $BAT% %{F-}"
-	elif [ $BAT -ge '75' ] && [ $BAT -lt '90' ]; then
-    CUR="%{F${fg}} $BAT% %{F-}"
-	else
-    CUR="%{F${fg}} $BAT% %{F-}"
-	fi
-	echo $CUR
-}
-
 vol() {
 	vol=$( ( mixer -s vol 2> /dev/null || echo - ) | cut -d ':' -f 2 )
 	echo $vol
@@ -75,7 +57,7 @@ clock() {
     echo $time
 }
 
-echo %{l}%{F${sp}}" >> "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{c}%{F${sp}}%{F-}%{r}%{F${sp}}" >> "%{F-}%{F${fg}}bat:$(battery)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}}mem: $(mem)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}}ip: $(ip)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}}vol: $(vol)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}} $(dateclock)%{F-}%{F${sp}}" @ "%{F-}%{F${fg}}$(clock)%{F-}%{F${sp}}" "%{F-}
+echo %{l}%{F${sp}}" >> "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{c}%{F${sp}}%{F-}%{r}%{F${sp}}" >> "%{F-}%{F${fg}}mem: $(mem)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}}ip: $(ip)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}}vol: $(vol)%{F-}%{F${sp}}" >> "%{F-}%{F${fg}} $(dateclock)%{F-}%{F${sp}}" @ "%{F-}%{F${fg}}$(clock)%{F-}%{F${sp}}" "%{F-}
 }
 
 while true
