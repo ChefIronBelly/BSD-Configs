@@ -4,7 +4,7 @@ BSD-Configs
 
 Current Setups
 
-   Distro: FreeBSD (amd64) laptop / OpenBSD (amd64)
+   Distro: FreeBSD (amd64) laptop & desktop / OpenBSD (amd64) desktop
    
    Window Manager: cwm 
    
