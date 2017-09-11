@@ -1,25 +1,24 @@
 #!/usr/bin/env bash
 
 # define colors for color-echo
-red="\e[1;31m"
+red="\e[31m"
 grn="\e[32m"
 org="\e[33m"
-blu="\e[94m"
+blu="\e[34m"
 prp="\e[35m"
 cyn="\e[36m"
+wht="\e[37m"
 rst="\e[0m"
 
 f1="\e[0;007m"
 f2="\e[0;37m"
 
 # or use wm array -- add any that need to be recognized
-wms=( 2bwm 2wm 9wm aewm afterstep ahwm alopex amiwm antiwm awesome blackbox bspwm catwm clfswm ctwm cwm dminiwm dragonflywm dwm echinus \
-    euclid-wm evilpoison evilwm fluxbox flwm fvwm-crystal goomwwm hcwm herbstluftwm i3 icewm jwm karmen larswm lwm matwm2 mcwm monsterwm \
-    musca notion nwm olwm openbox openbsd-cwm oroborus pekwm ratpoison sapphire sawfish sscrotwm sithwm smallwm snapwm spectrwm stumpwm subtle swm tfwm tinywm tritium twm \
-    uwm vtwm w9wm weewm wind windowlab wm2 wmaker wmfs wmii wmutils wmx xfwm4 xmonad xoat yeahwm )
-
+wms=( 2bwm 9wm bspwm catwm cwm dminiwm dwm evilwm fluxbox i3 icewm jwm openbox ratpoison swm twm \
+    w9wm wmfs wmii wmutils )
+    
 color-echo() {  # print with colors
-	echo -e "$blu$1: $rst$2"
+	echo -e "$cyn$1: $wht$2"
 }
 
 print-kernel() {
@@ -115,8 +114,8 @@ print-shell
 print-term
 #printf "\n"
 print-font
-colors='zenblue'
-printf "\e[94mCOLORS: \e[0m   $colors$rst\n"
+colors='traffic by dkeg'
+printf "\e[36mCOLORS: \e[37m   $colors$rst\n"
 #printf "\n"
 print-disk
 print-mem

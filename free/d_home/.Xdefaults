@@ -4,7 +4,7 @@
 XTerm*font:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
 XTerm*boldFont:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
 
-XTerm*vt100*geometry: 80x24
+XTerm*vt100*geometry: 56x15
 XTerm*saveLines: 4096
 XTerm*loginShell: true
 XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
@@ -21,4 +21,25 @@ XTerm*selectToClipboard: true
 XTerm*ScrollBar: false
 XTerm*ScrollKey: true
 
-#include </home/chef/.colors/gotham>
+#include </home/chef/.colors/traffic>
+
+! Colors
+*background:   bg
+*foreground:   fg
+
+*color0:      blk
+*color8:      bblk
+*color1:      red
+*color9:      bred
+*color2:      grn
+*color10:     bgrn
+*color3:      ylw
+*color11:     bylw
+*color4:      blu
+*color12:     bblu
+*color5:      mag
+*color13:     bmag
+*color6:      cyn
+*color14:     bcyn
+*color7:      wht
+*color15:     bwht

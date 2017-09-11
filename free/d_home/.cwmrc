@@ -1,6 +1,4 @@
-#
-# ~/.cwmrc
-#
+## cwm config
 
 # set font
 fontname "-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1"
@@ -122,7 +120,7 @@ bind M-Left   unbind
 bind M-Right  unbind
 bind M-Return unbind
 
-# mousebinds
+# bind-mouses
 mousebind 4-1 window_move
 mousebind 4-2 window_grouptoggle
 mousebind 4-3 window_resize

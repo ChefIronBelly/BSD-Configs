@@ -18,28 +18,16 @@ xset +fp /home/chef/.fonts/
 xset +fp /usr/local/share/fonts/terminus-font
 xset fp rehash
 
-xrdb -load ~/.Xresources &
-
+#xrdb -load ~/.Xresources &
+xrdb < ~/.Xdefaults
 #xsidle.sh slock &
 
-#sxhkd &
-#xbindkeys &
-l_statusbar.sh &
-#statusbar.sh &
-#compton &
+statusbar.sh &
 
 xsetroot -cursor_name left_ptr
-#xsetroot -solid '#506070'
-hsetroot -fill ~/Pictures/ANhxh.jpg -tint '#506070'
-
-# rm /tmp/grp/* 2>/dev/null
-
-#wew | focus_watcher.sh &
-#exec xwait
+#hsetroot -fill ~/Pictures/ANhxh.jpg -tint '#506070'
+xsetroot -mod 16 16 -bg "$(xrdb -query | awk '/\*background/ {print $2}')" -fg "$(xrdb -query | awk '/\*color8/ {print $2}')"
 
 exec cwm
 
 #exec evilwm -term xterm -fn fixed -fg '#506070' -snap 10 -bw 2 -nosoliddrag
-
-#exec xterm -geometry 80x32+20+20 -name login
-
