@@ -1,0 +1,8 @@
+simple-mtpfs
+
+sysutils/fusefs-simple-mtpfs
+
+kldload fuse
+
+simple-mtpfs /mnt
+simple-mtpfs -l

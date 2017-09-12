@@ -1,0 +1,50 @@
+### upgrade from 10.3 to 11.0 release (from memory)
+
+# freebsd-update fetch
+# freebsd-update install
+# pkg update -f 
+# pkg upgrade -y
+
+# shutdown -r now
+
+# freebsd-update upgrade 11.0-RELEASE
+# vi /etc/sysctl.conf (edit)
+
+# shutdown -r now
+
+# pkg-static bootstrap -f
+# pkg update -f 
+# pkg upgrade -y
+
+# shutdown -r now
+
+#####################################################
+
+2.2.Â Upgrading Using “FreeBSD Update”
+
+The freebsd-update(8) utility supports binary upgrades of i386 and amd64 systems running earlier FreeBSD releases. Systems running 10.3-RELEASE, 11.0-RELEASE, or 11.1-RC[123] can upgrade as follows:
+
+# freebsd-update fetch
+# freebsd-update install
+
+Now the freebsd-update(8) utility can fetch bits belonging to 11.1-RELEASE. During this process freebsd-update(8) will ask for help in merging configuration files.
+
+# freebsd-update upgrade -r 11.1-RELEASE
+
+# freebsd-update install
+
+The system must now be rebooted with the newly installed kernel before the non-kernel components are updated.
+
+# shutdown -r now
+
+After rebooting, freebsd-update(8) needs to be run again to install the new userland components:
+
+# freebsd-update install
+
+At this point, users of systems being upgraded from earlier FreeBSD releases will be prompted by freebsd-update(8) to rebuild all third-party applications (e.g., ports installed from the ports tree) due to updates in system libraries.
+
+After updating installed third-party applications (and again, only if freebsd-update(8) printed a message indicating that this was necessary), run freebsd-update(8) again so that it can delete the old (no longer used) system libraries:
+
+# freebsd-update install
+
+Finally, reboot into 11.1-RELEASE 
