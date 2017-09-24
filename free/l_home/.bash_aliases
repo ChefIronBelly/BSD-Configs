@@ -17,9 +17,9 @@ alias cp='cp -iv'
 alias ln='ln -i'
 
 #### REBOOT/SHUTDOWN ####
-alias reboot='sudo /sbin/shutdown -r now'
-alias poweroff='sudo /sbin/shutdown -h now'
-alias shutdown='sudo /sbin/shutdown -h now'
+alias reboot='sudo /sbin/shutdown -r now "R E B O O T"'
+alias poweroff='sudo /sbin/poweroff "P O W E R O F F"'
+alias shutdown='sudo /sbin/shutdown -p now "Going D O W N to the crossroads"'
 
 alias ls='ls -G'
 #alias la='ls -A'
@@ -40,3 +40,6 @@ alias rnet='sudo /etc/rc.d/netif restart'
 alias shootme='DISPLAY=:0 import -window root ~/Pictures/scrots/scrot-$(date +%m-%d-%Y-%H-%M-%S).png'
 alias blankcd='cdrdao blank'
 alias zzz=slock
+alias g='git'
+alias gc='git commit -m "adds and tweaks"'
+alias ping='ping -c3'

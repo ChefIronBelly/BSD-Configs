@@ -3,8 +3,8 @@
 alias upd='sudo freebsd-update fetch'
 alias upg='sudo freebsd-update install'
 alias ins='sudo pkg install'
-alias pkgupd='sudo pkg update'
-alias pkgupg='sudo pkg upgrade'
+alias pupd='sudo pkg upate'
+alias pupg='sudo pkg upgrade'
 alias search='sudo pkg search'
 
 ## Space on drive
@@ -18,7 +18,7 @@ alias ln='ln -i'
 
 #### REBOOT/SHUTDOWN ####
 alias reboot='sudo /sbin/shutdown -r now "R E B O O T"'
-alias poweroff='sudo /sbin/shutdown -h now "P O W E R D O W N'
+alias poweroff='sudo /sbin/poweroff "P O W E R O F F"'
 alias shutdown='sudo /sbin/shutdown -p now "Going D O W N to the crossroads"'
 
 alias ls='ls -G'
