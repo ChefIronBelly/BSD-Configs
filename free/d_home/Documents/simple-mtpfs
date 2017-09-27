@@ -4,5 +4,5 @@ sysutils/fusefs-simple-mtpfs
 
 kldload fuse
 
-simple-mtpfs /mnt
+sudo simple-mtpfs /mnt/phone
 simple-mtpfs -l
