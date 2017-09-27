@@ -3,7 +3,7 @@
 alias upd='sudo freebsd-update fetch'
 alias upg='sudo freebsd-update install'
 alias ins='sudo pkg install'
-alias pupd='sudo pkg upate'
+alias pupd='sudo pkg update'
 alias pupg='sudo pkg upgrade'
 alias search='sudo pkg search'
 
@@ -18,11 +18,11 @@ alias ln='ln -i'
 
 #### REBOOT/SHUTDOWN ####
 alias reboot='sudo /sbin/shutdown -r now "R E B O O T"'
-alias poweroff='sudo /sbin/poweroff "P O W E R O F F"'
+alias poweroff='sudo /sbin/shutdown -p now "P O W E R O F F"'
 alias shutdown='sudo /sbin/shutdown -p now "Going D O W N to the crossroads"'
 
 alias ls='ls -G'
-#alias la='ls -A'
+alias la='ls -A'
 alias ll='ls -lG'
 
 alias grep='grep --color=auto'

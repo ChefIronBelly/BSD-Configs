@@ -57,7 +57,6 @@ bind SM-q     dmenu_exit.sh
 bind M-0      "volume.sh 0" # audio mute toggle
 bind M-minus  "volume.sh -" # audio lower
 bind M-equal  "volume.sh +" # audio raise
-bind M-u      uptime.sh
 bind M-w      wetcat.sh
 
 bind 4-v      vmaximize
