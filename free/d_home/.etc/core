@@ -1,15 +1,30 @@
-alias _='doas'
-alias ..='cd ../'
-alias ...='cd ../../'
-alias ....='cd ../../../'
-alias ll='colorls -laFoG'
-alias l='colorls -lfG'
-alias g='git'
-alias gc='git commit -m "adds and tweaks"'
-alias mkdir='mkdir -p'
-alias cp='cp -ip'
-alias mv='mv -i'
-alias rm='rm -i'
+# .etc/core
+
+#### SAFETY ####
+alias rm='rm -Iv'
+alias mv='mv -iv'
+alias cp='cp -iv'
+alias ln='ln -i'
+
+#alias ..='cd ../'
+#alias ...='cd ../../'
+#alias ....='cd ../../../'
+alias ls='ls -G'
+alias la='ls -A'
+alias ll='ls -lG'
+alias md='mkdir -p -v'
+alias rd='rmdir -v'
 alias h='fc -l'
 alias p='pwd'
-alias ping='ping -c3'
+alias manb='man -H'
+alias grep='grep --color=auto'
+
+
+
+
+
+
+
+
+
+

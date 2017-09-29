@@ -21,7 +21,7 @@ EDITOR=vi;   	export EDITOR
 PAGER=more;  	export PAGER
 
 # set ENV to a file invoked each time sh is started for interactive use.
-ENV=$HOME/.shrc; export ENV
+#NV=$HOME/.shrc; export ENV
 
 ### XDG CONFIG DIRS
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -40,6 +40,6 @@ PS1=""
  	*) PS1="${PS1}$ ";;
  esac
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+#if [ -f ~/.bash_aliases ]; then
+#    . ~/.bash_aliases
+#fi
