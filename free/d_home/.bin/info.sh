@@ -122,5 +122,5 @@ print-mem
 print-kernel
 print-cpu
 #print-temp
-#print-colors
+print-colors
 read
