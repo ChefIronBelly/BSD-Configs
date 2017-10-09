@@ -1,97 +1,125 @@
 ## cwm config
 
-## Key bindings
-	bind MS-Return xterm
-	bind M-t status.sh
-	bind MS-c delete
-	bind C-r exec
-	bind CMS-l label
-    bind CM-r reload
-	bind M-f maximize
-	bind MS-m menusearch
-	bind M-F8 "mixer -s vol 80:80"
-	bind M-F9 "mixer -s vol -5:-5"
-	bind M-F10 "mixer -s vol +5:+5"
-	bind M-p "dmenu_run -fn 'DejaVuSansMono-14' -nb '#ffffff' -nf '#000000' -sb '#365572' -sf '#ffffff'"
+# set font
+fontname "-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1"
 
-	bind M-1 grouponly1
-	bind M-2 grouponly2
-	bind M-3 grouponly3
-	bind M-4 grouponly4
-	bind MS-1 movetogroup1
-	bind MS-2 movetogroup2
-	bind MS-3 movetogroup3
-	bind MS-4 movetogroup4
+# set border width
+borderwidth 4
 
-	mousebind M-2 window_lower
-	mousebind M-3 window_resize
+# gaps
+gap 10 10 10 10
 
-## Application menu
-	command file_manager "xterm -e vifm"
-	command music_player "xterm -e cmus"
-	command search "xterm -e links -G google.com"
-	command web_browser "xterm -e links -G new.google.com"
-	command weatherman "xterm -e weatherman.sh -e 48328"
+# snap
+snapdist 10
 
-## Fonts, Style, Color
-    fontname        "DejaVuSansMono:pixelsize=12:antialias=true"
-  	color menubg    "#ffffff"
-    color font      "#000000"
+# stick it
+sticky yes
 
-	borderwidth 2
-    color activeborder      "#8cd0d3"
-    color inactiveborder    "#dcdccc"
-    gap 10 10 10 10         #[T,B,L,R]
+# colors
+color activeborder   '#515e67'
+color inactiveborder '#272c30'
+color menubg         '#252525'
+color menufg         '#e3e3e3'
+color font           '#f7f7f7'
+color selfont        '#D8686D'
 
-## Ignore programs; no borders
-	ignore xclock
+# faster pussy cat
+moveamount 10
 
-## Groups predefined
-	autogroup 1 "xterm"
-	autogroup 2 "geany"
-	autogroup 2 "links"
-	autogroup 3 "mpg123"
-	autogroup 3 "mpv"
-    autogroup 4 "Chrome"
-	autogroup 4 "gFTP"
+# autogroup
+autogroup 1 "xterm,tmux"
+autogroup 2 "Navigator,Firefox"
+autogroup 3 "Geany,vim"
+autogroup 4 "mpv,MPlayer"
 
-## Tiling
-	#bind 4S-h 	htile
-	#bind 4S-v	vtile
+# menu
+command box    "xterm -g 80x24+290+324"
+command surf   firefox
+command xlock  "xlock -mode blot"
 
-## Mousebindings
-	mousebind CM-1 	window_resize
-	mousebind M-1  	window_move
+# Ignore programs by that name by not drawing borders around them. 
+ignore firefox
 
-## pointer movement
-    bind 4-j ptrmovedown
-    bind 4S-j bigptrmovedown
-    bind 4-k ptrmoveup
-    bind 4S-k bigptrmoveup
-    bind 4-h ptrmoveleft
-    bind 4S-h bigptrmoveleft
-    bind 4-l ptrmoveright
-    bind 4S-l bigptrmoveright
+# binds (window geometry based on 1920x1080)
+bind 4-Return "xterm -g 80x24+290+324" # middle left
+bind 4-t      "xterm -g 80x24+980+324 -e \"tmux\"" # middle right
+bind 4-n      "xterm -g 125x67+25+25"   # left 50%
+bind 4-m      "xterm -g 125x67+995+25"  # right 50%
+bind 4-comma  "xterm -g 263x32+25+25"  # top 50%
+bind 4-period "xterm -g 263x32+25+544" # bottom 50%
+bind SM-s     status.sh
+bind SM-f     firefox
+bind SM-g     geany
+bind SM-d     dmenu_start.sh
+bind SM-r     dmenu_soma.sh
+bind SM-x     dmenu_xset.sh
+bind SM-q     dmenu_exit.sh
+bind M-0      "volume.sh 0" # audio mute toggle
+bind M-minus  "volume.sh -" # audio lower
+bind M-equal  "volume.sh +" # audio raise
+bind M-w      wetcat.sh
 
-## Window movement (standard bindings)
-    bind M-h moveleft
-    bind MS-h bigmoveleft
-    bind M-j movedown
-    bind MS-j bigmovedown
-    bind M-k moveup
-    bind MS-k bigmoveup
-    bind M-l moveright
-    bind MS-l bigmoveright
+bind 4-v      vmaximize
+bind 4-b      hmaximize
+bind 4-f      maximize
+bind 4S-h     resizeleft
+bind 4S-j     resizedown
+bind 4S-k     resizeup
+bind 4S-l     resizeright
+bind 4MS-h    bigresizeleft
+bind 4MS-j    bigresizedown
+bind 4MS-k    bigresizeup
+bind 4MS-l    bigresizeright
 
-## Window resizing
-    bind MC-h resizeleft
-    bind MCS-h bigresizeleft
-    bind MC-j resizedown
-    bind MCS-j bigresizedown
-    bind MC-k resizeup
-    bind MCS-k bigresizeup
-    bind MC-l resizeright
-    bind MCS-l bigresizeright
+bind 4-h      moveleft
+bind 4-j      movedown
+bind 4-k      moveup
+bind 4-l      moveright
+bind 4C-h     bigmoveleft
+bind 4C-j     bigmovedown
+bind 4C-k     bigmoveup
+bind 4C-l     bigmoveright
 
-    snapdist 4
-    sticky yes
+bind 4S-comma label
+bind 4S-e     delete
+
+bind 4-Tab    cycle
+bind 4S-Tab   rcycle
+
+bind 4-g      grouptoggle
+bind 4MC-l    cyclegroup
+bind 4MC-h    rcyclegroup
+bind 4-1      group-toggle-1
+bind 4-2      group-toggle-2
+bind 4-3      group-toggle-3
+bind 4-4      group-toggle-4
+bind 4-5      group-toggle-5
+bind 4-6      group-toggle-6
+bind 4-7      group-toggle-7
+bind 4-8      group-toggle-8
+bind 4-9      group-toggle-9
+bind 4-0      nogroup
+bind 4M-1     group-only-1
+bind 4M-2     group-only-2
+bind 4M-3     group-only-3
+bind 4M-4     group-only-4
+bind 4M-5     group-only-5
+bind 4M-6     group-only-6
+bind 4M-7     group-only-7
+bind 4M-8     group-only-8
+bind 4M-9     group-only-9
+
+bind 4C-r     restart
+bind 4C-q     quit
+
+bind 4-d      exec
+bind 4-s      search
+
+bind M-Left   unbind
+bind M-Right  unbind
+bind M-Return unbind
+
+# bind-mouses
+mousebind 4-1 window_move
+mousebind 4-2 window_grouptoggle
+mousebind 4-3 window_resize

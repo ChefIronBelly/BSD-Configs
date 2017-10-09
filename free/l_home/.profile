@@ -7,8 +7,10 @@
 
 # These are normally set through /etc/login.conf.  You may override them here
 # if wanted.
-PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:$HOME/bin:$HOME/wmutils; export PATH
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/.bin; export PATH
 # BLOCKSIZE=K;	export BLOCKSIZE
+
+LANG=en_US.UTF-8
 
 # Setting TERM is normally done through /etc/ttys.  Do only override
 # if you're sure that you'll never log in via telnet or xterm or a
@@ -19,7 +21,7 @@ EDITOR=vi;   	export EDITOR
 PAGER=more;  	export PAGER
 
 # set ENV to a file invoked each time sh is started for interactive use.
-ENV=$HOME/.shrc; export ENV
+#NV=$HOME/.shrc; export ENV
 
 ### XDG CONFIG DIRS
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -38,8 +40,6 @@ PS1=""
  	*) PS1="${PS1}$ ";;
  esac
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-[ -n "$XTERM_VERSION" ] && transset --id "$WINDOWID" >/dev/null
+#if [ -f ~/.bash_aliases ]; then
+#    . ~/.bash_aliases
+#fi

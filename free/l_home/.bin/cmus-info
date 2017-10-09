@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+ARTIST=$( cmus-remote -Q 2>/dev/null | grep artist | cut -d " " -f 3- | head -n1)
+TITLE=$( cmus-remote -Q 2>/dev/null | grep title | cut -d " " -f 3- )
+
+if [ -z "$ARTIST" ]; then
+    echo ""
+else
+    echo " $ARTIST - $TITLE"
+fi

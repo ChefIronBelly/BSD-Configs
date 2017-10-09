@@ -1,0 +1,30 @@
+# .etc/core
+
+#### SAFETY ####
+alias rm='rm -Iv'
+alias mv='mv -iv'
+alias cp='cp -iv'
+alias ln='ln -i'
+
+#alias ..='cd ../'
+#alias ...='cd ../../'
+#alias ....='cd ../../../'
+alias ls='ls -G'
+alias la='ls -A'
+alias ll='ls -lG'
+alias md='mkdir -p -v'
+alias rd='rmdir -v'
+alias h='fc -l'
+alias p='pwd'
+alias manb='man -H'
+alias grep='grep --color=auto'
+
+
+
+
+
+
+
+
+
+

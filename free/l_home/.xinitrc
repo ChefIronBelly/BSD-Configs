@@ -10,29 +10,24 @@ export LC_ALL=""
 setxkbmap -option terminate:ctrl_alt_bksp
 setxkbmap -layout us -option ctrl:nocaps
 
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+
 xset +dpms
-xset b off
+xset -b 
 xset s 300
 
-xset +fp /home/chef/.fonts/
-xset +fp /usr/local/share/fonts/terminus-font
+xset +fp /usr/local/share/fonts/ohsnap
 xset fp rehash
 
-xrdb -load ~/.Xresources &
+xrdb < ~/.Xdefaults
+#xsidle.sh slock &
 
-xsidle.sh slock &
-
-sxhkd &
-#xbindkeys &
 l_statusbar.sh &
-#statusbar.sh &
-#compton &
 
 xsetroot -cursor_name left_ptr
-#xsetroot -solid '#506070'
-hsetroot -fill ~/Pictures/wallpapers/ANhxh.jpg -tint '#506070'
+#hsetroot -fill ~/Pictures/ANhxh.jpg -tint '#506070'
+xsetroot -mod 16 16 -bg "$(xrdb -query | awk '/\*background/ {print $2}')" -fg "$(xrdb -query | awk '/\*color8/ {print $2}')"
 
-rm /tmp/grp/* 2>/dev/null
+exec cwm
 
 #exec evilwm -term xterm -fn fixed -fg '#506070' -snap 10 -bw 2 -nosoliddrag
-exec cwm

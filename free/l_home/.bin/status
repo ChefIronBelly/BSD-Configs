@@ -1,0 +1,78 @@
+#!/bin/sh
+#          /\           /\
+#    ____ / /_   _____ / /_  __  /\  ____
+#   / __// ___\.'__  // ___\/ / / / / __/
+# __\ \ / /   / /_/ // /   / /_/ /__\ \
+# \___/ \/    \____/ \/    \____/ \___/ - Display status in one line
+#
+# Thanks to xero's script sysinfo
+#	http://git.io/v4aH5
+#
+# Thank to z3bra's mkbar translated now in C
+#	http://git.z3bra.org/mkb/files.html
+
+battery=/sys/class/power_supply/BAT1
+FULL=${FULL-█}
+EMPTY=${EMPTY-░}
+SIZE=${SIZE-15}
+
+_draw()
+{
+	perc=$1
+	size=$2
+
+	inc=$(( perc * size / 100 ))
+
+	for v in $(seq 0 $(( size - 1 )))
+	do
+		[ "$v" -le "$inc" ] \
+			&& out="${out}${FULL}" \
+			|| out="${out}${EMPTY}"
+	done
+
+	printf '%s' "$out"
+}
+
+_cpu()
+{
+	cpu="$(grep 'cpu ' /proc/stat |\
+		awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage}')"
+	cpu=$(printf "%.0f" $cpu)
+
+	printf 'cpu %-2s %s' "$cpu%" "$(_draw $cpu $SIZE)"
+}
+
+_ram()
+{
+	ram="$(free | awk '/Mem:/ {print int($3/$2 * 100.0)}')"
+
+	printf "ram %-2s %s" "$ram%" "$(_draw $ram $SIZE)"
+}
+
+_battery()
+{
+	b_full=$(sed 1q $battery/*_full)
+	b_now=$(sed 1q $battery/*_now)
+	charge=$(printf '%s' "$(( 100 * $b_now / $b_full ))")
+
+	printf "bat %-2s %s\n" "$charge%" "$(_draw $charge $SIZE)"
+}
+
+_temperature()
+{
+	temp="$(($(cat /sys/class/thermal/thermal_zone0/temp) / 1000))"
+
+	printf "%-2s°C%s" "$temp" " $(_draw $temp $SIZE)"
+}
+
+_ip()
+{
+	printf 'ip '
+	for i in $(ip r)
+	do
+		printf '%s\n' "$i"
+	done | grep -A 1 src | sed -n '$p'
+}
+
+printf ' %s  %s  %s  %s  %s\n' \
+	"$(_temperature)" "$(_cpu)" "$(_ram)" "$(_battery)" "$(_ip)"
