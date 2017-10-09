@@ -114,7 +114,7 @@ print-shell
 print-term
 #printf "\n"
 print-font
-colors='zenblue'
+colors='traffic by dkeg'
 printf "\e[36mCOLORS: \e[37m   $colors$rst\n"
 #printf "\n"
 print-disk
@@ -122,5 +122,5 @@ print-mem
 print-kernel
 print-cpu
 #print-temp
-#print-colors
+print-colors
 read
