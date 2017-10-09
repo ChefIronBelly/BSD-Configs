@@ -16,11 +16,11 @@ xset +dpms
 xset -b 
 xset s 300
 
-xset +fp /usr/local/share/fonts/ohsnap
+xset +fp ~/.fonts
 xset fp rehash
 
 xrdb < ~/.Xdefaults
-#xsidle.sh slock &
+xsidle.sh slock &
 
 l_statusbar.sh &
 
