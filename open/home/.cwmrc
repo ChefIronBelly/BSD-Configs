@@ -54,6 +54,7 @@ bind-key SM-f     firefox
 bind-key SM-g     geany
 bind-key SM-d     dmenu_start.sh
 bind-key SM-r     dmenu_soma.sh
+bind-key SM-h     dmenu_hset.sh
 bind-key SM-x     dmenu_xset.sh
 bind-key SM-q     dmenu_exit.sh
 bind-key M-0      "volume.sh 0" # audio mute toggle
