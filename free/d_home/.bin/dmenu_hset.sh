@@ -10,6 +10,6 @@ walls="$(ls $wallpath)"
 selection="$(echo "$walls" | dmenu "$@" $DMENU_FN $DMENU_NB $DMENU_NF $DMENU_SF $DMENU_SB)"
 
 if [ "$selection" ]; then
-	hsetroot -fill $wallpath/$selection -tint '#506070'
+	hsetroot -fill $wallpath/$selection #-tint '#506070'
 else exit;
 fi
