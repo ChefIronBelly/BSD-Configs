@@ -42,7 +42,7 @@ command xlock  "xlock -mode blot"
 # Ignore programs by that name by not drawing borders around them. 
 ignore firefox
 
-# binds (window geometry based on 1920x1080)
+# binds (window geometry based on 1280x800)
 bind 4-Return "xterm -g 65x18+124+254" # middle left
 bind 4-t      "xterm -g 65x18+644+254 -e \"tmux\"" # middle right
 bind 4-n      "xterm -g 84x48+25+25"   # left 50%
