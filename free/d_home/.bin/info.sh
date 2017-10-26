@@ -61,7 +61,7 @@ print-mem() {
 	totalmem=$( freecolor -mo | awk 'NR==2 {print substr($2,0,4)}')
 	usedmem=$( freecolor -mo | awk 'NR==2 {print substr($3,0,3)}')
 	mem="${usedmem}MB / ${totalmem}MB"
-	color-echo 'MEM' '      '"$mem"
+	color-echo 'MEMORY' '   '"$mem"
 }
 
 print-wm() {
@@ -76,7 +76,7 @@ print-wm() {
 }
            
 print-font() {
-    fontstr=$(xrdb -query 2>/dev/null | grep '*faceName:')
+    fontstr=$(xrdb -query 2>/dev/null | grep '*font:')
     font=$(echo $fontstr | awk -F: '{ print $3 }')
     [[ $font != "" ]] && color-echo 'FONT' '     '"$font"
 }

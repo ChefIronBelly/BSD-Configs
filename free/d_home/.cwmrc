@@ -43,12 +43,13 @@ command xlock  "xlock -mode blot"
 ignore firefox
 
 # binds (window geometry based on 1920x1080)
-bind 4-Return "xterm -g 80x24+290+324" # middle left
-bind 4-t      "xterm -g 80x24+980+324 -e \"tmux\"" # middle right
-bind 4-n      "xterm -g 125x67+25+25"   # left 50%
-bind 4-m      "xterm -g 125x67+995+25"  # right 50%
-bind 4-comma  "xterm -g 263x32+25+25"  # top 50%
-bind 4-period "xterm -g 263x32+25+544" # bottom 50%
+#bind 4-Return "xterm -g 80x24+290+324" # middle left
+bind 4-Return "urxvt -g 68x24+290+324" # middle left
+bind 4-t      "urxvt -g 68x24+980+324 -e \"tmux\"" # middle right
+bind 4-n      "urxvt -g 125x67+25+25"   # left 50%
+bind 4-m      "urxvt -g 125x67+995+25"  # right 50%
+bind 4-comma  "urxvt -g 263x32+25+25"  # top 50%
+bind 4-period "urxvt -g 263x32+25+544" # bottom 50%
 bind SM-s     status.sh
 bind SM-f     firefox
 bind SM-g     geany
