@@ -44,8 +44,8 @@ ignore firefox
 
 # binds (window geometry based on 1920x1080)
 #bind 4-Return "xterm -g 80x24+290+324" # middle left
-bind 4-Return "urxvt -g 68x24+290+324" # middle left
-bind 4-t      "urxvt -g 68x24+980+324 -e \"tmux\"" # middle right
+bind 4-Return "urxvt -g 80x24+290+324" # middle left
+bind 4-t      "urxvt -g 80x24+980+324 -e \"tmux\"" # middle right
 bind 4-n      "urxvt -g 125x67+25+25"   # left 50%
 bind 4-m      "urxvt -g 125x67+995+25"  # right 50%
 bind 4-comma  "urxvt -g 263x32+25+25"  # top 50%

@@ -1,26 +1,22 @@
-!XTerm*font:		-*-terminus-*-*-*-*-14-*-*-*-*-*-*-1
-!XTerm*boldFont:	-*-terminus-medium-*-*-*-14-*-*-*-*-*-*-1
+!  ██     ██      ██           ████                    ██   ██          
+! ░░██   ██      ░██          ░██░                    ░██  ░██          
+!  ░░██ ██       ░██  █████  ██████  ██████   ██   ██ ░██ ██████  ██████
+!   ░░███     ██████ ██░░░██░░░██░  ░░░░░░██ ░██  ░██ ░██░░░██░  ██░░░░ 
+!    ██░██   ██░░░██░███████  ░██    ███████ ░██  ░██ ░██  ░██  ░░█████ 
+!   ██ ░░██ ░██  ░██░██░░░░   ░██   ██░░░░██ ░██  ░██ ░██  ░██   ░░░░░██
+!  ██   ░░██░░██████░░██████  ░██  ░░████████░░██████ ███  ░░██  ██████ 
+! ░░     ░░  ░░░░░░  ░░░░░░   ░░    ░░░░░░░░  ░░░░░░ ░░░    ░░  ░░░░░░  
+!
+!  ▓▓▓▓▓▓▓▓▓▓
+! ░▓ author ▓ xero <x@xero.nu>
+! ░▓ code   ▓ http://code.xero.nu/dotfiles
+! ░▓ mirror ▓ http://git.io/.files
+! ░▓▓▓▓▓▓▓▓▓▓
+! ░░░░░░░░░░
+!
 
-XTerm*font:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
-XTerm*boldFont:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
 
-XTerm*vt100*geometry: 56x15
-XTerm*saveLines: 4096
-XTerm*loginShell: true
-XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
-XTerm*termName: xterm-256color
-XTerm*eightBitInput: false
-XTerm*locale: true
-XTerm*metaSendsEscape: true
-XTerm*borderWidth: 0
-XTerm*internalBorder: 8
-XTerm*externalBorder: 4
-XTerm*scaleHeight: 1.01
-XTerm*utf8: 1
-XTerm*selectToClipboard: true
-XTerm*ScrollBar: false
-XTerm*ScrollKey: true
-
+! █▓▒░ color scheme
 #include </home/chef/.colors/traffic>
 
 ! Colors
@@ -43,3 +39,51 @@ XTerm*ScrollKey: true
 *color14:     bcyn
 *color7:      wht
 *color15:     bwht
+
+! █▓▒░ fonts
+!urxvt*font: xft:gohufont:size=12:antialias=true, \
+            xft:Symbola:pixelsize=14:antialias=true:hinting=slight
+!urxvt*font: xft:gohufont:size=11:antialias=false
+!urxvt*font: -*-creep-regular-*-*--16-*-*-*-*-*-*-1
+!urxvt*font: -*-lime-*-*-*--11-*-*-*-*-*-*-1
+!urxvt*font: xft:creep:size=16:antialias=true
+!urxvt*font: xft:envy code r:size=9:antialias=false
+!urxvt*font: xft:lemon:size=16:antialias=false
+!urxvt*font: xft:lime:size=16:antialias=false
+!urxvt*font: xft:neep:size=11:antialias=false
+!urxvt*font: xft:perfect dos vga 437:size=11:antialias=false
+!urxvt*font: xft:tewi:size=11:antialias=false
+URxvt*font:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
+URxvt*boldFont:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
+
+urxvt*boldFont: 
+urxvt*italicFont: 
+urxvt*bolditalicFont: 
+
+urxvt*letterSpace: 0
+urxvt*lineSpace: 0
+
+! █▓▒░ interface
+urxvt*scrollBar: false
+urxvt*transparent: false
+urxvt*internalBorder: 6
+urxvt*borderColor: #272c30
+urxvt*borderLess:false
+
+! █▓▒░ extensions
+urxvt.perl-ext-common: default,clipboard,keyboard-select,url-select
+urxvt.keysum.M-u: perl:url-select:select_next
+urxvt.url-select.autocopy: true
+urxvt.url-select.launcher: firefox
+urxvt.keysym.M-Escape: perl:keyboard-select:activate
+urxvt.keysym.M-c:   perl:clipboard:copy
+urxvt.keysym.C-v:   perl:clipboard:paste
+urxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+urxvt.clipboard.copycmd:  xsel -ib
+urxvt.clipboard.pastecmd: xsel -ob
+
+! █▓▒░ misc
+urxvt.saveLines: 9999
+urxvt.iso14755: false
+!URxvt*altSendsEscape: true
+URxvt*termName: rxvt-unicode-256color

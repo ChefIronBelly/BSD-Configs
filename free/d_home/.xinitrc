@@ -20,8 +20,7 @@ xset +fp /usr/local/share/fonts/ohsnap
 xset fp rehash
 
 urxvtd -q -o -f &
-#xrdb < ~/.Xdefaults
-xrdb -merge ~/.Xresources &
+xrdb < ~/.Xdefaults &
 #xsidle.sh slock &
 
 statusbar.sh &
