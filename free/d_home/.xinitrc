@@ -20,7 +20,7 @@ xset +fp ~/.fonts
 xset fp rehash
 
 urxvtd -q -o -f &
-xrdb < ~/.Xdefaults &
+xrdb < ~/.Xdefaults
 #xsidle.sh slock &
 
 statusbar.sh &

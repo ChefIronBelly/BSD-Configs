@@ -14,7 +14,7 @@ f1="\e[0;007m"
 f2="\e[0;37m"
 
 # or use wm array -- add any that need to be recognized
-wms=( 2bwm 9wm bspwm catwm cwm dminiwm dwm evilwm fluxbox i3 icewm jwm openbox ratpoison swm twm \
+wms=( cwm dminiwm dwm evilwm fluxbox i3 icewm jwm openbox ratpoison swm twm \
     w9wm wmfs wmii wmutils )
     
 color-echo() {  # print with colors
@@ -66,7 +66,7 @@ print-mem() {
 
 print-wm() {
     for wm in ${wms[@]}; do          # pgrep through wmname array
-        pid=$(pgrep -x -u $USER $wm)		# if found, this wmname has running process
+        pid=$(pgrep -x -u $USER $wm) # if found, this wmname has running process
         if [[ "$pid" ]]; then
             color-echo 'WM' '       '"$wm"
 	        break
