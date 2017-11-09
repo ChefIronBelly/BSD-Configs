@@ -103,7 +103,7 @@ command Spell :setlocal spell! spell?
 command Chmodx :!chmod a+x %
 
 " ╻┏┓╻╺┳╸┏━╸┏━┓┏━╸┏━┓┏━╸┏━╸
-" ┃┃┗┫ ┃ ┣╸ ┣┳┛┣╸ ┣━┫┃  ┣╸ 
+" ┃┃┗┫ ┃ ┣╸ ┣┳┛┣╸ ┣━┫┃  ┣╸
 " ╹╹ ╹ ╹ ┗━╸╹┗╸╹  ╹ ╹┗━╸┗━╸
 
 " show matching brackets/parenthesis
@@ -139,26 +139,26 @@ set cursorline
 " so invisibles
 set list
 set listchars=
-set listchars+=tab:𐄙\ 
+set listchars+=tab:𐄙\
 set listchars+=trail:·
 set listchars+=extends:»
 set listchars+=precedes:«
 set listchars+=nbsp:⣿
 
 " ┏━┓╻  ╻ ╻┏━╸╻┏┓╻   ┏━┓╺┳╸╻ ╻┏━╸┏━╸
-" ┣━┛┃  ┃ ┃┃╺┓┃┃┗┫   ┗━┓ ┃ ┃ ┃┣╸ ┣╸ 
-" ╹  ┗━╸┗━┛┗━┛╹╹ ╹   ┗━┛ ╹ ┗━┛╹  ╹  
+" ┣━┛┃  ┃ ┃┃╺┓┃┃┗┫   ┗━┓ ┃ ┃ ┃┣╸ ┣╸
+" ╹  ┗━╸┗━┛┗━┛╹╹ ╹   ┗━┛ ╹ ┗━┛╹  ╹
 " i struggle with the decision to use plugins or a more vanilla vim, don't judge me.
 " to install from the shell run:
 " git clone https://github.com/gmarik/Vundle.vim.git ~/dotfiles/vim/.vim/bundle/Vundle.vim && vim +BundleInstall +qall && pacman -S the_silver_searcher
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 "Plugin 'gmarik/Vundle.vim'
 "Plugin 'ajh17/VimCompletesMe'
 "Plugin 'shawncplus/phpcomplete.vim'
 "Plugin 'pangloss/vim-javascript'
 "Plugin 'elzr/vim-json'
-"Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 "Plugin 'airblade/vim-gitgutter'
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'gregsexton/gitv'
@@ -167,9 +167,9 @@ set listchars+=nbsp:⣿
 "Plugin 'isa/vim-matchit'
 "Plugin 'chrisbra/unicode.vim'
 "Plugin 'lilydjwg/colorizer'
-"Plugin 'itchyny/lightline.vim'
-"Plugin 'xero/sourcerer.vim'
-"call vundle#end()
+Plugin 'itchyny/lightline.vim'
+Plugin 'xero/sourcerer.vim'
+call vundle#end()
 filetype plugin indent on
 
 " vimcompletesme https://git.io/XLcB1A
@@ -224,10 +224,10 @@ let g:ag_highlight=1
 nnoremap \ :Ag<SPACE>
 
 " wizard colors http://git.io/vim.sourcerer
-colorscheme github
+colorscheme sourcerer
 
 " ┏━┓╺┳╸┏━┓╺┳╸╻ ╻┏━┓╻  ╻┏┓╻┏━╸
-" ┗━┓ ┃ ┣━┫ ┃ ┃ ┃┗━┓┃  ┃┃┗┫┣╸ 
+" ┗━┓ ┃ ┣━┫ ┃ ┃ ┃┗━┓┃  ┃┃┗┫┣╸
 " ┗━┛ ╹ ╹ ╹ ╹ ┗━┛┗━┛┗━╸╹╹ ╹┗━╸
 " lightline http://git.io/lightline
 " █▓▒░ wizard status line
@@ -278,7 +278,7 @@ endfunction
 
 function! WizName()
   return ('' != WizMod() ? WizMod() . ' ' : '') .
-        \ ('' != expand('%:t') ? expand('%:t') : '[none]') 
+        \ ('' != expand('%:t') ? expand('%:t') : '[none]')
 endfunction
 
 function! WizType()
