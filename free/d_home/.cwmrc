@@ -39,17 +39,17 @@ command box    "xterm -g 80x24+290+324"
 command surf   firefox
 command xlock  "xlock -mode blot"
 
-# Ignore programs by that name by not drawing borders around them. 
+# Ignore programs by that name by not drawing borders around them.
 ignore firefox
 
 # binds (window geometry based on 1920x1080)
 #bind 4-Return "xterm -g 80x24+290+324" # middle left
 bind 4-Return "urxvtc -g 80x24+290+324" # middle left
 bind 4-t      "urxvtc -g 80x24+980+324 -e \"tmux\"" # middle right
-bind 4-n      "urxvtc -g 125x67+25+25"   # left 50%
-bind 4-m      "urxvtc -g 125x67+995+25"  # right 50%
-bind 4-comma  "urxvtc -g 263x32+25+25"  # top 50%
-bind 4-period "urxvtc -g 263x32+25+544" # bottom 50%
+bind 4-n      "urxvtc -g 126x72+32+32"   # left 50%
+bind 4-m      "urxvtc -g 126x72+995+32"  # right 50%
+bind 4-comma  "urxvtc -g 263x34+32+32"  # top 50%
+bind 4-period "urxvtc -g 263x34+32+550" # bottom 50%
 bind SM-s     status.sh
 bind SM-f     firefox
 bind SM-g     geany
