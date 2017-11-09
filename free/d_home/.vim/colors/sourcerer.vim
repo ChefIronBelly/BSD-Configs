@@ -1,10 +1,10 @@
 "   ██████  ██████  ██   ██ ██████  █████   █████  ██████  █████  ██████
 "  ██░░░░  ██░░░░██░██  ░██░░██░░████░░░██ ██░░░██░░██░░████░░░██░░██░░██
 " ░░█████ ░██   ░██░██  ░██ ░██ ░░░██  ░░ ░███████ ░██ ░░░███████ ░██ ░░
-"  ░░░░░██░██   ░██░██  ░██ ░██   ░██   ██░██░░░░  ░██   ░██░░░░  ░██
-"  ██████ ░░██████ ░░██████░███   ░░█████ ░░██████░███   ░░██████░███
-" ░░░░░░   ░░░░░░   ░░░░░░ ░░░     ░░░░░   ░░░░░░ ░░░     ░░░░░░ ░░░
-"  r  e  a  d     c  o  d  e     l  i  k  e     a     w  i  z  a  r  d
+"  ░░░░░██░██   ░██░██  ░██ ░██   ░██   ██░██░░░░  ░██   ░██░░░░  ░██   
+"  ██████ ░░██████ ░░██████░███   ░░█████ ░░██████░███   ░░██████░███   
+" ░░░░░░   ░░░░░░   ░░░░░░ ░░░     ░░░░░   ░░░░░░ ░░░     ░░░░░░ ░░░   
+"  r  e  a  d     c  o  d  e     l  i  k  e     a     w  i  z  a  r  d 
 "
 " sourcerer by xero harrison (http://sourcerer.xero.nu)
 "  ├─ based on sorcerer by Jeet Sukumaran (http://jeetworks.org)
@@ -106,7 +106,7 @@ hi pythonExClass    guifg=#996666 guibg=NONE gui=NONE
 hi pythonDecorator  guifg=#888555 guibg=NONE gui=NONE
 hi link pythonDecoratorFunction pythonDecorator
 
-"  █▓▒░ 256 colors
+"  █▓▒░ 256 colors 
 hi Normal                 cterm=NONE             ctermbg=NONE  ctermfg=145
 hi ColorColumn            cterm=NONE             ctermbg=16    ctermfg=NONE
 hi Cursor                 cterm=NONE             ctermbg=241   ctermfg=fg
@@ -213,3 +213,4 @@ hi Pmenu                  cterm=NONE             ctermfg=248   ctermbg=237
 hi PmenuSel               cterm=NONE             ctermfg=16    ctermbg=66
 hi PmenuSbar              cterm=NONE             ctermfg=16    ctermbg=66
 hi PmenuThumb             cterm=NONE             ctermfg=16    ctermbg=66
+
