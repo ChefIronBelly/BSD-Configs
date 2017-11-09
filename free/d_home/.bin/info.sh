@@ -18,7 +18,7 @@ wms=( 2bwm 2wm 9wm aewm afterstep ahwm alopex amiwm antiwm awesome blackbox bspw
     euclid-wm evilpoison evilwm fluxbox flwm fvwm-crystal goomwwm hcwm herbstluftwm i3 icewm jwm karmen larswm lwm matwm2 mcwm monsterwm \
     musca notion nwm olwm openbox oroborus pekwm ratpoison sapphire sawfish sscrotwm sithwm smallwm snapwm spectrwm stumpwm subtle swm tfwm tinywm tritium twm \
     uwm vtwm w9wm weewm wind windowlab wm2 wmaker wmfs wmii wmx xfwm4 xmonad xoat yeahwm )
-    
+
 color-echo() {  # print with colors
 	echo -e "$cyn$1: $wht$2"
 }
@@ -46,9 +46,9 @@ print-cpu() {
 }
 
 print-packages() {
-	pkgs=$(if TMPDIR=/dev/null ASSUME_ALWAYS_YES=1 PACKAGESITE=file:///nonexistent pkg info pkg >/dev/null 2>&1; then 
+	pkgs=$(if TMPDIR=/dev/null ASSUME_ALWAYS_YES=1 PACKAGESITE=file:///nonexistent pkg info pkg >/dev/null 2>&1; then
 	pkg info | wc -l | awk '{print $1}'; else pkg_info | wc -l | awk '{sub(" ", "");print $1}'; fi)
-	
+
 	color-echo 'PACKAGES' ' '"$pkgs"
 }
 
@@ -76,7 +76,7 @@ print-wm() {
     done
     #color-echo 'WM' '       '"Not Found / wmutils active"
 }
-           
+
 print-font() {
     fontstr=$(xrdb -query 2>/dev/null | grep '*font:')
     font=$(echo $fontstr | awk -F: '{ print $2 }')
@@ -93,7 +93,7 @@ print-distro() {
 }
 
 print-colors() {
-#█▓▒░ colors 
+#█▓▒░ colors
 printf "\n"
 i=0
 while [ $i -le 6 ]
