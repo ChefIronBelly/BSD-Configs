@@ -158,7 +158,7 @@ call vundle#begin()
 "Plugin 'shawncplus/phpcomplete.vim'
 "Plugin 'pangloss/vim-javascript'
 "Plugin 'elzr/vim-json'
-Plugin 'scrooloose/syntastic'
+Plugin 'vim-syntastic/syntastic'
 "Plugin 'airblade/vim-gitgutter'
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'gregsexton/gitv'
