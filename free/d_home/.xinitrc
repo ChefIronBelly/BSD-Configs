@@ -13,7 +13,7 @@ setxkbmap -layout us -option ctrl:nocaps
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 
 xset +dpms
-xset -b 
+xset -b
 xset s 300
 
 xset +fp ~/.fonts
