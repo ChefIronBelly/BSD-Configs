@@ -3,3 +3,5 @@
 	name = ChefIronBelly
 [push]
 	default = simple
+[color]
+	ui = auto
