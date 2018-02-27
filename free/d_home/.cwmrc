@@ -42,89 +42,89 @@ command xlock  "xlock -mode blot"
 # Ignore programs by that name by not drawing borders around them.
 ignore firefox
 
-# binds (window geometry based on 1920x1080)
-#bind 4-Return "xterm -g 80x24+290+324" # middle left
-bind 4-Return "urxvtc -g 80x24+290+324" # middle left
-bind 4-t      "urxvtc -g 80x24+980+324 -e \"tmux\"" # middle right
-bind 4-n      "urxvtc -g 126x72+32+32"   # left 50%
-bind 4-m      "urxvtc -g 126x72+995+32"  # right 50%
-bind 4-comma  "urxvtc -g 263x34+32+32"  # top 50%
-bind 4-period "urxvtc -g 263x34+32+550" # bottom 50%
-bind SM-s     status.sh
-bind SM-f     firefox
-bind SM-g     geany
-bind SM-d     dmenu_start.sh
-bind SM-r     dmenu_soma.sh
-#bind SM-x     dmenu_xset.sh
-bind SM-x     dmenu_hset.sh
-bind SM-q     dmenu_exit.sh
-bind M-0      "volume.sh 0" # audio mute toggle
-bind M-minus  "volume.sh -" # audio lower
-bind M-equal  "volume.sh +" # audio raise
-bind M-u      uptime.sh
-bind M-w      wetcat.sh
+# bind-keys (window geometry based on 1920x1080)
+#bind-key 4-Return "xterm -g 80x24+290+324" # middle left
+bind-key 4-Return "urxvtc -g 80x24+290+324" # middle left
+bind-key 4-t      "urxvtc -g 80x24+980+324 -e \"tmux\"" # middle right
+bind-key 4-n      "urxvtc -g 126x72+32+32"   # left 50%
+bind-key 4-m      "urxvtc -g 126x72+995+32"  # right 50%
+bind-key 4-comma  "urxvtc -g 263x34+32+32"  # top 50%
+bind-key 4-period "urxvtc -g 263x34+32+550" # bottom 50%
+bind-key SM-s     status.sh
+bind-key SM-f     firefox
+bind-key SM-g     geany
+bind-key SM-d     dmenu_start.sh
+bind-key SM-r     dmenu_soma.sh
+#bind-key SM-x     dmenu_xset.sh
+bind-key SM-x     dmenu_hset.sh
+bind-key SM-q     dmenu_exit.sh
+bind-key M-0      "volume.sh 0" # audio mute toggle
+bind-key M-minus  "volume.sh -" # audio lower
+bind-key M-equal  "volume.sh +" # audio raise
+bind-key M-u      uptime.sh
+bind-key M-w      wetcat.sh
 
-bind 4-v      vmaximize
-bind 4-b      hmaximize
-bind 4-f      maximize
-bind 4S-h     resizeleft
-bind 4S-j     resizedown
-bind 4S-k     resizeup
-bind 4S-l     resizeright
-bind 4MS-h    bigresizeleft
-bind 4MS-j    bigresizedown
-bind 4MS-k    bigresizeup
-bind 4MS-l    bigresizeright
+bind-key 4-v      vmaximize
+bind-key 4-b      hmaximize
+bind-key 4-f      maximize
+bind-key 4S-h     resizeleft
+bind-key 4S-j     resizedown
+bind-key 4S-k     resizeup
+bind-key 4S-l     resizeright
+bind-key 4MS-h    bigresizeleft
+bind-key 4MS-j    bigresizedown
+bind-key 4MS-k    bigresizeup
+bind-key 4MS-l    bigresizeright
 
-bind 4-h      moveleft
-bind 4-j      movedown
-bind 4-k      moveup
-bind 4-l      moveright
-bind 4C-h     bigmoveleft
-bind 4C-j     bigmovedown
-bind 4C-k     bigmoveup
-bind 4C-l     bigmoveright
+bind-key 4-h      moveleft
+bind-key 4-j      movedown
+bind-key 4-k      moveup
+bind-key 4-l      moveright
+bind-key 4C-h     bigmoveleft
+bind-key 4C-j     bigmovedown
+bind-key 4C-k     bigmoveup
+bind-key 4C-l     bigmoveright
 
-bind 4S-comma label
-bind 4S-e     delete
+bind-key 4S-comma label
+bind-key 4S-e     delete
 
-bind 4-Tab    cycle
-bind 4S-Tab   rcycle
+bind-key 4-Tab    cycle
+bind-key 4S-Tab   rcycle
 
-bind 4-g      grouptoggle
-bind 4MC-l    cyclegroup
-bind 4MC-h    rcyclegroup
-bind 4-1      group-toggle-1
-bind 4-2      group-toggle-2
-bind 4-3      group-toggle-3
-bind 4-4      group-toggle-4
-bind 4-5      group-toggle-5
-bind 4-6      group-toggle-6
-bind 4-7      group-toggle-7
-bind 4-8      group-toggle-8
-bind 4-9      group-toggle-9
-bind 4-0      nogroup
-bind 4M-1     group-only-1
-bind 4M-2     group-only-2
-bind 4M-3     group-only-3
-bind 4M-4     group-only-4
-bind 4M-5     group-only-5
-bind 4M-6     group-only-6
-bind 4M-7     group-only-7
-bind 4M-8     group-only-8
-bind 4M-9     group-only-9
+bind-key 4-g      grouptoggle
+bind-key 4MC-l    cyclegroup
+bind-key 4MC-h    rcyclegroup
+bind-key 4-1      group-toggle-1
+bind-key 4-2      group-toggle-2
+bind-key 4-3      group-toggle-3
+bind-key 4-4      group-toggle-4
+bind-key 4-5      group-toggle-5
+bind-key 4-6      group-toggle-6
+bind-key 4-7      group-toggle-7
+bind-key 4-8      group-toggle-8
+bind-key 4-9      group-toggle-9
+bind-key 4-0      nogroup
+bind-key 4M-1     group-only-1
+bind-key 4M-2     group-only-2
+bind-key 4M-3     group-only-3
+bind-key 4M-4     group-only-4
+bind-key 4M-5     group-only-5
+bind-key 4M-6     group-only-6
+bind-key 4M-7     group-only-7
+bind-key 4M-8     group-only-8
+bind-key 4M-9     group-only-9
 
-bind 4C-r     restart
-bind 4C-q     quit
+bind-key 4C-r     restart
+bind-key 4C-q     quit
 
-bind 4-d      exec
-bind 4-s      search
+bind-key 4-d      exec
+bind-key 4-s      search
 
-bind M-Left   unbind
-bind M-Right  unbind
-bind M-Return unbind
+bind-key M-Left   unbind-key
+bind-key M-Right  unbind-key
+bind-key M-Return unbind-key
 
-# mousebinds
-mousebind 4-1 window_move
-mousebind 4-2 window_grouptoggle
-mousebind 4-3 window_resize
+# bind-mouses
+bind-mouse 4-1 window_move
+bind-mouse 4-2 window_grouptoggle
+bind-mouse 4-3 window_resize
