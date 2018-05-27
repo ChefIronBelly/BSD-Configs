@@ -1,10 +1,10 @@
 BSD-Configs
 - FreeBSD - http://www.freebsd.org
-- OpenBSD - http://www.openbsd.org
+- NetBSD - http://www.netbsd.org
 
 Current Setups
 
-   Distro: FreeBSD (amd64) laptop & desktop / OpenBSD (amd64) desktop
+   Distro: FreeBSD (amd64) laptop & desktop / NetBSD (amd64) desktop
    
    Window Manager: cwm 
    
@@ -12,13 +12,13 @@ Current Setups
    
    Launcher: dmenu
    
-   Terminal Emulator: xterm
+   Terminal Emulator: rxvt
    
    Shell: bash / mksh
    
    Terminal Font: ohsnap / terminus
    
-   File Manager: mc
+   File Manager: mc / command line
    
    Text Editor: vim / geany
    
