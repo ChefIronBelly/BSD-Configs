@@ -5,14 +5,18 @@
 #
 # depends: lemonbar, wattr and common sense
 
+. $HOME/.wmrc
+
 # alpha
-a="#ff"
-b="#c0"
+a="#cc"
+b="#00"
 
 # default colors
-bg="${a}${XCOL4}"
-fg="${a}${XCOL7}"
-hl="${a}${XCOL0}"
+bg="${a}${C0}"
+fg="${a}${C7}"
+sp="${a}${C4}"
+red="${a}${C1}"
+grn="${a}${C2}"
 
 default_geometry() {
     # get screen size

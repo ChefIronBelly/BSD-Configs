@@ -18,14 +18,14 @@ export VISUAL=${EDITOR}
 #export PRINTER=change-this-to-a-printer
 
 # Set the search path for programs.
-PATH=$HOME/bin:$HOME/wmutils:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R7/bin:/usr/X11R6/bin:/usr/pkg/bin
-PATH=${PATH}:/usr/pkg/sbin:/usr/games:/usr/local/bin:/usr/local/sbin
+PATH=$HOME/.bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R7/bin
+PATH=${PATH}:/usr/pkg/bin:/usr/pkg/sbin
 export PATH
 
 # Configure the shell to load .shrc at startup time.
 # This will happen for every shell started, not just login shells.
 #export ENV=$HOME/.shrc
 export ENV=$HOME/.mkshrc
-export PKG_PATH=ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD/$(uname -m)/7.0/All/
+export PKG_PATH=ftp://ftp.NetBSD.org/pub/pkgsrc/packages/$(uname -s)/$(uname -m)/$(uname -r|cut -f '1 2' -d.)/All/
 export CVSROOT="anoncvs@anoncvs.NetBSD.org:/cvsroot"
 

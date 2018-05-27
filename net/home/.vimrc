@@ -1,158 +1,303 @@
-" Settings
-
-filetype on
-filetype plugin on
-filetype indent on
-
-set shell=/bin/sh
+"           ██
+"          ░░
+"  ██    ██ ██ ██████████  ██████  █████
+" ░██   ░██░██░░██░░██░░██░░██░░█ ██░░░██
+" ░░██ ░██ ░██ ░██ ░██ ░██ ░██ ░ ░██  ░░
+"  ░░████  ░██ ░██ ░██ ░██ ░██   ░██   ██
+"   ░░██   ░██ ███ ░██ ░██░███   ░░█████
+"    ░░    ░░ ░░░  ░░  ░░ ░░░     ░░░░░
+"
+"  ▓▓▓▓▓▓▓▓▓▓
+" ░▓ author ▓ xero <x@xero.nu>
+" ░▓ code   ▓ http://code.xero.nu/dotfiles
+" ░▓ mirror ▓ http://git.io/.files
+" ░▓▓▓▓▓▓▓▓▓▓
+" ░░░░░░░░░░
+"
+" use vim settings, rather than vi settings
+" must be first, because it changes other options as a side effect
 set nocompatible
-set encoding=utf-8
-set fileencoding=utf-8
-set nobackup
-set nowb
+
+" security
+set modelines=0
+
+" hide buffers, not close them
+set hidden
+
+" maintain undo history between sessions
+set undofile
+set undodir=~/.vim/undo
 set noswapfile
-set noundofile
-set ignorecase
-set incsearch
-set hlsearch
-set wrapscan
-set smartcase
-set mouse=a
-set modeline
-set more
-set ruler
-set number
-set cursorline
-set showmode
-set showcmd
-set pastetoggle=<F2>
-set backspace=2
-set scrolloff=3
-set lazyredraw
-set foldmethod=syntax 
+
+" lazy file name tab completion
+set wildmode=longest,list,full
 set wildmenu
-set wildmode=longest,full,list
-set fillchars=vert:\
+set wildignorecase
+" ignore files vim doesnt use
+set wildignore+=.git,.hg,.svn
+set wildignore+=*.aux,*.out,*.toc
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest,*.rbc,*.class
+set wildignore+=*.ai,*.bmp,*.gif,*.ico,*.jpg,*.jpeg,*.png,*.psd,*.webp
+set wildignore+=*.avi,*.divx,*.mp4,*.webm,*.mov,*.m2ts,*.mkv,*.vob,*.mpg,*.mpeg
+set wildignore+=*.mp3,*.oga,*.ogg,*.wav,*.flac
+set wildignore+=*.eot,*.otf,*.ttf,*.woff
+set wildignore+=*.doc,*.pdf,*.cbr,*.cbz
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
+set wildignore+=*.swp,.lock,.DS_Store,._*
+
+" case insensitive search
+set ignorecase
+set smartcase
+set infercase
+
+" the /g flag on :s substitutions by default
+set gdefault
+
+" make backspace behave in a sane manner
+set backspace=indent,eol,start
+
+" searching
+set hlsearch
+set incsearch
+
+" use indents of 4 spaces
+set shiftwidth=2
+
+" tabs are spaces, not tabs
+set expandtab
+
+" an indentation every four columns
+set tabstop=2
+
+" let backspace delete indent
+set softtabstop=2
+
+" enable auto indentation
+set autoindent
+
+" remove trailing whitespaces and ^M chars
+autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+
+" let mapleader=","
+vnoremap <silent> <leader>y :w !xsel -i -b<CR>
+nnoremap <silent> <leader>y V:w !xsel -i -b<CR>
+nnoremap <silent> <leader>p :silent :r !xsel -o -b<CR>
+
+" ┏━╸┏━┓┏┳┓┏┳┓┏━┓┏┓╻╺┳┓┏━┓
+" ┃  ┃ ┃┃┃┃┃┃┃┣━┫┃┗┫ ┃┃┗━┓
+" ┗━╸┗━┛╹ ╹╹ ╹╹ ╹╹ ╹╺┻┛┗━┛
+
+" json pretty print
+command J :%!python -mjson.tool
+
+" remove trailing white space
+command Nows :%s/\s\+$//
+
+" remove blank lines
+command Nobl :g/^\s*$/d
+
+" toggle spellcheck
+command Spell :setlocal spell! spell?
+
+" make current buffer executable
+command Chmodx :!chmod a+x %
+
+" ╻┏┓╻╺┳╸┏━╸┏━┓┏━╸┏━┓┏━╸┏━╸
+" ┃┃┗┫ ┃ ┣╸ ┣┳┛┣╸ ┣━┫┃  ┣╸
+" ╹╹ ╹ ╹ ┗━╸╹┗╸╹  ╹ ╹┗━╸┗━╸
+
+" show matching brackets/parenthesis
+set showmatch
+
+" disable startup message
+set shortmess+=I
+
+" syntax highlighting
+syntax on
+set synmaxcol=512
+filetype off
+
+" stop unnecessary rendering
+set lazyredraw
+
+" show line numbers
+set number
+
+" no line wrapping
+set nowrap
+
+" no folding
+set nofoldenable
+set foldlevel=99
+set foldminlines=99
+set foldlevelstart=99
+
+" highlight cursor
+set cursorline
+"set cursorcolumn
+
+" so invisibles
+set list
+set listchars=
+set listchars+=tab:𐄙\
+set listchars+=trail:·
+set listchars+=extends:»
+set listchars+=precedes:«
+set listchars+=nbsp:⣿
+
+" ┏━┓╻  ╻ ╻┏━╸╻┏┓╻   ┏━┓╺┳╸╻ ╻┏━╸┏━╸
+" ┣━┛┃  ┃ ┃┃╺┓┃┃┗┫   ┗━┓ ┃ ┃ ┃┣╸ ┣╸
+" ╹  ┗━╸┗━┛┗━┛╹╹ ╹   ┗━┛ ╹ ┗━┛╹  ╹
+" i struggle with the decision to use plugins or a more vanilla vim, don't judge me.
+" to install from the shell run:
+" git clone https://github.com/gmarik/Vundle.vim.git ~/dotfiles/vim/.vim/bundle/Vundle.vim && vim +BundleInstall +qall && pacman -S the_silver_searcher
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+"Plugin 'gmarik/Vundle.vim'
+"Plugin 'ajh17/VimCompletesMe'
+"Plugin 'shawncplus/phpcomplete.vim'
+"Plugin 'pangloss/vim-javascript'
+"Plugin 'elzr/vim-json'
+Plugin 'vim-syntastic/syntastic'
+"Plugin 'airblade/vim-gitgutter'
+"Plugin 'tpope/vim-fugitive'
+"Plugin 'gregsexton/gitv'
+"Plugin 'mbbill/undotree'
+"Plugin 'rking/ag.vim'
+"Plugin 'isa/vim-matchit'
+"Plugin 'chrisbra/unicode.vim'
+"Plugin 'lilydjwg/colorizer'
+Plugin 'itchyny/lightline.vim'
+Plugin 'xero/sourcerer.vim'
+call vundle#end()
+filetype plugin indent on
+
+" vimcompletesme https://git.io/XLcB1A
+" use omni-complete
+let b:vcm_tab_complete = 'omni'
+set omnifunc=syntaxcomplete#Complete
+" select the completion with enter
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" close preview on completion complete
+autocmd CompleteDone * pclose
+" or disable previews completely
+" set completeopt-=preview
+
+" syntatic http://git.io/syntastic.vim
+" linters: (from aur) nodejs-jshint, nodejs-jsonlint, csslint, checkbashisms
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+" color overrides
+highlight SyntasticErrorSign ctermfg=red ctermbg=237
+highlight SyntasticWarningSign ctermfg=yellow ctermbg=237
+highlight SyntasticStyleErrorSign ctermfg=red ctermbg=237
+highlight SyntasticStyleWarningSign ctermfg=yellow ctermbg=237
+
+" disable folding
+let g:vim_json_syntax_conceal = 0
+
+" git-gutter http://git.io/vimgitgutter
+" speed optimizations
+let g:gitgutter_realtime = 1
+let g:gitgutter_eager = 1
+let g:gitgutter_max_signs = 1500
+let g:gitgutter_diff_args = '-w'
+" custom symbols
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '~'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_removed_first_line = '^'
+let g:gitgutter_sign_modified_removed = ':'
+" color overrrides
+highlight clear SignColumn
+highlight GitGutterAdd ctermfg=green ctermbg=237
+highlight GitGutterChange ctermfg=yellow ctermbg=237
+highlight GitGutterDelete ctermfg=red ctermbg=237
+highlight GitGutterChangeDelete ctermfg=red ctermbg=237
+
+" ag, the silver searcher http://git.io/AEu3dQ + http://git.io/d9N0MA
+let g:agprg="ag -i --vimgrep"
+let g:ag_highlight=1
+" map \ to the ag command for quick searching
+nnoremap \ :Ag<SPACE>
+
+" wizard colors http://git.io/vim.sourcerer
+colorscheme sourcerer
+
+" ┏━┓╺┳╸┏━┓╺┳╸╻ ╻┏━┓╻  ╻┏┓╻┏━╸
+" ┗━┓ ┃ ┣━┫ ┃ ┃ ┃┗━┓┃  ┃┃┗┫┣╸
+" ┗━┛ ╹ ╹ ╹ ╹ ┗━┛┗━┛┗━╸╹╹ ╹┗━╸
+" lightline http://git.io/lightline
+" █▓▒░ wizard status line
 set laststatus=2
-set cmdheight=1
+let g:lightline = {
+  \ 'colorscheme': 'sourcerer',
+  \ 'active': {
+  \   'left': [ [ 'filename' ],
+  \             [ 'readonly', 'fugitive' ] ],
+  \   'right': [ [ 'percent', 'lineinfo' ],
+  \              [ 'fileencoding', 'filetype' ],
+  \              [ 'fileformat', 'syntastic' ] ]
+  \ },
+  \ 'component_function': {
+  \   'modified': 'WizMod',
+  \   'readonly': 'WizRO',
+  \   'fugitive': 'WizGit',
+  \   'filename': 'WizName',
+  \   'filetype': 'WizType',
+  \   'fileformat' : 'WizFormat',
+  \   'fileencoding': 'WizEncoding',
+  \   'mode': 'WizMode',
+  \ },
+  \ 'component_expand': {
+  \   'syntastic': 'SyntasticStatuslineFlag',
+  \ },
+  \ 'component_type': {
+  \   'syntastic': 'error',
+  \ },
+  \ 'separator': { 'left': '▓▒░', 'right': '░▒▓' },
+  \ 'subseparator': { 'left': '▒', 'right': '░' }
+  \ }
 
-" NetBSD
-au BufNewFile,BufRead *Pkgfile set filetype=sh
+function! WizMod()
+  return &ft =~ 'help\|vimfiler' ? '' : &modified ? '»' : &modifiable ? '' : ''
+endfunction
 
-" Colorscheme
-set background=dark
-highlight clear
-if exists("syntax_on")
-	syntax reset
-endif
+function! WizRO()
+  return &ft !~? 'help\|vimfiler' && &readonly ? 'x' : ''
+endfunction
 
-set t_Co=256
-let g:colors_name = "AfterDark"
+function! WizGit()
+  if &ft !~? 'help\|vimfiler' && exists("*fugitive#head")
+    return fugitive#head()
+  endif
+  return ''
+endfunction
 
-hi Normal         ctermfg=none
-hi Boolean        ctermfg=215
-hi Comment        ctermfg=14
-hi Conditional    ctermfg=176 cterm=bold
-hi Constant       ctermfg=11
-hi CursorLine     ctermbg=235 cterm=none
-hi CursorLineNr   ctermfg=3   ctermbg=none
-hi LineNr         ctermfg=14
-hi DiffAdd        ctermfg=8   ctermbg=11
-hi DiffChange     ctermfg=8   ctermbg=12
-hi DiffText       ctermfg=8   ctermbg=13
-hi DiffDelete     ctermfg=8   ctermbg=14
-hi FoldColumn     ctermfg=239 ctermbg=234
-hi Folded         ctermfg=3   ctermbg=234
-hi Function       ctermfg=11
-hi StatusLine     ctermfg=234 ctermbg=239
-hi StatusLineNC   ctermfg=2
-hi Statement      ctermfg=11
-hi Number         ctermfg=174
-hi MatchParen     ctermfg=240
-hi ModeMsg        ctermfg=3   ctermbg=235
-hi String         ctermfg=3
-hi Operator       ctermfg=215 cterm=none
-hi PreCondit      ctermfg=9   cterm=none
-hi PreProc        ctermfg=217
-hi Question       ctermfg=12
-hi Repeat         ctermfg=246
-hi Search         ctermfg=173 ctermbg=7
-hi SpecialChar    ctermfg=144
-hi SpecialComment ctermfg=216
-hi Special        ctermfg=180
-hi SpecialKey     ctermfg=181
-hi Title          ctermfg=173
-hi Type           ctermfg=239
-hi Visual         ctermfg=209
+function! WizName()
+  return ('' != WizMod() ? WizMod() . ' ' : '') .
+        \ ('' != expand('%:t') ? expand('%:t') : '[none]')
+endfunction
 
-" General highlighting group links.
-highlight! link diffAdded       DiffAdd
-highlight! link diffRemoved     DiffDelete
-highlight! link diffChanged     DiffChange
-highlight! link StatusLineNC    StatusLine
-highlight! link Title           Normal
-highlight! link LineNr          NonText
-highlight! link MoreMsg         Normal
-highlight! link Question        DiffChange
-highlight! link TabLine         StatusLineNC
-highlight! link TabLineFill     StatusLineNC
-highlight! link VimHiGroup      VimGroup
+function! WizType()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : '') : ''
+endfunction
 
-" Test the actual colorscheme
-syn match Comment      "\"__Comment.*"
-syn match Constant     "\"__Constant.*"
-syn match Cursor       "\"__Cursor.*"
-syn match CursorLine   "\"__CursorLine.*"
-syn match DiffAdd      "\"__DiffAdd.*"
-syn match DiffChange   "\"__DiffChange.*"
-syn match DiffText     "\"__DiffText.*"
-syn match DiffDelete   "\"__DiffDelete.*"
-syn match Folded       "\"__Folded.*"
-syn match Function     "\"__Function.*"
-syn match Identifier   "\"__Identifier.*"
-syn match IncSearch    "\"__IncSearch.*"
-syn match NonText      "\"__NonText.*"
-syn match Normal       "\"__Normal.*"
-syn match Pmenu        "\"__Pmenu.*"
-syn match PreProc      "\"__PreProc.*"
-syn match Search       "\"__Search.*"
-syn match Special      "\"__Special.*"
-syn match SpecialKey   "\"__SpecialKey.*"
-syn match Statement    "\"__Statement.*"
-syn match StatusLine   "\"__StatusLine.*"
-syn match StatusLineNC "\"__StatusLineNC.*"
-syn match String       "\"__String.*"
-syn match Todo         "\"__Todo.*"
-syn match Type         "\"__Type.*"
-syn match Underlined   "\"__Underlined.*"
-syn match VertSplit    "\"__VertSplit.*"
-syn match Visual       "\"__Visual.*"
+function! WizFormat()
+  return ''
+endfunction
 
-"__Comment              /* this is a comment */
-"__Constant             var = SHBLAH
-"__Cursor               char under the cursor?
-"__CursorLine           Line where the cursor is
-"__DiffAdd              +line added from file.orig
-"__DiffChange           line changed from file.orig
-"__DiffText             actual changes on this line
-"__DiffDelete           -line removed from file.orig
-"__Folded               +--- 1 line : Folded line ---
-"__Function             function sblah()
-"__Identifier           Never ran into that actually...
-"__IncSearch            Next search term
-"__NonText              This is not a text, move on
-"__Normal               Typical text goes like this
-"__Pmenu                Currently selected menu item
-"__PreProc              #define SHBLAH true
-"__Search               This is what you're searching for
-"__Special              true false NULL SIGTERM
-"__SpecialKey           Never ran into that either
-"__Statement            if else return for switch
-"__StatusLine           Statusline of current windows
-"__StatusLineNC         Statusline of other windows
-"__String               "Hello, World!"
-"__Todo                 TODO: remove todos from source
-"__Type                 int float char void unsigned uint32_t
-"__Underlined           Anything underlined
-"__VertSplit            :vsplit will only show ' | '
-"__Visual               Selected text looks like this
+function! WizEncoding()
+  return winwidth(0) > 70 ? (strlen(&fenc) ? &enc : &enc) : ''
+endfunction
+
+augroup AutoSyntastic
+  autocmd!
+  autocmd BufWritePost *.c,*.cpp,*.go,*.js,*.php,*.css,*.scss,*.sh,*.rb call s:syntastic()
+augroup END
+function! s:syntastic()
+  SyntasticCheck
+  call lightline#update()
+endfunction

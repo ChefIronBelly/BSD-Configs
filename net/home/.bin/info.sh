@@ -27,7 +27,8 @@ print-kernel() {
 }
 
 print-shell() {
-	fshell=$(echo $SHELL | cut -d '/' -f 5)
+	#fshell=$(echo $SHELL | cut -d '/' -f 5)
+	fshell=$(echo $SHELL)
 	color-echo 'SHELL' '    '"$fshell"
 }
 
@@ -55,7 +56,7 @@ print-mem() {
     # field 2 on line 2 is total, field 3 on line 2 is used
     # use -m because slackaware does not have -h
     mem=$(free | grep Memory | awk -F ' ' '{ print $2 }')
-    color-echo 'MEM' '      '"$mem 2048M"
+    color-echo 'MEM' '      '"$mem"
 }
 
 print-wm() {
@@ -66,7 +67,7 @@ print-wm() {
 	        break
         fi
     done
-    color-echo 'WM' '       '"Not Found / wmutils active"
+#    color-echo 'WM' '       '"Not Found / wmutils active"
 }
            
 print-font() {
@@ -108,12 +109,12 @@ print-shell
 print-term
 #printf "\n"
 print-font
-colors='zenblue'
+colors='Traffic by dkeg'
 printf "\e[94mCOLORS: \e[0m   $colors$rst\n"
 #printf "\n"
 print-disk
 #print-mem
 print-kernel
 print-cpu
-#print-colors
+print-colors
 read
