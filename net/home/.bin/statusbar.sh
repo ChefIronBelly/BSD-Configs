@@ -27,6 +27,7 @@ GEOM=${GEOM:-$(default_geometry)}
 
 statusbar() {
 	
+
 groups() {
     groups=$(gind.sh)
     echo $groups
@@ -34,8 +35,8 @@ groups() {
 
 mem() {
 	#mem=$(freecolor -o | awk 'NR==2 {print substr($3,0,3)}')
-	mem=$(free | grep Memory | awk -F ' ' '{ print $2 }')
-	mem=128
+	#mem=$(free | grep Memory | awk -F ' ' '{ print $2 }')
+	mem=$(free.sh | grep Memory | awk -F ' ' '{ print $2 }')
 	echo $mem
 }
 
