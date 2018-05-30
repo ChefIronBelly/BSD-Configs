@@ -53,9 +53,7 @@ print-disk() {
 }
 
 print-mem() {
-    # field 2 on line 2 is total, field 3 on line 2 is used
-    # use -m because slackaware does not have -h
-    mem=$(free | grep Memory | awk -F ' ' '{ print $2 }')
+	mem=$(free.sh | grep Memory | awk -F ' ' '{ print $2 }')
     color-echo 'MEM' '      '"$mem"
 }
 
@@ -71,8 +69,8 @@ print-wm() {
 }
            
 print-font() {
-    fontstr=$(xrdb -query 2>/dev/null | grep '*faceName:')
-    font=$(echo $fontstr | awk -F: '{ print $3 }')
+    fontstr=$(xrdb -query 2>/dev/null | grep '*font:')
+    font=$(echo $fontstr | awk -F: '{ print $2 }')
     [[ $font != "" ]] && color-echo 'FONT' '     '"$font"
 }
 
@@ -113,7 +111,7 @@ colors='Traffic by dkeg'
 printf "\e[94mCOLORS: \e[0m   $colors$rst\n"
 #printf "\n"
 print-disk
-#print-mem
+print-mem
 print-kernel
 print-cpu
 print-colors

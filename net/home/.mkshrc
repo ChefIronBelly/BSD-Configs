@@ -18,7 +18,7 @@ HISTSIZE=5000
 
 #### SAFETY ####
 
-alias rm='rm -Iv'
+alias rm='rm -iv'
 alias mv='mv -iv'
 alias cp='cp -iv'
 alias ln='ln -i'
