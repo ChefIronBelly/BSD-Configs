@@ -58,9 +58,9 @@ bind-key SM-r     dmenu_soma.sh
 #bind-key SM-x     dmenu_xset.sh
 bind-key SM-x     dmenu_hset.sh
 bind-key SM-q     dmenu_exit.sh
-bind-key M-0	  "mixer -s vol 80:80"
-bind-key M-minus  "mixer -s vol -5:-5"
-bind-key M-equal  "mixer -s vol +5:+5"
+bind-key M-0	  "volume.sh 0"
+bind-key M-minus  "volume.sh -"
+bind-key M-equal  "volume.sh +"
 bind-key M-u      uptime.sh
 bind-key M-w      wetcat.sh
 
