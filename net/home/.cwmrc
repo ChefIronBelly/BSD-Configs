@@ -35,9 +35,9 @@ autogroup 3 "Geany,vim"
 autogroup 4 "mpv,MPlayer"
 
 # menu
-command box    "xterm -g 80x24+290+324"
+command box    "urxvtc -g 80x24+290+324"
 command surf   firefox
-command xlock  "xlock -mode blot"
+command slock  "slock"
 
 # Ignore programs by that name by not drawing borders around them.
 ignore firefox
