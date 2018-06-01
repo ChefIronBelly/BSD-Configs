@@ -1,0 +1,13 @@
+** NetBSD **
+
+simple-mtpfs
+/usr/pkgsrc/wip/simple-mtpfs
+
+Device listing
+sudo simple-mtpfs --list-devices
+
+Mount
+sudo simple-mtpfs /mnt/phone
+
+Unmount
+sudo fusermount -u /mnt/phone
