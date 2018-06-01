@@ -29,3 +29,6 @@ export ENV=$HOME/.mkshrc
 export PKG_PATH=ftp://ftp.NetBSD.org/pub/pkgsrc/packages/$(uname -s)/$(uname -m)/$(uname -r|cut -f '1 2' -d.)/All/
 export CVSROOT="anoncvs@anoncvs.NetBSD.org:/cvsroot"
 
+# set CVS remote shell command
+CVS_RSH=ssh
+export CVS_RSH
