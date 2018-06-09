@@ -21,7 +21,7 @@ xset fp rehash
 
 urxvtd -q -o -f &
 xrdb < ~/.Xdefaults
-#xsidle.sh slock &
+xsidle.sh slock &
 
 statusbar.sh &
 
@@ -31,4 +31,4 @@ xsetroot -mod 16 16 -bg "$(xrdb -query | awk '/\*background/ {print $2}')" -fg "
 
 exec cwm
 
-#exec evilwm -term xterm -fn fixed -fg '#506070' -snap 10 -bw 2 -nosoliddrag
+#exec evilwm -term urxvt -fn fixed -fg '#506070' -snap 10 -bw 3 #-nosoliddrag
