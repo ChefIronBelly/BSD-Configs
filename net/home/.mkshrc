@@ -36,13 +36,12 @@ alias p='pwd'
 alias manb='man -H'
 alias grep='grep --color=auto'
 
-alias upd='sudo freebsd-update fetch'
-alias upg='sudo freebsd-update install'
-alias ins='sudo pkg install'
-alias pupd='sudo pkg update'
-alias pupg='sudo pkg upgrade'
-alias search='sudo pkg search'
-alias autoremove='sudo pkg autoremove'
+alias ins='sudo pkgin install'
+alias pupd='sudo pkgin update'
+alias pupg='sudo pkgin upgrade'
+alias pfug='sudo pkgin full-upgrade'
+alias search='sudo pkgin search'
+alias autoremove='sudo pkgin autoremove'
 
 # REBOOT/SHUTDOWN
 alias reboot='sudo /sbin/shutdown -r now "R E B O O T"'
@@ -58,7 +57,7 @@ alias rec='ffmpeg -f x11grab -s 1920x1080 -an -i :0.0 -c:v libvpx -b:v 5M -crf 1
 
 alias info='info.sh'
 alias todo='vim ~/todo'
-alias rnet='sudo sh /etc/netstart'
+alias rnet='sudo /etc/rc.d/network restart'
 
 alias zzz='slock'
 alias shootme='DISPLAY=:0 import -window root ~/Pictures/scrots/scrot-$(date +%m-%d-%Y-%H-%M-%S).png'
