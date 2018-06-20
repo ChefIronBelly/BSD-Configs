@@ -7,7 +7,7 @@
 set -e
 set -x
 
-mkdir ~/HEAD/$1 && cd $_
+mkdir /home/chef/HEAD/$1 && cd $_
 
 for file in base comp etc kern-GENERIC modules xbase xcomp xetc xfont xserver
 do

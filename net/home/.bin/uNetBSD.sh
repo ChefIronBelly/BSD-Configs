@@ -3,7 +3,7 @@
 # unpack NetBSD daily sets
 #
 # depends: common sense
-# work in progress
+### work in progress ###
 
 set -e
 set -x
@@ -13,6 +13,7 @@ do
 	tar zxpf /home/chef/HEAD/$1/${file}.tgz
 done
 
+# wrong stomps on kernel #
 #tar -zxpf /home/chef/HEAD/$1/kern-GENERIC.tgz
 #ln -fh /netbsd /netbsd.old
 #cp /home/chef/HEAD/$1/netbsd /netbsd.new
