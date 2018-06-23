@@ -13,15 +13,14 @@ do
 	tar zxpf /home/chef/HEAD/$1/${file}.tgz
 done
 
-# wrong stomps on kernel #
-#tar -zxpf /home/chef/HEAD/$1/kern-GENERIC.tgz
-#ln -fh /netbsd /netbsd.old
-#cp /home/chef/HEAD/$1/netbsd /netbsd.new
-#ln -fh /netbsd.new /netbsd
+# hand job this #
 
-#for file in etc xetc
-#do
-#	/usr/sbin/postinstall -s ~/${file}.tgz check
-#    /usr/sbin/postinstall -s ~/${file}.tgz fix
-#    /usr/sbin/etcupdate -s ~/${file}.tgz
-#done
+# tar -zxpf /home/chef/HEAD/$1/kern-GENERIC.tgz
+# ln -fh /netbsd /netbsd.old
+# cp /home/chef/HEAD/$1/netbsd /netbsd.new
+# ln -fh /netbsd.new /netbsd
+
+# /usr/sbin/postinstall -s ~/${file}.tgz check
+# /usr/sbin/postinstall -s ~/${file}.tgz fix
+# /usr/sbin/etcupdate -s ~/${file}.tgz
+
