@@ -30,5 +30,4 @@ xsetroot -cursor_name left_ptr
 xsetroot -mod 16 16 -bg "$(xrdb -query | awk '/\*background/ {print $2}')" -fg "$(xrdb -query | awk '/\*color8/ {print $2}')"
 
 exec cwm
-
 #exec evilwm -term urxvt -fn fixed -fg '#506070' -snap 10 -bw 3 #-nosoliddrag
