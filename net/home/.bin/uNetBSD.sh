@@ -8,6 +8,10 @@
 set -e
 set -x
 
+cd /
+pwd
+read
+
 for file in base comp kern-GENERIC modules xbase xcomp xfont xserver
 do
 	tar zxpf /home/chef/HEAD/$1/${file}.tgz
