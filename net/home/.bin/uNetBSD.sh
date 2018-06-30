@@ -19,7 +19,7 @@ do
 	tar zxpf /home/chef/HEAD/$1/${file}.tgz
 done
 
-# hand job this #
+# hand job this you lazy bastage #
 
 # /usr/sbin/postinstall -s /home/chef/HEAD/etc.tgz check
 # /usr/sbin/postinstall -s /home/chef/HEAD/etc.tgz fix
