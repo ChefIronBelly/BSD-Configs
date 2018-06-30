@@ -27,8 +27,8 @@ export PATH
 #export ENV=$HOME/.shrc
 export ENV=$HOME/.mkshrc
 #export PKG_PATH=ftp://ftp.NetBSD.org/pub/pkgsrc/packages/$(uname -s)/$(uname -m)/$(uname -r|cut -f '1 2' -d.)/All/
-#export PKG_PATH=http://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/amd64/8.0_2018Q1/All/
-export PKG_PATH=http://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/amd64/8.0_current/All/
+export PKG_PATH=http://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/x86_64/8.0_2018Q1/All/
+#export PKG_PATH=http://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/x86_64/8.0_current/All/
 export CVSROOT="anoncvs@anoncvs.NetBSD.org:/cvsroot"
 
 # set CVS remote shell command
