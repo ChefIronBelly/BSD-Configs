@@ -21,13 +21,14 @@ xset fp rehash
 
 urxvtd -q -o -f &
 xrdb < ~/.Xdefaults
-xsidle.sh slock &
+#xsidle.sh slock &
 
-statusbar.sh &
+#statusbar.sh &
 
 xsetroot -cursor_name left_ptr
 #hsetroot -fill ~/Pictures/ANhxh.jpg -tint '#506070'
 xsetroot -mod 16 16 -bg "$(xrdb -query | awk '/\*background/ {print $2}')" -fg "$(xrdb -query | awk '/\*color8/ {print $2}')"
 
-exec cwm
+#exec cwm
+exec evilwm
 #exec evilwm -term urxvt -fn fixed -fg '#506070' -snap 10 -bw 3 #-nosoliddrag

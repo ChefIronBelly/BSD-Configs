@@ -2,10 +2,11 @@ if [ -f /etc/shrc ]; then
 	. /etc/shrc
 fi
 
-case "$-" in *i*)
-	# interactive mode settings go here
-	;;
+case $LOGNAME in			# include command number in prompt
+root)	PS1="!# " ;;
+*)	PS1="!$ " ;;
 esac
+export PS1
 
 # some useful aliases
 alias h='fc -l'

@@ -1,4 +1,4 @@
-#!/usr/pkg/bin/mksh
+#!/usr/pkg/bin/bash
 
 # define colors for color-echo
 red="\e[31m"
@@ -54,8 +54,10 @@ print-disk() {
 }
 
 print-mem() {
-	mem=$(free.sh | grep Memory | awk -F ' ' '{ print $2 }')
-    color-echo 'MEM' '      '"$mem"
+	memtotal="$(($(sysctl -n hw.physmem64) / 1024 / 1024))"
+	memused="$(($(vmstat | awk 'END {printf $3}') / 1024))"
+	mem="${memused}MB / ${memtotal}MB"
+	color-echo 'MEM' '      '"$mem"
 }
 
 print-wm() {
