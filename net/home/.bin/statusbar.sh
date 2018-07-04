@@ -34,9 +34,9 @@ groups() {
 }
 
 mem() {
-	#mem=$(freecolor -o | awk 'NR==2 {print substr($3,0,3)}')
-	#mem=$(free | grep Memory | awk -F ' ' '{ print $2 }')
-	mem=$(free.sh | grep Memory | awk -F ' ' '{ print $2 }')
+	memtotal="$(($(sysctl -n hw.physmem64) / 1024 / 1024))"
+	memused="$(($(vmstat | awk 'END {printf $3}') / 1024))"
+	mem="${memused}MB"
 	echo $mem
 }
 
