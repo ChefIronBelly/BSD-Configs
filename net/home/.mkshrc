@@ -2,12 +2,6 @@
 # ~/.mkshrc
 #
 
-PS1=""
- case `id -u` in
- 	0) PS1="${PS1}# ";;
- 	*) PS1="${PS1}$ ";;
- esac
-
 # Do make a history
 HISTFILE=~/.mksh/history
 HISTSIZE=5000
@@ -38,10 +32,10 @@ alias grep='grep --color=auto'
 
 alias ins='sudo pkgin install'
 alias pupd='sudo pkgin update'
-alias pupg='sudo pkgin upgrade'
-alias pfug='sudo pkgin full-upgrade'
+alias pupg='sudo pkgin full-upgrade'
 alias search='sudo pkgin search'
 alias autoremove='sudo pkgin autoremove'
+alias clean='sudo pkgin clean'
 
 # REBOOT/SHUTDOWN
 alias reboot='sudo /sbin/shutdown -r now "R E B O O T"'
@@ -76,3 +70,9 @@ alias gc='git commit -m "adds and tweaks"'
 alias mc='mc -a'
 alias umount='sudo umount /mnt/$1'
 alias dm='dmenu_start.sh'
+
+PS1=""
+ case `id -u` in
+ 	0) PS1="${PS1}# ";;
+ 	*) PS1="${PS1}$ ";;
+ esac

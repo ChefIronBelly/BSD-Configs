@@ -19,27 +19,6 @@
 ! █▓▒░ color scheme
 #include </home/chef/.colors/traffic>
 
-! Colors
-*background:   bg
-*foreground:   fg
-
-*color0:      blk
-*color8:      bblk
-*color1:      red
-*color9:      bred
-*color2:      grn
-*color10:     bgrn
-*color3:      ylw
-*color11:     bylw
-*color4:      blu
-*color12:     bblu
-*color5:      mag
-*color13:     bmag
-*color6:      cyn
-*color14:     bcyn
-*color7:      wht
-*color15:     bwht
-
 ! █▓▒░ fonts
 !urxvt*font: xft:gohufont:size=12:antialias=true, \
             xft:Symbola:pixelsize=14:antialias=true:hinting=slight
@@ -87,3 +66,24 @@ urxvt.saveLines: 9999
 urxvt.iso14755: false
 !URxvt*altSendsEscape: true
 URxvt*termName: rxvt-unicode-256color
+
+! Colors
+*background:   bg
+*foreground:   fg
+
+*color0:      blk
+*color8:      bblk
+*color1:      red
+*color9:      bred
+*color2:      grn
+*color10:     bgrn
+*color3:      ylw
+*color11:     bylw
+*color4:      blu
+*color12:     bblu
+*color5:      mag
+*color13:     bmag
+*color6:      cyn
+*color14:     bcyn
+*color7:      wht
+*color15:     bwht

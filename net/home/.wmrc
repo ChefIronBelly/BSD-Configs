@@ -7,10 +7,10 @@ export BG=272c30
 export C0=282d31
 export C1=934e46
 export C2=637268
-export C3=c79e84
-export C4=515e67
-export C5=715f5e
-export C6=5c6f7d
+export C3=715f5e
+export C4=545F72
+export C5=A18673
+export C6=75909F
 export C7=cfb9a8
 
 export FONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
@@ -19,7 +19,7 @@ export ICOFONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
 DMENU_FN="-fn -*-ohsnap.icons-medium-r-*-*-12-*-*-*-*-*-*-*"
 DMENU_NB="-nb #272c30"
 DMENU_NF="-nf #cfb9a8"
-DMENU_SB="-sb #506070"
-DMENU_SF="-sf #cfb9a8"
+DMENU_SB="-sb #cfb9a8"
+DMENU_SF="-sf #272c30"
 
 export DMENU_FN DMENU_NB DMENU_NF DMENU_SF DMENU_SB

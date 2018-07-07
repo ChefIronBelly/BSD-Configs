@@ -1,6 +1,6 @@
 #!/usr/pkg/bin/bash
 #
-# unpack NetBSD daily sets
+# unpack NetBSD-8 sets
 #
 # depends: common sense
 ### work in progress ###
@@ -16,7 +16,7 @@ cp /netbsd /netbsd.old
 
 for file in kern-GENERIC modules base comp xbase xcomp xfont xserver
 do
-	tar zxpf /home/chef/HEAD/$1/${file}.tgz
+	tar zxpf /home/chef/netbsd-8/$1/${file}.tgz
 done
 
 # hand job this you lazy bastage #
