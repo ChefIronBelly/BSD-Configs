@@ -1,13 +1,4 @@
-!  ██     ██      ██           ████                    ██   ██
-! ░░██   ██      ░██          ░██░                    ░██  ░██
-!  ░░██ ██       ░██  █████  ██████  ██████   ██   ██ ░██ ██████  ██████
-!   ░░███     ██████ ██░░░██░░░██░  ░░░░░░██ ░██  ░██ ░██░░░██░  ██░░░░
-!    ██░██   ██░░░██░███████  ░██    ███████ ░██  ░██ ░██  ░██  ░░█████
-!   ██ ░░██ ░██  ░██░██░░░░   ░██   ██░░░░██ ░██  ░██ ░██  ░██   ░░░░░██
-!  ██   ░░██░░██████░░██████  ░██  ░░████████░░██████ ███  ░░██  ██████
-! ░░     ░░  ░░░░░░  ░░░░░░   ░░    ░░░░░░░░  ░░░░░░ ░░░    ░░  ░░░░░░
-!
-!  ▓▓▓▓▓▓▓▓▓▓
+! ▓▓▓▓▓▓▓▓▓▓
 ! ░▓ author ▓ xero <x@xero.nu>
 ! ░▓ code   ▓ http://code.xero.nu/dotfiles
 ! ░▓ mirror ▓ http://git.io/.files
@@ -17,21 +8,9 @@
 
 
 ! █▓▒░ color scheme
-#include </home/chef/.colors/traffic>
+#include </home/chef/.colors/blok>
 
 ! █▓▒░ fonts
-!urxvt*font: xft:gohufont:size=12:antialias=true, \
-            xft:Symbola:pixelsize=14:antialias=true:hinting=slight
-!urxvt*font: xft:gohufont:size=11:antialias=false
-!urxvt*font: -*-creep-regular-*-*--16-*-*-*-*-*-*-1
-!urxvt*font: -*-lime-*-*-*--11-*-*-*-*-*-*-1
-!urxvt*font: xft:creep:size=16:antialias=true
-!urxvt*font: xft:envy code r:size=9:antialias=false
-!urxvt*font: xft:lemon:size=16:antialias=false
-!urxvt*font: xft:lime:size=16:antialias=false
-!urxvt*font: xft:neep:size=11:antialias=false
-!urxvt*font: xft:perfect dos vga 437:size=11:antialias=false
-!urxvt*font: xft:tewi:size=11:antialias=false
 URxvt*font:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
 URxvt*boldFont:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
 
@@ -45,8 +24,8 @@ urxvt*lineSpace: 0
 ! █▓▒░ interface
 urxvt*scrollBar: false
 urxvt*transparent: false
-urxvt*internalBorder: 6
-urxvt*borderColor: #272c30
+urxvt*internalBorder: 4
+urxvt*borderColor: #2c2a2b
 urxvt*borderLess:false
 
 ! █▓▒░ extensions

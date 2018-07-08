@@ -20,7 +20,7 @@ wms=( 2bwm 2wm 9wm aewm afterstep ahwm alopex amiwm antiwm awesome blackbox bspw
     uwm vtwm w9wm weewm wind windowlab wm2 wmaker wmfs wmii wmx xfwm4 xmonad xoat yeahwm )
 
 color-echo() {  # print with colors
-	echo -e "$cyn$1: $wht$2"
+	echo -e "$blu$1: $wht$2"
 }
 
 print-kernel() {
@@ -100,7 +100,7 @@ printf "\e[34m░▒▓█\e[0m▓▒░\n\n"
 }
 
 clear
-printf "\n$org$USER@$(hostname)$rst\n"
+printf "\n$red$USER@$(hostname)$rst\n"
 printf "\n"
 print-distro
 print-packages
@@ -110,8 +110,8 @@ print-shell
 print-term
 #printf "\n"
 print-font
-colors='traffic by dkeg'
-printf "\e[36mCOLORS: \e[37m   $colors$rst\n"
+colors='blok by dkeg'
+printf "\e[34mCOLORS: \e[37m   $colors$rst\n"
 #printf "\n"
 print-disk
 print-mem

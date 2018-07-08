@@ -18,8 +18,8 @@ snapdist 10
 sticky yes
 
 # colors
-color activeborder   '#515e67'
-color inactiveborder '#272c30'
+color activeborder   '#6d7575'
+color inactiveborder '#2c2a2b'
 color menubg         '#252525'
 color menufg         '#e3e3e3'
 color font           '#f7f7f7'

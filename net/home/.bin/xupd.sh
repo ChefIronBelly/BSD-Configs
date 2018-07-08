@@ -1,3 +1,3 @@
 #!/bin/sh
 
-xrdb -load ~/.Xresources
+xrdb -load ~/.Xdefaults

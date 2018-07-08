@@ -4,22 +4,22 @@
 export FG=cfb9a8
 export BG=272c30
 
-export C0=282d31
-export C1=934e46
-export C2=637268
-export C3=715f5e
-export C4=545F72
-export C5=A18673
-export C6=75909F
-export C7=cfb9a8
+export C0=2d2b2c
+export C1=a67979
+export C2=809f7b
+export C3=baad8a
+export C4=6d7575
+export C5=7d6969
+export C6=7b9899
+export C7=bab9ba
 
 export FONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
 export ICOFONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
 
 DMENU_FN="-fn -*-ohsnap.icons-medium-r-*-*-12-*-*-*-*-*-*-*"
-DMENU_NB="-nb #272c30"
-DMENU_NF="-nf #cfb9a8"
-DMENU_SB="-sb #cfb9a8"
-DMENU_SF="-sf #272c30"
+DMENU_NB="-nb #2c2a2b"
+DMENU_NF="-nf #bab9ba"
+DMENU_SB="-sb #bab9ba"
+DMENU_SF="-sf #2c2a2b"
 
 export DMENU_FN DMENU_NB DMENU_NF DMENU_SF DMENU_SB
