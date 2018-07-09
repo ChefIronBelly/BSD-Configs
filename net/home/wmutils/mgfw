@@ -1,0 +1,77 @@
+#!/bin/sh 
+#    
+# mgfw - manage groups for windows
+# (c) arcetera 2015 - wtfpl
+#
+
+. ~/.config/wmrc/config
+
+usage() {
+  echo "$(basename $0) [-adsth <gid>]"
+}
+
+addtgrp() {
+  :> $GRPROOT/$2/$1
+  showgrp $2
+}
+
+removefgrp() {
+  [ "$2" = "all" ] \
+  && rm -f $GRPROOT/*/$1 \
+  || rm -f $GRPROOT/$2/$1
+}
+
+findgrp() {
+  file=$(find $GRPROOT -name "$1")
+  [ -n "$file" ] && basename $(dirname $file)
+}
+
+showgrp() {
+  for file in $GRPROOT/$1/*; do
+    wid=$(basename $file)
+    mapw -m $wid
+  done
+}
+
+hidegrp() {
+  for file in $GRPROOT/$1/*; do
+    wid=$(basename $file)
+    mapw -u $wid
+  done
+}
+
+togggrp() {
+  wid=$(ls -1 $GRPROOT/$1 | sed 1q)
+
+  [ -z "$wid" ] && return
+  wattr m $wid \
+  && hidegrp $1 \
+  || showgrp $1
+}
+
+cgrps() {
+  for gid in $(seq 1 $GRPNUM ); do
+    [ -d $GRPROOT/$gid ] || mkdir -p $GRPROOT/$gid
+  done
+
+  for file in $(find $GRPROOT -type f); do
+    wid=$(basename $file)
+    wattr $wid || rm -f $file
+  done
+}
+
+cgrps
+
+while getopts ":a:wd:gm:t:h:" opt; do
+  case $opt in
+    a) addtgrp $(pfw) $OPTARG ;;
+    d) removefgrp $(pfw) $OPTARG ;;
+    g) findgrp $(pfw) ;;
+    s) showgrp $OPTARG ;;
+    t) togggrp $OPTARG ;;
+    h) hidegrp $OPTARG ;;
+    *) usage && exit 0;;
+  esac
+done
+
+[ $# -eq 0 ] && tree --noreport $GRPROOT

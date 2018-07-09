@@ -1,0 +1,26 @@
+#!/bin/sh
+#                    
+# fls - fullscreen window
+# (c) arcetera 2015 - wtfpl
+#
+
+. ~/.config/wmrc/config
+
+usage() {
+  echo "usage: $(basename $0) <wid>"
+  exit 1
+}
+
+[ -z "$1" ] && usage
+
+[ -f $FSFILE ] && wtp $(cat $FSFILE)
+
+if [ -f $FSFILE ] && grep -q $1 $FSFILE; then
+  rm -f $FSFILE
+else
+  wattr xywhi $1 > $FSFILE
+  wtp $(wattr xywh `lsw -r`) $1
+  chwb -s 0 $1
+fi
+
+wfw $1
