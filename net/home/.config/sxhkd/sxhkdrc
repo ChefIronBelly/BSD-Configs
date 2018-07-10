@@ -22,7 +22,7 @@ alt + shift + f
 alt + shift + g
 	geany      
 		
-# weather pop up
+# weather pop
 alt + w
 	~/.bin/pop.sh %\{c\} $(weather.sh)
 
@@ -30,12 +30,12 @@ alt + w
 alt + {F10,F11,F12}
 	~/.bin/volume.sh {0,-,+}
 		
-# size window to 50% screen left, right, top or bottom
+# create window to 50% of screen left, right, top or bottom
 super + {n,m,comma,period}
 	~/wmutils/fifty.sh {left,right,up,down} 
 		
 # move window to left center, center, right center
-super + {Left,Down,Right}
+super + {Left,Up,Right}
 	~/wmutils/middles.sh {left,center,right}
 
 # move windows
@@ -77,3 +77,23 @@ super + shift + e
 # fullscreens window
 super + f
 	~/wmutils/fullscreen.sh $(pfw)
+
+# move left, down, up, right 
+super + {h,j,k,l}
+ wmv {-10 0,0 +10, 0 -10, +10 0} $(pfw)
+
+# move fast left, down, up, right
+super + shift + {h,j,k,l}
+ wmv {-40 0,0 +40, 0 -40, +40 0} $(pfw)
+
+# resize left, down, up, right
+super + alt + {h,j,k,l}
+ wrs {-10 0,0 +10, 0 -10, +10 0} $(pfw)
+
+# resize fast left, down, up, right
+super + alt + shift + {h,j,k,l}
+ wrs {-40 0,0 +40, 0 -40, +40 0} $(pfw)
+
+# quit X	 
+super + ctrl + q
+ ~/bin/dmenu_exit.sh
