@@ -16,23 +16,6 @@ usage() {
 # exit if no argument given
 test -z "$1" && usage
 
-# default values for gaps, panel and master area
-PANEL=${PANEL:-20}
-GAP=${GAP:-10}
-
-# get current window id and its borderwidth
-PFW=$(pfw)
-BW=$(wattr b $PFW)
-
-# get root window's size (beware, multi-head setups...)
-ROOT=$(lsw -r)
-SW=$(wattr w $ROOT)
-SH=$(wattr h $ROOT)
-
-# calculate usable screen size (without borders and gaps)
-SW=$((SW - 2*GAP - 2*BW))
-SH=$((SH - 2*GAP - PANEL - 2*BW))
-
 # this will unset the fullscreen state of any fullscreen window if there is one.
 # this way, there will only be one window in fullscreen at a time, and no window
 # will loose their previous geometry info
@@ -49,10 +32,8 @@ else
     # if not, then put the current window in fullscreen mode, after saving its
     # geometry and id to $FSFILE we also remove any border from this window.
     wattr xywhi $1 > $FSFILE
-    Y=$((0 + GAP + PANEL))
-    wtp $GAP $Y $SW $SH $1
-#    wtp $(wattr xywh `lsw -r`) $1 #original
     chwb -s 0 $1
+    wtp $(wattr xywh `lsw -r`) $1
 fi
 
 # now focus the window, and put it in front, no matter which state we're in, and

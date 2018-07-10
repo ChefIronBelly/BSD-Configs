@@ -33,5 +33,5 @@ xec cwm
 #exec evilwm
 
 sxhkd &
-wew | wchg &
+wew | focus_watcher.sh &
 exec xwait

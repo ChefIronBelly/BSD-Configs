@@ -19,7 +19,6 @@ fi
 # user defined
 BW=${BW:-4} # width of your borders
 GAP=${GAP:-20} # gap between windows
-PANEL=${PANEL:-10} # height of panel // might make this a global
 
 # get monitor dimensions
 ROOT=$(lsw -r)
@@ -27,7 +26,7 @@ SW=$(wattr w $ROOT)
 SH=$(wattr h $ROOT)
 # reduce screen useable screen area to improve later expressions
 SW=$(( SW - GAP - 2*BW ))
-SH=$(( SH - GAP - PANEL - 2*BW ))
+SH=$(( SH - GAP - 2*BW ))
 
 # calculate the size of the grid using the square root of the number of windows
 ROWS=$(echo "sqrt($NB)" | bc)
@@ -59,7 +58,7 @@ for r in `seq 1 $ROWS`; do
         test $(( (r-1)*r + c )) -gt $NB && break
 
         # heigh of windows (total heigh minus gaps and borders)
-        H=$(( SH/ROWS - GAP - PANEL - BW ))
+        H=$(( SH/ROWS - GAP - BW ))
         # same for width
         W=$(( SW/COLS - GAP - BW ))
 
@@ -69,7 +68,7 @@ for r in `seq 1 $ROWS`; do
         # paper like me, it will make much more sense!
         X=$(( W * (c-1) + c*(GAP + BW) ))
         # same for the Y offset
-        Y=$(( H * (r-1) + r*(GAP + PANEL + BW) ))
+        Y=$(( H * (r-1) + r*(GAP + BW) ))
 
         # finally, teleport the window to the place we just calculated.
         # the sed trick is used to get the corresponding line number in the file

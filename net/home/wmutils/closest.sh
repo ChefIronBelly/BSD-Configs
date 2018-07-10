@@ -12,11 +12,11 @@ usage() {
     exit 1
 }
 
-next_east() {
+next_west() {
     lsw | xargs wattr xi | sort -nr | sed "0,/$CUR/d" | sed "1s/^[0-9]* //p;d"
 }
 
-next_west() {
+next_east() {
     lsw | xargs wattr xi | sort -n | sed "0,/$CUR/d" | sed "1s/^[0-9]* //p;d"
 }
 
@@ -30,8 +30,11 @@ next_south() {
 
 # Use the specification of your choice: WASD, HJKL, ←↑↓→, west/north/south/east
 case $1 in
-    h|a|east|left)  focus.sh $(next_east)  2>/dev/null ;;
-    j|s|south|down) focus.sh $(next_south) 2>/dev/null ;;
-    k|w|north|up)   focus.sh $(next_north) 2>/dev/null ;;
-    l|d|west|right) focus.sh $(next_west)  2>/dev/null ;;
+    h|a|west|left)  wid=$(next_west)  ;;
+    j|s|south|down) wid=$(next_south) ;;
+    k|w|north|up)   wid=$(next_north) ;;
+    l|d|east|right) wid=$(next_east)  ;;
+    *)              usage             ;;
 esac
+
+test ! -z "$wid" && focus.sh "$wid"

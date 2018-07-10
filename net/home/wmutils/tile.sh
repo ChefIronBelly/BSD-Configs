@@ -4,9 +4,9 @@
 # arrange windows in a tiled pattern
 
 # default values for gaps and master area
-PANEL=${PANEL:-20}
-GAP=${GAP:-10}
-MASTER=${MASTER:-800}
+PANEL=${PANEL:-0}
+GAP=${GAP:-20}
+MASTER=${MASTER:-900}
 
 # get current window id and its borderwidth
 PFW=$(pfw)
@@ -22,17 +22,16 @@ MAX=$(lsw|grep -v $PFW|wc -l)
 
 # calculate usable screen size (without borders and gaps)
 SW=$((SW - GAP - 2*BW))
-SH=$((SH - GAP - 2*BW - PANEL))
+SH=$((SH - GAP - PANEL))
 
 Y=$((0 + GAP + PANEL))
 # put current window in master area
-wtp $GAP $Y $((MASTER - GAP - 2*BW)) $((SH - GAP)) $PFW
+wtp $GAP $Y $((MASTER - GAP - 2*BW)) $((SH - GAP - 2*BW)) $PFW
 
 # and now, stack up all remaining windows on the right
 X=$((MASTER + GAP))
 W=$((SW - MASTER - GAP))
-#H=$((SH / MAX - GAP - 2*BW)) // incorrect. screws alignment
-H=$((SH / MAX - GAP - BW))
+H=$((SH / MAX - GAP - 2*BW))
 
 for wid in $(lsw|grep -v $PFW); do
     wtp $X $Y $W $H $wid
