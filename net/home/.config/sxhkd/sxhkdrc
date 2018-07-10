@@ -39,11 +39,11 @@ super + {Left,Down,Right}
 	~/wmutils/middles.sh {left,center,right}
 
 # move windows
-super + {Left,Down,Up,Right}
+super + {h,j,k,l}
 	wmv {-20 0, 0 20, 0 -20, 20 0} $(pfw)
 
 # resize windows
-super + alt + {Left,Down,Up,Right}
+super + alt + {h,j,k,l}
 	wrs {-20 0, 0 20, 0 -20, 20 0} $(pfw)
 
 # switch between windows
@@ -77,7 +77,3 @@ super + shift + e
 # fullscreens window
 super + f
 	~/wmutils/fullscreen.sh $(pfw)
-
-# move window to left center, center, right center
-super + {Left,Up,Right}
-	~/wmutils/middles.sh {left,center,right}
