@@ -8,11 +8,11 @@ shift + alt + d
 
 # pop a term
 super + Return
-	urxvtc -g 80x24+290+324
+	st -g 80x24+290+324
         
 # pop a tmux
 super + t
-	urxvtc -g 80x24+980+324 -e bash -c "tmux"
+	st -g 80x24+980+324 -e bash -c "tmux"
         
 # let's surf
 alt + shift + f
