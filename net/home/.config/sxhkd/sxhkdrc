@@ -1,99 +1,92 @@
 # launch a soma stream
 shift + alt + r
-	~/.bin/dmenu_soma.sh 
+		dmenu_soma.sh 
 
 # launch a menu
 shift + alt + d
-	~/.bin/dmenu_start.sh 
+		dmenu_start.sh 
 
 # pop a term
 super + Return
-	st -g 80x24+290+324
+		st -g 80x24+290+324
         
 # pop a tmux
 super + t
-	st -g 80x24+980+324 -e bash -c "tmux"
-        
+		st -g 80x24+980+324 -e tmux
+	
 # let's surf
 alt + shift + f
-	firefox        
+		firefox        
         
 # overlord
 alt + shift + g
-	geany      
-		
+		geany
+
 # weather pop
 alt + w
-	~/.bin/pop.sh %\{c\} $(weather.sh)
+		pop.sh %\{c\} $(weather.sh)
 
 # adjust volume down, up,  mute toggle
 alt + {F10,F11,F12}
-	~/.bin/volume.sh {0,-,+}
-		
-# create window to 50% of screen left, right, top or bottom
-super + {n,m,comma,period}
-	~/wmutils/fifty.sh {left,right,up,down} 
-		
-# move window to left center, center, right center
-super + {Left,Up,Right}
-	~/wmutils/middles.sh {left,center,right}
+		volume.sh {0,-,+}		
 
 # move windows
-super + {h,j,k,l}
-	wmv {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+super + {Left,Down,Up,Right}
+        wmv {-20 0, 0 20, 0 -20, 20 0} $(pfw)
 
 # resize windows
-super + alt + {h,j,k,l}
-	wrs {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+super + alt + {Left,Down,Up,Right}
+        wrs {-20 0, 0 20, 0 -20, 20 0} $(pfw)
 
-# switch between windows
-alt + Tab
-	~/wmutils/focus.sh next
+# switch between windows quickly
+super + Tab
+        wfw next
 
-# kill sxhkd
+# kill sxhkd (for config changes, must be manually reopened)
 super + Escape
-	killall sxhkd
+        killall sxhkd
 
-# create groups
-super + shift + {1,2,3,4,5,6,7,8}
-	~/wmutils/group.sh add $(pfw) {1,2,3,4,5,6,7,8}
+# toggle groups
+super + {1,2,3,4,5}
+        mgfw -t {1,2,3,4,5}
 
-# view groups 
-super + {1,2,3,4,5,6,7,8}
-	~/wmutils/group.sh view {1,2,3,4,5,6,7,8}
- 
-# hide groups 
-super + alt + {1,2,3,4,5,6,7,8}
-	~/wmutils/group.sh hide {1,2,3,4,5,6,7,8} 
+# assign window to group
+super + shift + {1,2,3,4,5}
+        mgfw -d all; \
+        mgfw -a {1,2,3,4,5}
 
-# remove groups
-super + shift + BackSpace
-	~/wmutils/group.sh remove $(pfw)
+# remove window from group
+super + shift + Return
+        mgfw -d all
 
 # close window
 super + shift + e
-	killw $(pfw)
+        killw $(pfw)
 
 # fullscreens window
 super + f
-	~/wmutils/fullscreen.sh $(pfw)
+        fls $(pfw)
 
-# move left, down, up, right 
+# focuses the closest window
 super + {h,j,k,l}
- wmv {-10 0,0 +10, 0 -10, +10 0} $(pfw)
+        cls {left,down,up,right}
 
-# move fast left, down, up, right
-super + shift + {h,j,k,l}
- wmv {-40 0,0 +40, 0 -40, +40 0} $(pfw)
+# puts window in a corner
+super + shift + {q,w,a,s}
+        crnr {tl,tr,bl,br}
 
-# resize left, down, up, right
-super + alt + {h,j,k,l}
- wrs {-10 0,0 +10, 0 -10, +10 0} $(pfw)
+# centers window
+super + shift + space
+        cw $(pfw)
 
-# resize fast left, down, up, right
-super + alt + shift + {h,j,k,l}
- wrs {-40 0,0 +40, 0 -40, +40 0} $(pfw)
-
-# quit X	 
-super + ctrl + q
- ~/bin/dmenu_exit.sh
+# switches between different layouts
+super + shift + {Left,Right,Up}
+        echo "$NOTILE" | grep -q "$(wname $WID)" || dytyl {default,spiral,float}
+        
+# move window to left center, center, right center
+super + {y,g,u}
+		middles.sh {left,center,right}
+ 
+# size window to 50% screen left, right, top or bottom
+super + {n,m,comma,period}
+		fifty.sh {left,right,up,down}

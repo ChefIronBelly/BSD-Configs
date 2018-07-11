@@ -1,0 +1,25 @@
+#!/bin/sh
+#                             
+# wfw - window focus wrapper
+# (c) arcetera 2015 - wtfpl
+
+. ~/.config/wmrc/config
+
+usage() {
+    echo "usage: $(basename $0) <next|prev|wid>" >&2
+    exit 1
+}
+
+case $1 in
+    next) wid=$(lsw|grep -v $CUR|sed '1 p;d') ;;
+    prev) wid=$(lsw|grep -v $CUR|sed '$ p;d') ;;
+    0x*) wattr $1 && wid=$1 ;;
+    *) usage ;;
+esac
+
+[ -z "$wid" ] && { echo "$(basename $0): no window to focus" >&2; exit 1; }
+
+chwso -r $wid           
+wtf $wid                
+setb active $wid   
+setb inactive $CUR 
