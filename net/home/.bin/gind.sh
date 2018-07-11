@@ -6,25 +6,9 @@ group2=""
 group3=""
 group4=""
 
-if [ ! “$(ls -A “$FSDIR/1”)” ];
-    then group1="0"
-    else group1="1"
-fi
-
-if [ ! “$(ls -A “$FSDIR/2”)” ];
-    then group2="0"
-    else group2="1"
-fi
-
-if [ ! “$(ls -A “$FSDIR/3”)” ];
-    then group3="0"
-    else group3="1"
-fi
-
-if [ ! “$(ls -A “$FSDIR/4”)” ];
-    then group4="0"
-    else group4="1"
-fi
+[ "$(ls -A /tmp/groups/1)" ] && group1="1" || group1="0"
+[ "$(ls -A /tmp/groups/2)" ] && group2="1" || group2="0"
+[ "$(ls -A /tmp/groups/3)" ] && group3="1" || group3="0"
+[ "$(ls -A /tmp/groups/4)" ] && group4="1" || group4="0"
 
 echo "$group4""$group3""$group2""$group1"
-
