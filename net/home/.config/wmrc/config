@@ -24,7 +24,7 @@ STATE_FILE=${STATE_FILE:-~/.dytyl_state} ## stores the current layout
 
 # groups
 
-GRPNUM=5 ## number of groups
+GRPNUM=4 ## number of groups
 
 # blur
 
@@ -33,7 +33,7 @@ BLUR=2           ## blur radius. move up for more intense blur, move down for le
 
 # tiling
 
-PANEL=${PANEL:-5} ## leaves space for the bar/panel
+PANEL=${PANEL:-20} ## leaves space for the bar/panel
 GAP=${GAP:-15}    ## how large the gaps should be
 
 # borders
