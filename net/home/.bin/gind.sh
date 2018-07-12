@@ -1,14 +1,27 @@
 #!/bin/sh
 
-FSDIR=${FSDIR:-/tmp/groups}
-group1=""
-group2=""
-group3=""
-group4=""
+# add test directory first
 
-[ "$(ls -A /tmp/groups/1)" ] && group1="1" || group1="0"
-[ "$(ls -A /tmp/groups/2)" ] && group2="1" || group2="0"
-[ "$(ls -A /tmp/groups/3)" ] && group3="1" || group3="0"
-[ "$(ls -A /tmp/groups/4)" ] && group4="1" || group4="0"
+FSDIR=${FSDIR:-/tmp/groups}
+
+if [ "$(ls -A $FSDIR/1)" ]; then
+	group1="1"
+	else group1="0"
+fi
+
+if [ "$(ls -A $FSDIR/2)" ]; then
+	group2="1"
+	else group2="0"
+fi
+
+if [ "$(ls -A $FSDIR/3)" ]; then
+	group3="1"
+	else group3="0"
+fi
+
+if [ "$(ls -A $FSDIR/4)" ]; then
+	group4="1"
+	else group4="0"
+fi
 
 echo "$group4""$group3""$group2""$group1"
