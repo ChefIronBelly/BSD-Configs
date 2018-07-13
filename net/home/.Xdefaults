@@ -1,78 +1,25 @@
-! ▓▓▓▓▓▓▓▓▓▓
-! ░▓ author ▓ xero <x@xero.nu>
-! ░▓ code   ▓ http://code.xero.nu/dotfiles
-! ░▓ mirror ▓ http://git.io/.files
-! ░▓▓▓▓▓▓▓▓▓▓
-! ░░░░░░░░░░
-!
-
-st.termname:     st-256color
+*termname:     	st-256color
 st.shell:        /usr/pkg/bin/mksh
-#st.font:         Liberation Mono:pixelsize=12:antialias=true:autohint=true;
+*.font:		-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
+*.boldFont:		-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
 st.borderpx:          6
-! Available cursor values: 2 4 6 7 = █ _ | ☃ ( 1 3 5 are blinking versions)
 st.cursorshape:       2
-! thickness of underline and bar cursors
 st.cursorthickness:   2
-! 0: normal blinking, 1: leave cursor border and blink with cursor's background
 st.cursorblinkstyle:  0
-! 0: cursor blinks with a constant interval; 1: blinking cycle resets on key input
 st.cursorblinkontype: 1
 st.bold_font:         0
 st.xfps:              120
 st.actionfps:         30
-! Kerning / character bounding-box height multiplier
 st.chscale:           1.0
-! Kerning / character bounding-box width multiplier
 st.cwscale:           1.0
-! blinking timeout for terminal and cursor blinking (0 disables)
 st.blinktimeout:      800
-! bell volume. Value between -100 and 100. (0 disables)
 st.bellvolume:        100
-! this is a char that is exposed like so: `printf '\033[z'`
 st.prompt_char:       $
-
-! opacity==255 means what terminal will be not transparent, 0 - fully transparent
 st.opacity:      255
 
-! █▓▒░ color scheme
+! color scheme
 #include </home/chef/.colors/blok>
 
-! █▓▒░ fonts
-*font:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
-*boldFont:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
-
-urxvt*boldFont:
-urxvt*italicFont:
-urxvt*bolditalicFont:
-
-urxvt*letterSpace: 0
-urxvt*lineSpace: 0
-
-! █▓▒░ interface
-urxvt*scrollBar: false
-urxvt*transparent: false
-urxvt*internalBorder: 4
-urxvt*borderColor: #2c2a2b
-urxvt*borderLess:false
-
-! █▓▒░ extensions
-urxvt.perl-ext-common: default,clipboard,keyboard-select,url-select
-urxvt.keysum.M-u: perl:url-select:select_next
-urxvt.url-select.autocopy: true
-urxvt.url-select.launcher: firefox
-urxvt.keysym.M-Escape: perl:keyboard-select:activate
-urxvt.keysym.M-c:   perl:clipboard:copy
-urxvt.keysym.C-v:   perl:clipboard:paste
-urxvt.keysym.M-C-v: perl:clipboard:paste_escaped
-urxvt.clipboard.copycmd:  xsel -ib
-urxvt.clipboard.pastecmd: xsel -ob
-
-! █▓▒░ misc
-urxvt.saveLines: 9999
-urxvt.iso14755: false
-!URxvt*altSendsEscape: true
-URxvt*termName: rxvt-unicode-256color
 
 ! Colors
 *background:   bg

@@ -72,7 +72,7 @@ print-wm() {
 }
            
 print-font() {
-    fontstr=$(xrdb -query 2>/dev/null | grep '*font:')
+    fontstr=$(xrdb -query 2>/dev/null | grep '*.font:')
     font=$(echo $fontstr | awk -F: '{ print $2 }')
     [[ $font != "" ]] && color-echo 'FONT' '     '"$font"
 }
@@ -117,5 +117,5 @@ print-disk
 print-mem
 print-kernel
 print-cpu
-print-colors
+#print-colors
 read

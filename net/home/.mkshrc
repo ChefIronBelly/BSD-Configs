@@ -47,7 +47,7 @@ alias disk='du -h | sort -n -r |more'
 
 alias preview='feh -g 450x300+500+200 -R .01 --zoom fill'
 #alias rec='ffmpeg -f x11grab -s 1280x800 -an -i :0.0 -c:v libvpx -b:v 5M -crf 10 -quality realtime -y -loglevel quiet'
-alias rec='ffmpeg3 -f x11grab -s 1920x1080 -an -i :0.0 -c:v libvpx -b:v 5M -crf 10 -quality realtime -y -loglevel quiet'
+#alias rec='ffmpeg3 -f x11grab -s 1920x1080 -an -i :0.0 -c:v libvpx -b:v 5M -crf 10 -quality realtime -y -loglevel quiet'
 
 alias info='info.sh'
 alias todo='vim ~/todo'
@@ -55,7 +55,7 @@ alias rnet='sudo /etc/rc.d/network restart'
 
 alias zzz='slock'
 alias shootme='DISPLAY=:0 import -window root ~/Pictures/scrots/scrot-$(date +%m-%d-%Y-%H-%M-%S).png'
-#alias free='top -n 1 | head -n 5 | tail -n 2'
+alias free='top -n 1 | head -n 5 | tail -n 2'
 alias blankf='cdrecord dev=/dev/rcd0d blank=fast'
 alias blanka='cdrecord dev=/dev/rcd0d blank=all'
 alias rip='doas cdparanoia -g /dev/rcd0d -B'

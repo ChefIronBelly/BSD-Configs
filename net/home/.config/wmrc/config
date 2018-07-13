@@ -28,7 +28,7 @@ GRPNUM=4 ## number of groups
 
 # blur
 
-WALL=~/.wall.png ## wallpaper to blur, should be the same as the currently set wallpaper
+WALL=~/.wall.jpg ## wallpaper to blur, should be the same as the currently set wallpaper
 BLUR=2           ## blur radius. move up for more intense blur, move down for less intense blur.
 
 # tiling
