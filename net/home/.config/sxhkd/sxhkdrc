@@ -16,7 +16,7 @@ super + t
 	
 # let's surf
 alt + shift + f
-		firefox        
+		firefox60       
         
 # overlord
 alt + shift + g
