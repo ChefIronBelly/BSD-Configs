@@ -6,13 +6,13 @@ Current Setups
 
    Distro: FreeBSD (amd64) laptop & desktop / NetBSD (amd64) desktop
    
-   Window Manager: cwm 
+   Window Manager:  none wmutils
    
    Bar: lemonbar / osd_cat
    
    Launcher: dmenu
    
-   Terminal Emulator: rxvt
+   Terminal Emulator: xst
    
    Shell: bash / mksh
    
@@ -22,10 +22,10 @@ Current Setups
    
    Text Editor: vim / geany
    
-   Color Scheme: zenblue / traffic 
+   Color Scheme: blok 
    
    Music Player: cmus / mpg123
    
    Browser: firefox
    
-   Video Player: mpv / mplayer   
+   Video Player: mpv   
