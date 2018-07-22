@@ -1,3 +1,23 @@
+Short way for impatient
+
+# fetch source:
+cd /usr; cvs -z3 -d anoncvs@anoncvs.se.netbsd.org:/cvsroot co -P src
+# everything goes into this directory
+mkdir /usr/obj
+# build tools (to build everything else), custom kernel, binary sets
+cd /usr/src; ./build.sh -O /usr/obj -U -j 8 tools kernel=H4KK1T modules distribution sets
+# install kernel:
+cd /usr/obj/sys/compile/arch/*/compile/H4KK1T; su root -c 'make install'
+# test kernel:
+su root -c 'shutdown -r now'
+# update userland:
+cd /usr/src; ./build.sh -O /usr/obj install=/
+# follow printed instructions about "postinstall"
+
+# build CD image (omit "tools" if built already):
+cd /usr/src; ./build.sh -O /usr/obj -U -j 8 tools release iso-image
+
+
 32.3. Creating the kernel configuration file
 
 The directories described in this section are i386 specific. Users of other architectures must substitute the appropriate directories, see the subdirectories of src/sys/arch for a list.
@@ -51,12 +71,10 @@ options RTC_OFFSET=-60
 After creating and possibly editing the kernel config file, the manual steps of configuring the kernel, generating dependencies and recompiling can also be done using the src/build.sh script, all in one go:
 
 $ cd /usr/src
-$ ./build.sh kernel=MYKERNEL 
+$ ./build.sh -j 4 -U tools # fist time
+$ ./build.sh -j 4 -U kernel=MYKERNEL 
 
 This will perform the same steps as above, with one small difference: before compiling, all old object files will be removed, to start with a fresh build. This is usually overkill, and it's fine to keep the old file and only rebuild the ones whose dependencies have changed. To do this, add the -u option to build.sh:
-
-$ cd /usr/src
-$ ./build.sh -u kernel=MYKERNEL 
 
 At the end of its job, build.sh will print out the location where the new compiled kernel can be found. It can then be installed.
 32.6. Installing the new kernel
@@ -97,3 +115,4 @@ When the computer is restarted it can happen that the new kernel doesn't work as
     # reboot
 
 This will give you back the working system you started with, and you can revise your custom kernel config file to resolve the problem. In general, it's wise to start with a GENERIC kernel first, and then make gradual changes.
+**************************************

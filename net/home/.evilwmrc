@@ -3,11 +3,11 @@
 # author:                                                              +
 # ---------------------------------------------------------------------+
 
-bw 4
+bw 2
 fn -*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
 snap    10
-term urxvtc
-fg #515e67
-bg #272c30
+term st
+fg #bab9ba
+bg #2c2a2b
 mask1 mod4
 altmask shift

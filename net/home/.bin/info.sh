@@ -117,5 +117,5 @@ print-disk
 print-mem
 print-kernel
 print-cpu
-#print-colors
+print-colors
 read

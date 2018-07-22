@@ -1,3 +1,3 @@
 #!/bin/sh
 
-surf file:///home/chef/Desktop/startpage/index.html
+surf2 file:///home/chef/Desktop/startpage/index.html

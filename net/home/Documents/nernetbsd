@@ -1,0 +1,149 @@
+#!/bin/sh
+#
+# newnetbsd.sh - set up a fresh NetBSD install
+#
+# Prereq:
+#   - During install:
+#       - Configure your network
+#       - Install pkgin ("Enable installation of binary packages")
+#       - Fetch/unpack pkgsrc
+#       - Run ntpdate at boot
+#   - After install:
+#       - Install wget (pkgin in wget)
+#       - Create a new user for yourself, add it to group `wheel`
+#       - Install sudo (pkgin in sudo)
+#       - Allow users in `wheel` to run all commands (visudo)
+# 
+# Usage:
+#   $ wget --no-check-certificate https://gist.github.com/rnelson/5575619/raw/newnetbsd.sh
+#   $ chmod +x newnetbsd.sh
+#   $ ./newnetbsd.sh
+
+
+# Install some development tools
+echo "Installing development tools"
+yes Y | sudo pkgin install g95 clang gcc47 mono openjdk7 pcc python27 python33 ruby distcc distcc-pump >/dev/null
+
+
+
+
+# Install a shell
+echo "Installing ZSH"
+yes Y | sudo pkgin in zsh >/dev/null
+
+
+
+
+# Change to that shell
+echo "Changing shell to /usr/pkg/bin/zsh"
+chsh -s /usr/pkg/bin/zsh
+
+
+
+
+# Add some entries to /etc/rc.conf
+echo "rpcbind=YES" >> /etc/rc.conf
+echo "distccd=YES" >> /etc/rc.conf
+
+
+
+
+# Write some scripts to ~/bin
+echo "Creating some helper scripts"
+mkdir ~/bin
+touch ~/bin/installgnome.sh
+echo "#!/bin/sh" > ~/bin/installgnome.sh
+echo "pkgin in gnome gnome-admin gnome-devtools c++-gnome-bindings mono-gnome-bindings \\" >> ~/bin/installgnome.sh
+echo "  p5-gnome-bindings py-gnome-bindings && \\" >> ~/bin/installgnome.sh
+echo "echo \"PKG_DEVELOPER=YES\" >> /etc/mk.conf && \\" >> ~/bin/installgnome.sh
+echo "echo \"ALLOW_VULNERABLE_PACKAGES=YES\" >> /etc/mk.conf && \\" >> ~/bin/installgnome.sh
+echo "echo \"ACCEPTABLE_LICENSES+= lame-license\" >> /etc/mk.conf && \\" >> ~/bin/installgnome.sh
+echo "pkgin in cups cups-pdf foomatic-filters-cups foomatic-ppds-cups gnome-mount \\" >> ~/bin/installgnome.sh
+echo "  gst-plugins0.10-x264 gst-plugins0.10-faad gst-plugins0.10-resindvd gst-plugins0.10-a52 \\" >> ~/bin/installgnome.sh
+echo "  telepathy-mission-control5 telepathy-idle xscreensaver xscreensaver-demo xlockmore && \\" >> ~/bin/installgnome.sh
+echo "cd /usr/pkgsrc/multimedia/gst-plugins0.10-ffmpeg && make install clean distclean && \\" >> ~/bin/installgnome.sh
+echo "cd /usr/pkgsrc/audio/gst-plugins0.10-faad && make install clean distclean && \\" >> ~/bin/installgnome.sh
+echo "cd /usr/pkgsrc/audio/gst-plugins0.10-fluendo-mp3 && make install clean distclean && \\" >> ~/bin/installgnome.sh
+echo "cp /usr/pkg/share/examples/rc.d/distccd /etc/rc.d && chmod 0755 /etc/rc.d/distccd && \\" >> ~/bin/installgnome.sh
+echo "cp /usr/pkg/share/examples/rc.d/dirmngr /etc/rc.d && chmod 0755 /etc/rc.d/dirmngr && \\" >> ~/bin/installgnome.sh
+echo "cp /usr/pkg/share/examples/rc.d/avahidaemon /etc/rc.d && chmod 0755 /etc/rc.d/avahidaemon && \\" >> ~/bin/installgnome.sh
+echo "cp /usr/pkg/share/examples/rc.d/famd /etc/rc.d && chmod 0755 /etc/rc.d/famd && \\" >> ~/bin/installgnome.sh
+echo "cp /usr/pkg/share/examples/rc.d/dbus /etc/rc.d && chmod 0755 /etc/rc.d/dbus && \\" >> ~/bin/installgnome.sh
+echo "cp /usr/pkg/share/examples/rc.d/hal /etc/rc.d && chmod 0755 /etc/rc.d/hal && \\" >> ~/bin/installgnome.sh
+echo "cp /usr/pkg/share/examples/rc.d/slpd /etc/rc.d && chmod 0755 /etc/rc.d/slpd && \\" >> ~/bin/installgnome.sh
+echo "cp /usr/pkg/share/examples/rc.d/winbindd /etc/rc.d && chmod 0755 /etc/rc.d/winbindd && \\" >> ~/bin/installgnome.sh
+echo "cp /usr/pkg/share/examples/rc.d/smbd /etc/rc.d && chmod 0755 /etc/rc.d/smbd && \\" >> ~/bin/installgnome.sh
+echo "cp /usr/pkg/share/examples/rc.d/samba /etc/rc.d && chmod 0755 /etc/rc.d/samba && \\" >> ~/bin/installgnome.sh
+echo "cp /usr/pkg/share/examples/rc.d/nmbd /etc/rc.d && chmod 0755 /etc/rc.d/nmbd && \\" >> ~/bin/installgnome.sh
+echo "cp /usr/pkg/share/examples/rc.d/gdm /etc/rc.d && chmod 0755 /etc/rc.d/gdm && \\" >> ~/bin/installgnome.sh
+echo "cp /usr/pkg/share/examples/rc.d/cupsd /etc/rc.d && chmod 0755 /etc/rc.d/cupsd && \\" >> ~/bin/installgnome.sh
+echo "cd /dev && sh MAKEDEV drvctl && \\" >> ~/bin/installgnome.sh
+echo "touch /usr/pkg/etc/dirmngr/ldapservers.conf && \\" >> ~/bin/installgnome.sh
+echo "echo \"winbindd=YES\" >> /etc/rc.conf && \\" >> ~/bin/installgnome.sh
+echo "echo \"smbd=YES\" >> /etc/rc.conf && \\" >> ~/bin/installgnome.sh
+echo "echo \"slpd=NO\" >> /etc/rc.conf && \\" >> ~/bin/installgnome.sh
+echo "echo \"samba=YES\" >> /etc/rc.conf && \\" >> ~/bin/installgnome.sh
+echo "echo \"nmbd=YES\" >> /etc/rc.conf && \\" >> ~/bin/installgnome.sh
+echo "echo \"dbus=YES\" >> /etc/rc.conf && \\" >> ~/bin/installgnome.sh
+echo "echo \"hal=YES\" >> /etc/rc.conf && \\" >> ~/bin/installgnome.sh
+echo "echo \"gdm=YES\" >> /etc/rc.conf && \\" >> ~/bin/installgnome.sh
+echo "echo \"famd=YES\" >> /etc/rc.conf && \\" >> ~/bin/installgnome.sh
+echo "echo \"dirmngr=YES\" >> /etc/rc.conf && \\" >> ~/bin/installgnome.sh
+echo "echo \"cupsd=YES\" >> /etc/rc.conf && \\" >> ~/bin/installgnome.sh
+echo "echo \"avahidaemon=YES\" >> /etc/rc.conf && \\" >> ~/bin/installgnome.sh
+echo "echo \"export LC_MESSAGES=en_US.UTF-8\" >> /etc/profile" >> ~/bin/installgnome.sh
+
+# Get the current system and X source code; note: this downloads -CURRENT, so modify
+# it to get a specific release if desired
+echo "#!/bin/sh" > ~/bin/getsource.sh
+echo "export CVS_RSH=\"ssh\"" >> ~/bin/getsource.sh
+echo "export CVSROOT=\"anoncvs@anoncvs.NetBSD.org:/cvsroot\"" >> ~/bin/getsource.sh
+echo "(cd /usr && cvs checkout -A -P src)" >> ~/bin/getsource.sh
+echo "(cd /usr && cvs checkout -A -P xsrc)" >> ~/bin/getsource.sh
+
+# Update the system and X source code
+echo "#!/bin/sh" > ~/bin/updatesource.sh
+echo "export CVS_RSH=\"ssh\"" >> ~/bin/updatesource.sh
+echo "export CVSROOT=\"anoncvs@anoncvs.NetBSD.org:/cvsroot\"" >> ~/bin/updatesource.sh
+echo "(cd /usr/src && cvs update -A -Pd)" >> ~/bin/updatesource.sh
+echo "(cd /usr/xsrc && cvs update -A -Pd)" >> ~/bin/updatesource.sh
+echo "(cd /usr/pkgsrc && cvs update -A -Pd)" >> ~/bin/updatesource.sh
+
+# Step 1 of the system rebuild process
+echo "#!/bin/sh" >> ~/bin/build1.sh
+echo "(cd /usr/src && ./build.sh -O ../obj -T ../tools distribution)" >> ~/bin/build1.sh
+echo "(cd /usr/src && ./build.sh -O ../obj -T ../tools kernel=GENERIC)" >> ~/bin/build1.sh
+echo "mv /netbsd /netbsd.old" >> ~/bin/build1.sh
+echo "mv /usr/obj/sys/arch/`uname -m`/compile/GENERIC/netbsd /" >> ~/bin/build1.sh
+echo "/sbin/shutdown -r now" >> ~/bin/build1.sh
+
+# Step 2 of the system rebuild process
+echo "#!/bin/sh" >> ~/bin/build2.sh
+echo "(cd /usr/src && ./build.sh -O ../obj -T ../tools install=/)" >> ~/bin/build2.sh
+echo "/usr/sbin/etcupdate -s /usr/src" >> ~/bin/build2.sh
+echo "/sbin/shutdown -r now" >> ~/bin/build2.sh
+
+
+
+
+# Make those scripts executable
+chmod +x ~/bin/*.sh
+
+
+
+
+# Run getsource to download system and X source code
+echo "Downloading system source code"
+sudo ~/bin/getsource.sh >/dev/null
+
+
+
+
+# Print the completion message
+echo ""
+echo "Initial setup complete."
+echo ""
+echo "To rebuild the system to -CURRENT, run 'sudo ~/bin/build1.sh' and,"
+echo "after that reboots, 'sudo ~/bin/build2.sh'"
+echo ""
+echo "To install GNOME and set up GDM, run 'sudo ~/bin/installgnome.sh'"

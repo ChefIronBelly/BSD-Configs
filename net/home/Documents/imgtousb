@@ -1,0 +1,2 @@
+# gunzip NetBSD-8.0-amd64-install.img.gz
+# dd if=NetBSD-8.0-amd64-install.img of=/dev/rsd4d bs=1m
