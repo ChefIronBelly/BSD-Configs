@@ -18,26 +18,4 @@ st.prompt_char:       $
 st.opacity:      255
 
 ! color scheme
-#include </home/chef/.colors/blok>
-
-
-! Colors
-*background:   bg
-*foreground:   fg
-
-*color0:      blk
-*color8:      bblk
-*color1:      red
-*color9:      bred
-*color2:      grn
-*color10:     bgrn
-*color3:      ylw
-*color11:     bylw
-*color4:      blu
-*color12:     bblu
-*color5:      mag
-*color13:     bmag
-*color6:      cyn
-*color14:     bcyn
-*color7:      wht
-*color15:     bwht
+#include </home/chef/.colors/nord>

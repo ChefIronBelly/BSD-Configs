@@ -39,5 +39,5 @@ GAP=${GAP:-15}    ## how large the gaps should be
 # borders
 
 BW=${BW:-1}                    ## border width
-ACTIVE=${ACTIVE:-0x6d7575}     ## border color of active window
-INACTIVE=${INACTIVE:-0x2c2a2b} ## border color of inactive window
+ACTIVE=${ACTIVE:-0x88C0D0}     ## border color of active window
+INACTIVE=${INACTIVE:-0x2E3440} ## border color of inactive window

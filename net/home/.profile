@@ -23,7 +23,7 @@ export PATH
 
 # Configure the shell to load .shrc at startup time.
 # This will happen for every shell started, not just login shells.
-export ENV=$HOME/.kshrc
+export ENV=$HOME/.mkshrc
 
 #export PKG_PATH=ftp://ftp.NetBSD.org/pub/pkgsrc/packages/$(uname -s)/$(uname -m)/$(uname -r|cut -f '1 2' -d.)/All/
 export PKG_PATH=http://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/amd64/8.0_2018Q2/All/

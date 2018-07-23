@@ -110,7 +110,7 @@ print-shell
 print-term
 #printf "\n"
 print-font
-colors='blok by dkeg'
+colors='nord'
 printf "\e[34mCOLORS: \e[37m   $colors$rst\n"
 #printf "\n"
 print-disk
