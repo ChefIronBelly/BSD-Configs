@@ -11,6 +11,7 @@ the rest pkgin
 - wmutils core (https://github.com/wmutils/core)
 - wmutils opt (https://github.com/wmutils/opt)
 - xst (https://github.com/gnotclub/xst)
+- xssstate (http://git.suckless.xssstate)
 
 at-spi2-atk-2.26.1nb1 Assistive Technology Service Provider Interface A11y Toolkit
 at-spi2-core-2.26.2nb1 Assistive Technology Service Provider Interface Core
