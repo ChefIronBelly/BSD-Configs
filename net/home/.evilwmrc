@@ -6,7 +6,7 @@
 bw 2
 fn -*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
 snap    10
-term st
+term xterm 
 fg #bab9ba
 bg #2c2a2b
 mask1 mod4
