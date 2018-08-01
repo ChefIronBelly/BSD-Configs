@@ -53,7 +53,7 @@ alias info='info.sh'
 alias todo='vim ~/todo'
 alias rnet='sudo /etc/rc.d/network restart'
 
-alias zzz='slock'
+alias zzz='zzz.sh'
 alias shootme='DISPLAY=:0 import -window root ~/Pictures/scrots/scrot-$(date +%m-%d-%Y-%H-%M-%S).png'
 alias free='top -n 1 | head -n 5 | tail -n 2'
 alias blankf='cdrecord dev=/dev/rcd0d blank=fast'
