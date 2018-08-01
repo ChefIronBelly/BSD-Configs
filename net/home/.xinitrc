@@ -14,7 +14,7 @@ xset fp rehash
 
 #urxvtd -q -o -f &
 xrdb < ~/.Xdefaults
-xsidle.sh xxx.sh &
+xsidle.sh slock &
 
 statusbar.sh &
 
