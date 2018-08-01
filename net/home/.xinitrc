@@ -7,14 +7,14 @@ xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 
 xset +dpms
 xset -b
-xset s 300
+xset s 1860
 
 xset +fp ~/.fonts
 xset fp rehash
 
 #urxvtd -q -o -f &
 xrdb < ~/.Xdefaults
-xsidle.sh slock &
+xsidle.sh xxx.sh &
 
 statusbar.sh &
 
