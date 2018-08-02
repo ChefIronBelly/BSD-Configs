@@ -1,0 +1,21 @@
+*termname:     	st-256color
+st.shell:        /usr/pkg/bin/mksh
+*.font:		-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
+*.boldFont:		-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
+st.borderpx:          6
+st.cursorshape:       2
+st.cursorthickness:   2
+st.cursorblinkstyle:  0
+st.cursorblinkontype: 1
+st.bold_font:         0
+st.xfps:              120
+st.actionfps:         30
+st.chscale:           1.0
+st.cwscale:           1.0
+st.blinktimeout:      800
+st.bellvolume:        100
+st.prompt_char:       $
+st.opacity:      255
+
+! color scheme
+#include </home/chef/.colors/nord>

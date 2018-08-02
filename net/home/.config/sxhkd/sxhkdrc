@@ -8,11 +8,11 @@ shift + alt + d
 
 # pop a term
 super + Return
-		st -g 80x24+290+324
+		urxvt -g 80x24+290+324
         
 # pop a tmux
 super + t
-		st -g 80x24+980+324 -e tmux
+		urxvt -g 80x24+980+324 -e tmux
 	
 # let's surf
 alt + shift + f

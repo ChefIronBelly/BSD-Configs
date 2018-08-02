@@ -52,7 +52,6 @@ alias rec='ffmpeg1 -f x11grab -s 1920x1080 -an -i :0.0 -c:v libvpx -b:v 5M -crf 
 alias info='info.sh'
 alias todo='vim ~/todo'
 alias rnet='sudo /etc/rc.d/network restart'
-
 alias zzz='zzz.sh'
 alias shootme='DISPLAY=:0 import -window root ~/Pictures/scrots/scrot-$(date +%m-%d-%Y-%H-%M-%S).png'
 alias free='top -n 1 | head -n 5 | tail -n 2'

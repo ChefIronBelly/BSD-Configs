@@ -7,10 +7,8 @@ the rest pkgin
 
 
 * bar (https://github.com/LemonBoy/bar)
-* swm (https://github.com/dcat/swm)
 * wmutils core (https://github.com/wmutils/core)
 * wmutils opt (https://github.com/wmutils/opt)
-* xst (https://github.com/gnotclub/xst)
 * xssstate (https://git.suckless.org/xssstate)
 
 at-spi2-atk-2.26.1nb1 Assistive Technology Service Provider Interface A11y Toolkit
@@ -124,6 +122,7 @@ png-1.6.34           Library for manipulating PNG images
 py27-cElementTree-2.7.15 C implementation of Python ElementTree API
 py27-expat-2.7.15    Python interface to expat
 python27-2.7.15nb1   Interpreted, interactive, object-oriented programming language
+rxvt-unicode-9.22nb3 Clone of rxvt supporting Xft fonts and Unicode
 shared-mime-info-1.9 Core database of common types
 slock-1.4            Simple X11 screen locker
 sqlite3-3.24.0       SQL Database Engine in a C Library

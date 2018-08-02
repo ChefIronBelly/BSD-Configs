@@ -1,21 +1,43 @@
-*termname:     	st-256color
-st.shell:        /usr/pkg/bin/mksh
-*.font:		-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
-*.boldFont:		-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
-st.borderpx:          6
-st.cursorshape:       2
-st.cursorthickness:   2
-st.cursorblinkstyle:  0
-st.cursorblinkontype: 1
-st.bold_font:         0
-st.xfps:              120
-st.actionfps:         30
-st.chscale:           1.0
-st.cwscale:           1.0
-st.blinktimeout:      800
-st.bellvolume:        100
-st.prompt_char:       $
-st.opacity:      255
+!
+
+! █▓▒░ color scheme
+#include </home/chef/.colors/nord>
+
+! █▓▒░ fonts
+urxvt*font:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
+urxvt*boldFont:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
+
+urxvt*boldFont:
+urxvt*italicFont:
+urxvt*bolditalicFont:
+
+urxvt*letterSpace: 0
+urxvt*lineSpace: 0
+
+! █▓▒░ interface
+urxvt*scrollBar: false
+urxvt*transparent: false
+urxvt*internalBorder: 6
+urxvt*borderColor: #2E3440
+urxvt*borderLess:false
+
+! █▓▒░ extensions
+urxvt.perl-ext-common: default,clipboard,keyboard-select,url-select
+urxvt.keysum.M-u: perl:url-select:select_next
+urxvt.url-select.autocopy: true
+urxvt.url-select.launcher: /usr/pkg/bin/firefox60
+urxvt.keysym.M-Escape: perl:keyboard-select:activate
+urxvt.keysym.M-c:   perl:clipboard:copy
+urxvt.keysym.C-v:   perl:clipboard:paste
+urxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+urxvt.clipboard.copycmd:  xsel -ib
+urxvt.clipboard.pastecmd: xsel -ob
+
+! █▓▒░ misc
+urxvt.saveLines: 9999
+urxvt.iso14755: false
+!urxvt*altSendsEscape: true
+urxvt*termName: rxvt-unicode-256color
 
 ! color scheme
 #include </home/chef/.colors/nord>
