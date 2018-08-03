@@ -69,6 +69,7 @@ alias gc='git commit -m "adds and tweaks"'
 alias mc='mc -a'
 alias umount='sudo umount /mnt/$1'
 alias dm='dmenu_start.sh'
+alias show='imlib2_view'
 
 PS1=""
  case `id -u` in
