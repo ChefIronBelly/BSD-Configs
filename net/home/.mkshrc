@@ -61,15 +61,15 @@ alias rip='doas cdparanoia -g /dev/rcd0d -B'
 alias weather='curl -4 http://wttr.in'
 alias tb='nc termbin.com 9999'
 alias ytdl='youtube-dl'
-alias v='vim'
 alias ping='ping -c3'
-alias mc='mc -a'
+alias mc='mc -a -b'
 alias g='git'
 alias gc='git commit -m "adds and tweaks"'
 alias mc='mc -a'
 alias umount='sudo umount /mnt/$1'
 alias dm='dmenu_start.sh'
-alias show='imlib2_view'
+alias view='imlib2_view'
+alias grab='imlib2_grab'
 
 PS1=""
  case `id -u` in
