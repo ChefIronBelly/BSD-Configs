@@ -1,9 +1,0 @@
-#!/bin/sh 
-#
-# wmrc - dummy script
-# (c) arcetera 2015 - wtfpl
-#
-
-while true; do
-  sleep 1
-done

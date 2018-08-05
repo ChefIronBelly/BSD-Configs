@@ -1,4 +1,4 @@
-## NetBSD_8.0 20180730
+## NetBSD_current 20180804
 
 .fonts and conf from github.com/ChefIronBelly/BSD-Configs.git
 
@@ -7,10 +7,10 @@ the rest pkgin
 
 
 * bar (https://github.com/LemonBoy/bar)
-* wmutils core (https://github.com/wmutils/core)
-* wmutils opt (https://github.com/wmutils/opt)
+* cwm (https://github.com/chneukirchen/cwm)
 * xssstate (https://git.suckless.org/xssstate)
-* xst (https://github.com/gnotclub/xst)
+* xst (https://github.com/gnotclub/xst / dep libX11, liXft, libXext,
+libXrender)
 
 at-spi2-atk-2.26.1nb1 Assistive Technology Service Provider Interface A11y Toolkit
 at-spi2-core-2.26.2nb1 Assistive Technology Service Provider Interface Core
