@@ -17,7 +17,7 @@ export VISUAL=${EDITOR}
 #export PRINTER=change-this-to-a-printer
 
 # Set the search path for programs.
-PATH=$HOME/.bin:/$HOME/wmutils:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R7/bin
+PATH=$HOME/.bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R7/bin
 PATH=${PATH}:/usr/pkg/bin:/usr/pkg/sbin
 export PATH
 

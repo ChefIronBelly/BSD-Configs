@@ -1,7 +1,7 @@
 #!/bin/sh
 # ~/.wmrc
 
-export FG=8FBCBB
+export FG=D8DEE9
 export BG=2E3440
 
 export C0=2E3440
