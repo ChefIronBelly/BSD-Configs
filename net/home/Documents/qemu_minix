@@ -1,0 +1,11 @@
+Setup
+# qemu-img create minix.img 8G
+
+Install
+# qemu-system-x86_64 -rtc base=localtime -net user -net nic -m 2048 -cdrom minix.iso -hda minix.img -boot d
+
+Run
+# qemu-system-x86_64 -rtc base=localtime -net user,hostfwd=tcp::10022-:22 -net nic -m 2048 -hda minix.img
+
+guest
+ssh root@localhost -p10022

@@ -116,3 +116,4 @@ When the computer is restarted it can happen that the new kernel doesn't work as
 
 This will give you back the working system you started with, and you can revise your custom kernel config file to resolve the problem. In general, it's wise to start with a GENERIC kernel first, and then make gradual changes.
 **************************************
+./build.sh -T ../tools -D ../dest -R ../release -O ../obj -U -j4 kernel=MOMOFUKU

@@ -20,4 +20,3 @@ if [ "$selection" ]; then
 		player http://somafm.com/$selection.pls
 else exit;
 fi
-

@@ -1,0 +1,27 @@
+#!/bin/sh
+
+## x11fs
+#x11WID=$(cat $X11FS/focused)
+#x11WW=$(cat $X11FS/$x11WID/geometry/width)
+#x11WH=$(cat $X11FS/$x11WID/geometry/height)
+#x11X=$(cat $X11FS/$x11WID/geometry/x)
+#x11Y=$(cat $X11FS/$x11WID/geometry/y)
+	
+#echo "WID: $x11WID"
+#echo "WW: $WW"
+#echo "WH: $WH"
+#echo "X: $X"
+#echo "Y: $Y"
+
+## wmutils
+PFW=$(pfw)
+WW=$(wattr w $PFW)
+WH=$(wattr h $PFW)
+X=$(wattr x $PFW)
+Y=$(wattr y $PFW)
+
+echo "WID:$PFW"
+echo "WW:$WW"
+echo "WH:$WH"
+echo "X:$X"
+echo "Y:$Y"

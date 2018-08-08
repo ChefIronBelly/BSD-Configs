@@ -1,0 +1,601 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+ <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <meta name="MSSmartTagsPreventParsing" content="TRUE" />
+ <title>RTFM install.i386(7)</title>
+ <meta name="robots" content="index, follow" />
+ <link rel="canonical" href="https://www.mirbsd.org/mani386/install.i386.7" />
+ <style type="text/css"><!--/*--><![CDATA[/*><!--*/
+	body {
+		background-color:#000000;
+		color:#666666;
+		font-family:serif;
+	}
+	a {
+		color:inherit;
+		text-decoration:none;
+		border-bottom:1px dashed;
+	}
+	a:visited {
+		text-decoration:none;
+		border-bottom:1px dotted;
+	}
+	a:hover {
+		text-decoration:none;
+		border-bottom:1px double;
+	}
+	pre {
+		line-height:1.12;
+		color:#FFBF00;
+	}
+	b {
+		color:#FFEF00;
+		font-weight:normal;
+	}
+	i {
+		font-style:normal;
+		border-bottom:1px solid #FFBF00;
+	}
+	b i,i b {
+		color:#FFEF00;
+		font-weight:normal;
+		font-style:normal;
+		border-bottom:1px solid #FFEF00;
+	}
+	h1 {
+		color:#FFEF00;
+		font-size:xx-large;
+		font-family:serif;
+	}
+	h2 {
+		color:#FFFFFF;
+		font-size:x-large;
+		font-family:sans-serif;
+	}
+	h3 {
+		color:#CCCCCC;
+		font-size:large;
+		font-family:sans-serif;
+	}
+ /*]]>*/--&gt;</style>
+</head><body>
+<h1>MirOS Manual: <a href="http://www.mirbsd.org/htman/i386/man7/install.i386.htm">install.i386(7)</a></h1>
+<pre>INSTALL.I386(7)              BSD Reference Manual              INSTALL.I386(7)
+</pre><h2>NAME</h2><pre>
+     <b>install.i386</b> - installation instructions for the i386 architecture
+</pre><h2>SYNOPSIS</h2><pre>
+     <b>/install</b>
+</pre><h2>DESCRIPTION</h2><pre>
+     This manual page describes how to install the MirOS operating system on
+     an i386 (PC) machine.
+</pre><h2>OBTAINING INSTALLATION MEDIA</h2><pre>
+     The MirOS homepage (see below) contains a comprehensive list of possibil-
+     ities to get bootable installation media. In many cases, you will down-
+     load MirOS from the internet via HTTP or BitTorrent. On some conferences
+     and fairs, you can also get CDs directly from the developers. You can
+     also mail them to have a CD sent to you if you don't have broadband.
+
+     You will need a bootable medium to start the installation and one that
+     contains the installation sets. For booting, you have the following op-
+     tions:
+
+     <b>-</b>   the "big" CD-ROM (which is bootable and contains all the installation
+         sets)
+
+     <b>-</b>   the baselive CD-ROM (which can be booted into either a Live CD with
+         the base system pre-installed, or into an installer behaving exactly
+         like the "big" CD-ROM, which is what you need to install MirOS)
+
+     <b>-</b>   the CD mini-ISO or midi-ISO (multi-architecture mini-ISO) (burned
+         from <i>cdrom10.iso</i>)
+
+     <b>-</b>   one of the serial console preconfigured ISOs (burned from
+         <i>cdrom9600.iso</i>, <i>etc</i>.)
+
+     <b>-</b>   the ssh daemon preconfigured ISO (burned from <i>cdsshd10.iso</i>)
+
+     <b>-</b>   one of the aforementioned ISOs, written to a USB stick, CF/SD card,
+         HDD, or any other medium bootable by the firmware, "raw" using <a href="http://www.mirbsd.org/htman/i386/man1/dd.htm">dd(1)</a>
+
+     <b>-</b>   a floppy disk (created from <i>floppy10.fs</i>)
+
+     <b>-</b>   one of the serial console preconfigured floppies (created from
+         <i>floppy9600.fs</i>, <i>etc</i>.)
+
+     <b>-</b>   <i>bsd.rd</i>, a kernel that contains a "rescue system". This is the best
+         solution if you already have MirOS installed.
+
+     <b>-</b>   If your machine is capable of netbooting via PXE and you have another
+         box that can be a bootserver, you can even do a network installation
+         without any physical media. This, however, is outside of the scope of
+         this document.
+
+     The installation sets can be fetched from the following sources:
+
+     <b>-</b>   again, the CD-ROM
+
+     <b>-</b>   another filesystem on your hard disk, e.g. FAT, NTFS, ext2fs, etc.
+
+     <b>-</b>   an NFS, HTTP or FTP server in your local network
+
+     <b>-</b>   a USB stick or external hard drive
+
+     <b>-</b>   directly from the MirOS homepage
+
+     To write the floppy image to a disk, use a command such as:
+           dd if=floppy10.fs of=/dev/rfd0c bs=9216
+     Under GNU/Linux, use <i>/dev/fd0</i> as the device name instead. To create the
+     floppy under DOS, use the tool <b>rawrite.exe</b>. For MS Windows(R), use
+     <b>rawritewin</b> (see URL below).
+
+     To burn the ISO image to a CD-ROM (a rewritable CD is recommended), you
+     can use any CD burning program. Under UNIX, use <b>cdrecord</b> for example:
+           cdrecord -v dev=/dev/rcd1c cdrom10.iso
+     You will need to change the device name above according to your system.
+     <b>cdrecord</b> is available within the MirPorts Framework as <i>sysutils/cdrtools</i>.
+     On MirOS #11, OpenBSD 4.0 and up, use <a href="http://www.mirbsd.org/htman/i386/man1/cdio.htm">cdio(1)</a> to burn the CD:
+           cdio blank; cdio tao cdsshd10.iso
+     The ISO images can be written to a hard disc or other bootable medium:
+           dd if=cdrom9600.iso of=/dev/sda bs=262144
+
+<b>BEFORE YOU START: THOUGHTS ON PARTITIONING</b>
+     You should plan the organization of your hard disk now before you start
+     the installation. The BSD operating systems don't use PC-style partition
+     tables. Instead, they have their own scheme called a "disklabel". Thus,
+     you will normally create one <a href="http://www.mirbsd.org/htman/i386/man8/fdisk.htm">fdisk(8)</a> partition for MirOS which contains
+     the disklabel and all the MirOS filesystems. This partition is then sub-
+     divided into so-called "slices" using the <a href="http://www.mirbsd.org/htman/i386/man8/disklabel.htm">disklabel(8)</a> editor. Partitions
+     of other operating systems (e.g. ext2fs, msdos, or ntfs partitions) are
+     usually automatically added to the disklabel. In fact, MirOS only uses
+     the partition entry to find its disklabel and to show other operating
+     systems that the space is used.
+
+     The MirOS partition needs to be big enough to hold all the file systems
+     and the swap partition. At least 2 Gibibytes are recommended. It needs to
+     be a primary or logical partition with type 0x27. If you are using a dif-
+     ferent operating system now and you are familiar with its partitioning
+     tool (e.g. GNU <b>fdisk)</b>, you can use it to create the partition before you
+     start the installation. This way, you avoid having to learn a new parti-
+     tioning tool and minimise the risk of data loss. In any case, <b>do a full</b>
+     <b>backup of your data NOW</b> in case anything goes wrong during the installa-
+     tion or the change of the partition table.
+
+     In case you have only one big partition (for example, if you had only MS
+     Windows(R) installed before), you need to either delete or shrink it. For
+     the latter, tools such as <b>fips</b>, <b>parted</b> or Partition Magic (commercial)
+     can be used.
+
+     In special cases, you can have more than one area on the disk for MirOS.
+     However, you will have to calculate slice offsets yourself, so do this
+     only if you know what you are doing. In this case, the other partitions
+     should be of a type otherwise unused in the system, such as 0xDB (CP/M-
+     86).
+
+     The slices inside the disklabel are named using letters.
+
+     'a'    This is always the root filesystem, i.e. the one from which you
+            boot and which contains the kernel. For a full MirOS installation
+            including XFree86(R), you will need at least 500 MiB of space in
+            this partition - more if you want to install third-party applica-
+            tions using MirPorts or binary packages.
+
+     'b'    This slice is always for swap space. As for its size, it used to
+            be recommended to make it twice as big as the installed RAM, but
+            on modern systems, you can use less (say 300 MiB) to save space.
+            However, more swap space does not hurt, and it can be useful for
+            high loads or compiling big software. It should be noted that the
+            installer used to force the disk with the root filesystem to have
+            a usable and allocated swap slice of at least 8 MiB.
+
+     'c'    As this slice represents the whole disk, you cannot change its
+            size or put a filesystem on it.
+
+     'i'    Auto-detected partitions from other operating systems are given
+            names from i on.
+</pre><h2>STARTING THE INSTALLATION</h2><pre>
+     You will now boot from the installation media you have chosen. If you use
+     a floppy, just insert it before rebooting. To boot from the CD-ROM, you
+     may need to alter the settings in your BIOS setup. Again, this depends on
+     your system.
+
+     The first thing you will see is the MirOS bootloader. A boot prompt will
+     appear:
+           boot&gt;
+     Wait a few seconds (depending on the installation medium) or enter the
+     boot command shown to load the kernel and begin with the installation.
+     You will see lots of messages on a blue background scroll by. These are
+     the normal kernel startup messages while your hardware is being probed
+     and the appropriate drivers are loaded. Once the kernel has finished
+     loading, you will be asked:
+           (I)nstall, (U)pgrade, or (S)hell?
+     Press the 'I' key to start the installation procedure.
+
+     You will be greeted with a welcome message:
+
+           Welcome to the MirOS BSD #10/i386 install program.
+
+           This program will help you install MirOS. At any prompt except
+           password prompts you can run a shell command by typing '!foo', or
+           escape to a shell by typing sometimes there is no default. At any
+           time you can exit this programme by pressing Control-C and then RE-
+           TURN, but quitting during an install can leave your system in an
+           inconsistent state.
+
+           Terminal type? [wsvtg]
+     Simply press Enter at this prompt.
+
+     The next question is:
+           <a href="http://www.mirbsd.org/htman/i386/man8/kbd.htm">kbd(8)</a> mapping? ('?' for list) [none]
+     If you want to use the default US keyboard table, press Enter. If not,
+     enter the short code for your keyboard layout here. It is usually identi-
+     cal to your country code, for example <b>de</b> for Germany.
+
+           IS YOUR DATA BACKED UP? As with anything that modifies disk con-
+           tents, this program can cause SIGNIFICANT data loss.
+
+           It is often helpful to have the installation notes handy. For com-
+           plex disk configurations, relevant disk hardware manuals and a cal-
+           culator are useful.
+
+           Proceed with install? [no]
+     This is the point where you should stop if you do not really want to do
+     the installation now. If you are really sure you want to continue and if
+     you have planned your disk layout (see above), then enter <b>yes</b> now to con-
+     tinue.
+
+           Cool! Let's get into it...
+
+           You will now initialise the disk(s) that MirBSD will use. To enable
+           all available security features you should configure the disk(s) to
+           allow the creation of separate filesystems for /, /tmp, /var, /usr,
+           and /home.
+
+           Available disks are: wd0. Which disk is the root disk (or 'done')
+           [wd0]
+     Enter the name of the hard disk you want to install MirOS on. The first
+     IDE hard disk is 'wd0', while the first SCSI hard disk is 'sd0'.
+
+     The next steps are partitioning with <a href="http://www.mirbsd.org/htman/i386/man8/fdisk.htm">fdisk(8)</a> and <a href="http://www.mirbsd.org/htman/i386/man8/disklabel.htm">disklabel(8)</a>. See the
+     section above for advice - you should have read it by now anyway. Enter
+     the partition scheme you planned earlier here. If you want to use MirOS
+     exclusively on the hard disk, say <b>yes</b> on the next question:
+           Do you want to use <b>all</b> of wd0 for MirBSD? [no]
+     In most cases, you will say <b>no</b> here, so <a href="http://www.mirbsd.org/htman/i386/man8/fdisk.htm">fdisk(8)</a> will be started.
+
+     You will get a prompt from fdisk that looks like this:
+           fdisk: 1&gt;
+     The <b>print</b> command will show the current table. If you think you made a
+     mistake, use the <b>exit</b> command to quit fdisk without saving any changes.
+     <b>quit</b> saves the changes and exit.
+
+     As an example of fdisk use, we will create one partition on an otherwise
+     empty hard disk here. At the fdisk prompt, we edit the first entry in the
+     partition table by entering <b>edit 0</b>.
+
+                    Starting       Ending       LBA Info:
+            #: id    C   H  S -    C   H  S [       start:      size   ]
+           ---------------------------------------------------------------------
+           !0: 00    0   0  0 -    0   0  0 [           0:           0 ] unused
+           Partition id ('0' to disable)  [0 - FF]: [0] (? for help) 27
+           Do you wish to edit in CHS mode? [n] y
+           BIOS Starting cylinder [0 - 1014]: [0] 0
+           BIOS Starting head [0 - 15]: [0] 1
+           BIOS Starting sector [1 - 63]: [0] 1
+           BIOS Ending cylinder [0 - 1014]: [0] 1014
+           BIOS Ending head [0 - 15]: [0] 15
+           BIOS Ending sector [1 - 63]: [0] 63
+           fdisk:*1&gt; flag 0
+           Partition 0 marked active.
+           fdisk:*1&gt;
+
+     NOTE: If you are doing the installation on a "virgin" hard disk, you must
+     use the <b>update</b> command to install a boot loader into the MBR (Master Boot
+     Record) and initialise the magic number.
+
+     It is very important that the first partition begins on head 1 and not on
+     head 0 (i.e. at sector 63) to leave some space for the partition table.
+     As you see, the prompt in fdisk is now marked with an asterisk. This
+     means that the partition table was changed. Type <b>quit</b> now to save it and
+     quit fdisk.
+
+           You will now create a MirBSD disklabel inside the MirBSD MBR parti-
+           tion. The disklabel defines how MirBSD splits up the MBR partition
+           (rather, the whole disk) into MirBSD slices in which filesystems
+           and swap space are created.
+
+           The offsets used in the disklabel are ABSOLUTE, i.e. relative to
+           the start of the disk, NOT the start of the MirBSD MBR partition.
+
+           If you have created a split space, i.e. one partition of type 27
+           and one or more partitions of type (e.g.) DB, use the command
+           b&lt;return&gt;0&lt;return&gt;*&lt;return&gt; to enable using the entire disk for
+           MirBSD. Be sure to create slices mapping the filesystems of any
+           other operating systems in order to not overwrite them.
+
+           # Inside MBR partition 0: type 27 start 63 (0x3F) size 1023057
+           (0xF9C51).
+
+           Treating sectors 63-1023120 as the MirBSD portion of the disk. You
+           can use the 'b' command to change this.
+
+           Initial label editor (enter '?' for help at any prompt)
+
+           &gt;
+
+     To see your current disklabel, use the <b>p</b> command. To add a slice in the
+     disklabel editor, enter <b>a</b> followed by the slice name, for example <b>a a</b>. To
+     create a slice, enter its offset (the starting point), size, and mount
+     point. Offset and size values are in sectors, thus twice their size in
+     kibibytes. Note that it is also possible to use a number and a modifier,
+     for example <b>250M</b> for a partition of 256 MiB or <b>2G</b> for a partition of 2
+     Gibibytes.
+
+     The default value for the offset is the beginning of free space, thus it
+     is the right one if you add the partitions one after another. The default
+     value for the size is the remaining space. Always leave the default when
+     asked for the FS type. A very simple example with just two slices fol-
+     lows:
+
+           &gt; a a
+           offset: [63]
+           size: [1023057] 896000
+           FS type: [4.2BSD]
+           mount point: [none] /
+           &gt; a b
+           offset: [896063]
+           size: [127057]
+           FS type: [swap]
+           &gt;
+     Type <b>q</b> to quit and save your changes or <b>x</b> to quit without saving if you
+     made a mistake and want to redo the disklabel or the partitioning.
+
+     After the disklabel is created, the new filesystems will be initialised
+     (erased):
+
+           The root filesystem will be mounted on wd0a. wd0b will be used for
+           swap space. No more disks to initialise.
+
+           MirBSD filesystems:
+
+           wd0a /
+
+           The next step DESTROYS all existing data on these partitions! Are
+           you really sure that you're ready to proceed? [no]
+     This is really your last chance to abort. To continue, enter <b>yes</b>.
+</pre><h2>INITIAL NETWORK CONFIGURATION</h2><pre>
+           System hostname? (short form, e.g. 'foo')
+     After the creation of the filesystems, you will be asked for the host
+     name of the system. This is the name that you give your computer, without
+     the domain name. It should be unique on your local network. Many people
+     use some kind of naming scheme for their machines, for example the last
+     names of their favourite authors.
+
+           Configure the network? [yes]
+     If you say <b>no</b> here, you can skip the whole network configuration. This is
+     useful if you do not have a local network or if you want to configure it
+     by hand later. However, if you want to fetch the installation sets over
+     the network, you must do the configuration now.
+
+           Available interfaces are: ne3 plip0 irip0 irip1. Which one do you
+           wish to initialise? (or 'done') [ne3]
+     Now, you need to figure out the name of your local network interface.
+     Under MirOS, network interfaces have a the name of their driver plus a
+     number. 'plip0, irip0' and 'irip1' are "virtual" interfaces, thus the LAN
+     interface in this example is 'ne3'.
+
+           The media options for ne3 are currently
+
+                media: Ethernet autoselect (10baseT)
+
+           Do you want to change the media options? [no]
+     The default media type of "Ethernet autoselect" is sufficient in most
+     cases. Say <b>yes</b> here if you want to fix the speed or the cable type manu-
+     ally. The latter might be necessary for cards with 10baseT via RJ-45 and
+     10base2 via coaxial cables, or if your switch is broken.
+
+           IPv4 address for ne3? (or 'none' or 'dhcp')
+     Enter the IPv4 address of the interface here. If you want to automatical-
+     ly configure the parameters using DHCP (Dynamic Host Configuration
+     Protocol), enter <b>dhcp</b>. If you do not want to give the interface an IPv4
+     address, enter <b>none</b>. If you are not sure what to do, ask your network ad-
+     ministrator or try <b>dhcp</b>.
+
+           Netmask? [255.255.255.0]
+     Enter the subnet mask here. In most cases, you can keep the default.
+
+     Now you are brought back to the interface selector from before, where you
+     can configure additional network interfaces if you want. Enter <b>done</b> after
+     you finished configuring the last one.
+
+           DNS Domain name? (e.g. 'bar.com') [my.domain]
+     Enter the internet domain name of your computer here. If you do not have
+     your own domain, then use something like <b>invalid</b>, but never enter a
+     domain name that belongs to someone else.
+
+           DNS Nameserver? (IP address or 'none) [none]
+     Enter the name of your local domain name server here. If you used DHCP
+     before, the nameserver has been configured automatically, and you can
+     just leave the default. If you use a DSL router or something similar,
+     enter the address your ISP gave you. If you do not want to use a
+     nameserver now, enter <b>none</b>.
+
+           Edit hosts with ed? [no]
+     If you enter <b>yes</b> here, you can edit the <i>/etc/hosts</i> file with <b>ed</b>. This
+     file contains a static table of host names and corresponding IP ad-
+     dresses. You will almost never need this.
+
+     As the next step, you will create an initial user account for the system.
+     In MirOS, the "root" account is disabled by default. Instead, you can ex-
+     ecute commands with root rights via <a href="http://www.mirbsd.org/htman/i386/man8/sudo.htm">sudo(8)</a>.
+</pre><h2>INSTALLING THE SETS</h2><pre>
+     The installation sets are compressed archives that contain the different
+     parts of MirOS proper. You will now specify the location and names of the
+     install sets you want to load. You will be able to repeat this step until
+     all of your sets have been successfully loaded. Sets can be located on a
+     mounted filesystem; a cdrom, disk or tape device; or a ftp, nfs, http or
+     https server.
+
+           Let's install the sets!
+
+           Location of sets? (cd disk ftp http shttp nfs or 'done') [cd]
+     If you have the "big" CD-ROM, just enter <b>cd</b> here and accept the defaults
+     for the next questions. For an installation via internet, enter <b>http</b> or
+     <b>shttp</b> (actually, this means https, but since the first character of the
+     response is enough, it can be shortened to 's' this way) and also accept
+     the defaults.
+
+     In any case, you will be dropped into the install set selector. The
+     available sets are:
+
+     <i>base10.ngz</i>
+             As the name implies, this set contains the base files and direc-
+             tories. You want this.
+
+     <i>bsd</i>     The operating system kernel. You need this.
+
+     <i>bsd.rd</i>  A kernel image that boots into a "rescue system" that is con-
+             tained within the image itself. A very handy tool for system
+             recovery and later upgrades.
+
+     <i>dev10.ngz</i>
+             The GNU Compiler Collection, binutils, system headers, static li-
+             braries and manual pages and associated documentation for
+             developers. You will need this if you want to install additional
+             software using the MirPorts Framework, or want to develop or com-
+             pile yourself. For most normal systems, you will want this; how-
+             ever, in some cases (like when building a router), it might be
+             wise not to install the compiler.
+
+     <i>etc10.ngz</i>
+             This set installs the files in <i>/etc</i> as well as the <a href="http://www.mirbsd.org/htman/i386/man8/httpd.htm">httpd(8)</a> manu-
+             al and the default .profile files. It is never offered during an
+             upgrade to not overwrite your changes.
+
+     <i>gnu10.ngz</i>
+             Contains those parts of the base system that are under less free
+             licences, such as perl, sendmail, and lynx. You can choose to not
+             install this set, but your system will not really be functional
+             without.
+
+     <i>xbase10.ngz</i>
+             Most of the files needed for XFree86(R), the graphical user in-
+             terface.
+
+     <i>xetc10.ngz</i>
+             Configuration files for XFree86(R), not offered during an upgrade
+             either.
+
+     <i>xfont10.ngz</i>
+             Fonts for XFree86(R), Freetype2, and other applications.
+
+     <i>xserv10.ngz</i>
+             XFree86(R) regular (including DMX), nested and print servers. Do
+             not install these on headless servers or if you do not plan on
+             running an X11 server. The presence of this set switches the de-
+             fault value for the X Window System question below to "yes".
+
+     <i>ada10.ngz</i>
+             Contains GNAT, the GCC Ada compiler.
+
+     <i>unfree10.ngz</i>
+             Contains FDL licenced documentation for the GNU toolchain.
+
+     <i>fixes10.ngz</i>
+             May contain post-release or post-snapshot should-have fixes.
+
+     <i>ports10.ngz</i>
+             Extracted MirPorts Framework tree. It is recommended to check
+             this out from CVS. This set takes a very long time to unpack. You
+             do not need to install this if you only want to install binary
+             packages; choose the next set instead.
+
+     <i>pkgutl10.ngz</i>
+             Precompiled MirPorts Framework package tools, such as <a href="http://www.mirbsd.org/htman/i386/man1/pkg_add.htm">pkg_add(1)</a>.
+
+     <i>pkgsrc10.ngz</i>
+             Extracted pkgsrc(R) source package tree. It is recommended to
+             check this out from CVS. This set takes a very long time to un-
+             pack. You do not need to install this if you only want to install
+             binary packages; choose the next set instead.
+
+     <i>psbsk10.ngz</i>
+             Precompiled pkgsrc(R) bootstrap binaries.
+
+     <i>site10.ngz</i>
+             May have been filled with content by your site administrator.
+
+     <i>source10.ngz</i>
+             Extracted source code of MirOS BSD, including GCC.
+
+     <i>xfree10.ngz</i>
+             Extracted source code of XFree86(R) for MirOS.
+
+     The installation of the sets is going to take a while. After it has fin-
+     ished, you will be asked a final set of questions.
+
+           Start <a href="http://www.mirbsd.org/htman/i386/man8/sshd.htm">sshd(8)</a> by default? [yes]
+     ssh (Secure Shell) is a service that allows secure remote logins with en-
+     cryption. It can be very handy for many uses, so will almoast always say
+     <b>yes</b> here.
+
+           Start <a href="http://www.mirbsd.org/htman/i386/man8/ntpd.htm">ntpd(8)</a> by default? [yes]
+     The ntp daemon synchronises your system clock from time servers over the
+     internet or a local network. NFS and many other services rely on an exact
+     time, so answer <b>yes</b> here if the machine has an internet connection.
+
+           This setting affects the machdep.allowaperture sysctl. If you
+           respond negatively, you must enable it later in /etc/sysctl.conf in
+           order to be able to run XFree86(R).
+
+           Do you expect to run the X Window System? [yes]
+     If you ever want to run the X Window System (the graphical user inter-
+     face), answer <b>yes</b> to this question. Please note that this is a <i>huge</i>
+     <i>security hole</i> as long as the X server is not yet running, cf. <a href="http://www.mirbsd.org/htman/i386/man4/xf86.htm">xf86(4)</a>.
+
+     Finally, you must select your local timezone, for example <b>Europe/Berlin</b>
+     in Germany. Enter ? to get a list. Finally, the device nodes which reside
+     in <i>/dev</i> are created by executing <a href="http://www.mirbsd.org/htman/i386/man8/MAKEDEV.htm">MAKEDEV(8)</a>, and the bootloader will be
+     installed.
+
+     You will also have to create a user which you will be using after reboot
+     to log into the system (locally or via <a href="http://www.mirbsd.org/htman/i386/man1/ssh.htm">ssh(1)</a>), for normal work if
+     desired, but primarily for management tasks with <a href="http://www.mirbsd.org/htman/i386/man1/sudo.htm">sudo(1)</a>.
+
+     At the end of the installation, the installer asks you to reboot. If you
+     flagged the MirOS partition as bootable in the beginning, the computer
+     will automatically boot into MirOS. If you use a boot manager, you will
+     have to configure it accordingly to boot the partition
+     (this is called a "chainloader" in LILO and GNU grub). The default MirOS
+     MBR also contains a boot manager. To boot the active partition, just
+     press Return; select one of the four primary partitions with the keys 0
+     to 3, or boot from a floppy by pressing 5. To install a simple MBR
+     without boot manager, use "fdisk -ef /nonexistent wd0" and press (um)in,
+     (w)rite, (q)uit.
+
+     Have fun with your new MirOS installation!
+</pre><h2>SEE ALSO</h2><pre>
+     <a href="http://www.mirbsd.org/htman/i386/man8/afterboot.htm">afterboot(8)</a>, <a href="http://www.mirbsd.org/htman/i386/man8/boot_i386.htm">boot_i386(8)</a>, <a href="http://www.mirbsd.org/htman/i386/man8/disklabel.htm">disklabel(8)</a>, <a href="http://www.mirbsd.org/htman/i386/man8/fdisk.htm">fdisk(8)</a>
+
+     The MirOS homepage: <i>http://mirbsd.de</i>/
+
+     The MirOS IRC channel: <i>irc://irc.eu.freenode.org/%23MirBSD</i>
+
+     rawrite for Microsoft(R) Windows(R):
+     <i>http://uranus.it.swin.edu.au/~jn/linux/rawwrite.htm</i>
+     <i>http://cvs.mirbsd.de/contrib/code/Snippets/NTRawrite.exe</i>
+</pre><h2>AUTHORS</h2><pre>
+     This manual page was written by Benny Siegert &lt;bsiegert@gmx.de&gt;. For the
+     names of the authors and all the copyright notices, see the file
+     <i>/usr/share/doc/legal/1stREAD</i> on the installed system.
+
+MirOS BSD #10-current           March 19, 2012                               8</pre>
+
+<hr /><p style="font-size:xx-small;">Generated on 2017-04-03 16:26:17 by <tt>$MirOS: src/scripts/roff2htm,v 1.88 2017/01/29 00:51:06 tg Exp $</tt></p>
+<p>These manual pages and other documentation are <a href="http://www.mirbsd.org/htman/i386/man7/BSD-Licence.htm">copyrighted</a> by their respective writers;
+ their source is available at our <a href="http://cvs.mirbsd.de/">CVSweb</a>,
+ AnonCVS, and other mirrors. The rest is Copyright © 2002–2017 <a href="https://www.mirbsd.org/">The MirOS Project</a>, Germany.<br /><span style="font-size:3pt; font-style:italic;">This product includes material
+ provided by <b>mirabilos</b>.</span></p>
+<p style="font-size:x-small;">This manual page’s HTML representation
+ is supposed to be <a href="http://validator.w3.org/check/referer">valid
+ XHTML/1.1</a>; if not, please send a bug report — diffs preferred.</p>
+</body></html>

@@ -66,6 +66,6 @@ echo %{l}%{F${sp}}" >> "%{F-}%{F${fg}}"0x"$(groups)%{F-}%{c}%{F${sp}}%{F-}%{r}%{
 while true
  do
    echo "$(statusbar)"
-   sleep 0.5
+   sleep 1.0
       
  done |  lemonbar -p -d -g $GEOM -f $FONT -f $ICOFONT -B $bg

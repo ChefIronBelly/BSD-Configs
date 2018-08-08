@@ -7,7 +7,7 @@ fontname "-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1"
 borderwidth 2
 
 # gaps
-gap 10 10 10 10
+gap 20 20 20 20
 
 # snap
 snapdist 10
@@ -28,10 +28,10 @@ moveamount 20
 #bind-key 4-Return "xterm -g 80x24+290+324" # middle left
 bind-key 4-Return "st -g 80x24+290+324" # middle left
 bind-key 4-t      "st -g 80x24+980+324 -e \"tmux\"" # middle right
-bind-key 4-n      "st -g 126x72+32+32"   # left 50%
-bind-key 4-m      "st -g 126x72+995+32"  # right 50%
-bind-key 4-comma  "st -g 263x34+32+32"  # top 50%
-bind-key 4-period "st -g 263x34+32+550" # bottom 50%
+bind-key 4-n      "fifty.sh left" # left 50%
+bind-key 4-m      "fifty.sh right" # right 50%
+bind-key 4-comma  "fifty.sh up" # top 50%
+bind-key 4-period "fifty.sh down" # bottom 50%
 bind-key SM-f     firefox60
 bind-key SM-g     geany
 bind-key SM-d     dmenu_start.sh
