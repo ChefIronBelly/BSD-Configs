@@ -6,7 +6,7 @@ Current Setups
 
    Distro: FreeBSD (amd64) laptop & desktop / NetBSD (amd64) desktop
    
-   Window Manager:  none wmutils
+   Window Manager:  cwm + wmutils core
    
    Bar: lemonbar / osd_cat
    
