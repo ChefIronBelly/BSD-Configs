@@ -1,0 +1,10 @@
+# .evilwmrc
+term dmenu_start.sh
+snap 20
+bw 4
+fg #D8DEE9
+fc #88C0D0
+mask1 mod4
+altmask shift
+bg #2E3440
+fn -*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
