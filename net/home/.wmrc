@@ -13,10 +13,13 @@ export C5=E5E9F0
 export C6=ECEFF4
 export C7=8FBCBB
 
-export FONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
-export ICOFONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
+#export FONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
+#export ICOFONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
+export FONT="'menlo-14'"
+DMENU_FN="-fn 'menlo-12'"
 
-DMENU_FN="-fn -*-ohsnap.icons-medium-r-*-*-12-*-*-*-*-*-*-*"
+#DMENU_FN="-fn -*-ohsnap.icons-medium-r-*-*-12-*-*-*-*-*-*-*"
+DMENU_FN="-fn 'menlo-12'"
 DMENU_NB="-nb #D8DEE9"
 DMENU_NF="-nf #2E3440"
 DMENU_SB="-sb #2E3440"

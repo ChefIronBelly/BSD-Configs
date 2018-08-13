@@ -4,10 +4,10 @@
 fontname "-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1"
 
 # set border width
-borderwidth 2
+borderwidth 3
 
 # gaps
-gap 20 20 20 20
+gap 10 10 10 10
 
 # snap
 snapdist 10
@@ -20,6 +20,8 @@ color activeborder   '#81A1C1'
 color inactiveborder '#2E3440'
 color font           '#f7f7f7'
 color selfont        '#222222'
+color menubg "#212121"
+color menufg "#c2c2c2"
 
 # faster pussy cat
 moveamount 20
