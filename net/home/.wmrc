@@ -19,10 +19,10 @@ export FONT="'menlo-10'"
 DMENU_FN="-fn 'menlo-10'"
 
 #DMENU_FN="-fn -*-ohsnap.icons-medium-r-*-*-12-*-*-*-*-*-*-*"
-DMENU_FN="-fn 'menlo-12'"
-DMENU_NB="-nb #D8DEE9"
-DMENU_NF="-nf #2E3440"
-DMENU_SB="-sb #2E3440"
-DMENU_SF="-sf #D8DEE9"
+DMENU_FN="-fn 'menlo-10'"
+DMENU_NB="-nb #2E3440"
+DMENU_NF="-nf #D8DEE9"
+DMENU_SB="-sb #81A1C1"
+DMENU_SF="-sf #2E3440"
 
 export DMENU_FN DMENU_NB DMENU_NF DMENU_SF DMENU_SB
