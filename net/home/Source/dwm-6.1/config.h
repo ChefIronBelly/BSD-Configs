@@ -2,9 +2,9 @@
 
 /* appearance */
 static const char *fonts[] = {
-	"menlo:size=12"
+	"menlo:size=10"
 };
-static const char dmenufont[]       = "menlo:size=12";
+static const char dmenufont[]       = "menlo:size=10";
 static const char normbordercolor[] = "#2E3440";
 static const char normbgcolor[]     = "#2E3440";
 static const char normfgcolor[]     = "#D8DEE9";
