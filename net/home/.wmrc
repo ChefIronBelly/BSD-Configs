@@ -15,8 +15,8 @@ export C7=8FBCBB
 
 #export FONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
 #export ICOFONT="-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*"
-export FONT="'menlo-14'"
-DMENU_FN="-fn 'menlo-12'"
+export FONT="'menlo-10'"
+DMENU_FN="-fn 'menlo-10'"
 
 #DMENU_FN="-fn -*-ohsnap.icons-medium-r-*-*-12-*-*-*-*-*-*-*"
 DMENU_FN="-fn 'menlo-12'"
