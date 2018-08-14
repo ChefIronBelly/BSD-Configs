@@ -5,20 +5,20 @@ static const char *fonts[] = {
 	"menlo:size=12"
 };
 static const char dmenufont[]       = "menlo:size=12";
-static const char normbordercolor[] = "#444444";
+static const char normbordercolor[] = "#2E3440";
 static const char normbgcolor[]     = "#2E3440";
 static const char normfgcolor[]     = "#D8DEE9";
-static const char selbordercolor[]  = "#2E3440";
-static const char selbgcolor[]      = "#2E3440";
-static const char selfgcolor[]      = "#D8DEE9";
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int snap      = 32;       /* snap pixel */
+static const char selbordercolor[]  = "#81A1C1";
+static const char selbgcolor[]      = "#81A1C1";
+static const char selfgcolor[]      = "#2E3440";
+static const unsigned int borderpx  = 4;        /* border pixel of windows */
+static const unsigned int snap      = 8;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const unsigned int gappx     = 8; 	   /* gap pixel between windows */ 
 
 /* tagging */
-static const char *tags[] = { "term", "www", "text", "file", "misc" };
+static const char *tags[] = { "term", "surf", "edit", "file", "misc" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -37,8 +37,8 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "[T]",      tile },    /* first entry is default */
+	{ "[F]",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
 
@@ -86,7 +86,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
-	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_4,                      3)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
