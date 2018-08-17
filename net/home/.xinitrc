@@ -15,8 +15,6 @@ xset fp rehash
 xrdb < ~/.Xdefaults
 xsidle.sh slock &
 
-#statusbar.sh &
-
 xsetroot -cursor_name left_ptr
 #hsetroot -fill ~/Pictures/walls/traffic.jpg -blur .5
 #xsetroot -mod 16 16 -bg "$(xrdb -query | awk '/\*.background/ {print $2}')" -fg "$(xrdb -query | awk '/\*.color8/ {print $2}')"

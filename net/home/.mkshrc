@@ -58,6 +58,7 @@ alias shootme='DISPLAY=:0 import -window root ~/Pictures/scrots/scrot-$(date +%m
 alias free='top -n 1 | head -n 5 | tail -n 2'
 alias blankf='cdrecord dev=/dev/rcd0d blank=fast'
 alias blanka='cdrecord dev=/dev/rcd0d blank=all'
+alias curl='curl -C - -LO'
 alias rip='doas cdparanoia -g /dev/rcd0d -B'
 alias weather='curl -4 http://wttr.in'
 alias tb='nc termbin.com 9999'
