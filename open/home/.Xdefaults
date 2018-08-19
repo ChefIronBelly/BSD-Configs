@@ -1,45 +1,23 @@
-!XTerm*font:		-*-terminus-*-*-*-*-14-*-*-*-*-*-*-1
-!XTerm*boldFont:	-*-terminus-medium-*-*-*-14-*-*-*-*-*-*-1
+*termname:     	xst-256color
+st.shell:       /bin/ksh
+*.font:			menlo-10
+*.boldFont:		menlo-10
+!*.font:			-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
+!*.boldFont:		-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
+st.borderpx:          6
+st.cursorshape:       2
+st.cursorthickness:   2
+st.cursorblinkstyle:  0
+st.cursorblinkontype: 1
+st.bold_font:         0
+st.xfps:              120
+st.actionfps:         30
+st.chscale:           1.0
+st.cwscale:           1.0
+st.blinktimeout:      800
+st.bellvolume:        100
+st.prompt_char:       $
+st.opacity:      	  128
 
-XTerm*font:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
-XTerm*boldFont:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
-
-XTerm*vt100*geometry: 56x15
-XTerm*saveLines: 4096
-XTerm*loginShell: true
-XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
-XTerm*termName: xterm-256color
-XTerm*eightBitInput: false
-XTerm*locale: true
-XTerm*metaSendsEscape: true
-XTerm*borderWidth: 0
-XTerm*internalBorder: 8
-XTerm*externalBorder: 4
-XTerm*scaleHeight: 1.01
-XTerm*utf8: 1
-XTerm*selectToClipboard: true
-XTerm*ScrollBar: false
-XTerm*ScrollKey: true
-
-#include </home/chef/.colors/traffic>
-
-! Colors
-*background:   bg
-*foreground:   fg
-
-*color0:      blk
-*color8:      bblk
-*color1:      red
-*color9:      bred
-*color2:      grn
-*color10:     bgrn
-*color3:      ylw
-*color11:     bylw
-*color4:      blu
-*color12:     bblu
-*color5:      mag
-*color13:     bmag
-*color6:      cyn
-*color14:     bcyn
-*color7:      wht
-*color15:     bwht
+! color scheme
+#include </home/chef/.colors/nord>

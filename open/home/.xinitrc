@@ -7,19 +7,22 @@ xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 
 xset +dpms
 xset -b
-xset s 300
+xset s 1860
 
-xset +fp /usr/local/share/fonts/ohsnap
+xset +fp ~/.fonts
 xset fp rehash
 
 xrdb < ~/.Xdefaults
-
-#mpd ~/.config/mpd/mpd.conf &
-#cupsd &
+#xsidle.sh slock &
 
 xsetroot -cursor_name left_ptr
-#feh --bg-fill --randomize ~/.wallpapers/* &
-#feh --bg-scale ~/Pictures/wallpapers/republica.jpg &
-xsetroot -mod 16 16 -bg "$(xrdb -query | awk '/\*background/ {print $2}')" -fg "$(xrdb -query | awk '/\*color8/ {print $2}')"
+#hsetroot -fill ~/Pictures/walls/traffic.jpg -blur .5
+#xsetroot -mod 16 16 -bg "$(xrdb -query | awk '/\*.background/ {print $2}')" -fg "$(xrdb -query | awk '/\*.color8/ {print $2}')"
+xsetroot -solid "$(xrdb -query | awk '/\*.color8/ {print $2}')"
 
-exec cwm
+while true; do
+   xsetroot -name "$(date +" %a, %b %d") @$(date +" %I:%M")"
+   sleep 60 
+done &
+
+exec dwm
