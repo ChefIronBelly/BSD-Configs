@@ -1,5 +1,5 @@
-*termname:     	xst-256color
-st.shell:       /bin/ksh
+*termname:     	st-256color
+st.shell:       /bin/mksh
 *.font:			menlo-10
 *.boldFont:		menlo-10
 !*.font:			-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
@@ -16,7 +16,7 @@ st.chscale:           1.0
 st.cwscale:           1.0
 st.blinktimeout:      800
 st.bellvolume:        100
-st.prompt_char:       $
+st.prompt_char:        $
 st.opacity:      	  128
 
 ! color scheme
