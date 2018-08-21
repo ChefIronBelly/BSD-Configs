@@ -1,12 +1,10 @@
-#
 # ~/.cwmrc
-#
 
 # set font
 fontname "-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1"
 
 # set border width
-borderwidth 4
+borderwidth 3
 
 # gaps
 gap 10 10 10 10
@@ -18,49 +16,34 @@ snapdist 10
 sticky yes
 
 # colors
-color activeborder   '#515e67'
-color inactiveborder '#272c30'
-color menubg         '#252525'
-color menufg         '#e3e3e3'
+color activeborder   '#81A1C1'
+color inactiveborder '#2E3440'
 color font           '#f7f7f7'
-color selfont        '#D8686D'
+color selfont        '#222222'
+color menubg "#212121"
+color menufg "#c2c2c2"
 
 # faster pussy cat
-moveamount 10
+moveamount 20
 
-# autogroup
-autogroup 1 "xterm,tmux"
-autogroup 2 "Navigator,Firefox"
-autogroup 3 "Geany,vim"
-autogroup 4 "mpv,MPlayer"
-
-# menu
-command box    "xterm -g 80x24+290+324"
-command surf   firefox
-command xlock  "xlock -mode blot"
-
-# Ignore programs by that name by not drawing borders around them. 
-ignore firefox
-
-# binds (window geometry based on 1920x1080)
-bind-key 4-Return "xterm -g 80x24+290+324" # middle left
-bind-key 4-t      "xterm -g 80x24+980+324 -e \"tmux\"" # middle right
-bind-key 4-n      "xterm -g 125x67+25+25"   # left 50%
-bind-key 4-m      "xterm -g 125x67+995+25"  # right 50%
-bind-key 4-comma  "xterm -g 263x32+25+25"  # top 50%
-bind-key 4-period "xterm -g 263x32+25+544" # bottom 50%
-bind-key SM-s     status.sh
-bind-key SM-f     firefox
+# bind-keys (window geometry based on 1920x1080)
+#bind-key 4-Return "xterm -g 80x24+290+324" # middle left
+bind-key 4-Return "st -g 80x24+290+324" # middle left
+bind-key 4-t      "st -g 80x24+980+324 -e \"tmux\"" # middle right
+bind-key 4-n      "fifty.sh left" # left 50%
+bind-key 4-m      "fifty.sh right" # right 50%
+bind-key 4-comma  "fifty.sh up" # top 50%
+bind-key 4-period "fifty.sh down" # bottom 50%
+bind-key SM-f     firefox60
 bind-key SM-g     geany
 bind-key SM-d     dmenu_start.sh
 bind-key SM-r     dmenu_soma.sh
-bind-key SM-h     dmenu_hset.sh
-bind-key SM-x     dmenu_xset.sh
+#bind-key SM-x     dmenu_xset.sh
+bind-key SM-x     dmenu_hset.sh
 bind-key SM-q     dmenu_exit.sh
-bind-key M-0      "volume.sh 0" # audio mute toggle
-bind-key M-minus  "volume.sh -" # audio lower
-bind-key M-equal  "volume.sh +" # audio raise
-bind-key M-u      uptime.sh
+bind-key M-0	  "volume.sh 0"
+bind-key M-minus  "volume.sh -"
+bind-key M-equal  "volume.sh +"
 bind-key M-w      wetcat.sh
 
 bind-key 4-v      vmaximize
@@ -119,9 +102,9 @@ bind-key 4C-q     quit
 bind-key 4-d      exec
 bind-key 4-s      search
 
-bind-key M-Left   unbind
-bind-key M-Right  unbind
-bind-key M-Return unbind
+#bind-key M-Left   unbind-key
+#bind-key M-Right  unbind-key
+#bind-key M-Return unbind-key
 
 # bind-mouses
 bind-mouse 4-1 window_move

@@ -13,7 +13,7 @@ xset +fp ~/.fonts
 xset fp rehash
 
 xrdb < ~/.Xdefaults
-#xsidle.sh slock &
+xsidle.sh slock &
 
 xsetroot -cursor_name left_ptr
 #hsetroot -fill ~/Pictures/walls/traffic.jpg -blur .5

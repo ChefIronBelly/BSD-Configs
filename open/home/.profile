@@ -1,20 +1,8 @@
-# $OpenBSD: dot.profile,v 1.0 2016/10/20 06:56:57 chef Exp $
+# $OpenBSD: dot.profile,v 1.5 2018/02/02 02:29:54 yasuoka Exp $
+#
+# sh/ksh initialization
 
-LC_CTYPE=en_US.UTF-8
-TZ=America/New_York
+PATH=$HOME/.bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
+export PATH HOME TERM
 
-PATH=$HOME/.bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:.
-PKG_PATH=http://ftp5.usa.openbsd.org/pub/OpenBSD/snapshots/packages/$(uname -p)/
-
-LANG=en_US.UTF-8
-XDG_DATA_HOME=$HOME
-EDITOR=vim
-VISUAL=$EDITOR
-PAGER=less\ -R
-BROWSER=open
-MANWIDTH=80
-CC=cc
-CVSROOT=anoncvs@mirror.planetunix.net:/cvs
-
-export LC_CTYPE PATH PKG_PATH XDG_DATA_HOME EDITOR VISUAL PAGER BROWSER \
-MANWIDTH CC CVSROOT TZ
+export PKG_PATH=http://mirrors.sonic.net/pub/OpenBSD/snapshots/packages/amd64/
