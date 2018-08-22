@@ -1,14 +1,16 @@
 BSD-Configs
 - FreeBSD - http://www.freebsd.org
 - NetBSD - http://www.netbsd.org
+- OpenBSD - http://www.openbsd.org
 
 Current Setups
 
-   Distro: FreeBSD (amd64) laptop & desktop / NetBSD (amd64) desktop
+   Distro: FreeBSD (amd64) laptop & desktop / NetBSD (amd64) desktop 
+   / OpenBSD (amd64) desktop
    
-   Window Manager:  cwm + wmutils core
+   Window Manager:  dwm
    
-   Bar: lemonbar / osd_cat
+   Bar: dwmstat
    
    Launcher: dmenu
    
@@ -16,15 +18,15 @@ Current Setups
    
    Shell: bash / mksh
    
-   Terminal Font: ohsnap / terminus
+   Terminal Font: menlo
    
    File Manager: mc / command line
    
    Text Editor: vim / geany
    
-   Color Scheme: blok 
+   Color Scheme: nord
    
-   Music Player: cmus / mpg123
+   Music Player: cmus / mpg123 / ncmpcpp
    
    Browser: firefox
    
