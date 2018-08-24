@@ -95,7 +95,7 @@ do
   printf "\e[$((i+30))m░▒▓█▓▒░"
   i=$(($i+1))
 done
-printf "\e[34m░▒▓█▓▒░\e[0m\n\n"
+printf "\e[37m░▒▓█▓▒░\e[0m\n\n"
 # ascii bits by xero
 }
 

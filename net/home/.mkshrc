@@ -29,7 +29,7 @@ alias h='fc -l'
 alias p='pwd'
 alias manb='man -H'
 alias grep='grep --color=auto'
-
+alias curl='curl -C - -LO'
 alias install='sudo pkgin install'
 alias remove='sudo pkgin remove'
 alias pupd='sudo pkgin update'

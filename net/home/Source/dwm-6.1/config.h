@@ -15,7 +15,7 @@ static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const unsigned int snap      = 4;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const unsigned int gappx     = 8; 	   /* gap pixel between windows */ 
+static const unsigned int gappx     = 8; 	/* gap pixel between windows */ 
 
 /* tagging */
 static const char *tags[] = { "term", "surf", "edit", "file", "misc" };
@@ -62,6 +62,9 @@ static const char *dmenucmd[] = { "dmenu_start.sh", NULL };
 static const char *termcmd[]  = { "xst", NULL };
 static const char *surfcmd[]  = { "firefox60", NULL };
 static const char *editcmd[]  = { "geany", NULL };
+static const char *volup[]    = { "volume.sh", "+", NULL };
+static const char *voldown[]  = { "volume.sh", "-", NULL };
+static const char *volmute[]  = { "volume.sh", "0", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -69,6 +72,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_f, 	   spawn,          {.v = surfcmd } },
 	{ MODKEY|ShiftMask,             XK_g, 	   spawn,          {.v = editcmd } },
+	{ MODKEY,			XK_F10,    spawn,          {.v = volup } },
+	{ MODKEY,			XK_F11,    spawn,          {.v = voldown } },
+	{ MODKEY,			XK_F12,    spawn,          {.v = volmute } },			
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
