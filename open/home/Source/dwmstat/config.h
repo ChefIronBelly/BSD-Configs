@@ -5,6 +5,6 @@
 /* maximum number of characters in status string */
 #define MAX_LEN   128
 /* output format used by printf(3) for status string */
-#define OUTFMT    "%s | %3d°C | %3d%% | %s"
+#define OUTFMT    "ip:%s | t:%3d°C | vol:%3d%% | %s"
 /* time format used by strftime(3) within status string */
-#define TIMEFMT   "%a, %b %d @ %I:%M"
+#define TIMEFMT   "%a %b %d, %I:%M"
