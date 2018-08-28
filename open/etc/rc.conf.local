@@ -1,2 +1,4 @@
 sshd_flags=NO
 apmd_flags=-A
+dbus_enable=YES
+mixerctl inputs.spkr.mute=on
