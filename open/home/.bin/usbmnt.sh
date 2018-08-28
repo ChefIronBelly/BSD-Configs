@@ -1,8 +1,4 @@
 #! /bin/sh
+# usually /dev/sd0e or sd5i on my machines.
 
-# Mount usb
-# sysctl hw.disknames
-# dmesg | grep sd6
-# disklabel sd6
-
-sudo mount_msdos /dev/sd6i /mnt/usb
+sudo mount_msdos /dev/sd5i /mnt
