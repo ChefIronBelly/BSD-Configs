@@ -1,8 +1,8 @@
 *termname:     	st-256color
 st.shell:       /usr/pkg/bin/mksh
-*.font:		menlo-10
-*.boldFont:	menlo-10
-!*.font:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
+*.font:			menlo-10
+*.boldFont:		menlo-10
+!*.font:		-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
 !*.boldFont:	-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
 st.borderpx:          6
 st.cursorshape:       2

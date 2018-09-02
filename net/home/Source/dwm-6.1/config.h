@@ -1,5 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
+/* include modules */
+#include "patches/gaplessgrid.c"
+
 /* appearance */
 static const char *fonts[] = {
 	"menlo:size=10"
@@ -11,8 +14,8 @@ static const char normfgcolor[]     = "#D8DEE9";
 static const char selbordercolor[]  = "#81A1C1";
 static const char selbgcolor[]      = "#81A1C1";
 static const char selfgcolor[]      = "#2E3440";
-static const unsigned int borderpx  = 4;        /* border pixel of windows */
-static const unsigned int snap      = 4;        /* snap pixel */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int snap      = 8;        /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const unsigned int gappx     = 8; 	/* gap pixel between windows */ 
@@ -32,9 +35,9 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.52; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
