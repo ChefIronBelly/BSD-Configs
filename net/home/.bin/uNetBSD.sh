@@ -14,7 +14,7 @@ read
 
 cp /netbsd /netbsd.old
 
-for file in kern-GENERIC modules base comp xbase xcomp xfont xserver
+for file in modules base comp etc man text xbase xcomp xetc xfont xserver
 do
 	tar zxpf /home/chef/HEAD/$1/${file}.tgz
 done
