@@ -21,8 +21,8 @@ xsetroot -cursor_name left_ptr
 xsetroot -solid "$(xrdb -query | awk '/\*.color8/ {print $2}')"
 
 while true; do
-	xsetroot -name " $(date +"%a %b %d,") $(date +"%I:%M")"
-	sleep 70
+  xsetroot -name " $(date +"%a %b %d,") $(date +"%I:%M")"
+  sleep 70
 done &
 
 dwm_start.sh
