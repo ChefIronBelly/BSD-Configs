@@ -7,7 +7,8 @@
 set -e
 set -x
 
-mkdir /home/chef/netbsd-8/$1 && cd $_
+now=$(date +"%m%d%I%M""Z")
+mkdir /home/chef/netbsd-8/${now} && cd $_
 
 for file in kern-GENERIC modules base comp etc man text xbase xcomp xetc xfont xserver
 do
