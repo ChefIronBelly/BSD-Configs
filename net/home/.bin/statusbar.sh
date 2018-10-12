@@ -46,7 +46,7 @@ ip() {
 }
 
 vol() {
-	vol=$(volumebar.sh)
+	vol=$(vol_bar.sh)
 	echo $vol
 }
 

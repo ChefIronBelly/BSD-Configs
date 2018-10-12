@@ -26,7 +26,7 @@ export PATH
 export ENV=$HOME/.mkshrc
 
 #export PKG_PATH=ftp://ftp.NetBSD.org/pub/pkgsrc/packages/$(uname -s)/$(uname -m)/$(uname -r|cut -f '1 2' -d.)/All/
-export PKG_PATH=http://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/amd64/8.0_2018Q2/All/
+export PKG_PATH=http://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/amd64/8.0/All/
 
 export CVSROOT="anoncvs@anoncvs.NetBSD.org:/cvsroot"
 

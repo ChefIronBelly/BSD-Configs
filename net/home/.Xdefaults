@@ -1,7 +1,7 @@
 *termname:    st-256color
 st.shell:     /usr/pkg/bin/mksh
-*.font:       menlo-10
-*.boldFont:   menlo-10
+*.font:       Menlo-10
+*.boldFont:   Menlo-10
 !*.font:      -*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
 !*.boldFont:  -*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-1
 st.borderpx:          6
@@ -21,3 +21,10 @@ st.opacity:           128
 
 ! color scheme
 #include </home/chef/.colors/nord>
+
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
