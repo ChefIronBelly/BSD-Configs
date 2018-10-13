@@ -1,6 +1,0 @@
-# gunzip NetBSD-8.0-amd64-install.img.gz
-
-NetBSD
-# dd if=NetBSD-8.0-amd64-install.img of=/dev/rsd4d bs=1m
-OpenBSD
-# dd if=install*.fs of=/dev/rsd64 bs=1m
